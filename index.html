@@ -1,205 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ThaiPackages.com | Thailand Holidays Made Easy</title>
-<meta name="description" content="Thailand holiday packages for Indian travellers. Explore Bangkok, Phuket, Krabi and Pattaya with customized family, honeymoon and group holidays.">
-<style>
-:root{
-  --ink:#12333b; --teal:#00a6a6; --teal2:#007f86; --gold:#f4b942;
-  --cream:#f7fbfa; --white:#fff; --muted:#64777d; --shadow:0 18px 50px rgba(18,51,59,.12);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:auto}
-nav{position:absolute;z-index:5;top:0;left:0;right:0;padding:22px 0;color:white}
-.navin{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--gold)}
-.navlinks{display:flex;gap:28px;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--gold)}
-.navbtn{background:white;color:var(--ink);padding:11px 18px;border-radius:30px;font-weight:800;font-size:14px}
-.hero{min-height:680px;color:white;display:flex;align-items:center;position:relative;overflow:hidden;
-background:linear-gradient(90deg,rgba(5,31,38,.78),rgba(5,31,38,.30)),url("https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero:after{content:"";position:absolute;bottom:-80px;right:-50px;width:340px;height:340px;border-radius:50%;background:rgba(244,185,66,.13)}
-.hero-content{max-width:720px;padding-top:70px}.eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:30px;font-size:13px;font-weight:800;margin-bottom:18px}
-h1{font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
-.hero p{font-size:19px;max-width:590px;color:#eef7f6;margin-bottom:30px}
-.cta{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#17343a;padding:15px 23px;border-radius:32px;font-weight:900;box-shadow:0 10px 30px rgba(244,185,66,.25)}
-.cta.alt{background:white;margin-left:10px}
-.searchbox{background:white;color:var(--ink);padding:16px;border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:10px;margin-top:-45px;position:relative;z-index:4}
-.field{padding:10px 14px;border:1px solid #e1e9e9;border-radius:12px}.field small{display:block;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase}.field strong{font-size:14px}
-.searchbtn{border:0;background:var(--teal);color:white;padding:0 23px;border-radius:12px;font-weight:900;cursor:pointer}
-section{padding:85px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.sectionhead h2{font-size:38px;letter-spacing:-1.5px}.sectionhead p{color:var(--muted);max-width:480px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(18,51,59,.07);transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.cardimg{height:190px;background-size:cover;background-position:center;position:relative}.tag{position:absolute;top:13px;left:13px;background:white;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:900}
-.cardbody{padding:19px}.cardbody h3{font-size:21px}.cardbody p{color:var(--muted);font-size:13px;margin:5px 0 14px}.price{font-size:14px}.price b{font-size:22px;color:var(--teal2)}
-.styles{background:#12333b;color:white}.styles .sectionhead p{color:#bcd0d2}.stylegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.style{height:220px;border-radius:20px;display:flex;align-items:end;padding:20px;background-size:cover;background-position:center;position:relative;overflow:hidden}.style:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.72))}.style div{position:relative}.style h3{font-size:21px}.style p{font-size:12px;color:#dce8e8}
-.why{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.whyimg{height:470px;border-radius:28px;background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85") center/cover}.checks{display:grid;gap:18px;margin-top:25px}.check{display:flex;gap:14px}.icon{width:40px;height:40px;flex:none;border-radius:12px;background:#e4f7f5;display:grid;place-items:center;color:var(--teal);font-weight:900}
-.testimonials{background:#eef7f6}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:white;padding:25px;border-radius:20px}.stars{color:#f4b942;letter-spacing:2px}.review p{margin:13px 0;color:#52696e}.review b{font-size:14px}
-.enquiry{background:linear-gradient(135deg,#007f86,#12333b);color:white;border-radius:28px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:45px}.enquiry h2{font-size:40px;line-height:1.1}.enquiry p{color:#c8dcde;margin-top:14px}.form{background:white;border-radius:20px;padding:22px;display:grid;gap:12px}.form input,.form select,.form textarea{width:100%;border:1px solid #dbe6e6;padding:13px;border-radius:10px;font:inherit}.form textarea{min-height:85px}.form button{border:0;background:var(--gold);padding:14px;border-radius:12px;font-weight:900;color:#17343a;cursor:pointer}
-footer{background:#09252b;color:#b8cccf;padding:45px 0 25px}.foot{display:flex;justify-content:space-between;gap:30px}.foot h3{color:white;margin-bottom:8px}.foot p{font-size:13px}.copy{border-top:1px solid #24444a;margin-top:30px;padding-top:18px;font-size:12px}
-.whatsapp{position:fixed;right:22px;bottom:22px;background:#25d366;color:white;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:13px;box-shadow:0 8px 25px rgba(0,0,0,.22);z-index:10}
-@media(max-width:850px){.navlinks{display:none}.searchbox{grid-template-columns:1fr 1fr}.searchbtn{padding:14px}.cards,.stylegrid{grid-template-columns:1fr 1fr}.why,.enquiry{grid-template-columns:1fr}.whyimg{height:330px}.reviews{grid-template-columns:1fr}.enquiry{padding:30px}.foot{flex-direction:column}}
-@media(max-width:520px){h1{letter-spacing:-2px}.hero{min-height:620px}.hero p{font-size:16px}.cta.alt{display:none}.searchbox{grid-template-columns:1fr;margin-top:-25px}.cards,.stylegrid{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead h2{font-size:31px;margin-bottom:8px}section{padding:60px 0}}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ThaiPackages.com | Your Thailand Story Starts Here</title>
+  <meta name="description" content="Discover customized Thailand holiday packages across Phuket, Krabi, Bangkok, Pattaya, Koh Samui, and Chiang Mai. Handpicked hotels, island tours, and dedicated on-trip support.">
+  <meta name="theme-color" content="#0A2A30">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thaipackages.com/">
+  <meta property="og:title" content="ThaiPackages.com | Your Thailand Story Starts Here">
+  <meta property="og:description" content="Customized Thailand holiday packages across Phuket, Krabi, Bangkok, Pattaya, and Koh Samui.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=85">
 
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:190px 190px;gap:12px}
-.gallery .photo{border-radius:18px;background-size:cover;background-position:center;position:relative;overflow:hidden}
-.gallery .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.55))}
-.gallery .photo span{position:absolute;z-index:1;bottom:14px;left:16px;color:white;font-weight:900;font-size:18px}
-.gallery .big{grid-row:span 2}
-@media(max-width:700px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.gallery .big{grid-row:span 1;grid-column:span 2}}
+  <!-- Typography Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-.indian-comfort{background:#fff7e7}
-.comfort-box{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
-.comfort-copy .eyebrow{color:#007f86;background:#e5f6f4;border:0}
-.comfort-copy h2{font-size:42px;line-height:1.12;letter-spacing:-1.5px;margin:8px 0 16px}
-.comfort-copy p{color:#536a70;margin:0 0 15px;font-size:16px}
-.comfort-highlight{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.comfort-item{background:white;border:1px solid #eee2c9;border-radius:15px;padding:16px}
-.comfort-item b{display:block;margin-bottom:4px}
-.comfort-item span{font-size:12px;color:#65777b}
-.comfort-photo{min-height:430px;border-radius:26px;background:
-linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.15)),
-url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1000&q=85') center/cover}
-@media(max-width:700px){.comfort-box{grid-template-columns:1fr}.comfort-copy h2{font-size:32px}.comfort-highlight{grid-template-columns:1fr}.comfort-photo{min-height:320px}}
-</style>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "ThaiPackages.com",
+    "url": "https://thaipackages.com",
+    "description": "Customized Thailand holiday packages, private island tours, and luxury resort stays.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Thailand"
+    },
+    "currenciesAccepted": "INR, USD, THB"
+  }
+  </script>
 </head>
 <body>
-<nav><div class="container navin">
-  <div class="logo">Thai<span>Packages</span>.com</div>
-  <div class="navlinks"><a href="#packages">Packages</a><a href="#destinations">Destinations</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a></div>
-  <a class="navbtn" href="#enquire">Get a Quote</a>
-</div></nav>
 
-<header class="hero">
-<div class="container hero-content">
-  <div class="eyebrow">✦ THAILAND HOLIDAYS FOR INDIAN TRAVELLERS</div>
-  <h1>Your Thailand story starts here.</h1>
-  <p>Beautiful beaches, vibrant cities, island adventures and unforgettable experiences — planned around your dates, budget and travel style.</p>
-  <a class="cta" href="#enquire">Plan My Thailand Trip →</a>
-  <a class="cta alt" href="#packages">Explore Packages</a>
-</div>
-</header>
+  <!-- Navigation Bar -->
+  <header class="site-header transparent-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ThaiPackages.com Homepage">
+        ThaiPackages<span>.com</span>
+      </a>
 
-<div class="container">
-<div class="searchbox">
-  <div class="field"><small>Destination</small><strong>Thailand</strong></div>
-  <div class="field"><small>Travel style</small><strong>Family / Honeymoon</strong></div>
-  <div class="field"><small>Trip duration</small><strong>4–8 Nights</strong></div>
-  <button class="searchbtn" onclick="document.querySelector('#enquire').scrollIntoView({behavior:'smooth'})">Get Best Price</button>
-</div>
-</div>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-<section id="packages"><div class="container">
-<div class="sectionhead"><div><h2>Popular Thailand packages</h2><p>Handpicked itineraries that make planning simple. Customize them to match your trip.</p></div></div>
-<div class="cards">
-  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80')"><span class="tag">BESTSELLER</span></div><div class="cardbody"><h3>Bangkok + Pattaya</h3><p>City life, shopping, nightlife & island fun.</p><div class="price">From <b>₹24,999</b> / person*</div></div></article>
-  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=800&q=80')"><span class="tag">FAMILY FAVOURITE</span></div><div class="cardbody"><h3>Phuket Escape</h3><p>Beaches, Phi Phi and relaxed island days.</p><div class="price">From <b>₹29,999</b> / person*</div></div></article>
-  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=800&q=80')"><span class="tag">ROMANTIC</span></div><div class="cardbody"><h3>Krabi Getaway</h3><p>Stunning islands, sunsets and tropical scenery.</p><div class="price">From <b>₹27,999</b> / person*</div></div></article>
-  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=800&q=80')"><span class="tag">LONG WEEKEND</span></div><div class="cardbody"><h3>Bangkok + Phuket</h3><p>The perfect mix of city and beach.</p><div class="price">From <b>₹34,999</b> / person*</div></div></article>
-</div>
-</div></section>
+      <div class="nav-actions">
+        <select class="currency-select" aria-label="Select Currency">
+          <option value="INR">₹ INR</option>
+          <option value="USD">$ USD</option>
+          <option value="THB">฿ THB</option>
+        </select>
+        <a href="contact.html" class="btn btn-pill-white btn-sm">Plan a Trip</a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<section id="destinations" class="styles"><div class="container">
-<div class="sectionhead"><div><h2>Travel Thailand your way</h2><p>Choose the kind of holiday you want. We'll take care of the details.</p></div></div>
-<div class="stylegrid">
-<div class="style" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80')"><div><h3>Family Holidays</h3><p>Comfortable stays & fun-filled experiences</p></div></div>
-<div class="style" style="background-image:url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80')"><div><h3>Honeymoon</h3><p>Romantic escapes made for two</p></div></div>
-<div class="style" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80')"><div><h3>Bachelor Trips</h3><p>Nightlife, adventures & unforgettable fun</p></div></div>
-<div class="style" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80')"><div><h3>Luxury</h3><p>Premium resorts & private experiences</p></div></div>
-</div>
-</div></section>
-
-
-<section>
-<div class="container">
-  <div class="sectionhead">
-    <div><h2>See the Thailand you'll experience</h2>
-    <p>From Bangkok's temples to turquoise island waters, discover the places waiting for you.</p></div>
-  </div>
-  <div class="gallery">
-    <div class="photo big" style="background-image:url('https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1200&q=85')"><span>Thailand Islands</span></div>
-    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=85')"><span>Bangkok</span></div>
-    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=800&q=85')"><span>Phuket</span></div>
-    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=800&q=85')"><span>Krabi</span></div>
-    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=800&q=85')"><span>Thai Culture</span></div>
-  </div>
-</div>
-</section>
-
-<section id="why"><div class="container why">
-<div class="whyimg"></div>
-<div><div class="eyebrow" style="color:var(--teal);background:#e5f6f4;border:0">WHY THAIPACKAGES.COM</div><h2 style="font-size:42px;line-height:1.1;margin-top:8px">Thailand, planned around you.</h2><p style="color:var(--muted);margin-top:14px">No cookie-cutter holidays. Tell us what you want, and our Thailand team will build the right trip for you.</p>
-<div class="checks">
-<div class="check"><div class="icon">✓</div><div><b>Customized itineraries</b><p style="color:var(--muted);font-size:13px">Choose destinations, hotels, activities and pace.</p></div></div>
-<div class="check"><div class="icon">₹</div><div><b>Transparent pricing</b><p style="color:var(--muted);font-size:13px">Packages designed to suit different budgets.</p></div></div>
-<div class="check"><div class="icon">24</div><div><b>Local assistance</b><p style="color:var(--muted);font-size:13px">Support while you are travelling in Thailand.</p></div></div>
-</div></div>
-</div></section>
-
-
-<section class="indian-comfort">
-<div class="container comfort-box">
-  <div class="comfort-copy">
-    <div class="eyebrow">THAILAND WITH THE COMFORT OF HOME</div>
-    <h2>A different Thailand experience for Indian families & couples.</h2>
-    <p>Many Indian families and couples hesitate to visit Thailand due to the misconception that it is mainly a nightlife destination. <b>At ThaiPackages.com, we offer a completely different experience—family-friendly, comfortable and homely.</b></p>
-    <p>Enjoy <b>homely Indian food with your choice of menu, Telugu- and Hindi-speaking guides, and comfortable stays at trusted family-friendly hotels.</b> From your hometown to Thailand and safely back home, <b>we take care of your journey from start to finish—all at a highly affordable price.</b></p>
-    <div class="comfort-highlight">
-      <div class="comfort-item"><b>🍛 Homely Indian Food</b><span>Your choice of menu for a comfortable dining experience.</span></div>
-      <div class="comfort-item"><b>🗣️ Telugu & Hindi Guides</b><span>Easy communication and local assistance throughout your trip.</span></div>
-      <div class="comfort-item"><b>🏨 Family-Friendly Hotels</b><span>Comfortable stays at trusted, carefully selected hotels.</span></div>
-      <div class="comfort-item"><b>✈️ End-to-End Care</b><span>From your hometown to Thailand and safely back home.</span></div>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-logo">ThaiPackages<span>.com</span></span>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close Menu">&times;</button>
+      </div>
+      <ul class="drawer-menu">
+        <li><a href="packages.html">Holiday Packages <span>→</span></a></li>
+        <li><a href="destinations.html">Destinations <span>→</span></a></li>
+        <li><a href="#why-us">Why ThaiPackages <span>→</span></a></li>
+        <li><a href="#reviews">Traveller Reviews <span>→</span></a></li>
+        <li><a href="about.html">About Us <span>→</span></a></li>
+        <li><a href="contact.html">Request a Quote <span>→</span></a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--space-4); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="color: white; font-size: 14px;">Currency:</span>
+          <select class="currency-select" aria-label="Select Mobile Currency">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="THB">฿ THB</option>
+          </select>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-block">Plan Your Trip</a>
+      </div>
     </div>
   </div>
-  <div class="comfort-photo"></div>
-</div>
-</section>
 
-<section id="reviews" class="testimonials"><div class="container">
-<div class="sectionhead"><div><h2>Happy travellers</h2><p>Real experiences make the best recommendations.</p></div></div>
-<div class="reviews">
-<div class="review"><div class="stars">★★★★★</div><p>“Everything was arranged smoothly and the itinerary was perfect for our family. Phuket was unforgettable!”</p><b>— Priya, Hyderabad</b></div>
-<div class="review"><div class="stars">★★★★★</div><p>“Great hotel selection and very good coordination. We enjoyed Bangkok and Pattaya without any stress.”</p><b>— Rahul, Bengaluru</b></div>
-<div class="review"><div class="stars">★★★★★</div><p>“Our honeymoon package was customized exactly as we wanted. Excellent experience from start to finish.”</p><b>— Ananya & Kiran, Chennai</b></div>
-</div>
-</div></section>
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
+      <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2070&auto=format&fit=crop" alt="Thailand Longtail Boat in Krabi" class="hero-bg-media" fetchpriority="high">
+      <div class="hero-overlay"></div>
 
-<section id="enquire"><div class="container">
-<div class="enquiry"><div><div class="eyebrow">LET'S PLAN YOUR TRIP</div><h2>Ready to explore Thailand?</h2><p>Share a few details and we'll help you create a Thailand holiday that fits your plans and budget.</p><p style="margin-top:25px"><b>WhatsApp us for a quick response.</b></p></div>
-<form class="form" onsubmit="sendWhatsApp(event)">
-<input id="name" placeholder="Your name" required>
-<input id="phone" placeholder="WhatsApp number" required>
-<select id="trip"><option>Family holiday</option><option>Honeymoon</option><option>Bachelor trip</option><option>Friends / Group</option><option>Luxury holiday</option></select>
-<input id="dates" placeholder="Preferred travel dates">
-<textarea id="message" placeholder="Destinations or special requirements"></textarea>
-<button type="submit">Request My Thailand Quote →</button>
-</form></div>
-</div></section>
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow-badge">🌴 TAILOR-MADE PACKAGES FOR THAILAND HOLIDAYS</span>
+          <h1>Your Thailand story starts here.</h1>
+          <p>From full itineraries, vibrant cities, island afternoons and selfie-worthy destinations — planned around your dates, budget and travel style.</p>
+          
+          <div class="hero-cta-group">
+            <a href="#leadForm" class="btn btn-primary">Plan My Thailand Trip →</a>
+            <a href="packages.html" class="btn btn-secondary">Explore Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer><div class="container">
-<div class="foot"><div><h3>ThaiPackages.com</h3><p>Thailand holidays, thoughtfully planned.</p></div><div><h3>Destinations</h3><p>Bangkok · Pattaya · Phuket · Krabi</p></div><div><h3>Contact</h3>
-<p><a href="mailto:info@thaipackages.com">info@thaipackages.com</a></p>
-<p style="margin-top:10px"><b>Pattaya Office</b><br>
-207/16 Thepprasit Soi 7, Moo 12, Nong Prue,<br>
-Bang Lamung, Chonburi 20150, Thailand</p>
-<p style="margin-top:10px"><b>India Office</b><br>
-502, Surya Residency, Beside Mamatha Hospital,<br>
-Khammam, Telangana, India</p>
-</div></div>
-<div class="copy">© 2026 ThaiPackages.com · *Indicative package pricing. Final price depends on dates, hotels, inclusions and availability.</div>
-</div></footer>
-<a class="whatsapp" href="https://wa.me/" aria-label="WhatsApp">WA</a>
-<script>
-function sendWhatsApp(e){
- e.preventDefault();
- const name=document.getElementById('name').value, phone=document.getElementById('phone').value,
- trip=document.getElementById('trip').value, dates=document.getElementById('dates').value,
- msg=document.getElementById('message').value;
- const text=`Hello ThaiPackages.com!%0A%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0ATrip: ${encodeURIComponent(trip)}%0ADates: ${encodeURIComponent(dates)}%0ARequirements: ${encodeURIComponent(msg)}`;
- window.open('https://wa.me/?text='+text,'_blank');
-}
-</script>
-</body></html>
+    <!-- 2. Popular Thailand Packages Section -->
+    <section class="section py-20 md:py-24" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <h2>Popular Thailand packages</h2>
+            <p>Handpicked itineraries featuring top island day tours, comfortable transfers and hotel stays.</p>
+          </div>
+          <a href="packages.html" class="link-arrow">View All Packages →</a>
+        </div>
+
+        <div class="packages-grid w-full grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto" id="homeFeaturedGrid">
+          <!-- Package 1: Bangkok & Pattaya (Signature Lead Product) -->
+          <article class="package-card w-full" id="cardBangkokPattaya">
+            <div class="package-media-wrap">
+              <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Bangkok & Pattaya Super Saver" loading="lazy" width="600" height="450">
+              <span class="package-badge-tag">BESTSELLER</span>
+              <span class="package-duration-tag">6 Days / 5 Nights</span>
+            </div>
+            <div class="package-card-body">
+              <span class="package-destination">Bangkok + Pattaya</span>
+              <h3>Bangkok & Pattaya Super Saver</h3>
+              <p>Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private kitchen, 100% private AC transfers & VIP shows.</p>
+              
+              <div class="package-feature-pills flex flex-wrap gap-2">
+                <span class="pill-feature">🏢 3N Pattaya Condo (Kitchen)</span>
+                <span class="pill-feature">🏢 2N Bangkok Condo</span>
+                <span class="pill-feature">🍽️ Indian Food Options</span>
+                <span class="pill-feature">🚗 100% Private Transfers</span>
+              </div>
+
+              <div class="package-card-footer">
+                <div class="package-price-wrap">
+                  <span class="package-price-label">Starting Price</span>
+                  <span class="package-price-value">From ₹24,999</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm btn-open-itinerary" id="openItineraryBtn" data-target-modal="itineraryModal">
+                  View Itinerary
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 2: Phuket & Krabi -->
+          <article class="package-card w-full">
+            <div class="package-media-wrap">
+              <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80" alt="Phuket & Krabi Romantic Escape" loading="lazy" width="600" height="450">
+              <span class="package-badge-tag">COUPLE SPECIAL</span>
+              <span class="package-duration-tag">7 Days / 6 Nights</span>
+            </div>
+            <div class="package-card-body">
+              <span class="package-destination">Phuket & Krabi</span>
+              <h3>Phuket & Krabi Romantic Island Escape</h3>
+              <p>Full-day Phi Phi & Maya Bay speedboat tour, Krabi 4 Islands cruise, private airport transfers, and 4★ resort stays.</p>
+              
+              <div class="package-feature-pills flex flex-wrap gap-2">
+                <span class="pill-feature">🏖️ Beachfront Resorts</span>
+                <span class="pill-feature">🛥️ Phi Phi Speedboat</span>
+                <span class="pill-feature">🚗 100% Private AC</span>
+              </div>
+
+              <div class="package-card-footer">
+                <div class="package-price-wrap">
+                  <span class="package-price-label">Starting Price</span>
+                  <span class="package-price-value">From ₹29,999</span>
+                </div>
+                <a href="package-detail.html?pkg=phuket-krabi-romantic-escape" class="btn btn-primary btn-sm">View Itinerary</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Itinerary Modal Popup -->
+    <div id="itineraryModal" class="itinerary-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="itinerary-modal-dialog">
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close Itinerary Modal">&times;</button>
+        
+        <div class="modal-header-top">
+          <span class="package-badge-tag">SIGNATURE BESTSELLER</span>
+          <span class="package-duration-tag">5 Nights / 6 Days</span>
+        </div>
+        <h3 class="modal-title" id="modalTitle">Bangkok & Pattaya Super Saver</h3>
+        <p class="modal-subtitle">Private condo stays with kitchen access, 100% private transfers, VIP cabaret, island speedboat, and Chao Phraya luxury dinner cruise.</p>
+
+        <!-- Accommodation & Food Flexibility Highlights -->
+        <div class="modal-highlights-grid">
+          <div class="modal-highlight-card">
+            <span class="modal-highlight-icon">🏢</span>
+            <div class="modal-highlight-content">
+              <h5>Pattaya: 3 Nights</h5>
+              <p>Premium Sea-View Condo (with Private Kitchen)</p>
+            </div>
+          </div>
+          <div class="modal-highlight-card">
+            <span class="modal-highlight-icon">🏢</span>
+            <div class="modal-highlight-content">
+              <h5>Bangkok: 2 Nights</h5>
+              <p>City-Center Luxury Condo</p>
+            </div>
+          </div>
+          <div class="modal-highlight-card">
+            <span class="modal-highlight-icon">🍽️</span>
+            <div class="modal-highlight-content">
+              <h5>Dining Options</h5>
+              <p>Option A (Self-cook with groceries) vs. Option B (Daily fresh Indian partner meals)</p>
+            </div>
+          </div>
+          <div class="modal-highlight-card">
+            <span class="modal-highlight-icon">🚗</span>
+            <div class="modal-highlight-content">
+              <h5>100% Private Transfers</h5>
+              <p>Airport → Pattaya → Bangkok → Airport (Zero shared buses)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Day-by-Day Timeline -->
+        <h4 class="modal-timeline-title">Complete 5N/6D Day-by-Day Itinerary</h4>
+        <div class="modal-timeline-list">
+          <div class="modal-timeline-item">
+            <span class="modal-day-badge">Day 1</span>
+            <div class="modal-day-content">
+              <h4>Suvarnabhumi Airport Private Pickup → Transfer to Premium Sea-View Pattaya Condo → Evening at leisure</h4>
+              <p>Meet your private chauffeur directly at Bangkok Suvarnabhumi Airport. Enjoy a comfortable private AC drive to Pattaya. Check into your Premium Sea-View Condo with kitchen amenities. Evening at leisure to stroll Pattaya Beach or relax.</p>
+            </div>
+          </div>
+
+          <div class="modal-timeline-item">
+            <span class="modal-day-badge">Day 2</span>
+            <div class="modal-day-content">
+              <h4>Coral Island (Koh Larn) Speedboat Tour with Indian Lunch → Alcazar Cabaret Show (VIP Seating)</h4>
+              <p>Morning speedboat excursion to Coral Island (Koh Larn) with crystal-clear waters and white sands, followed by a delicious Indian lunch. In the evening, enjoy VIP seating at the world-famous Alcazar Cabaret Show.</p>
+            </div>
+          </div>
+
+          <div class="modal-timeline-item">
+            <span class="modal-day-badge">Day 3</span>
+            <div class="modal-day-content">
+              <h4>Pattaya City Highlights (Big Buddha & coastal viewpoints) → Free evening for night markets</h4>
+              <p>Visit the towering Big Buddha (Wat Phra Yai) and panoramic coastal viewpoints overlooking Pattaya Bay. Spend the afternoon exploring local cafes or relaxing in your condo pool, followed by vibrant evening night markets.</p>
+            </div>
+          </div>
+
+          <div class="modal-timeline-item">
+            <span class="modal-day-badge">Day 4</span>
+            <div class="modal-day-content">
+              <h4>Private Checkout Transfer to Bangkok → Check into City-Center Luxury Condo → Shopping/Leisure</h4>
+              <p>Private door-to-door transfer from Pattaya to Bangkok. Check into your City-Center Luxury Condo. Afternoon at leisure for street shopping, visiting Platinum Fashion Mall, or exploring downtown Sukhumvit.</p>
+            </div>
+          </div>
+
+          <div class="modal-timeline-item">
+            <span class="modal-day-badge">Day 5</span>
+            <div class="modal-day-content">
+              <h4>Shopping at Pratunam/MBK → Evening Chao Phraya Princess Luxury Dinner Cruise with live music</h4>
+              <p>Enjoy shopping at Pratunam, MBK Center, or ICONSIAM. In the evening, board the Chao Phraya Princess Luxury Dinner Cruise with live music, breathtaking illuminated views of Wat Arun and the Grand Palace, and a lavish buffet.</p>
+            </div>
+          </div>
+
+          <div class="modal-timeline-item">
+            <span class="modal-day-badge">Day 6</span>
+            <div class="modal-day-content">
+              <h4>Relaxed breakfast → Private Transfer to Bangkok Airport → Flight home</h4>
+              <p>Enjoy a relaxed breakfast in your condo or partner cafe. Your private AC chauffeur will transfer you directly to Suvarnabhumi or Don Mueang Airport for your return flight home.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer-cta">
+          <div class="modal-price-box">
+            <span class="modal-price-label">Starting Price</span>
+            <span class="modal-price-num" id="modalPriceVal">From ₹24,999 <small style="font-size:14px; font-weight:500; color:var(--text-muted)">/ person</small></span>
+          </div>
+          <div class="modal-action-buttons">
+            <a href="package-detail.html?pkg=bangkok-pattaya-classic-vacation" class="btn btn-secondary btn-sm">Full Details Page</a>
+            <a href="contact.html?package=Bangkok%20%2B%20Pattaya%20Super%20Saver" class="btn btn-primary btn-sm">Request Custom Quote →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Travel Thailand Your Way (Category Strip) -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <h2>Travel Thailand your way</h2>
+            <p>Choose the holiday style you want, we'll tailor every detail.</p>
+          </div>
+        </div>
+
+        <div class="travel-styles-grid">
+          <a href="packages.html" class="style-card">
+            <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=600&q=80" alt="Family Holidays in Thailand" loading="lazy">
+            <div class="style-card-overlay"></div>
+            <div class="style-card-content">
+              <h3>Family Holidays</h3>
+              <p>Theme parks, safaris & kid-friendly beach resorts</p>
+            </div>
+          </a>
+
+          <a href="packages.html" class="style-card">
+            <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=600&q=80" alt="Honeymoon in Thailand" loading="lazy">
+            <div class="style-card-overlay"></div>
+            <div class="style-card-content">
+              <h3>Honeymoon</h3>
+              <p>Private pool villas & sunset catamaran cruises</p>
+            </div>
+          </a>
+
+          <a href="packages.html" class="style-card">
+            <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=600&q=80" alt="Weekend Short Trips" loading="lazy">
+            <div class="style-card-overlay"></div>
+            <div class="style-card-content">
+              <h3>Weekend / Short Trips</h3>
+              <p>Bangkok shopping & Pattaya seaside breaks</p>
+            </div>
+          </a>
+
+          <a href="packages.html" class="style-card">
+            <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=600&q=80" alt="Luxury Travel in Thailand" loading="lazy">
+            <div class="style-card-overlay"></div>
+            <div class="style-card-content">
+              <h3>Luxury & Marine</h3>
+              <p>5-star island retreats & private boat excursions</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. See the Thailand You'll Experience (Bento Grid) -->
+    <section class="section" id="destinations">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <h2>See the Thailand you'll experience</h2>
+            <p>From gorgeous beaches to emerald karst islands, choose the places calling to you.</p>
+          </div>
+          <a href="destinations.html" class="link-arrow">Browse All Destinations →</a>
+        </div>
+
+        <div class="bento-dest-grid">
+          <!-- Big Left Featured -->
+          <a href="destination-detail.html?dest=phuket" class="bento-card featured">
+            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1200&q=85" alt="The Thai Islands" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <h3>The Thai Islands</h3>
+              <p>Phuket, Phi Phi & Krabi's dramatic limestone lagoons</p>
+            </div>
+          </a>
+
+          <!-- Right 1 -->
+          <a href="destination-detail.html?dest=bangkok" class="bento-card">
+            <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=600&q=80" alt="Bangkok" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <h3>Bangkok</h3>
+            </div>
+          </a>
+
+          <!-- Right 2 -->
+          <a href="destination-detail.html?dest=phuket" class="bento-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Phuket" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <h3>Phuket</h3>
+            </div>
+          </a>
+
+          <!-- Right 3 -->
+          <a href="destination-detail.html?dest=krabi" class="bento-card">
+            <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=600&q=80" alt="Krabi" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <h3>Krabi</h3>
+            </div>
+          </a>
+
+          <!-- Right 4 -->
+          <a href="destination-detail.html?dest=chiang-mai" class="bento-card">
+            <img src="https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=600&q=80" alt="Thai Culture Chiang Mai" loading="lazy">
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <h3>Thai Culture</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Thailand, Planned Around You (Feature Block) -->
+    <section class="section section-subtle" id="why-us">
+      <div class="container">
+        <div class="feature-split-layout">
+          <div class="feature-media-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=85" alt="Relaxing tropical beach" loading="lazy">
+          </div>
+
+          <div>
+            <span class="eyebrow-pill">WHAT YOU GET WITH US</span>
+            <h2>Thailand, planned around you.</h2>
+            <p style="margin-top: 8px;">Customized daily pacing, handpicked resorts, and certified local transfers so you don't waste time figuring things out on your own.</p>
+
+            <div class="feature-points-list">
+              <div class="feature-point-item">
+                <div class="feature-check-icon">✓</div>
+                <div class="feature-point-text">
+                  <h4>Customised itineraries</h4>
+                  <p>Tailored to your preferred travel dates, trip duration, and hotel standard.</p>
+                </div>
+              </div>
+
+              <div class="feature-point-item">
+                <div class="feature-check-icon">✓</div>
+                <div class="feature-point-text">
+                  <h4>Transparent inclusions</h4>
+                  <p>All airport transfers, national park permits, and boat trips clearly itemized upfront.</p>
+                </div>
+              </div>
+
+              <div class="feature-point-item">
+                <div class="feature-check-icon">✓</div>
+                <div class="feature-point-text">
+                  <h4>Live on-trip assistance</h4>
+                  <p>Dedicated coordinator support on WhatsApp before departure and throughout your trip.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. A Different Thailand Experience for Indian Families & Couples -->
+    <section class="section section-warm">
+      <div class="container">
+        <div class="feature-split-layout">
+          <div>
+            <span class="eyebrow-pill">SIGNATURE TAILORED EXPERIENCE</span>
+            <h2>A different Thailand experience for Indian families & couples.</h2>
+            <p style="margin: 12px 0 20px;">Travelling to Southeast Asia shouldn't feel like a rigid, cookie-cutter tour with cramped hotel rooms and shared buses. At ThaiPackages, our signature standard delivers spacious premium condos with private kitchens, 100% private door-to-door AC transfers, and tailored Indian food flexibility.</p>
+
+            <div class="feature-quad-grid">
+              <div class="quad-item">
+                <div class="quad-item-icon">🏢</div>
+                <h4>Signature Sea-View Condo (3N)</h4>
+                <p>Spacious private ocean-view condo in Pattaya with fully functional kitchen amenities.</p>
+              </div>
+
+              <div class="quad-item">
+                <div class="quad-item-icon">🏢</div>
+                <h4>Luxury City-Center Condo (2N)</h4>
+                <p>Prime downtown Bangkok condo with rooftop pool & seamless transit to shopping hubs.</p>
+              </div>
+
+              <div class="quad-item">
+                <div class="quad-item-icon">🍳</div>
+                <h4>Self-Cook / Indian Dining</h4>
+                <p>Option A (Flagship): Pre-stocked kitchen groceries & spices vs. Option B: Partner Indian meals.</p>
+              </div>
+
+              <div class="quad-item">
+                <div class="quad-item-icon">🚗</div>
+                <h4>100% Private AC Transfers</h4>
+                <p>Dedicated AC car/van exclusively for your group from arrival to departure. Zero shared buses.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-media-card">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=85" alt="Happy family travelers" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Happy Travellers (Reviews Section) -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-header centered">
+          <h2>Happy travellers</h2>
+          <p>Real experiences from recent Thailand itineraries.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Everything was perfectly planned! The private transfers in Phuket and Krabi were on time, and our Phi Phi speedboat day was unbelievable. Having WhatsApp support made travel effortless."</p>
+            <div class="review-author">Priya & Rohan Sharma</div>
+            <div class="review-trip">Phuket & Krabi Romantic Escape (7D)</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Traveling with two young kids can be challenging, but ThaiPackages took care of everything. Great hotel locations, kid-friendly Coral Island tour, and delicious Indian meal recommendations."</p>
+            <div class="review-author">Anil & Family</div>
+            <div class="review-trip">Bangkok & Pattaya Vacation (5D)</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"The 9-day itinerary gave us the perfect balance of relaxation in Krabi and temple sightseeing in Bangkok. Transparent inclusions with zero surprise costs."</p>
+            <div class="review-author">Vikram & Meera Verma</div>
+            <div class="review-trip">Grand Thailand (9D)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Final Lead Generation Card (Embedded Banner) -->
+    <div class="container" id="leadForm">
+      <div class="final-lead-card">
+        <div class="final-lead-left">
+          <span class="eyebrow-pill" style="background: rgba(255,255,255,0.15); color: #ffffff;">GET A FREE PROPOSAL</span>
+          <h2>Ready to explore Thailand?</h2>
+          <p>Share your travel dates and requirements. A Thailand travel specialist will send you a personalized quote and itinerary within 24 hours.</p>
+          <div class="wa-direct-note">
+            💬 WhatsApp us for a quick response.
+          </div>
+        </div>
+
+        <form class="final-lead-form" id="leadQuoteForm" novalidate>
+          <div id="formSuccessMessage" class="form-success-message" role="alert">
+            <strong>✓ Thank you for your inquiry!</strong><br>
+            Our Thailand travel specialist has received your request and will reach out with a personalized itinerary proposal within 24 hours.
+          </div>
+
+          <div class="form-group">
+            <label for="formName">Full Name *</label>
+            <input type="text" id="formName" name="fullName" class="form-input" placeholder="e.g. Rahul Sharma" required>
+          </div>
+
+          <div class="form-group">
+            <label for="formPhone">Phone / WhatsApp Number *</label>
+            <input type="tel" id="formPhone" name="phone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+          </div>
+
+          <div class="form-group">
+            <label for="formDestination">Destination / Style</label>
+            <select id="formDestination" name="destination" class="form-select">
+              <option value="Family Holiday">Family Holiday (Bangkok / Pattaya / Phuket)</option>
+              <option value="Honeymoon & Romantic">Honeymoon & Romantic (Phuket / Krabi)</option>
+              <option value="Grand Thailand">Grand Thailand (Phuket + Krabi + Bangkok)</option>
+              <option value="Koh Samui Luxury Villa">Koh Samui Luxury Villa Retreat</option>
+              <option value="Chiang Mai Culture">Chiang Mai Mountain Heritage</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="formDate">Approximate Travel Dates</label>
+            <input type="text" id="formDate" name="travelDate" class="form-input" placeholder="e.g. November 2026 / 6 Nights">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Request My Tailored Quote →
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="contact.html" class="floating-whatsapp-btn" id="floatingWhatsAppBtn" aria-label="Chat on WhatsApp" title="WhatsApp Consultation">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.075-1.895-.445-1.571-.648-2.586-2.247-2.664-2.352-.078-.104-.633-.843-.633-1.608 0-.765.399-1.144.542-1.299.143-.156.312-.195.416-.195.104 0 .208.002.299.006.096.004.224-.036.35.267.13.312.442 1.079.481 1.157.039.078.065.169.013.273-.052.104-.078.169-.156.26-.078.091-.163.203-.234.273-.078.078-.159.163-.068.319.091.156.403.665.865 1.077.595.531 1.097.695 1.253.773.156.078.247.065.338-.039.091-.104.39-.455.494-.611.104-.156.208-.13.351-.078.143.052.909.429 1.065.507.156.078.26.117.299.182.039.065.039.377-.105.782z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">ThaiPackages<span>.com</span></a>
+          <p>Customized Thailand holiday packages, private island tours, and vetted beachfront resort stays across Phuket, Krabi, Bangkok, Pattaya, and Koh Samui.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="destination-detail.html?dest=phuket">Phuket</a></li>
+            <li><a href="destination-detail.html?dest=krabi">Krabi</a></li>
+            <li><a href="destination-detail.html?dest=bangkok">Bangkok</a></li>
+            <li><a href="destination-detail.html?dest=pattaya">Pattaya</a></li>
+            <li><a href="destination-detail.html?dest=samui">Koh Samui</a></li>
+            <li><a href="destination-detail.html?dest=chiang-mai">Chiang Mai</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul class="footer-links">
+            <li><a href="package-detail.html?pkg=bangkok-pattaya-classic-vacation">Bangkok & Pattaya (6D/5N)</a></li>
+            <li><a href="package-detail.html?pkg=phuket-krabi-romantic-escape">Phuket & Krabi (7D/6N)</a></li>
+            <li><a href="packages.html">All Holiday Packages</a></li>
+            <li><a href="contact.html">Custom Tailored Proposal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Request a Custom Quote</a></li>
+            <li><a href="about.html">About ThaiPackages.com</a></li>
+            <li><a href="contact.html">Direct Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ThaiPackages.com. All rights reserved. Thailand Holidays Made Easy.</p>
+        <p>Ultra-Fast Static Website • Hosted on Cloudflare Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="context/index.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

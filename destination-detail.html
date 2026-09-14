@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Thailand Destination Guide & Itineraries | ThaiPackages.com</title>
+  <meta name="description" content="Discover curated Thailand itineraries, island excursions, quick facts, and vetted resort options for your journey.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header transparent-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ThaiPackages.com Homepage">
+        ThaiPackages<span>.com</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <select class="currency-select" aria-label="Select Currency">
+          <option value="INR">₹ INR</option>
+          <option value="USD">$ USD</option>
+          <option value="THB">฿ THB</option>
+        </select>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-logo">ThaiPackages<span>.com</span></span>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close Menu">&times;</button>
+      </div>
+      <ul class="drawer-menu">
+        <li><a href="destinations.html">Destinations <span>→</span></a></li>
+        <li><a href="packages.html">Holiday Packages <span>→</span></a></li>
+        <li><a href="about.html">About ThaiPackages <span>→</span></a></li>
+        <li><a href="contact.html">Request a Quote <span>→</span></a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--space-4); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="color: white; font-size: 14px;">Currency:</span>
+          <select class="currency-select" aria-label="Select Mobile Currency">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="THB">฿ THB</option>
+          </select>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-block">Plan Your Trip</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Dynamic Destination Hero -->
+    <section class="hero-section" id="destDetailHero" style="min-height: 520px; padding: 140px 0 80px;">
+      <img id="destHeroBg" src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1920&q=85" alt="Destination scenery" class="hero-bg-media">
+      <div class="hero-overlay"></div>
+      
+      <div class="container">
+        <div class="hero-inner" style="max-width: 720px;">
+          <a href="destinations.html" style="color: var(--gold-accent); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-bottom: var(--space-2);">
+            ← Back to Destinations
+          </a>
+          <h1 id="destTitle">Phuket</h1>
+          <p id="destTagline" style="font-size: 20px; font-weight: 500; color: #f3f4f6; margin-bottom: 12px;">The Pearl of the Andaman Sea</p>
+          <p id="destDesc">Thailand’s largest island, famed for dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Facts Grid -->
+    <section class="section" style="padding-top: var(--space-8); padding-bottom: var(--space-6);">
+      <div class="container">
+        <h2 style="font-size: 22px; margin-bottom: var(--space-3); color: var(--navy-800);">Destination Quick Facts</h2>
+        <div class="quick-facts-grid">
+          <div class="fact-item">
+            <div class="fact-label">Best Time to Visit</div>
+            <div class="fact-value" id="factBestTime">Nov – Apr</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Local Currency</div>
+            <div class="fact-value" id="factCurrency">Thai Baht (THB)</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Ideal Trip Length</div>
+            <div class="fact-value" id="factDuration">4 – 7 Days</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Travel Style</div>
+            <div class="fact-value" id="factStyle">Islands, Luxury Resorts, Marine Adventures</div>
+          </div>
+        </div>
+
+        <!-- Curated Highlights -->
+        <div class="detail-block" style="margin-bottom: var(--space-8);">
+          <h2>Curated Highlights & Excursions</h2>
+          <ul class="highlights-list" id="destHighlightsList">
+            <li>Speedboat day tours to Phi Phi Islands, Maya Bay, and Pileh Lagoon</li>
+            <li>Sunset panorama at Promthep Cape and Big Buddha viewpoint</li>
+            <li>Old Phuket Town Sino-Portuguese heritage architecture and street dining</li>
+            <li>Private beach clubs and luxury pool villa accommodations</li>
+          </ul>
+        </div>
+
+        <!-- Recommended Packages for this destination -->
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="eyebrow">Recommended Packages</span>
+            <h2>Curated Holiday Packages for This Destination</h2>
+            <p>Every itinerary is completely flexible and can be customized around your specific travel dates and pacing.</p>
+          </div>
+        </div>
+
+        <div id="destRecommendedPackages" class="packages-grid">
+          <!-- Populated by app.js based on destination packageSlugs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-inner">
+          <span class="eyebrow light">Custom Itineraries</span>
+          <h2>Ready to design your customized Thailand package?</h2>
+          <p>Let our specialists create a tailored proposal with beachfront resort options, private vehicle transfers, and island excursions.</p>
+          <a href="contact.html" class="btn btn-primary">Request a Custom Proposal</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="contact.html" class="floating-whatsapp-btn" id="floatingWhatsAppBtn" aria-label="Chat on WhatsApp" title="WhatsApp Consultation">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.075-1.895-.445-1.571-.648-2.586-2.247-2.664-2.352-.078-.104-.633-.843-.633-1.608 0-.765.399-1.144.542-1.299.143-.156.312-.195.416-.195.104 0 .208.002.299.006.096.004.224-.036.35.267.13.312.442 1.079.481 1.157.039.078.065.169.013.273-.052.104-.078.169-.156.26-.078.091-.163.203-.234.273-.078.078-.159.163-.068.319.091.156.403.665.865 1.077.595.531 1.097.695 1.253.773.156.078.247.065.338-.039.091-.104.39-.455.494-.611.104-.156.208-.13.351-.078.143.052.909.429 1.065.507.156.078.26.117.299.182.039.065.039.377-.105.782z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">ThaiPackages<span>.com</span></a>
+          <p>Customized Thailand holiday packages, private island tours, and vetted beachfront resort stays across Phuket, Krabi, Bangkok, Pattaya, and Koh Samui.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Top Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="destination-detail.html?dest=phuket">Phuket Holidays</a></li>
+            <li><a href="destination-detail.html?dest=krabi">Krabi Island Tours</a></li>
+            <li><a href="destination-detail.html?dest=bangkok">Bangkok City Breaks</a></li>
+            <li><a href="destination-detail.html?dest=pattaya">Pattaya Packages</a></li>
+            <li><a href="destination-detail.html?dest=samui">Koh Samui Villas</a></li>
+            <li><a href="destination-detail.html?dest=chiang-mai">Chiang Mai Culture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Holiday Packages</h4>
+          <ul class="footer-links">
+            <li><a href="package-detail.html?pkg=phuket-krabi-romantic-escape">Phuket & Krabi Escape (7D)</a></li>
+            <li><a href="package-detail.html?pkg=bangkok-pattaya-classic-vacation">Bangkok & Pattaya (6D/5N)</a></li>
+            <li><a href="package-detail.html?pkg=grand-thailand-phuket-krabi-bangkok">Grand Thailand (9D)</a></li>
+            <li><a href="package-detail.html?pkg=samui-luxury-villa-retreat">Koh Samui Villa Retreat (6D)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Inquiries</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About ThaiPackages.com</a></li>
+            <li><a href="contact.html">Request a Custom Quote</a></li>
+            <li><a href="contact.html">Direct Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ThaiPackages.com. All rights reserved. Thailand Holidays Made Easy.</p>
+        <p>Ultra-Fast Static Website • Hosted on Cloudflare Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="context/index.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Thailand Destinations Guide | ThaiPackages.com</title>
+  <meta name="description" content="Explore top Thailand travel destinations: Phuket, Krabi, Bangkok, Pattaya, Koh Samui, and Chiang Mai with curated holiday packages and travel tips.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header solid-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ThaiPackages.com Homepage">
+        ThaiPackages<span>.com</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <select class="currency-select" aria-label="Select Currency">
+          <option value="INR">₹ INR</option>
+          <option value="USD">$ USD</option>
+          <option value="THB">฿ THB</option>
+        </select>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-logo">ThaiPackages<span>.com</span></span>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close Menu">&times;</button>
+      </div>
+      <ul class="drawer-menu">
+        <li><a href="destinations.html">Destinations <span>→</span></a></li>
+        <li><a href="packages.html">Holiday Packages <span>→</span></a></li>
+        <li><a href="about.html">About ThaiPackages <span>→</span></a></li>
+        <li><a href="contact.html">Request a Quote <span>→</span></a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--space-4); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="color: white; font-size: 14px;">Currency:</span>
+          <select class="currency-select" aria-label="Select Mobile Currency">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="THB">฿ THB</option>
+          </select>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-block">Plan Your Trip</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <header class="page-intro-header">
+      <div class="container">
+        <span class="eyebrow light">Thailand Travel Guide</span>
+        <h1>Explore Thailand Destinations</h1>
+        <p>From the Andaman limestone karsts of Phuket and Krabi to the golden temples of Bangkok and the mist-shrouded hills of Chiang Mai.</p>
+      </div>
+    </header>
+
+    <!-- Destination Grid & Filter Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Region Filter Tabs -->
+        <div class="filter-bar" role="tablist" aria-label="Filter destinations by region">
+          <button class="filter-btn active" data-region="all">All Regions</button>
+          <button class="filter-btn" data-region="Andaman">Andaman Coast (Phuket / Krabi)</button>
+          <button class="filter-btn" data-region="Central">Central Thailand (Bangkok)</button>
+          <button class="filter-btn" data-region="Gulf">Gulf of Thailand (Pattaya / Samui)</button>
+          <button class="filter-btn" data-region="Northern">Northern Thailand (Chiang Mai)</button>
+        </div>
+
+        <!-- Dynamic / Accessible Grid Container -->
+        <div id="destinationsGrid" class="destinations-grid">
+          <!-- 1. Phuket -->
+          <article class="destination-card">
+            <div class="dest-media-wrap">
+              <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80" alt="Phuket, Thailand" loading="lazy" width="600" height="450">
+              <span class="dest-region-badge">Andaman Coast</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Phuket</h3>
+              <p>Thailand's premier island combining lively beach clubs, world-famous Phi Phi speedboats, and 5-star ocean villas.</p>
+              <div class="dest-card-footer">
+                <span>Best: Nov – Apr</span>
+                <a href="destination-detail.html?dest=phuket" class="link-arrow">
+                  Explore Phuket →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Krabi -->
+          <article class="destination-card">
+            <div class="dest-media-wrap">
+              <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80" alt="Krabi, Thailand" loading="lazy" width="600" height="450">
+              <span class="dest-region-badge">Andaman Coast</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Krabi</h3>
+              <p>Towering limestone cliffs rising from emerald waters, secluded Railay beaches, and world-class snorkeling reefs.</p>
+              <div class="dest-card-footer">
+                <span>Best: Nov – Apr</span>
+                <a href="destination-detail.html?dest=krabi" class="link-arrow">
+                  Explore Krabi →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Bangkok -->
+          <article class="destination-card">
+            <div class="dest-media-wrap">
+              <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Bangkok, Thailand" loading="lazy" width="600" height="450">
+              <span class="dest-region-badge">Central Thailand</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Bangkok</h3>
+              <p>A dazzling metropolis of golden temples, world-class luxury shopping malls, Michelin street food, and Chao Phraya river cruises.</p>
+              <div class="dest-card-footer">
+                <span>Best: Year-round (Peak: Nov – Feb)</span>
+                <a href="destination-detail.html?dest=bangkok" class="link-arrow">
+                  Explore Bangkok →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Pattaya -->
+          <article class="destination-card">
+            <div class="dest-media-wrap">
+              <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80" alt="Pattaya, Thailand" loading="lazy" width="600" height="450">
+              <span class="dest-region-badge">Gulf of Thailand</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Pattaya</h3>
+              <p>Vibrant coastal playground featuring Coral Island watersports, sea-view condos with private kitchen, and world-class entertainment.</p>
+              <div class="dest-card-footer">
+                <span>Best: Nov – Apr</span>
+                <a href="destination-detail.html?dest=pattaya" class="link-arrow">
+                  Explore Pattaya →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Koh Samui -->
+          <article class="destination-card">
+            <div class="dest-media-wrap">
+              <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80" alt="Koh Samui, Thailand" loading="lazy" width="600" height="450">
+              <span class="dest-region-badge">Gulf of Thailand</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Koh Samui</h3>
+              <p>Palm-fringed luxury island boasting 5-star private pool villas, yacht charters to Ang Thong Marine Park, and serene wellness retreats.</p>
+              <div class="dest-card-footer">
+                <span>Best: Dec – Sep</span>
+                <a href="destination-detail.html?dest=samui" class="link-arrow">
+                  Explore Koh Samui →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Chiang Mai -->
+          <article class="destination-card">
+            <div class="dest-media-wrap">
+              <img src="https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=800&q=80" alt="Chiang Mai, Thailand" loading="lazy" width="600" height="450">
+              <span class="dest-region-badge">Northern Thailand</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Chiang Mai</h3>
+              <p>The cultural heart of the north: mist-shrouded mountain sanctuaries, ethical elephant care, and ancient golden Lanna temples.</p>
+              <div class="dest-card-footer">
+                <span>Best: Oct – Feb</span>
+                <a href="destination-detail.html?dest=chiang-mai" class="link-arrow">
+                  Explore Chiang Mai →
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-inner">
+          <span class="eyebrow light">Multi-City Planning</span>
+          <h2>Want to combine multiple destinations in Thailand?</h2>
+          <p>Our specialists design seamless multi-city holiday packages with internal transfers, domestic flights, and vetted hotel stays.</p>
+          <a href="contact.html" class="btn btn-primary">Request a Custom Multi-City Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="contact.html" class="floating-whatsapp-btn" id="floatingWhatsAppBtn" aria-label="Chat on WhatsApp" title="WhatsApp Consultation">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.075-1.895-.445-1.571-.648-2.586-2.247-2.664-2.352-.078-.104-.633-.843-.633-1.608 0-.765.399-1.144.542-1.299.143-.156.312-.195.416-.195.104 0 .208.002.299.006.096.004.224-.036.35.267.13.312.442 1.079.481 1.157.039.078.065.169.013.273-.052.104-.078.169-.156.26-.078.091-.163.203-.234.273-.078.078-.159.163-.068.319.091.156.403.665.865 1.077.595.531 1.097.695 1.253.773.156.078.247.065.338-.039.091-.104.39-.455.494-.611.104-.156.208-.13.351-.078.143.052.909.429 1.065.507.156.078.26.117.299.182.039.065.039.377-.105.782z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">ThaiPackages<span>.com</span></a>
+          <p>Customized Thailand holiday packages, private island tours, and vetted beachfront resort stays across Phuket, Krabi, Bangkok, Pattaya, and Koh Samui.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Top Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="destination-detail.html?dest=phuket">Phuket Holidays</a></li>
+            <li><a href="destination-detail.html?dest=krabi">Krabi Island Tours</a></li>
+            <li><a href="destination-detail.html?dest=bangkok">Bangkok City Breaks</a></li>
+            <li><a href="destination-detail.html?dest=pattaya">Pattaya Packages</a></li>
+            <li><a href="destination-detail.html?dest=samui">Koh Samui Villas</a></li>
+            <li><a href="destination-detail.html?dest=chiang-mai">Chiang Mai Culture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Holiday Packages</h4>
+          <ul class="footer-links">
+            <li><a href="package-detail.html?pkg=phuket-krabi-romantic-escape">Phuket & Krabi Escape (7D)</a></li>
+            <li><a href="package-detail.html?pkg=bangkok-pattaya-classic-vacation">Bangkok & Pattaya (6D/5N)</a></li>
+            <li><a href="package-detail.html?pkg=grand-thailand-phuket-krabi-bangkok">Grand Thailand (9D)</a></li>
+            <li><a href="package-detail.html?pkg=samui-luxury-villa-retreat">Koh Samui Villa Retreat (6D)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Inquiries</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About ThaiPackages.com</a></li>
+            <li><a href="contact.html">Request a Custom Quote</a></li>
+            <li><a href="contact.html">Direct Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ThaiPackages.com. All rights reserved. Thailand Holidays Made Easy.</p>
+        <p>Ultra-Fast Static Website • Hosted on Cloudflare Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="context/index.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
