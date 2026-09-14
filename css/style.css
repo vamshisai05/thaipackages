@@ -1777,7 +1777,7 @@ details[open] .itinerary-chevron {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Comprehensive Responsive Breakpoints (Mobile, Tablet, Desktop, Wide)
    ========================================================================== */
 
 @media (max-width: 1024px) {
@@ -1790,6 +1790,7 @@ details[open] .itinerary-chevron {
   .bento-dest-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    gap: 16px;
   }
   .bento-card.featured {
     grid-row: auto;
@@ -1802,10 +1803,12 @@ details[open] .itinerary-chevron {
   }
   .final-lead-card {
     grid-template-columns: 1fr;
-    padding: 32px 24px;
+    padding: 36px 24px;
+    gap: 28px;
   }
   .package-detail-layout {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
   .package-sidebar {
     display: none;
@@ -1813,41 +1816,176 @@ details[open] .itinerary-chevron {
   .mobile-conversion-bar {
     display: flex;
   }
+  .floating-whatsapp-btn {
+    bottom: 84px;
+  }
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 28px;
   }
 }
 
 @media (max-width: 768px) {
-  .planner-card {
-    grid-template-columns: 1fr;
+  .section {
+    padding: 60px 0;
+  }
+  .section-header {
+    margin-bottom: 28px;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
   }
-  .planner-field {
-    border-right: none;
-    border-bottom: 1px solid var(--border-subtle);
-    padding-bottom: 8px;
-    padding-right: 0;
+  .section-header.centered {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-section {
+    padding: 130px 0 60px;
+    min-height: auto;
+  }
+  .hero-inner h1 {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+  .hero-inner p {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+  .hero-cta-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
   }
   .bento-dest-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
+  .bento-card,
   .bento-card.featured {
     grid-column: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    padding: 20px;
   }
   .feature-quad-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   .inc-exc-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .footer-top-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   .footer-bottom {
     flex-direction: column;
     gap: 8px;
     text-align: center;
+  }
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+  }
+  .final-lead-card {
+    padding: 28px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .final-lead-form {
+    padding: 20px 16px;
+  }
+  .package-card-body {
+    padding: 20px 16px;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .travel-styles-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .site-header {
+    height: 68px;
+  }
+  .brand-logo {
+    font-size: 19px;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .currency-select {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .nav-actions .btn-sm {
+    display: none; /* Keep header clean on ultra-small screens; drawer CTA is available */
+  }
+  .package-badge-tag,
+  .package-category-tag,
+  .dest-region-badge {
+    top: 10px;
+    left: 10px;
+    font-size: 9.5px;
+    padding: 4px 9px;
+  }
+  .package-duration-tag {
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    padding: 4px 9px;
+  }
+  .package-price-value {
+    font-size: 16px;
+  }
+  .package-card-footer {
+    gap: 8px;
+  }
+  .pill-feature {
+    font-size: 10.5px;
+    padding: 3px 7px;
+  }
+  .itinerary-modal {
+    padding: 12px;
+  }
+  .itinerary-modal-dialog {
+    padding: 22px 14px;
+    border-radius: var(--radius-md);
+  }
+  .modal-highlights-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+  .modal-timeline-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .modal-day-badge {
+    align-self: flex-start;
+  }
+  .floating-whatsapp-btn {
+    width: 48px;
+    height: 48px;
+    right: 16px;
+    bottom: 80px;
+  }
+  .floating-whatsapp-btn svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
