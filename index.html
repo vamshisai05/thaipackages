@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThaiPackages.com | Thailand Holidays Made Easy</title>
+<meta name="description" content="Thailand holiday packages for Indian travellers. Explore Bangkok, Phuket, Krabi and Pattaya with customized family, honeymoon and group holidays.">
+<style>
+:root{
+  --ink:#12333b; --teal:#00a6a6; --teal2:#007f86; --gold:#f4b942;
+  --cream:#f7fbfa; --white:#fff; --muted:#64777d; --shadow:0 18px 50px rgba(18,51,59,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+nav{position:absolute;z-index:5;top:0;left:0;right:0;padding:22px 0;color:white}
+.navin{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:28px;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--gold)}
+.navbtn{background:white;color:var(--ink);padding:11px 18px;border-radius:30px;font-weight:800;font-size:14px}
+.hero{min-height:680px;color:white;display:flex;align-items:center;position:relative;overflow:hidden;
+background:linear-gradient(90deg,rgba(5,31,38,.78),rgba(5,31,38,.30)),url("https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero:after{content:"";position:absolute;bottom:-80px;right:-50px;width:340px;height:340px;border-radius:50%;background:rgba(244,185,66,.13)}
+.hero-content{max-width:720px;padding-top:70px}.eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:30px;font-size:13px;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
+.hero p{font-size:19px;max-width:590px;color:#eef7f6;margin-bottom:30px}
+.cta{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#17343a;padding:15px 23px;border-radius:32px;font-weight:900;box-shadow:0 10px 30px rgba(244,185,66,.25)}
+.cta.alt{background:white;margin-left:10px}
+.searchbox{background:white;color:var(--ink);padding:16px;border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:10px;margin-top:-45px;position:relative;z-index:4}
+.field{padding:10px 14px;border:1px solid #e1e9e9;border-radius:12px}.field small{display:block;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase}.field strong{font-size:14px}
+.searchbtn{border:0;background:var(--teal);color:white;padding:0 23px;border-radius:12px;font-weight:900;cursor:pointer}
+section{padding:85px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.sectionhead h2{font-size:38px;letter-spacing:-1.5px}.sectionhead p{color:var(--muted);max-width:480px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(18,51,59,.07);transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.cardimg{height:190px;background-size:cover;background-position:center;position:relative}.tag{position:absolute;top:13px;left:13px;background:white;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:900}
+.cardbody{padding:19px}.cardbody h3{font-size:21px}.cardbody p{color:var(--muted);font-size:13px;margin:5px 0 14px}.price{font-size:14px}.price b{font-size:22px;color:var(--teal2)}
+.styles{background:#12333b;color:white}.styles .sectionhead p{color:#bcd0d2}.stylegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.style{height:220px;border-radius:20px;display:flex;align-items:end;padding:20px;background-size:cover;background-position:center;position:relative;overflow:hidden}.style:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.72))}.style div{position:relative}.style h3{font-size:21px}.style p{font-size:12px;color:#dce8e8}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.whyimg{height:470px;border-radius:28px;background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85") center/cover}.checks{display:grid;gap:18px;margin-top:25px}.check{display:flex;gap:14px}.icon{width:40px;height:40px;flex:none;border-radius:12px;background:#e4f7f5;display:grid;place-items:center;color:var(--teal);font-weight:900}
+.testimonials{background:#eef7f6}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:white;padding:25px;border-radius:20px}.stars{color:#f4b942;letter-spacing:2px}.review p{margin:13px 0;color:#52696e}.review b{font-size:14px}
+.enquiry{background:linear-gradient(135deg,#007f86,#12333b);color:white;border-radius:28px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:45px}.enquiry h2{font-size:40px;line-height:1.1}.enquiry p{color:#c8dcde;margin-top:14px}.form{background:white;border-radius:20px;padding:22px;display:grid;gap:12px}.form input,.form select,.form textarea{width:100%;border:1px solid #dbe6e6;padding:13px;border-radius:10px;font:inherit}.form textarea{min-height:85px}.form button{border:0;background:var(--gold);padding:14px;border-radius:12px;font-weight:900;color:#17343a;cursor:pointer}
+footer{background:#09252b;color:#b8cccf;padding:45px 0 25px}.foot{display:flex;justify-content:space-between;gap:30px}.foot h3{color:white;margin-bottom:8px}.foot p{font-size:13px}.copy{border-top:1px solid #24444a;margin-top:30px;padding-top:18px;font-size:12px}
+.whatsapp{position:fixed;right:22px;bottom:22px;background:#25d366;color:white;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:13px;box-shadow:0 8px 25px rgba(0,0,0,.22);z-index:10}
+@media(max-width:850px){.navlinks{display:none}.searchbox{grid-template-columns:1fr 1fr}.searchbtn{padding:14px}.cards,.stylegrid{grid-template-columns:1fr 1fr}.why,.enquiry{grid-template-columns:1fr}.whyimg{height:330px}.reviews{grid-template-columns:1fr}.enquiry{padding:30px}.foot{flex-direction:column}}
+@media(max-width:520px){h1{letter-spacing:-2px}.hero{min-height:620px}.hero p{font-size:16px}.cta.alt{display:none}.searchbox{grid-template-columns:1fr;margin-top:-25px}.cards,.stylegrid{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead h2{font-size:31px;margin-bottom:8px}section{padding:60px 0}}
+
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:190px 190px;gap:12px}
+.gallery .photo{border-radius:18px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.gallery .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.gallery .photo span{position:absolute;z-index:1;bottom:14px;left:16px;color:white;font-weight:900;font-size:18px}
+.gallery .big{grid-row:span 2}
+@media(max-width:700px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.gallery .big{grid-row:span 1;grid-column:span 2}}
+
+.indian-comfort{background:#fff7e7}
+.comfort-box{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+.comfort-copy .eyebrow{color:#007f86;background:#e5f6f4;border:0}
+.comfort-copy h2{font-size:42px;line-height:1.12;letter-spacing:-1.5px;margin:8px 0 16px}
+.comfort-copy p{color:#536a70;margin:0 0 15px;font-size:16px}
+.comfort-highlight{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.comfort-item{background:white;border:1px solid #eee2c9;border-radius:15px;padding:16px}
+.comfort-item b{display:block;margin-bottom:4px}
+.comfort-item span{font-size:12px;color:#65777b}
+.comfort-photo{min-height:430px;border-radius:26px;background:
+linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.15)),
+url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1000&q=85') center/cover}
+@media(max-width:700px){.comfort-box{grid-template-columns:1fr}.comfort-copy h2{font-size:32px}.comfort-highlight{grid-template-columns:1fr}.comfort-photo{min-height:320px}}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <div class="logo">Thai<span>Packages</span>.com</div>
+  <div class="navlinks"><a href="#packages">Packages</a><a href="#destinations">Destinations</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a></div>
+  <a class="navbtn" href="#enquire">Get a Quote</a>
+</div></nav>
+
+<header class="hero">
+<div class="container hero-content">
+  <div class="eyebrow">✦ THAILAND HOLIDAYS FOR INDIAN TRAVELLERS</div>
+  <h1>Your Thailand story starts here.</h1>
+  <p>Beautiful beaches, vibrant cities, island adventures and unforgettable experiences — planned around your dates, budget and travel style.</p>
+  <a class="cta" href="#enquire">Plan My Thailand Trip →</a>
+  <a class="cta alt" href="#packages">Explore Packages</a>
+</div>
+</header>
+
+<div class="container">
+<div class="searchbox">
+  <div class="field"><small>Destination</small><strong>Thailand</strong></div>
+  <div class="field"><small>Travel style</small><strong>Family / Honeymoon</strong></div>
+  <div class="field"><small>Trip duration</small><strong>4–8 Nights</strong></div>
+  <button class="searchbtn" onclick="document.querySelector('#enquire').scrollIntoView({behavior:'smooth'})">Get Best Price</button>
+</div>
+</div>
+
+<section id="packages"><div class="container">
+<div class="sectionhead"><div><h2>Popular Thailand packages</h2><p>Handpicked itineraries that make planning simple. Customize them to match your trip.</p></div></div>
+<div class="cards">
+  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80')"><span class="tag">BESTSELLER</span></div><div class="cardbody"><h3>Bangkok + Pattaya</h3><p>City life, shopping, nightlife & island fun.</p><div class="price">From <b>₹24,999</b> / person*</div></div></article>
+  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=800&q=80')"><span class="tag">FAMILY FAVOURITE</span></div><div class="cardbody"><h3>Phuket Escape</h3><p>Beaches, Phi Phi and relaxed island days.</p><div class="price">From <b>₹29,999</b> / person*</div></div></article>
+  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=800&q=80')"><span class="tag">ROMANTIC</span></div><div class="cardbody"><h3>Krabi Getaway</h3><p>Stunning islands, sunsets and tropical scenery.</p><div class="price">From <b>₹27,999</b> / person*</div></div></article>
+  <article class="card"><div class="cardimg" style="background-image:url('https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=800&q=80')"><span class="tag">LONG WEEKEND</span></div><div class="cardbody"><h3>Bangkok + Phuket</h3><p>The perfect mix of city and beach.</p><div class="price">From <b>₹34,999</b> / person*</div></div></article>
+</div>
+</div></section>
+
+<section id="destinations" class="styles"><div class="container">
+<div class="sectionhead"><div><h2>Travel Thailand your way</h2><p>Choose the kind of holiday you want. We'll take care of the details.</p></div></div>
+<div class="stylegrid">
+<div class="style" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80')"><div><h3>Family Holidays</h3><p>Comfortable stays & fun-filled experiences</p></div></div>
+<div class="style" style="background-image:url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80')"><div><h3>Honeymoon</h3><p>Romantic escapes made for two</p></div></div>
+<div class="style" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80')"><div><h3>Bachelor Trips</h3><p>Nightlife, adventures & unforgettable fun</p></div></div>
+<div class="style" style="background-image:url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80')"><div><h3>Luxury</h3><p>Premium resorts & private experiences</p></div></div>
+</div>
+</div></section>
+
+
+<section>
+<div class="container">
+  <div class="sectionhead">
+    <div><h2>See the Thailand you'll experience</h2>
+    <p>From Bangkok's temples to turquoise island waters, discover the places waiting for you.</p></div>
+  </div>
+  <div class="gallery">
+    <div class="photo big" style="background-image:url('https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1200&q=85')"><span>Thailand Islands</span></div>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=85')"><span>Bangkok</span></div>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=800&q=85')"><span>Phuket</span></div>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=800&q=85')"><span>Krabi</span></div>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=800&q=85')"><span>Thai Culture</span></div>
+  </div>
+</div>
+</section>
+
+<section id="why"><div class="container why">
+<div class="whyimg"></div>
+<div><div class="eyebrow" style="color:var(--teal);background:#e5f6f4;border:0">WHY THAIPACKAGES.COM</div><h2 style="font-size:42px;line-height:1.1;margin-top:8px">Thailand, planned around you.</h2><p style="color:var(--muted);margin-top:14px">No cookie-cutter holidays. Tell us what you want, and our Thailand team will build the right trip for you.</p>
+<div class="checks">
+<div class="check"><div class="icon">✓</div><div><b>Customized itineraries</b><p style="color:var(--muted);font-size:13px">Choose destinations, hotels, activities and pace.</p></div></div>
+<div class="check"><div class="icon">₹</div><div><b>Transparent pricing</b><p style="color:var(--muted);font-size:13px">Packages designed to suit different budgets.</p></div></div>
+<div class="check"><div class="icon">24</div><div><b>Local assistance</b><p style="color:var(--muted);font-size:13px">Support while you are travelling in Thailand.</p></div></div>
+</div></div>
+</div></section>
+
+
+<section class="indian-comfort">
+<div class="container comfort-box">
+  <div class="comfort-copy">
+    <div class="eyebrow">THAILAND WITH THE COMFORT OF HOME</div>
+    <h2>A different Thailand experience for Indian families & couples.</h2>
+    <p>Many Indian families and couples hesitate to visit Thailand due to the misconception that it is mainly a nightlife destination. <b>At ThaiPackages.com, we offer a completely different experience—family-friendly, comfortable and homely.</b></p>
+    <p>Enjoy <b>homely Indian food with your choice of menu, Telugu- and Hindi-speaking guides, and comfortable stays at trusted family-friendly hotels.</b> From your hometown to Thailand and safely back home, <b>we take care of your journey from start to finish—all at a highly affordable price.</b></p>
+    <div class="comfort-highlight">
+      <div class="comfort-item"><b>🍛 Homely Indian Food</b><span>Your choice of menu for a comfortable dining experience.</span></div>
+      <div class="comfort-item"><b>🗣️ Telugu & Hindi Guides</b><span>Easy communication and local assistance throughout your trip.</span></div>
+      <div class="comfort-item"><b>🏨 Family-Friendly Hotels</b><span>Comfortable stays at trusted, carefully selected hotels.</span></div>
+      <div class="comfort-item"><b>✈️ End-to-End Care</b><span>From your hometown to Thailand and safely back home.</span></div>
+    </div>
+  </div>
+  <div class="comfort-photo"></div>
+</div>
+</section>
+
+<section id="reviews" class="testimonials"><div class="container">
+<div class="sectionhead"><div><h2>Happy travellers</h2><p>Real experiences make the best recommendations.</p></div></div>
+<div class="reviews">
+<div class="review"><div class="stars">★★★★★</div><p>“Everything was arranged smoothly and the itinerary was perfect for our family. Phuket was unforgettable!”</p><b>— Priya, Hyderabad</b></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Great hotel selection and very good coordination. We enjoyed Bangkok and Pattaya without any stress.”</p><b>— Rahul, Bengaluru</b></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Our honeymoon package was customized exactly as we wanted. Excellent experience from start to finish.”</p><b>— Ananya & Kiran, Chennai</b></div>
+</div>
+</div></section>
+
+<section id="enquire"><div class="container">
+<div class="enquiry"><div><div class="eyebrow">LET'S PLAN YOUR TRIP</div><h2>Ready to explore Thailand?</h2><p>Share a few details and we'll help you create a Thailand holiday that fits your plans and budget.</p><p style="margin-top:25px"><b>WhatsApp us for a quick response.</b></p></div>
+<form class="form" onsubmit="sendWhatsApp(event)">
+<input id="name" placeholder="Your name" required>
+<input id="phone" placeholder="WhatsApp number" required>
+<select id="trip"><option>Family holiday</option><option>Honeymoon</option><option>Bachelor trip</option><option>Friends / Group</option><option>Luxury holiday</option></select>
+<input id="dates" placeholder="Preferred travel dates">
+<textarea id="message" placeholder="Destinations or special requirements"></textarea>
+<button type="submit">Request My Thailand Quote →</button>
+</form></div>
+</div></section>
+
+<footer><div class="container">
+<div class="foot"><div><h3>ThaiPackages.com</h3><p>Thailand holidays, thoughtfully planned.</p></div><div><h3>Destinations</h3><p>Bangkok · Pattaya · Phuket · Krabi</p></div><div><h3>Contact</h3>
+<p><a href="mailto:info@thaipackages.com">info@thaipackages.com</a></p>
+<p style="margin-top:10px"><b>Pattaya Office</b><br>
+207/16 Thepprasit Soi 7, Moo 12, Nong Prue,<br>
+Bang Lamung, Chonburi 20150, Thailand</p>
+<p style="margin-top:10px"><b>India Office</b><br>
+502, Surya Residency, Beside Mamatha Hospital,<br>
+Khammam, Telangana, India</p>
+</div></div>
+<div class="copy">© 2026 ThaiPackages.com · *Indicative package pricing. Final price depends on dates, hotels, inclusions and availability.</div>
+</div></footer>
+<a class="whatsapp" href="https://wa.me/" aria-label="WhatsApp">WA</a>
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value, phone=document.getElementById('phone').value,
+ trip=document.getElementById('trip').value, dates=document.getElementById('dates').value,
+ msg=document.getElementById('message').value;
+ const text=`Hello ThaiPackages.com!%0A%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(phone)}%0ATrip: ${encodeURIComponent(trip)}%0ADates: ${encodeURIComponent(dates)}%0ARequirements: ${encodeURIComponent(msg)}`;
+ window.open('https://wa.me/?text='+text,'_blank');
+}
+</script>
+</body></html>
