@@ -104,16 +104,18 @@
       duration: { days: 6, nights: 5 },
       durationDays: 6,
       durationNights: 5,
-      startingPriceINR: 24999,
-      startingPriceUSD: 360,
-      startingPriceTHB: 12900,
+      startingPriceINR: 19900,
+      startingPriceUSD: 290,
+      startingPriceTHB: 10500,
       heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private kitchen, 100% private AC transfers & VIP shows.",
-      description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, and a Chao Phraya luxury dinner cruise.",
+      shortDescription: "Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private kitchen, 100% private AC transfers & Telugu-speaking guides.",
+      description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, Chao Phraya luxury dinner cruise, and 100% Telugu-speaking guide options.",
       highlights: [
         "3 Nights in Pattaya in a Premium Sea-View Condo (with Private Kitchen)",
         "2 Nights in Bangkok in a City-Center Luxury Condo",
+        "🗣️ 100% Telugu-Speaking Guides & Dedicated Local Coordinators Available",
+        "🎉 25% Discount on Group Packages (4+ Travelers)",
         "Food Flexibility: Option A (Self-cook with groceries) or Option B (Daily fresh Indian meals)",
         "Alcazar Cabaret Show (VIP Seating)",
         "Coral Island (Koh Larn) Speedboat Tour with Indian Lunch",
@@ -914,28 +916,58 @@
     }
 
     // ==========================================================================
-    // 9. Centralized Contact / Footer Info Sanitization
+    // 9. Centralized Contact / Sticky Actions & Footer Info
     // ==========================================================================
     // Ensure all elements with data-context-field or contact placeholders render safely
-    const waLinks = document.querySelectorAll('a[href*="wa.me"]');
-    waLinks.forEach(link => {
-      if (typeof isContactConfigured === 'function' && !isContactConfigured(CONTACT.whatsappNumber)) {
-        link.href = 'contact.html';
-        link.removeAttribute('target');
-      }
-    });
-
-    // Floating WhatsApp Button
-    const floatingWhatsAppBtn = document.getElementById('floatingWhatsAppBtn');
-    if (floatingWhatsAppBtn) {
-      if (typeof isContactConfigured === 'function' && isContactConfigured(CONTACT.whatsappNumber)) {
-        floatingWhatsAppBtn.href = getWhatsAppUrl(`Hello ${BRAND.name || 'ThaiPackages.com'}! I'm planning a Thailand holiday and would like to ask a few questions.`);
-        floatingWhatsAppBtn.target = '_blank';
-        floatingWhatsAppBtn.rel = 'noopener noreferrer';
-      } else {
-        floatingWhatsAppBtn.href = 'contact.html';
-      }
+    // Global Sticky Action Buttons: WhatsApp & Direct Phone Call
+    const stickyWhatsAppBtn = document.getElementById('stickyWhatsAppBtn') || document.getElementById('floatingWhatsAppBtn');
+    if (stickyWhatsAppBtn) {
+      stickyWhatsAppBtn.href = 'https://wa.me/918121214181';
+      stickyWhatsAppBtn.target = '_blank';
+      stickyWhatsAppBtn.rel = 'noopener noreferrer';
     }
+
+    const stickyPhoneBtn = document.getElementById('stickyPhoneBtn');
+    if (stickyPhoneBtn) {
+      stickyPhoneBtn.href = 'tel:+918121214181';
+    }
+
+    // Check if mobile conversion bar is present and tag body for CSS offset
+    const mobileConversionBar = document.getElementById('mobileConversionBar');
+    if (mobileConversionBar) {
+      document.body.classList.add('has-mobile-bar');
+    }
+
+    // Clean any stray AI asterisks (**) from text nodes
+    function removeAsterisksFromTextNodes(element) {
+      if (!element) return;
+      const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            // Ignore script or style content
+            if (node.parentElement && ['SCRIPT', 'STYLE', 'CODE', 'PRE'].includes(node.parentElement.tagName)) {
+              return NodeFilter.FILTER_REJECT;
+            }
+            return node.nodeValue && node.nodeValue.includes('**') ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+          }
+        },
+        false
+      );
+
+      const nodesToUpdate = [];
+      while (walker.nextNode()) {
+        nodesToUpdate.push(walker.currentNode);
+      }
+
+      nodesToUpdate.forEach(node => {
+        node.nodeValue = node.nodeValue.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*\*/g, '');
+      });
+    }
+
+    removeAsterisksFromTextNodes(document.body);
 
   });
 })();
+

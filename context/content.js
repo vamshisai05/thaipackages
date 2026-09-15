@@ -5,9 +5,9 @@
 
 export const CONTENT = {
   home: {
-    heroBadge: "🌴 TAILOR-MADE PACKAGES FOR THAILAND HOLIDAYS",
+    heroBadge: "🌴 TAILOR-MADE PACKAGES FOR THAILAND HOLIDAYS • 25% OFF GROUP PACKAGES",
     heroTitle: "Your Thailand story starts here.",
-    heroSubtitle: "From full itineraries, vibrant cities, island afternoons and selfie-worthy destinations — planned around your dates, budget and travel style.",
+    heroSubtitle: "Curated itineraries, luxury condo stays with private kitchen, 100% private transfers, and 100% Telugu-speaking guides — starting from ₹19,900 per person.",
     heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2070&auto=format&fit=crop",
     heroPrimaryCTA: "Plan My Thailand Trip",
     heroSecondaryCTA: "Explore Packages"
@@ -47,9 +47,13 @@ export const CONTENT = {
   valueProps: {
     badge: "WHAT YOU GET WITH US",
     title: "Thailand, planned around you.",
-    subtitle: "Customized daily pacing, handpicked resorts, and certified local transfers so you don't waste time figuring things out on your own.",
+    subtitle: "Customized daily pacing, handpicked resorts, 100% Telugu-speaking guides, and certified private transfers so you don't waste time figuring things out on your own.",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=85",
     points: [
+      {
+        title: "100% Telugu-Speaking Guides",
+        description: "Feel completely at home with dedicated Telugu-speaking destination coordinators and chauffeurs."
+      },
       {
         title: "Customised itineraries",
         description: "Tailored to your preferred travel dates, trip duration, and hotel standard."
@@ -68,13 +72,18 @@ export const CONTENT = {
   tailoredExperience: {
     badge: "SIGNATURE TAILORED EXPERIENCE",
     title: "Accessible luxury for Indian families, couples & travelers.",
-    description: "Travelling to Thailand shouldn't feel like a rigid, cookie-cutter tour with cramped hotel rooms and shared buses. At ThaiPackages, our signature standard delivers spacious premium condos with private kitchen access, 100% private door-to-door AC transfers, and complete Indian dining flexibility.",
+    description: "Travelling to Thailand shouldn't feel like a rigid, cookie-cutter tour with cramped hotel rooms and shared buses. At ThaiPackages, our signature standard delivers spacious premium condos with private kitchen access, 100% private door-to-door AC transfers, 100% Telugu-speaking guides, and complete Indian dining flexibility.",
     image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=85",
     features: [
       {
         icon: "🏢",
         title: "Signature Premium Condos (Flagship)",
         description: "Spacious private sea-view and city-center apartments with fully functional kitchens and resort amenities. 3★/4★ hotels available as alternatives."
+      },
+      {
+        icon: "🗣️",
+        title: "100% Telugu-Speaking Guides",
+        description: "Dedicated Telugu-speaking local coordinators and chauffeurs available on request for effortless family travel."
       },
       {
         icon: "🍳",
@@ -89,7 +98,7 @@ export const CONTENT = {
       {
         icon: "📋",
         title: "Direct & Itemized Pricing",
-        description: "Clear, transparent pricing starting from ₹24,999 with all private transfers and inclusions itemized upfront."
+        description: "Clear, transparent pricing starting from ₹19,900 with all private transfers and inclusions itemized upfront."
       }
     ]
   },

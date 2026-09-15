@@ -5,14 +5,14 @@
 
 export const NAVIGATION = [
   {
-    label: "Destinations",
-    href: "destinations.html",
-    description: "Explore Phuket, Krabi, Bangkok, Pattaya, Koh Samui, and Chiang Mai"
-  },
-  {
     label: "Packages",
     href: "packages.html",
     description: "Curated 5 to 9-day Thailand holiday itineraries"
+  },
+  {
+    label: "Destinations",
+    href: "destinations.html",
+    description: "Explore Phuket, Krabi, Bangkok, Pattaya, Koh Samui, and Chiang Mai"
   },
   {
     label: "About",
@@ -23,6 +23,24 @@ export const NAVIGATION = [
     label: "Contact",
     href: "contact.html",
     description: "Request a custom quotation or inquire on WhatsApp"
+  }
+];
+
+export const TRAVELER_SERVICES_NAVIGATION = [
+  {
+    label: "Apply for Passport",
+    href: "passport.html",
+    description: "Step-by-step guide and document checklist to apply for an Indian passport"
+  },
+  {
+    label: "Thailand Visa Services",
+    href: "visa.html",
+    description: "60-day visa exemption rules and required entry documents"
+  },
+  {
+    label: "Digital Arrival Card",
+    href: "digital-arrival-card.html",
+    description: "Free Thailand Digital Arrival Card guidance and accommodation templates"
   }
 ];
 

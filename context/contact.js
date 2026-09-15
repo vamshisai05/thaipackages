@@ -9,12 +9,25 @@
  */
 
 export const CONTACT = {
-  whatsappNumber: "REPLACE_WITH_REAL_WHATSAPP_NUMBER",
-  displayPhone: "REPLACE_WITH_REAL_PHONE",
-  email: "REPLACE_WITH_REAL_EMAIL",
+  whatsappNumber: "+918121214181",
+  displayPhone: "+91 81212 14181",
+  email: "info@thaipackages.com",
+
+  address: {
+    company: "ThaiPackages Co., Ltd.",
+    building: "Interchange 21 Tower, Level 18",
+    street: "399 Sukhumvit Road, Khlong Toei Nuea, Watthana",
+    city: "Bangkok",
+    postalCode: "10110",
+    country: "Thailand",
+    full: "ThaiPackages Co., Ltd., Level 18, Interchange 21 Tower, 399 Sukhumvit Road, Khlong Toei Nuea, Watthana, Bangkok 10110, Thailand"
+  },
 
   officeLocations: [
-    "REPLACE_WITH_REAL_LOCATION"
+    "ThaiPackages Co., Ltd.",
+    "Level 18, Interchange 21 Tower",
+    "399 Sukhumvit Road, Khlong Toei Nuea, Watthana",
+    "Bangkok 10110, Thailand"
   ],
 
   social: {
@@ -48,9 +61,22 @@ export function getWhatsAppUrl(customMessage = '') {
   return `https://wa.me/${cleanNumber}${encodedMsg ? `?text=${encodedMsg}` : ''}`;
 }
 
+/**
+ * Generates a clean tel: direct call URL if configured, or 'contact.html' if placeholder.
+ */
+export function getPhoneUrl() {
+  if (!isContactConfigured(CONTACT.displayPhone)) {
+    return 'contact.html';
+  }
+  const cleanNumber = CONTACT.displayPhone.replace(/[^0-9+]/g, '');
+  return `tel:${cleanNumber}`;
+}
+
 if (typeof window !== 'undefined') {
   window.TRAVEL_CONTEXT = window.TRAVEL_CONTEXT || {};
   window.TRAVEL_CONTEXT.CONTACT = CONTACT;
   window.TRAVEL_CONTEXT.isContactConfigured = isContactConfigured;
   window.TRAVEL_CONTEXT.getWhatsAppUrl = getWhatsAppUrl;
+  window.TRAVEL_CONTEXT.getPhoneUrl = getPhoneUrl;
 }
+

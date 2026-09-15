@@ -32,6 +32,18 @@ export const SEO = {
     contact: {
       title: "Request a Custom Quote | Contact ThaiPackages.com",
       description: "Plan your Thailand holiday with ThaiPackages.com. Request a custom travel proposal and speak directly with our destination specialists via form or WhatsApp."
+    },
+    passport: {
+      title: "Apply for Indian Passport | Step-by-Step Guide & Checklist | ThaiPackages.com",
+      description: "Complete step-by-step guidance to apply for or renew your Indian Passport for Thailand travel. Document checklist, Passport Seva Kendra process, and 6-month validity rule."
+    },
+    visa: {
+      title: "Thailand Visa Services & Entry Guidelines | ThaiPackages.com",
+      description: "Complete guide to Thailand Visa rules for Indian travelers. Learn about the 60-Day Visa Exemption, Visa on Arrival (VoA), required entry documents, and fast-track support."
+    },
+    digitalArrivalCard: {
+      title: "Free Thailand Digital Arrival Card Guide | ThaiPackages.com",
+      description: "Step-by-step free guide to submit your Thailand Digital Arrival Card (TM6 Electronic Form). Avoid third-party fees, access condo address templates, and download your QR code."
     }
   }
 };
