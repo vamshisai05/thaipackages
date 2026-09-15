@@ -86,39 +86,7 @@
     <!-- Packages Catalog & Multi-Filter Section -->
     <section class="section">
       <div class="container">
-        
-        <!-- Search & Filter Controls -->
-        <div class="catalog-search-panel flex flex-col md:flex-row gap-4 items-center" role="search" aria-label="Search and filter packages">
-          <div class="search-input-col" style="flex: 2; width: 100%;">
-            <input type="text" id="packageSearch" class="catalog-search-input w-full px-4 py-3 rounded-lg border border-slate-200 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm" placeholder="Search by keyword (e.g. Phi Phi, Villa, Safari)..." aria-label="Search packages by keyword">
-          </div>
-          <div class="search-select-col" style="flex: 1.2; width: 100%;">
-            <select id="packageDestFilter" class="catalog-select w-full px-4 py-3 rounded-lg border border-slate-200 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm" aria-label="Filter by destination">
-              <option value="all">All Destinations (Thailand)</option>
-              <option value="phuket">Phuket</option>
-              <option value="krabi">Krabi</option>
-              <option value="bangkok">Bangkok</option>
-              <option value="pattaya">Pattaya</option>
-            </select>
-          </div>
-          <div class="search-select-col" style="flex: 1.2; width: 100%;">
-            <select id="packageDurationFilter" class="catalog-select w-full px-4 py-3 rounded-lg border border-slate-200 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm" aria-label="Filter by duration">
-              <option value="all">Any Duration</option>
-              <option value="short">Short Getaways (4 – 5 Days)</option>
-              <option value="medium">Classic Trips (6 – 7 Days)</option>
-              <option value="long">Grand Explorer (8+ Days)</option>
-            </select>
-          </div>
-        </div>
 
-        <!-- Category Filter Tabs -->
-        <div class="filter-bar" role="tablist" aria-label="Filter packages by category">
-          <button class="filter-btn active" data-category="all">All Categories</button>
-          <button class="filter-btn" data-category="Honeymoon">Honeymoon & Romantic</button>
-          <button class="filter-btn" data-category="Family">Family & City Breaks</button>
-          <button class="filter-btn" data-category="Luxury">5-Star Luxury & Villas</button>
-          <button class="filter-btn" data-category="Culture">Culture & Nature</button>
-        </div>
 
         <!-- Dynamic Packages Grid -->
         <div id="packagesGrid" class="packages-grid w-full grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto justify-center place-items-center">

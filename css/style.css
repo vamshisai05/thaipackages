@@ -50,7 +50,7 @@
   --surface-dark: #0a2a30;
 
   /* Typography Colors */
-  --text-main: #0f172a;
+  --text-main: #1F2937;
   --text-muted: #475569;
   --text-light: #94a3b8;
   --text-white: #ffffff;
@@ -118,7 +118,7 @@ body {
   font-family: var(--font-body);
   background-color: var(--bg-main);
   color: var(--text-main);
-  line-height: 1.75;
+  line-height: 1.6;
   font-size: 15px;
   width: 100%;
   max-width: 100%;
@@ -293,6 +293,7 @@ ul, ol {
   border-radius: var(--radius-full);
   cursor: pointer;
   border: none;
+  outline: none;
   text-align: center;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
@@ -310,7 +311,8 @@ ul, ol {
 
 .btn-primary:hover {
   background-color: var(--gold-hover);
-  transform: scale(1.02);
+  transform: scale(1.03);
+  filter: brightness(1.05);
   box-shadow: 0 6px 20px rgba(242, 170, 39, 0.4);
 }
 
@@ -623,12 +625,14 @@ ul, ol {
    ========================================================================== */
 
 .section {
-  padding: 88px 0;
+  padding: 100px 0;
+  margin-bottom: 24px;
 }
 
 @media (min-width: 992px) {
   .section {
-    padding: 96px 0;
+    padding: 128px 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -718,14 +722,14 @@ ul, ol {
 
 .package-card {
   background-color: #ffffff;
-  border-radius: var(--radius-card, 16px);
-  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 16px;
+  border: none;
   display: flex;
   flex-direction: column;
   min-height: max-content;
   padding-bottom: 45px;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .package-card:hover {
@@ -809,7 +813,7 @@ ul, ol {
 }
 
 .package-card-body {
-  padding: 24px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -1188,12 +1192,12 @@ ul, ol {
 
 .destination-card {
   background-color: #ffffff;
-  border-radius: var(--radius-card, 16px);
-  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 16px;
+  border: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 

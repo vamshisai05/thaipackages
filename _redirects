@@ -7,13 +7,6 @@
 /destinations/samui /destination-detail.html?dest=samui 302
 /destinations/chiang-mai /destination-detail.html?dest=chiang-mai 302
 
-/packages/phuket-krabi /package-detail.html?pkg=phuket-krabi-romantic-escape 302
-/packages/bangkok-pattaya /package-detail.html?pkg=bangkok-pattaya-classic-vacation 302
-/bangkok-pattaya-saver.html /package-detail.html?pkg=bangkok-pattaya-classic-vacation 302
-/packages/grand-thailand /package-detail.html?pkg=grand-thailand-phuket-krabi-bangkok 302
-/packages/samui-villa /package-detail.html?pkg=samui-luxury-villa-retreat 302
-/packages/chiang-mai /package-detail.html?pkg=chiang-mai-northern-heritage 302
-/packages/phuket-adventure /package-detail.html?pkg=phuket-phi-phi-island-adventure 302
 
 /quote /contact.html 301
 /enquiry /contact.html 301
