@@ -2,13 +2,14 @@
 
 All contact information and floating action buttons across the entire website have been standardized to ensure consistent and functional routing on every page.
 
-## Contact Information Standardization
+## Surgical Cleanup
 
-1. **Phone & WhatsApp Text**: All visible placeholder numbers updated across all pages to `+91 81212 14181`.
-2. **Call Button Links**: Every `href="tel:..."` button and the sticky floating phone button now routes to `href="tel:+918121214181"`.
-3. **WhatsApp Links**: Every WhatsApp CTA and the sticky floating WhatsApp button now routes to `href="https://wa.me/918121214181"`.
-4. **Email Links & Display**: Standardized to `info@thaipackages.com` with `href="mailto:info@thaipackages.com"` across all footers and contact sections.
-5. **Central Config Sync**: [context/contact.js](file:///c:/Users/theva/OneDrive/Desktop/thaipackages/context/contact.js) updated to ensure JavaScript-rendered links and dynamic fallbacks use `+91 81212 14181` and `info@thaipackages.com`.
+1. **Currency Switcher Removal**: Permanently deleted the `<select class="currency-select">` component from both desktop navbar (`.nav-actions`) and mobile drawer menus across all HTML pages.
+2. **Removed 'Koh Samui', 'Chiang Mai', & 'Island Hopping'**:
+   - Removed 'Koh Samui' and 'Chiang Mai' cards, filter options, and links from [destinations.html](file:///c:/Users/theva/OneDrive/Desktop/thaipackages/destinations.html), [packages.html](file:///c:/Users/theva/OneDrive/Desktop/thaipackages/packages.html), [index.html](file:///c:/Users/theva/OneDrive/Desktop/thaipackages/index.html), and all footer columns.
+   - Removed the 'Island Hopping' filter category button from [packages.html](file:///c:/Users/theva/OneDrive/Desktop/thaipackages/packages.html).
+3. **AI Double Asterisks (`**`) Elimination**: Global ripgrep search confirmed zero double asterisks remaining across all `.html` files in the workspace.
+4. **CSS Preservation**: No changes were made to CSS files.
 
 ## Summary of Changes
 

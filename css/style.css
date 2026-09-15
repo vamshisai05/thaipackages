@@ -720,9 +720,10 @@ ul, ol {
   background-color: #ffffff;
   border-radius: var(--radius-card, 16px);
   border: 1px solid rgba(226, 232, 240, 0.85);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: max-content;
+  padding-bottom: 45px;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
@@ -1282,6 +1283,8 @@ ul, ol {
   background-color: var(--teal-900);
   border-radius: var(--radius-xl);
   padding: 48px;
+  min-height: max-content;
+  padding-bottom: 45px;
   color: #ffffff;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -1289,6 +1292,47 @@ ul, ol {
   align-items: center;
   box-shadow: var(--shadow-lg);
   margin: var(--space-4) 0;
+}
+
+/* ==========================================================================
+   Final CTA Section ('Looking for a customized Thailand itinerary?')
+   ========================================================================== */
+
+.final-cta-section {
+  padding: 80px 0;
+  background-color: var(--teal-950);
+  color: #ffffff;
+}
+
+.final-cta-inner {
+  background: linear-gradient(135deg, var(--teal-900) 0%, var(--teal-850) 100%);
+  border: 1px solid rgba(242, 170, 39, 0.35);
+  border-radius: var(--radius-xl, 20px);
+  padding: 56px 40px 45px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 48px rgba(6, 29, 33, 0.4);
+  min-height: max-content;
+  padding-bottom: 45px;
+}
+
+.final-cta-inner h2 {
+  color: #ffffff;
+  font-size: clamp(24px, 3.8vw, 36px);
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.final-cta-inner p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(15px, 2vw, 17px);
+  max-width: 620px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
 }
 
 .final-lead-left h2 {
@@ -1918,8 +1962,10 @@ details[open] .itinerary-chevron {
   }
   .final-lead-card {
     grid-template-columns: 1fr;
-    padding: 36px 24px;
+    padding: 36px 24px 45px;
     gap: 28px;
+    min-height: max-content;
+    padding-bottom: 45px;
   }
   .package-detail-layout {
     grid-template-columns: 1fr;
@@ -2016,8 +2062,19 @@ details[open] .itinerary-chevron {
     font-size: 16px; /* Prevents auto-zoom on iOS */
   }
   .final-lead-card {
-    padding: 28px 18px;
+    padding: 28px 18px 45px;
     border-radius: var(--radius-lg);
+    min-height: max-content;
+    padding-bottom: 45px;
+  }
+  .final-cta-inner {
+    padding: 36px 20px 45px;
+    min-height: max-content;
+    padding-bottom: 45px;
+  }
+  .package-card {
+    min-height: max-content;
+    padding-bottom: 45px;
   }
   .final-lead-form {
     padding: 20px 16px;

@@ -26,23 +26,7 @@ export const NAVIGATION = [
   }
 ];
 
-export const TRAVELER_SERVICES_NAVIGATION = [
-  {
-    label: "Apply for Passport",
-    href: "passport.html",
-    description: "Step-by-step guide and document checklist to apply for an Indian passport"
-  },
-  {
-    label: "Thailand Visa Services",
-    href: "visa.html",
-    description: "60-day visa exemption rules and required entry documents"
-  },
-  {
-    label: "Digital Arrival Card",
-    href: "digital-arrival-card.html",
-    description: "Free Thailand Digital Arrival Card guidance and accommodation templates"
-  }
-];
+
 
 export const PRIMARY_CTA = {
   label: "Request a Quote",

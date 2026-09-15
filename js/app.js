@@ -393,15 +393,9 @@
                   <span class="package-price-label">Starting Price</span>
                   <span class="package-price-value">${formatPrice(pkg)}</span>
                 </div>
-                ${isSignature ? `
-                  <button type="button" class="btn btn-primary btn-sm btn-open-itinerary" data-target-modal="itineraryModal">
-                    View Itinerary
-                  </button>
-                ` : `
-                  <a href="package-detail.html?pkg=${pkg.slug}" class="btn btn-primary btn-sm">
-                    View Itinerary
-                  </a>
-                `}
+                <a href="https://wa.me/918121214181?text=${encodeURIComponent('Hi ThaiPackages, I am interested in the ' + (pkg.title || 'Thailand Holiday') + ' package.')}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  View Itinerary
+                </a>
               </div>
             </div>
           </article>
@@ -579,7 +573,7 @@
                 <span class="package-price-label">Starting Price</span>
                 <span class="package-price-value">${formatPrice(pkg)}</span>
               </div>
-              <a href="package-detail.html?pkg=${pkg.slug}" class="btn btn-primary btn-sm">
+              <a href="https://wa.me/918121214181?text=${encodeURIComponent('Hi ThaiPackages, I am interested in the ' + (pkg.title || 'Thailand Holiday') + ' package.')}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                 View Itinerary
               </a>
             </div>
@@ -696,7 +690,7 @@
                     <span class="package-price-label">Starting Price</span>
                     <span class="package-price-value">${formatPrice(pkg)}</span>
                   </div>
-                  <a href="package-detail.html?pkg=${pkg.slug}" class="btn btn-primary btn-sm">
+                  <a href="https://wa.me/918121214181?text=${encodeURIComponent('Hi ThaiPackages, I am interested in the ' + (pkg.title || 'Thailand Holiday') + ' package.')}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                     View Itinerary
                   </a>
                 </div>
