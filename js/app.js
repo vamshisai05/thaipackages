@@ -462,7 +462,7 @@
               <p>${d.shortDescription || d.description}</p>
               <div class="dest-card-footer">
                 <span>Best: ${d.quickFacts ? d.quickFacts.bestTime : d.bestTime}</span>
-                <a href="destination-detail.html?dest=${d.slug}" class="link-arrow">
+                <a href="destination-detail.html?id=${d.slug}" class="link-arrow">
                   Explore ${d.name} →
                 </a>
               </div>
@@ -628,11 +628,12 @@
     // ==========================================================================
     const destDetailHero = document.getElementById('destDetailHero');
     if (destDetailHero && DESTINATIONS && DESTINATIONS.length > 0) {
-      const slug = getQueryParam('dest');
+      const slug = getQueryParam('id');
       let destination = DESTINATIONS.find(d => d.slug === slug);
 
       if (!destination) {
-        destination = DESTINATIONS[0]; // Fallback to Phuket
+        window.location.replace('destinations.html');
+        return;
       }
 
       // Dynamic Title
@@ -719,11 +720,12 @@
 
     const pkgDetailMain = document.getElementById('pkgDetailMain');
     if (pkgDetailMain && PACKAGES && PACKAGES.length > 0) {
-      const slug = getQueryParam('pkg');
+      const slug = getQueryParam('id');
       let pkg = PACKAGES.find(p => p.slug === slug);
 
       if (!pkg) {
-        pkg = PACKAGES[0];
+        window.location.replace('packages.html');
+        return;
       }
       activeDetailPackage = pkg;
 

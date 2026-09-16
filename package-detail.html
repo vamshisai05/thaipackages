@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <title>Package Details | ThaiPackages.com</title>
+  <meta name="description" content="View detailed itinerary and information for this package.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header solid-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ThaiPackages.com Homepage">
+        ThaiPackages<span>.com</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-logo">ThaiPackages<span>.com</span></span>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close Menu">&times;</button>
+      </div>
+            <ul class="drawer-menu">
+        <li><a href="packages.html">Holiday Packages <span>→</span></a></li>
+        <li><a href="destinations.html">Destinations <span>→</span></a></li>
+        <li><a href="about.html">About ThaiPackages <span>→</span></a></li>
+        <li><a href="contact.html">Request a Quote <span>→</span></a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--space-4); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 12px;">
+        <a href="contact.html" class="btn btn-primary btn-block">Plan Your Trip</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="pkgDetailMain">
+    <!-- Hero Section -->
+    <section class="hero-section" style="min-height: 480px; padding: 140px 0 80px;">
+      <img id="pkgHeroBg" src="" alt="Package Background" class="hero-bg-media">
+      <div class="hero-overlay"></div>
+      
+      <div class="container">
+        <div class="hero-inner" style="max-width: 800px;">
+          <a href="packages.html" style="color: var(--gold-accent); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-bottom: var(--space-2);">
+            ← Back to Packages
+          </a>
+          <div style="display:block; margin-bottom: 8px;"><span class="eyebrow light" id="pkgCategory"></span></div>
+          <h1 id="pkgTitle"></h1>
+          <p style="font-size: 18px; color: #f3f4f6; margin-bottom: 12px;">
+            <strong>Destination:</strong> <span id="pkgDest"></span><br>
+            <strong>Duration:</strong> <span id="pkgDuration"></span>
+          </p>
+          <div style="margin-top: 16px;">
+             <span id="sidebarPrice" style="font-size: 24px; font-weight: 700; color: var(--gold-accent);"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
+      <div class="container" style="display: grid; grid-template-columns: 1fr 350px; gap: var(--space-8);">
+        
+        <!-- Main Content Column -->
+        <div>
+          <!-- Description -->
+          <div class="detail-block">
+            <h2>Overview</h2>
+            <p id="pkgDesc" style="font-size: 16px; line-height: 1.6;"></p>
+          </div>
+
+          <!-- Highlights -->
+          <div class="detail-block">
+            <h2>Highlights</h2>
+            <ul id="pkgHighlights" class="highlights-list"></ul>
+          </div>
+
+          <!-- Itinerary Accordion -->
+          <div class="detail-block">
+            <h2>Day-by-Day Itinerary</h2>
+            <div id="pkgItinerary"></div>
+          </div>
+
+          <!-- Inclusions / Exclusions -->
+          <div class="detail-block" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px;">
+            <div style="background: #f8fafc; padding: 24px; border-radius: var(--radius-md);">
+              <h3 style="color: var(--teal-900); font-size: 18px; margin-bottom: 16px;">✓ Inclusions</h3>
+              <ul id="pkgInclusions" style="padding-left: 20px; font-size: 14px; line-height: 1.5; color: var(--text-body);"></ul>
+            </div>
+            <div style="background: #fff1f2; padding: 24px; border-radius: var(--radius-md);">
+              <h3 style="color: #9f1239; font-size: 18px; margin-bottom: 16px;">✕ Exclusions</h3>
+              <ul id="pkgExclusions" style="padding-left: 20px; font-size: 14px; line-height: 1.5; color: var(--text-body);"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Column -->
+        <aside>
+          <div style="position: sticky; top: 100px; background: white; padding: 24px; border-radius: var(--radius-md); box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--border-subtle);">
+            
+            <h3 style="margin-bottom: 16px; font-size: 20px;">Accommodation Options</h3>
+            <div id="pkgAccomOptions" style="margin-bottom: 24px;"></div>
+
+            <h3 style="margin-bottom: 16px; font-size: 20px;">Dining Options</h3>
+            <div id="pkgDiningOptions" style="margin-bottom: 24px;"></div>
+
+            <hr style="margin: 24px 0; border: none; border-top: 1px solid var(--border-subtle);">
+
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; text-align: center;">Want to customize this package?</p>
+            <a href="contact.html" class="btn btn-primary btn-block text-center" style="margin-bottom: 12px;">Request Custom Quote</a>
+            <a href="https://wa.me/918121214181" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block text-center" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+              Chat on WhatsApp
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Sticky Bar for Price -->
+  <div class="mobile-sticky-bar" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 12px 20px; box-shadow: 0 -4px 10px rgba(0,0,0,0.05); z-index: 100; justify-content: space-between; align-items: center;">
+    <div>
+      <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Starting from</div>
+      <div id="mobileBarPrice" style="font-size: 18px; font-weight: 700; color: var(--teal-900);"></div>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+  </div>
+
+  <style>
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr !important; }
+      .mobile-sticky-bar { display: flex !important; }
+      .detail-block > div { grid-template-columns: 1fr !important; }
+    }
+    .itinerary-day { background: white; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 12px; overflow: hidden; }
+    .itinerary-summary { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #f8fafc; font-weight: 600; list-style: none; }
+    .itinerary-summary::-webkit-details-marker { display: none; }
+    .itinerary-title-wrap { display: flex; align-items: center; gap: 12px; }
+    .itinerary-day-tag { background: var(--gold-accent); color: white; padding: 4px 10px; border-radius: 20px; font-size: 12px; }
+    .itinerary-details { padding: 20px; border-top: 1px solid var(--border-subtle); font-size: 15px; color: var(--text-body); line-height: 1.6; }
+    details[open] .itinerary-chevron { transform: rotate(180deg); }
+    .itinerary-chevron { transition: transform 0.2s; font-size: 12px; }
+  </style>
+
+  <!-- Global Sticky Quick Actions -->
+  <div class="global-sticky-actions" id="globalStickyActions">
+    <a href="tel:+918121214181" class="sticky-action-btn btn-call" id="stickyPhoneBtn">
+      <span class="sticky-action-label">Call Now</span>
+    </a>
+    <a href="https://wa.me/918121214181" class="sticky-action-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+      <span class="sticky-action-label">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">ThaiPackages<span>.com</span></a>
+          <p>Customized Thailand holiday packages, private island tours, and vetted luxury condo & beachfront resort stays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="destination-detail.html?id=phuket">Phuket Holidays</a></li>
+            <li><a href="destination-detail.html?id=krabi">Krabi Island Tours</a></li>
+            <li><a href="destination-detail.html?id=bangkok">Bangkok City Breaks</a></li>
+            <li><a href="destination-detail.html?id=pattaya">Pattaya Packages</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ThaiPackages.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="context/index.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
