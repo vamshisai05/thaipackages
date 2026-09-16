@@ -29,6 +29,12 @@ export const PACKAGES = [
     description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, Chao Phraya luxury dinner cruise, and 100% Telugu-speaking guide options.",
 
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "3 Nights in Pattaya in a Premium Sea-View Condo (with Private Kitchen)",
       "2 Nights in Bangkok in a City-Center Luxury Condo",
       "🗣️ 100% Telugu-Speaking Guides & Dedicated Local Coordinators Available",
@@ -42,6 +48,10 @@ export const PACKAGES = [
     ],
 
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "3 Nights in Premium Sea-View Condo in Pattaya",
       "2 Nights in City-Center Luxury Condo in Bangkok",
       "Kitchen access in condo with pre-stocked fridge/groceries (Option A) or Indian partner meals (Option B)",
@@ -140,6 +150,12 @@ export const PACKAGES = [
     description: "An idyllic 7-day Andaman holiday pairing the lively beaches of Phuket with the dramatic limestone karsts and tranquil luxury of Krabi.",
     
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "3 Nights accommodation in Phuket (4★/5★ Beachfront Resort)",
       "3 Nights accommodation in Krabi (4★/5★ Cliffside Resort)",
       "Full-day Phi Phi Islands & Maya Bay Speedboat Tour with Buffet Lunch",
@@ -149,6 +165,10 @@ export const PACKAGES = [
     ],
 
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "6 Nights accommodation in vetted 4-star / 5-star properties",
       "Daily buffet breakfast at hotels",
       "Full-day Phi Phi Islands & Maya Bay tour by Speedboat with Lunch",
@@ -239,12 +259,22 @@ export const PACKAGES = [
     shortDescription: "The ultimate kid-friendly Thailand family tour package featuring Safari World, Sea Life Ocean World, and spacious family condo stays.",
     description: "Our top-rated Thailand Family Tour Package ensures a stress-free holiday for parents and endless fun for kids. Highlights include Safari World & Marine Park, Sea Life Bangkok Ocean World, and relaxed pacing with family-sized condo accommodations providing home-like comfort and kitchen access.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Full day at Safari World and Marine Park with Indian Lunch",
       "Sea Life Bangkok Ocean World entry tickets",
       "Spacious Family Condo with Kitchen Access",
       "Private AC vehicles for all transfers (child seats on request)"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "4 Nights Family-Sized Accommodation",
       "Safari World & Marine Park tickets with transfers",
       "Sea Life Bangkok tickets",
@@ -291,12 +321,22 @@ export const PACKAGES = [
     shortDescription: "A luxurious and romantic Thailand Honeymoon Package with private pool villas, sunset dinner cruises, and couple's spa sessions.",
     description: "Celebrate your love with our premium Thailand Honeymoon Package. Featuring private pool villa stays, romantic beachfront candlelight dinners, exclusive sunset cruises, and tranquil couple's spa experiences across the pristine shores of Phuket and Krabi.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Romantic Private Pool Villa accommodations",
       "Exclusive Sunset Dinner Cruise in Phuket",
       "Phi Phi Islands premium speedboat tour",
       "Couple's Spa and Massage Session"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "5 Nights Luxury Accommodation (Pool Villa option)",
       "Sunset Dinner Cruise with transfers",
       "Phi Phi Island Tour",
@@ -344,12 +384,22 @@ export const PACKAGES = [
     shortDescription: "Experience the vibrant heart of Thailand with our Bangkok Tour Packages, featuring majestic temples, endless shopping, and luxury dinner cruises.",
     description: "Dive into the bustling metropolis with our dedicated Bangkok Tour Packages. Perfect for a quick city break, this itinerary covers the cultural majesty of the Grand Palace and Wat Arun, the shopping paradise of Pratunam and MBK, and the dazzling nightlife from premier skybars.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Guided tour of the Grand Palace and Wat Arun",
       "Chao Phraya Princess Luxury Dinner Cruise",
       "Dedicated shopping day at Platinum Mall & MBK",
       "City-Center Luxury Condo stay"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "3 Nights City-Center Condo Accommodation",
       "Grand Palace & Temples Guided Tour",
       "Dinner Cruise Tickets",
@@ -394,12 +444,22 @@ export const PACKAGES = [
     shortDescription: "Thrilling Pattaya Tour Packages packed with Coral Island water sports, Alcazar VIP shows, and premium sea-view condo stays.",
     description: "Discover the entertainment capital with our action-packed Pattaya Tour Packages. Enjoy a premium sea-view condo, thrilling water sports at Coral Island, the world-famous Alcazar Cabaret Show, and visits to the awe-inspiring Sanctuary of Truth.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Premium Sea-View Condo Accommodation",
       "Coral Island (Koh Larn) Speedboat Tour with Lunch",
       "Alcazar Cabaret Show VIP Seating",
       "Sanctuary of Truth Guided Visit"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "3 Nights Sea-View Condo Accommodation",
       "Coral Island Tour by Speedboat",
       "Alcazar Show Tickets",
@@ -445,12 +505,22 @@ export const PACKAGES = [
     shortDescription: "Explore Thailand's largest island with our Phuket Tour Packages, featuring Patong beach access, Phi Phi island tours, and Big Buddha views.",
     description: "Our comprehensive Phuket Tour Packages offer the ultimate tropical getaway. Enjoy luxurious beachfront resorts near Patong, embark on full-day speedboat tours to the Phi Phi Islands and James Bond Island, and explore the rich heritage of Old Phuket Town.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "4-Star/5-Star Beachfront Resort Accommodation",
       "Phi Phi Islands & Maya Bay Speedboat Tour",
       "James Bond Island & Phang Nga Bay Tour",
       "Phuket City Tour (Big Buddha & Old Town)"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "4 Nights Resort Accommodation",
       "Phi Phi Island Tour with Lunch",
       "James Bond Island Tour with Lunch",
@@ -496,12 +566,22 @@ export const PACKAGES = [
     shortDescription: "Tranquil Krabi Tour Packages showcasing the iconic 4-Islands tour, Railay Beach, and lush Emerald Pool hot springs.",
     description: "Escape to nature with our Krabi Tour Packages. Famous for its dramatic limestone cliffs and serene atmosphere, Krabi offers the perfect relaxation spot. Enjoy the iconic 4-Islands longtail boat tour, relax on the stunning Railay Beach, and soak in the natural Emerald Pool.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Cliffside or Beachfront Resort Accommodation",
       "Classic Krabi 4-Islands Tour by Longtail Boat",
       "Visit to the stunning Railay Beach",
       "Emerald Pool & Hot Springs Rainforest Tour"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "3 Nights Resort Accommodation",
       "4-Islands Tour with Picnic Lunch",
       "Emerald Pool Tour",
@@ -546,12 +626,22 @@ export const PACKAGES = [
     shortDescription: "The classic twin-city combo. Our Bangkok & Pattaya Tour Packages offer the perfect mix of city shopping and beachside entertainment.",
     description: "Experience the best of both worlds with our Bangkok & Pattaya Tour Packages. This classic twin-city combo offers the vibrant shopping and cultural landmarks of Bangkok paired with the thrilling water sports and nightlife of Pattaya, all with private transfers and luxury condo stays.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Twin-city experience: 3N Pattaya + 2N Bangkok",
       "Coral Island Speedboat Tour & Alcazar Show",
       "Chao Phraya Princess Dinner Cruise",
       "Private AC Inter-city Transfers"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "5 Nights Luxury Condo Accommodation",
       "All major attraction tickets (Alcazar, Coral Island, Dinner Cruise)",
       "100% Private AC Vehicle Transfers",
@@ -598,12 +688,22 @@ export const PACKAGES = [
     shortDescription: "The ultimate City & Beach combo! Bangkok's urban excitement seamlessly paired with Phuket's tropical island paradise.",
     description: "Combine the energetic pulse of Thailand's capital with the serene beaches of its largest island. Our Bangkok & Phuket Tour Packages provide a seamless, multi-destination experience including city luxury condos, beachfront resorts, and internal flight assistance.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "3 Nights in a Phuket Beachfront Resort + 3 Nights in a Bangkok Luxury Condo",
       "Phi Phi Islands Speedboat Tour",
       "Grand Palace Tour & Chao Phraya Dinner Cruise",
       "Seamless airport transfers for internal flights"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "6 Nights Premium Accommodation",
       "Phi Phi Island Tour",
       "Dinner Cruise in Bangkok",
@@ -651,12 +751,22 @@ export const PACKAGES = [
     shortDescription: "Tailored Thailand Tour Packages from Hyderabad featuring Telugu-speaking guides, direct flight convenience (RGIA), and authentic South-Indian food.",
     description: "Designed specifically for travelers flying from Rajiv Gandhi International Airport (RGIA). Our Thailand Packages from Hyderabad offer seamless travel coordination, the option for Telugu-speaking guides, and guaranteed authentic South-Indian meals throughout your stay in Bangkok and Pattaya.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Telugu-Speaking Guides & Dedicated Local Coordinators",
       "Authentic South-Indian Food / Kitchen Access",
       "Optimized for direct flights from Hyderabad (HYD to BKK)",
       "Premium Condo accommodations in Pattaya & Bangkok"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "5 Nights Premium Condo Accommodation",
       "Telugu-Speaking Guide availability",
       "South-Indian Meal Plan or Pre-stocked Kitchen",
@@ -704,12 +814,22 @@ export const PACKAGES = [
     shortDescription: "Zero-hassle Thailand packages guaranteeing 100% pure veg, Jain, and authentic Indian food options with private kitchen access condos.",
     description: "Travel to Thailand without worrying about your dietary preferences. Our specialized packages for Indian families guarantee 100% pure veg, Jain, and authentic Indian meals. Stay in luxury condos equipped with private kitchens pre-stocked with Indian groceries for the ultimate home-away-from-home comfort.",
     highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+
       "Guaranteed Pure Veg, Jain, or authentic Indian meals",
       "Luxury Condos with fully equipped private kitchens",
       "Pre-stocked Indian groceries (milk, bread, spices, rice)",
       "Family-friendly pacing with private AC vehicles"
     ],
     inclusions: [
+      "Dedicated Telugu & Hindi speaking local coordinator",
+      "End-to-End guidance from India to return home",
+      "Private AC transfers from airport to hotel and between attractions",
+
       "5 Nights Luxury Condo Accommodation",
       "Comprehensive Indian Meal Plan (or Groceries Option)",
       "All major attraction tickets (Alcazar, Coral Island, Dinner Cruise with Indian Buffet)",
