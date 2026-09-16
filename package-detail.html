@@ -168,7 +168,8 @@
 
   <style>
     @media (max-width: 768px) {
-      .container { grid-template-columns: 1fr !important; }
+      .section .container { display: flex !important; flex-direction: column !important; }
+      .section .container > aside { order: -1; margin-bottom: 24px; }
       .mobile-sticky-bar { display: flex !important; }
       .detail-block > div { grid-template-columns: 1fr !important; }
     }

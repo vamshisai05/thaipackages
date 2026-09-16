@@ -3479,3 +3479,44 @@ details[open] .itinerary-chevron {
   color: #4b5563;
   margin-bottom: 12px;
 }
+
+/* ==========================================================================
+   UI/UX Audit & Cross-Browser Consistency Polish (Applied Programmatically)
+   ========================================================================== */
+
+/* 1. Touch Targets & Mobile Optimization (Min 44px for accessibility) */
+a.btn, button.btn, .nav-link, .sticky-action-btn, .link-arrow, button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Image Fallbacks & Rendering Consistency (Prevent white flashes on slow networks) */
+.hero-bg-media, .package-image, .dest-image, img {
+  background-color: #e2e8f0; 
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* 3. Typography Standardization (Ensure consistent visual hierarchy) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--teal-900, #134e4a);
+  line-height: 1.25;
+}
+
+h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; }
+
+/* 4. Trust Signals Styling Enhancement */
+.highlights-list li, #pkgInclusions li, #pkgExclusions li {
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* 5. Smooth Scrolling for Anchor Links */
+html {
+  scroll-behavior: smooth;
+}
