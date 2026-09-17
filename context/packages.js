@@ -254,8 +254,8 @@ export const PACKAGES = [
     startingPriceINR: 24500,
     startingPriceUSD: 310,
     startingPriceTHB: 11500,
-    heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
+    heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
+    thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
     shortDescription: "The ultimate kid-friendly Thailand family tour package featuring Safari World, Sea Life Ocean World, and spacious family condo stays.",
     description: "Our top-rated Thailand Family Tour Package ensures a stress-free holiday for parents and endless fun for kids. Highlights include Safari World & Marine Park, Sea Life Bangkok Ocean World, and relaxed pacing with family-sized condo accommodations providing home-like comfort and kitchen access.",
     highlights: [

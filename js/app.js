@@ -552,52 +552,52 @@
       
       const featurePillsMap = {
         'bangkok-pattaya-classic-vacation': [
-          '🗣️ Telugu Guides',
-          '🏢 3N Pattaya Condo',
-          '🏢 2N Bangkok Condo',
-          '🍽️ Indian Food',
-          '🚗 100% Private AC'
+          'Telugu Guides',
+          '3N Pattaya Condo',
+          '2N Bangkok Condo',
+          'Indian Food',
+          '100% Private AC'
         ],
         'phuket-krabi-romantic-escape': [
-          '🏖️ Beachfront Resorts',
-          '🛥️ Phi Phi Speedboat',
-          '🚗 100% Private AC',
-          '🗣️ Telugu Support'
+          'Beachfront Resorts',
+          'Phi Phi Speedboat',
+          '100% Private AC',
+          'Telugu Support'
         ],
         'thailand-family-tour-packages': [
-          '👨‍👩‍👧 Family Condos',
-          '🦁 Safari World',
-          '🍽️ Indian Food',
-          '🚗 Private AC'
+          'Family Condos',
+          'Safari World',
+          'Indian Food',
+          'Private AC'
         ],
         'thailand-honeymoon-packages': [
-          '💕 Pool Villas',
-          '🛥️ Sunset Cruise',
-          '💆 Couple Spa',
-          '🚗 Private Transfers'
+          'Pool Villas',
+          'Sunset Cruise',
+          'Couple Spa',
+          'Private Transfers'
         ],
         'bangkok-tour-packages': [
-          '🛕 Grand Palace',
-          '🚢 Dinner Cruise',
-          '🛍️ Shopping Tour',
-          '🚗 Private AC'
+          'Grand Palace',
+          'Dinner Cruise',
+          'Shopping Tour',
+          'Private AC'
         ],
         'pattaya-tour-packages': [
-          '🏖️ Coral Island',
-          '🎭 Alcazar VIP',
-          '🛕 Sanctuary of Truth',
-          '🚗 Private AC'
+          'Coral Island',
+          'Alcazar VIP',
+          'Sanctuary of Truth',
+          'Private AC'
         ],
         'phuket-tour-packages': [
-          '🏝️ James Bond Island',
-          '🛥️ Phi Phi Speedboat',
-          '🏖️ Patong Beach',
-          '🚗 Private AC'
+          'James Bond Island',
+          'Phi Phi Speedboat',
+          'Patong Beach',
+          'Private AC'
         ],
         'krabi-tour-packages': [
-          '🏝️ 4 Islands Tour',
-          '🌿 Emerald Pool',
-          '🏖️ Railay Beach',
+          '4 Islands Tour',
+          'Emerald Pool',
+          'Railay Beach',
           '🚗 Private AC'
         ],
         'bangkok-pattaya-tour-packages': [
@@ -614,22 +614,35 @@
         ],
         'thailand-tour-packages-from-hyderabad': [
           '🗣️ Native Telugu Guides',
-          '🍲 South Indian Food',
-          '🏢 Family Condos',
-          '🚗 Private AC'
+          'Native Telugu Guides',
+          'South Indian Food',
+          'Family Condos',
+          'Private AC'
         ],
         'thailand-tour-packages-with-indian-food': [
-          '🍛 100% Indian Meals',
-          '🥬 Pure Veg / Jain',
-          '🏢 Kitchen Condos',
-          '🚗 Private AC'
+          '100% Indian Meals',
+          'Pure Veg / Jain',
+          'Kitchen Condos',
+          'Private AC'
+        ],
+        'chiang-mai-tour-packages': [
+          'Doi Suthep Temple',
+          'Elephant Sanctuary',
+          'Night Bazaar',
+          'Private AC'
+        ],
+        'koh-samui-tour-packages': [
+          'Ang Thong Marine Park',
+          'Big Buddha',
+          'Beachfront Stay',
+          'Private AC'
         ]
       };
 
       homeFeaturedGrid.innerHTML = featured.map((pkg, idx) => {
         const pills = featurePillsMap[pkg.slug] || [
-          `🏖️ ${pkg.destination || 'Thailand'}`,
-          '🚗 100% Private AC'
+          `${pkg.destination || 'Thailand'}`,
+          '100% Private AC'
         ];
         const isSignature = pkg.slug === 'bangkok-pattaya-classic-vacation';
         const link = pkg.slug === 'bangkok-pattaya-classic-vacation' ? 'package-detail.html?id=bangkok-pattaya-classic-vacation' :
@@ -648,6 +661,10 @@
               <span class="package-duration-tag">${pkg.durationDays || (pkg.duration && pkg.duration.days) || 5} Days / ${pkg.durationNights || (pkg.duration && pkg.duration.nights) || 4} Nights</span>
             </div>
             <div class="package-card-body">
+              <div class="package-price-wrap">
+                <span class="package-price-label">Starting Price</span>
+                <span class="package-price-value">${formatPrice(pkg)}</span>
+              </div>
               <span class="package-destination">${pkg.destination || 'Thailand'}</span>
               <h3>${pkg.title}</h3>
               <p>${pkg.shortDescription || pkg.description}</p>
@@ -657,10 +674,6 @@
               </div>
 
               <div class="package-card-footer">
-                <div class="package-price-wrap">
-                  <span class="package-price-label">Starting Price</span>
-                  <span class="package-price-value">${formatPrice(pkg)}</span>
-                </div>
                 <a href="${link}" class="btn btn-primary btn-sm">
                   View Itinerary
                 </a>
