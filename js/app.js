@@ -110,47 +110,7 @@
       heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
       shortDescription: "Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private kitchen, 100% private AC transfers & Telugu-speaking guides.",
-      description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, Chao Phraya luxury dinner cruise, and 100% Telugu-speaking guide options.",
-      highlights: [
-        "3 Nights in Pattaya in a Premium Sea-View Condo (with Private Kitchen)",
-        "2 Nights in Bangkok in a City-Center Luxury Condo",
-        "🗣️ 100% Telugu-Speaking Guides & Dedicated Local Coordinators Available",
-        "🎉 25% Discount on Group Packages (4+ Travelers)",
-        "Food Flexibility: Option A (Self-cook with groceries) or Option B (Daily fresh Indian meals)",
-        "Alcazar Cabaret Show (VIP Seating)",
-        "Coral Island (Koh Larn) Speedboat Tour with Indian Lunch",
-        "Pattaya City Highlights (Big Buddha & coastal viewpoints)",
-        "Chao Phraya Princess Luxury Dinner Cruise with live music",
-        "100% Private door-to-door AC Vehicle Transfers (Zero shared buses)"
-      ],
-      inclusions: [
-        "3 Nights in Premium Sea-View Condo in Pattaya",
-        "2 Nights in City-Center Luxury Condo in Bangkok",
-        "Kitchen access in condo with pre-stocked fridge/groceries (Option A) or Indian partner meals (Option B)",
-        "Coral Island speedboat excursion with Indian lunch",
-        "Alcazar Cabaret Show VIP admission tickets",
-        "Pattaya Big Buddha and scenic coastal viewpoints tour",
-        "Chao Phraya Princess Luxury Dinner Cruise ticket with buffet",
-        "100% Private AC vehicle transfers: Airport -> Pattaya -> Bangkok -> Airport",
-        "Dedicated 24/7 WhatsApp concierge support"
-      ],
-      exclusions: ["International flights", "Personal tipping and visa charges"],
-      hotelOptions: [
-        { tier: "Signature Premium Condo (Flagship - Highly Recommended)", pattaya: "The Base Central / Riviera Ocean Drive Sea-View (with Private Kitchen)", bangkok: "Ideo Mobi / Rhythm Sukhumvit Luxury Condo" },
-        { tier: "Standard 3★ / 4★ Hotel Alternative", pattaya: "Centara Pattaya / Nova Platinum 4★", bangkok: "Amari Bangkok / Berkeley Hotel Pratunam 4★" }
-      ],
-      diningOptions: [
-        { plan: "Self-Cook / Home Comfort Plan (Flagship - Highly Recommended)", details: "Condo kitchen pre-stocked with Indian groceries, milk, bread, butter, spices, rice, tea, and cookware. Ideal for families and pure vegetarians." },
-        { plan: "Indian Restaurant Plan (Alternative)", details: "Daily fresh pre-arranged lunches & dinners at verified partner Indian restaurants." }
-      ],
-      itinerary: [
-        { day: 1, title: "Suvarnabhumi Airport Private Pickup -> Transfer to Pattaya Condo", summary: "Meet your private chauffeur directly at Bangkok Suvarnabhumi Airport. Private AC drive to Pattaya. Check into your Sea-View Condo with kitchen amenities. Evening at leisure." },
-        { day: 2, title: "Coral Island Speedboat Tour with Indian Lunch & Alcazar VIP Show", summary: "Morning speedboat excursion to Coral Island with Indian lunch. In the evening, attend the world-famous Alcazar Cabaret Show with VIP seating." },
-        { day: 3, title: "Pattaya City Highlights (Big Buddha & Viewpoints) -> Night Markets", summary: "Tour Pattaya Big Buddha and coastal viewpoints overlooking the bay. Afternoon leisure by your condo pool and evening night markets." },
-        { day: 4, title: "Private Transfer to Bangkok -> Luxury City-Center Condo Check-in", summary: "Private door-to-door transfer from Pattaya to Bangkok. Check into your City-Center Luxury Condo. Afternoon at leisure for shopping." },
-        { day: 5, title: "Shopping at Pratunam/MBK -> Chao Phraya Princess Dinner Cruise", summary: "Day for shopping at Pratunam, MBK Center, or ICONSIAM. In the evening, board the Chao Phraya Princess Luxury Dinner Cruise with live music and buffet." },
-        { day: 6, title: "Relaxed Morning -> Private Transfer to Bangkok Airport", summary: "Enjoy breakfast in your condo or partner cafe. Private AC transfer to Suvarnabhumi or Don Mueang Airport for your flight home." }
-      ]
+      description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, Chao Phraya luxury dinner cruise, and 100% Telugu-speaking guide options."
     },
     {
       slug: "phuket-krabi-romantic-escape",
@@ -167,10 +127,177 @@
       heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
       shortDescription: "An idyllic 7-day Andaman holiday pairing lively Phuket beaches with Krabi's dramatic limestone karsts, 100% private transfers and island cruises.",
-      description: "An idyllic 7-day Andaman holiday pairing the lively beaches of Phuket with the dramatic limestone karsts and tranquil luxury of Krabi.",
-      highlights: ["3 Nights in Phuket Beachfront Resort", "3 Nights in Krabi Cliffside Resort", "Phi Phi Islands & Maya Bay Speedboat Excursion", "Krabi 4 Islands Sunset Boat Tour", "100% Private AC Transfers throughout"],
-      inclusions: ["6 Nights resort accommodation with breakfast", "Phi Phi & Maya Bay speedboat tour with lunch", "Krabi 4 Islands boat tour", "Private airport & intercity transfers", "Marine park entry permits"],
-      exclusions: ["International flights", "Personal expenses"]
+      description: "An idyllic 7-day Andaman holiday pairing the lively beaches of Phuket with the dramatic limestone karsts and tranquil luxury of Krabi."
+    },
+    {
+      slug: "thailand-family-tour-packages",
+      title: "Thailand Family Tour Packages",
+      destination: "Bangkok & Pattaya",
+      destinationSlug: "bangkok",
+      category: "Family & City Breaks",
+      duration: { days: 5, nights: 4 },
+      durationDays: 5,
+      durationNights: 4,
+      startingPriceINR: 24999,
+      startingPriceUSD: 310,
+      startingPriceTHB: 11500,
+      heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Specially crafted family vacation featuring kid-friendly attractions, Safari World, and spacious condo stays with kitchen.",
+      description: "Our top-rated Thailand Family Tour Package ensures a stress-free holiday for parents and endless fun for kids."
+    },
+    {
+      slug: "thailand-honeymoon-packages",
+      title: "Thailand Honeymoon Packages",
+      destination: "Phuket & Krabi",
+      destinationSlug: "phuket",
+      category: "Honeymoon & Romantic",
+      duration: { days: 6, nights: 5 },
+      durationDays: 6,
+      durationNights: 5,
+      startingPriceINR: 32999,
+      startingPriceUSD: 420,
+      startingPriceTHB: 15500,
+      heroImage: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Romantic island retreat featuring private pool villas, sunset dinner cruise, couple spa, and secluded island tours.",
+      description: "Celebrate your love with private pool villa stays, romantic beachfront dinners, and tranquil couple's spa experiences."
+    },
+    {
+      slug: "bangkok-tour-packages",
+      title: "Bangkok Tour Packages",
+      destination: "Bangkok",
+      destinationSlug: "bangkok",
+      category: "City Break",
+      duration: { days: 4, nights: 3 },
+      durationDays: 4,
+      durationNights: 3,
+      startingPriceINR: 16999,
+      startingPriceUSD: 180,
+      startingPriceTHB: 6800,
+      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Immerse yourself in Bangkok's golden temples, lively shopping malls, Chao Phraya river dinner cruise & street markets.",
+      description: "Dive into the bustling metropolis with our dedicated Bangkok Tour Packages featuring Grand Palace, temples, and luxury shopping."
+    },
+    {
+      slug: "pattaya-tour-packages",
+      title: "Pattaya Tour Packages",
+      destination: "Pattaya",
+      destinationSlug: "pattaya",
+      category: "Beach Special",
+      duration: { days: 4, nights: 3 },
+      durationDays: 4,
+      durationNights: 3,
+      startingPriceINR: 14999,
+      startingPriceUSD: 170,
+      startingPriceTHB: 6200,
+      heroImage: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Experience thrilling watersports at Coral Island, world-class Alcazar cabaret show, Sanctuary of Truth & night markets.",
+      description: "Experience the vibrant coastal energy of Pattaya with Coral Island speedboat excursions and cultural landmarks."
+    },
+    {
+      slug: "phuket-tour-packages",
+      title: "Phuket Tour Packages",
+      destination: "Phuket",
+      destinationSlug: "phuket",
+      category: "Island Special",
+      duration: { days: 5, nights: 4 },
+      durationDays: 5,
+      durationNights: 4,
+      startingPriceINR: 21999,
+      startingPriceUSD: 270,
+      startingPriceTHB: 9900,
+      heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Discover pristine Andaman beaches, Phi Phi Islands tour, Phang Nga Bay James Bond Island & Old Phuket Town heritage.",
+      description: "Explore the pearl of the Andaman Sea with luxury beachfront resort stays and island speedboat excursions."
+    },
+    {
+      slug: "krabi-tour-packages",
+      title: "Krabi Tour Packages",
+      destination: "Krabi",
+      destinationSlug: "krabi",
+      category: "Nature Special",
+      duration: { days: 4, nights: 3 },
+      durationDays: 4,
+      durationNights: 3,
+      startingPriceINR: 18999,
+      startingPriceUSD: 230,
+      startingPriceTHB: 8500,
+      heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Pristine limestone karsts, crystal clear waters of Railay, rainforest Emerald Pool hot springs & 4 Islands cruise.",
+      description: "Experience majestic limestone monoliths, tranquil emerald lagoons, and picturesque 4-island boat excursions."
+    },
+    {
+      slug: "bangkok-pattaya-tour-packages",
+      title: "Bangkok & Pattaya Tour Packages",
+      destination: "Bangkok & Pattaya",
+      destinationSlug: "bangkok",
+      category: "Combo Tour",
+      duration: { days: 5, nights: 4 },
+      durationDays: 5,
+      durationNights: 4,
+      startingPriceINR: 20999,
+      startingPriceUSD: 240,
+      startingPriceTHB: 9200,
+      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "The perfect holiday package covering top sights of both Bangkok and Pattaya with comfortable private transfers.",
+      description: "Our twin-city package combines Bangkok's cultural and shopping highlights with Pattaya's scenic coastal charms."
+    },
+    {
+      slug: "bangkok-phuket-tour-packages",
+      title: "Bangkok & Phuket Tour Packages",
+      destination: "Bangkok & Phuket",
+      destinationSlug: "phuket",
+      category: "Twin Destination",
+      duration: { days: 6, nights: 5 },
+      durationDays: 6,
+      durationNights: 5,
+      startingPriceINR: 27999,
+      startingPriceUSD: 330,
+      startingPriceTHB: 12500,
+      heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Combine metropolitan excitement & temple serenity in Bangkok with the tropical paradise & island hopping of Phuket.",
+      description: "The ultimate twin-destination vacation pairing capital city splendors with Andaman seaside luxury."
+    },
+    {
+      slug: "thailand-tour-packages-from-hyderabad",
+      title: "Thailand Tour from Hyderabad",
+      destination: "Bangkok & Pattaya",
+      destinationSlug: "bangkok",
+      category: "Telugu Special",
+      duration: { days: 5, nights: 4 },
+      durationDays: 5,
+      durationNights: 4,
+      startingPriceINR: 23499,
+      startingPriceUSD: 260,
+      startingPriceTHB: 9800,
+      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Handcrafted specifically for Telugu travelers with dedicated native Telugu coordination, South Indian food & care.",
+      description: "Travel with confidence featuring dedicated Telugu-speaking guides, South Indian dining arrangements, and private door-to-door transit."
+    },
+    {
+      slug: "thailand-tour-packages-with-indian-food",
+      title: "Thailand Packages with Indian Food",
+      destination: "Bangkok & Pattaya",
+      destinationSlug: "bangkok",
+      category: "Indian Food",
+      duration: { days: 5, nights: 4 },
+      durationDays: 5,
+      durationNights: 4,
+      startingPriceINR: 22499,
+      startingPriceUSD: 250,
+      startingPriceTHB: 9500,
+      heroImage: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Never worry about meals. Pure veg, Jain, & authentic Indian partner restaurants plus condo kitchen facilities.",
+      description: "Enjoy verified partner Indian dining and fully equipped condo kitchens tailored for pure vegetarian and Jain dietary needs."
     }
   ];
 
@@ -408,45 +535,124 @@
     }
 
     function renderHomeFeaturedPackages() {
-      if (!homeFeaturedGrid || !PACKAGES || PACKAGES.length === 0) return;
-      // Show 2 primary signature packages on homepage
-      const featured = PACKAGES.slice(0, 2);
-      const badges = ['BESTSELLER', 'COUPLE SPECIAL'];
+      const featuredCarousel = document.getElementById('featuredCarousel') || document.querySelector('.featured-carousel-container');
+      const homeFeaturedGrid = document.getElementById('homeFeaturedGrid') || document.querySelector('.carousel-track');
+      const prevBtn = document.getElementById('featuredPrevBtn') || document.querySelector('.carousel-btn.prev-btn');
+      const nextBtn = document.getElementById('featuredNextBtn') || document.querySelector('.carousel-btn.next-btn');
+
+      if (!homeFeaturedGrid) return;
+      
+      // Show all packages in the carousel
+      const featured = (PACKAGES && PACKAGES.length > 0) ? PACKAGES : FALLBACK_PACKAGES;
+      const badges = [
+        'BESTSELLER', 'COUPLE SPECIAL', 'FAMILY FAVORITE', 'HONEYMOON SPECIAL',
+        'CITY BREAK', 'BEACH SPECIAL', 'ISLAND SPECIAL', 'NATURE SPECIAL',
+        'COMBO TOUR', 'TWIN DESTINATION', 'TELUGU SPECIAL', 'INDIAN FOOD'
+      ];
       
       const featurePillsMap = {
         'bangkok-pattaya-classic-vacation': [
-          '🏢 3N Pattaya Condo (Kitchen)',
+          '🗣️ Telugu Guides',
+          '🏢 3N Pattaya Condo',
           '🏢 2N Bangkok Condo',
-          '🍽️ Indian Food Options',
-          '🚗 100% Private Transfers'
+          '🍽️ Indian Food',
+          '🚗 100% Private AC'
         ],
         'phuket-krabi-romantic-escape': [
           '🏖️ Beachfront Resorts',
           '🛥️ Phi Phi Speedboat',
-          '🚗 100% Private AC'
+          '🚗 100% Private AC',
+          '🗣️ Telugu Support'
+        ],
+        'thailand-family-tour-packages': [
+          '👨‍👩‍👧 Family Condos',
+          '🦁 Safari World',
+          '🍽️ Indian Food',
+          '🚗 Private AC'
+        ],
+        'thailand-honeymoon-packages': [
+          '💕 Pool Villas',
+          '🛥️ Sunset Cruise',
+          '💆 Couple Spa',
+          '🚗 Private Transfers'
+        ],
+        'bangkok-tour-packages': [
+          '🛕 Grand Palace',
+          '🚢 Dinner Cruise',
+          '🛍️ Shopping Tour',
+          '🚗 Private AC'
+        ],
+        'pattaya-tour-packages': [
+          '🏖️ Coral Island',
+          '🎭 Alcazar VIP',
+          '🛕 Sanctuary of Truth',
+          '🚗 Private AC'
+        ],
+        'phuket-tour-packages': [
+          '🏝️ James Bond Island',
+          '🛥️ Phi Phi Speedboat',
+          '🏖️ Patong Beach',
+          '🚗 Private AC'
+        ],
+        'krabi-tour-packages': [
+          '🏝️ 4 Islands Tour',
+          '🌿 Emerald Pool',
+          '🏖️ Railay Beach',
+          '🚗 Private AC'
+        ],
+        'bangkok-pattaya-tour-packages': [
+          '🏙️ City + Beach',
+          '🛥️ Speedboat Excursion',
+          '🍽️ Indian Meals',
+          '🚗 Private AC'
+        ],
+        'bangkok-phuket-tour-packages': [
+          '🏙️ Bangkok Sights',
+          '🏖️ Phuket Beaches',
+          '🛥️ Island Cruise',
+          '🚗 Private AC'
+        ],
+        'thailand-tour-packages-from-hyderabad': [
+          '🗣️ Native Telugu Guides',
+          '🍲 South Indian Food',
+          '🏢 Family Condos',
+          '🚗 Private AC'
+        ],
+        'thailand-tour-packages-with-indian-food': [
+          '🍛 100% Indian Meals',
+          '🥬 Pure Veg / Jain',
+          '🏢 Kitchen Condos',
+          '🚗 Private AC'
         ]
       };
 
       homeFeaturedGrid.innerHTML = featured.map((pkg, idx) => {
         const pills = featurePillsMap[pkg.slug] || [
-          `🏖️ ${pkg.destination}`,
+          `🏖️ ${pkg.destination || 'Thailand'}`,
           '🚗 100% Private AC'
         ];
         const isSignature = pkg.slug === 'bangkok-pattaya-classic-vacation';
+        const link = pkg.slug === 'bangkok-pattaya-classic-vacation' ? 'package-detail.html?id=bangkok-pattaya-classic-vacation' :
+                     pkg.slug === 'phuket-krabi-romantic-escape' ? 'package-detail.html?id=phuket-krabi-romantic-escape' :
+                     pkg.slug === 'thailand-family-tour-packages' ? 'family-packages.html' :
+                     pkg.slug === 'thailand-honeymoon-packages' ? 'honeymoon-packages.html' :
+                     pkg.slug === 'thailand-tour-packages-from-hyderabad' ? 'group-tours.html' :
+                     pkg.slug === 'thailand-tour-packages-with-indian-food' ? 'customized-packages.html' :
+                     'packages.html';
 
         return `
-          <article class="package-card w-full" id="${isSignature ? 'cardBangkokPattaya' : ''}">
+          <article class="package-card compact" id="${isSignature ? 'cardBangkokPattaya' : ''}">
             <div class="package-media-wrap">
-              <img src="${pkg.thumbnail}" alt="${pkg.title}" loading="lazy" width="600" height="450">
-              <span class="package-badge-tag">${badges[idx] || pkg.category}</span>
-              <span class="package-duration-tag">${pkg.durationDays || pkg.duration.days} Days / ${pkg.durationNights || pkg.duration.nights} Nights</span>
+              <img src="${pkg.thumbnail || pkg.heroImage}" alt="${pkg.title}" loading="lazy" width="600" height="450">
+              <span class="package-badge-tag">${badges[idx] || pkg.category || 'FEATURED'}</span>
+              <span class="package-duration-tag">${pkg.durationDays || (pkg.duration && pkg.duration.days) || 5} Days / ${pkg.durationNights || (pkg.duration && pkg.duration.nights) || 4} Nights</span>
             </div>
             <div class="package-card-body">
-              <span class="package-destination">${pkg.destination}</span>
+              <span class="package-destination">${pkg.destination || 'Thailand'}</span>
               <h3>${pkg.title}</h3>
               <p>${pkg.shortDescription || pkg.description}</p>
               
-              <div class="package-feature-pills flex flex-wrap gap-2">
+              <div class="package-feature-pills">
                 ${pills.map(p => `<span class="pill-feature">${p}</span>`).join('')}
               </div>
 
@@ -455,7 +661,7 @@
                   <span class="package-price-label">Starting Price</span>
                   <span class="package-price-value">${formatPrice(pkg)}</span>
                 </div>
-                <a href="https://wa.me/918121214181?text=${encodeURIComponent('Hi ThaiPackages, I am interested in the ' + (pkg.title || 'Thailand Holiday') + ' package.')}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <a href="${link}" class="btn btn-primary btn-sm">
                   View Itinerary
                 </a>
               </div>
@@ -464,17 +670,71 @@
         `;
       }).join('');
 
-      // Attach click handlers to newly rendered itinerary buttons
-      const openButtons = homeFeaturedGrid.querySelectorAll('.btn-open-itinerary');
-      openButtons.forEach(btn => {
-        btn.addEventListener('click', openItineraryModal);
-      });
-
-      // Update modal price display
+      // Update modal price display if present
       const modalPriceVal = document.getElementById('modalPriceVal');
-      const sigPkg = PACKAGES.find(p => p.slug === 'bangkok-pattaya-classic-vacation') || PACKAGES[1];
+      const sigPkg = PACKAGES.find(p => p.slug === 'bangkok-pattaya-classic-vacation') || PACKAGES[0];
       if (modalPriceVal && sigPkg) {
         modalPriceVal.innerHTML = `${formatPrice(sigPkg)} <small style="font-size:14px; font-weight:500; color:var(--text-muted)">/ person</small>`;
+      }
+
+      // Setup Carousel Arrow Controls & Dynamic Movement
+      if (prevBtn && nextBtn && featuredCarousel) {
+        const updateCarouselDimensions = () => {
+          const w = featuredCarousel.clientWidth;
+          let cardsVisible = 1;
+          if (window.innerWidth >= 1280) cardsVisible = 4;
+          else if (window.innerWidth >= 1024) cardsVisible = 3;
+          else if (window.innerWidth >= 768) cardsVisible = 2;
+          const gap = 16;
+          const cardWidth = Math.floor((w - (cardsVisible - 1) * gap) / cardsVisible);
+          if (cardWidth > 0) {
+            featuredCarousel.style.setProperty('--computed-card-width', `${cardWidth}px`);
+          }
+        };
+
+        const getScrollStep = () => {
+          const card = featuredCarousel.querySelector('.package-card.compact');
+          if (!card) return 300;
+          let gap = 16;
+          const track = featuredCarousel.querySelector('.carousel-track') || homeFeaturedGrid;
+          if (track) {
+            const st = window.getComputedStyle(track);
+            const g = parseFloat(st.gap || st.columnGap);
+            if (!isNaN(g) && g > 0) gap = g;
+          }
+          return card.getBoundingClientRect().width + gap;
+        };
+
+        const updateArrowStates = () => {
+          const scrollLeft = Math.round(featuredCarousel.scrollLeft);
+          const maxScroll = Math.round(featuredCarousel.scrollWidth - featuredCarousel.clientWidth);
+
+          prevBtn.disabled = scrollLeft <= 4;
+          nextBtn.disabled = maxScroll <= 0 || scrollLeft >= maxScroll - 4;
+        };
+
+        // Click handlers: move exactly 1 card position dynamically
+        prevBtn.onclick = () => {
+          featuredCarousel.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+        };
+
+        nextBtn.onclick = () => {
+          featuredCarousel.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+        };
+
+        featuredCarousel.addEventListener('scroll', updateArrowStates, { passive: true });
+        window.addEventListener('resize', () => {
+          updateCarouselDimensions();
+          updateArrowStates();
+        });
+
+        // Initialize state
+        updateCarouselDimensions();
+        updateArrowStates();
+        setTimeout(() => {
+          updateCarouselDimensions();
+          updateArrowStates();
+        }, 150);
       }
     }
 

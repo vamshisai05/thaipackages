@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link rel="stylesheet" href="css/style.css?v=2.2">
 
   <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -126,10 +126,6 @@
 
       <div class="container">
         <div class="hero-inner">
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
-            <span class="eyebrow-badge">✦ TAILOR-MADE THAILAND HOLIDAYS</span>
-            <span class="telugu-highlight-pill">🗣️ 100% Telugu & Hindi-Speaking Guides</span>
-          </div>
           <h1>Your Thailand story starts here.</h1>
           <p>Family-friendly itineraries, spacious condo stays with private kitchens, 100% private chauffeur transfers, and complete peace of mind — starting from ₹19,900 per person.</p>
           
@@ -142,7 +138,7 @@
     </section>
 
     <!-- 25% Group Discount Banner (Normal Document Flow) -->
-    <div class="container" style="margin-top: 32px; margin-bottom: 32px;">
+    <div class="container">
       <div class="group-discount-banner">
         <div class="group-discount-content">
           <span class="group-discount-badge">🎉 Special Offer</span>
@@ -154,6 +150,388 @@
       </div>
     </div>
 
+    <!-- 3. Featured Packages Section -->
+    <section class="section bg-subtle" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <h2>Featured Bestsellers</h2>
+            <p>Transparent pricing, zero hidden costs, and fully customizable itineraries for Indian travelers.</p>
+          </div>
+        </div>
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev-btn" id="featuredPrevBtn" aria-label="Previous Package">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="featured-carousel-container" id="featuredCarousel">
+            <div class="carousel-track" id="homeFeaturedGrid">
+              <!-- Card 1: Bangkok & Pattaya Super Saver -->
+              <article class="package-card compact" id="cardBangkokPattaya">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Bangkok & Pattaya Super Saver" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">BESTSELLER</span>
+                  <span class="package-duration-tag">6 Days / 5 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Bangkok & Pattaya</span>
+                  <h3>Bangkok & Pattaya Super Saver</h3>
+                  <p>Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private kitchen & Telugu guides.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🗣️ Telugu Guides</span>
+                    <span class="pill-feature">🏢 3N Pattaya Condo</span>
+                    <span class="pill-feature">🏢 2N Bangkok Condo</span>
+                    <span class="pill-feature">🍽️ Indian Food</span>
+                    <span class="pill-feature">🚗 100% Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹19,900</span>
+                    </div>
+                    <a href="package-detail.html?id=bangkok-pattaya-classic-vacation" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2: Phuket & Krabi Romantic Island Escape -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80" alt="Phuket & Krabi Romantic Island Escape" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">COUPLE SPECIAL</span>
+                  <span class="package-duration-tag">7 Days / 6 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Phuket & Krabi</span>
+                  <h3>Phuket & Krabi Romantic Island Escape</h3>
+                  <p>An idyllic 7-day Andaman holiday pairing lively Phuket beaches with Krabi's dramatic limestone karsts & private cruises.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🏖️ Beachfront Resorts</span>
+                    <span class="pill-feature">🛥️ Phi Phi Speedboat</span>
+                    <span class="pill-feature">🚗 100% Private AC</span>
+                    <span class="pill-feature">🗣️ Telugu Support</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹29,999</span>
+                    </div>
+                    <a href="package-detail.html?id=phuket-krabi-romantic-escape" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3: Thailand Family Tour Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80" alt="Thailand Family Tour Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">FAMILY FAVORITE</span>
+                  <span class="package-duration-tag">5 Days / 4 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Bangkok & Pattaya</span>
+                  <h3>Thailand Family Tour Packages</h3>
+                  <p>Specially crafted family vacation featuring kid-friendly attractions, Safari World, and spacious condo stays with kitchen.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">👨‍👩‍👧 Family Condos</span>
+                    <span class="pill-feature">🦁 Safari World</span>
+                    <span class="pill-feature">🍽️ Indian Food</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹24,999</span>
+                    </div>
+                    <a href="family-packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 4: Thailand Honeymoon Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80" alt="Thailand Honeymoon Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">HONEYMOON SPECIAL</span>
+                  <span class="package-duration-tag">6 Days / 5 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Phuket & Krabi</span>
+                  <h3>Thailand Honeymoon Packages</h3>
+                  <p>Romantic island retreat featuring private pool villas, sunset dinner cruise, couple spa, and secluded island tours.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">💕 Pool Villas</span>
+                    <span class="pill-feature">🛥️ Sunset Cruise</span>
+                    <span class="pill-feature">💆 Couple Spa</span>
+                    <span class="pill-feature">🚗 Private Transfers</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹32,999</span>
+                    </div>
+                    <a href="honeymoon-packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 5: Bangkok Tour Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Bangkok Tour Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">CITY BREAK</span>
+                  <span class="package-duration-tag">4 Days / 3 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Bangkok</span>
+                  <h3>Bangkok Tour Packages</h3>
+                  <p>Immerse yourself in Bangkok's golden temples, lively shopping malls, Chao Phraya river dinner cruise & street markets.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🛕 Grand Palace</span>
+                    <span class="pill-feature">🚢 Dinner Cruise</span>
+                    <span class="pill-feature">🛍️ Shopping Tour</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹16,999</span>
+                    </div>
+                    <a href="packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 6: Pattaya Tour Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80" alt="Pattaya Tour Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">BEACH SPECIAL</span>
+                  <span class="package-duration-tag">4 Days / 3 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Pattaya</span>
+                  <h3>Pattaya Tour Packages</h3>
+                  <p>Experience thrilling watersports at Coral Island, world-class Alcazar cabaret show, Sanctuary of Truth & night markets.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🏖️ Coral Island</span>
+                    <span class="pill-feature">🎭 Alcazar VIP</span>
+                    <span class="pill-feature">🛕 Sanctuary of Truth</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹14,999</span>
+                    </div>
+                    <a href="packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 7: Phuket Tour Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80" alt="Phuket Tour Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">ISLAND SPECIAL</span>
+                  <span class="package-duration-tag">5 Days / 4 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Phuket</span>
+                  <h3>Phuket Tour Packages</h3>
+                  <p>Discover pristine Andaman beaches, Phi Phi Islands tour, Phang Nga Bay James Bond Island & Old Phuket Town heritage.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🏝️ James Bond Island</span>
+                    <span class="pill-feature">🛥️ Phi Phi Speedboat</span>
+                    <span class="pill-feature">🏖️ Patong Beach</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹21,999</span>
+                    </div>
+                    <a href="packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 8: Krabi Tour Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80" alt="Krabi Tour Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">NATURE SPECIAL</span>
+                  <span class="package-duration-tag">4 Days / 3 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Krabi</span>
+                  <h3>Krabi Tour Packages</h3>
+                  <p>Pristine limestone karsts, crystal clear waters of Railay, rainforest Emerald Pool hot springs & 4 Islands cruise.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🏝️ 4 Islands Tour</span>
+                    <span class="pill-feature">🌿 Emerald Pool</span>
+                    <span class="pill-feature">🏖️ Railay Beach</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹18,999</span>
+                    </div>
+                    <a href="packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 9: Bangkok & Pattaya Tour Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Bangkok & Pattaya Tour Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">COMBO TOUR</span>
+                  <span class="package-duration-tag">5 Days / 4 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Bangkok & Pattaya</span>
+                  <h3>Bangkok & Pattaya Tour Packages</h3>
+                  <p>The perfect holiday package covering top sights of both Bangkok and Pattaya with comfortable private transfers.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🏙️ City + Beach</span>
+                    <span class="pill-feature">🛥️ Speedboat Excursion</span>
+                    <span class="pill-feature">🍽️ Indian Meals</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹20,999</span>
+                    </div>
+                    <a href="packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 10: Bangkok & Phuket Tour Packages -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80" alt="Bangkok & Phuket Tour Packages" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">TWIN DESTINATION</span>
+                  <span class="package-duration-tag">6 Days / 5 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Bangkok & Phuket</span>
+                  <h3>Bangkok & Phuket Tour Packages</h3>
+                  <p>Combine metropolitan excitement & temple serenity in Bangkok with the tropical paradise & island hopping of Phuket.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🏙️ Bangkok Sights</span>
+                    <span class="pill-feature">🏖️ Phuket Beaches</span>
+                    <span class="pill-feature">🛥️ Island Cruise</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹27,999</span>
+                    </div>
+                    <a href="packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 11: Thailand Tour Packages from Hyderabad -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Thailand Tour Packages from Hyderabad" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">TELUGU SPECIAL</span>
+                  <span class="package-duration-tag">5 Days / 4 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Bangkok & Pattaya</span>
+                  <h3>Thailand Tour from Hyderabad</h3>
+                  <p>Handcrafted specifically for Telugu travelers with dedicated native Telugu coordination, South Indian food & care.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🗣️ Native Telugu Guides</span>
+                    <span class="pill-feature">🍲 South Indian Food</span>
+                    <span class="pill-feature">🏢 Family Condos</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹23,499</span>
+                    </div>
+                    <a href="group-tours.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 12: Thailand Tour Packages with Indian Food -->
+              <article class="package-card compact">
+                <div class="package-media-wrap">
+                  <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Thailand Tour Packages with Indian Food" loading="lazy" width="600" height="450">
+                  <span class="package-badge-tag">INDIAN FOOD</span>
+                  <span class="package-duration-tag">5 Days / 4 Nights</span>
+                </div>
+                <div class="package-card-body">
+                  <span class="package-destination">Bangkok & Pattaya</span>
+                  <h3>Thailand Packages with Indian Food</h3>
+                  <p>Never worry about meals. Pure veg, Jain, & authentic Indian partner restaurants plus condo kitchen facilities.</p>
+                  <div class="package-feature-pills">
+                    <span class="pill-feature">🍛 100% Indian Meals</span>
+                    <span class="pill-feature">🥬 Pure Veg / Jain</span>
+                    <span class="pill-feature">🏢 Kitchen Condos</span>
+                    <span class="pill-feature">🚗 Private AC</span>
+                  </div>
+                  <div class="package-card-footer">
+                    <div class="package-price-wrap">
+                      <span class="package-price-label">Starting Price</span>
+                      <span class="package-price-value">From ₹22,499</span>
+                    </div>
+                    <a href="customized-packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="carousel-btn next-btn" id="featuredNextBtn" aria-label="Next Package">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Happy Travellers (Reviews Section) -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-header centered">
+          <h2>Happy travellers</h2>
+          <p>Real experiences from families and couples who trusted us.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Having Telugu-speaking guidance made our family trip completely stress-free. The condo in Pattaya was wonderful, spacious, and perfect for the kids with a full kitchen!"</p>
+            <div class="review-author">Ramesh & Family</div>
+            <div class="review-trip">Hyderabad, Telangana</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Transparent pricing and absolute zero hidden costs. The private transfers were prompt, and having authentic Indian food options made all the difference for my parents."</p>
+            <div class="review-author">Suresh Kumar</div>
+            <div class="review-trip">Khammam, Telangana</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Our honeymoon package was customized exactly to our budget. Best travel agency experience! Highly recommend the beachfront resort in Krabi."</p>
+            <div class="review-author">Ananya & Kiran</div>
+            <div class="review-trip">Bengaluru, Karnataka</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
     <!-- 2. Value Proposition / Feature Grid -->
     <section class="section-family-trust" id="about">
       <div class="container">
@@ -199,117 +577,6 @@
       </div>
     </section>
 
-    <!-- 3. Featured Packages Section (Matching packages.html Layout) -->
-    <section class="section bg-subtle" id="packages">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-header-left">
-            <h2>Featured Bestsellers</h2>
-            <p>Transparent pricing, zero hidden costs, and fully customizable itineraries for Indian travelers.</p>
-          </div>
-          <a href="packages.html" class="link-arrow">View All Packages →</a>
-        </div>
-
-        <div class="packages-grid w-full grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto" id="homeFeaturedGrid">
-          <!-- Package 1: Bangkok & Pattaya Super Saver -->
-          <article class="package-card w-full" id="cardBangkokPattaya">
-            <div class="package-media-wrap">
-              <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Bangkok & Pattaya Super Saver" loading="lazy" width="600" height="450">
-              <span class="package-badge-tag">BESTSELLER</span>
-              <span class="package-duration-tag">6 Days / 5 Nights</span>
-            </div>
-            <div class="package-card-body">
-              <span class="package-destination">Bangkok & Pattaya</span>
-              <h3>Bangkok & Pattaya Super Saver</h3>
-              <p class="text-sm text-gray-600">Our signature holiday designed for families, offering maximum comfort and privacy.</p>
-              
-              <div class="package-feature-pills flex flex-wrap gap-2">
-                <span class="pill-feature text-xs px-2 py-1">🗣️ Telugu Guides</span>
-                <span class="pill-feature text-xs px-2 py-1">🏢 3N Pattaya Condo</span>
-                <span class="pill-feature text-xs px-2 py-1">🏢 2N Bangkok Condo</span>
-                <span class="pill-feature text-xs px-2 py-1">🍽️ Indian Food</span>
-                <span class="pill-feature text-xs px-2 py-1">🚗 100% Private AC</span>
-              </div>
-
-              <div class="package-card-footer">
-                <div class="package-price-wrap">
-                  <span class="package-price-label">Starting Price</span>
-                  <span class="package-price-value">From ₹19,900</span>
-                </div>
-                <a href="package-detail.html?id=bangkok-pattaya-classic-vacation" class="btn btn-primary btn-sm">
-                  View Itinerary
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Package 2: Phuket & Krabi Romantic Escape -->
-          <article class="package-card w-full">
-            <div class="package-media-wrap">
-              <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80" alt="Phuket & Krabi Romantic Island Escape" loading="lazy" width="600" height="450">
-              <span class="package-badge-tag">COUPLE SPECIAL</span>
-              <span class="package-duration-tag">7 Days / 6 Nights</span>
-            </div>
-            <div class="package-card-body">
-              <span class="package-destination">Phuket & Krabi</span>
-              <h3>Phuket & Krabi Romantic Island Escape</h3>
-              <p class="text-sm text-gray-600">A tailored romantic island getaway featuring luxury beachfront resort stays and private cruises.</p>
-              
-              <div class="package-feature-pills flex flex-wrap gap-2">
-                <span class="pill-feature text-xs px-2 py-1">🏖️ Beachfront Resorts</span>
-                <span class="pill-feature text-xs px-2 py-1">🛥️ Phi Phi Speedboat</span>
-                <span class="pill-feature text-xs px-2 py-1">🚗 100% Private AC</span>
-                <span class="pill-feature text-xs px-2 py-1">🗣️ Telugu Support</span>
-              </div>
-
-              <div class="package-card-footer">
-                <div class="package-price-wrap">
-                  <span class="package-price-label">Starting Price</span>
-                  <span class="package-price-value">From ₹29,999</span>
-                </div>
-                <a href="package-detail.html?id=phuket-krabi-romantic-escape" class="btn btn-primary btn-sm">
-                  View Itinerary
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Happy Travellers (Reviews Section) -->
-    <section class="section" id="reviews">
-      <div class="container">
-        <div class="section-header centered">
-          <h2>Happy travellers</h2>
-          <p>Real experiences from families and couples who trusted us.</p>
-        </div>
-
-        <div class="reviews-grid">
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>"Having Telugu-speaking guidance made our family trip completely stress-free. The condo in Pattaya was wonderful, spacious, and perfect for the kids with a full kitchen!"</p>
-            <div class="review-author">Ramesh & Family</div>
-            <div class="review-trip">Hyderabad, Telangana</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>"Transparent pricing and absolute zero hidden costs. The private transfers were prompt, and having authentic Indian food options made all the difference for my parents."</p>
-            <div class="review-author">Suresh Kumar</div>
-            <div class="review-trip">Khammam, Telangana</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>"Our honeymoon package was customized exactly to our budget. Best travel agency experience! Highly recommend the beachfront resort in Krabi."</p>
-            <div class="review-author">Ananya & Kiran</div>
-            <div class="review-trip">Bengaluru, Karnataka</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- 5. Why Trust ThaiPackages for Families? (Dedicated Dark-Green Section) -->
     <section class="section section-dark" id="why-trust-families">
       <div class="container">
@@ -329,7 +596,7 @@
           </div>
 
           <div class="family-trust-card" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #ffffff;">
-            <div class="family-trust-icon">🍛</div>
+            <div class="family-trust-icon">🍲</div>
             <h3 style="color: var(--gold);">Homely Indian Dining</h3>
             <p style="color: rgba(255,255,255,0.8);">Vegetarian, Jain, and non-veg Indian menus curated to suit South Indian palates, with self-cook kitchen options.</p>
           </div>
@@ -487,7 +754,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script type="module" src="context/index.js?v=2.0" defer></script>
-  <script src="js/app.js?v=2.0" defer></script>
+  <script type="module" src="context/index.js?v=2.2" defer></script>
+  <script src="js/app.js?v=2.2" defer></script>
 </body>
 </html>

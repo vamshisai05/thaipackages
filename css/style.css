@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    ThaiPackages.com - Modern Boutique Travel Design System
    Visual Direction: Deep Forest Teal + Warm Amber Gold + Clean White + Warm Sand
@@ -469,7 +470,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 8px 0;
   font-size: 17px;
   font-weight: 600;
   color: #ffffff;
@@ -493,7 +494,7 @@ ul, ol {
   color: #ffffff;
   font-size: 17px;
   font-weight: 600;
-  padding: 12px 0;
+  padding: 8px 0;
   width: 100%;
   cursor: pointer;
   display: flex;
@@ -1602,7 +1603,7 @@ ul, ol {
 }
 
 .highlights-list li::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   left: 0;
   color: var(--cyan-accent);
@@ -1722,7 +1723,7 @@ details[open] .itinerary-chevron {
 }
 
 .inc-list li::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   left: 0;
   color: #059669;
@@ -1730,7 +1731,7 @@ details[open] .itinerary-chevron {
 }
 
 .exc-list li::before {
-  content: '✕';
+  content: '\2715';
   position: absolute;
   left: 0;
   color: #dc2626;
@@ -2835,7 +2836,7 @@ details[open] .itinerary-chevron {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin: 20px 0 28px;
+  margin: 20px 0 0;
   box-shadow: 0 10px 30px rgba(6, 29, 33, 0.18);
   position: relative;
   overflow: hidden;
@@ -3305,7 +3306,7 @@ details[open] .itinerary-chevron {
 }
 
 .step-flow-card ul.step-bullets li::before {
-  content: "•";
+  content: "\2022";
   color: var(--gold);
   font-weight: bold;
   font-size: 16px;
@@ -3633,4 +3634,287 @@ html {
 body.drawer-open .global-sticky-actions {
   opacity: 0;
   pointer-events: none;
+}
+
+/* 7. Featured Package Carousel (Pass 8 Track Layout) */
+#packages {
+  padding-top: 36px;
+  padding-bottom: 48px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  #packages {
+    padding-top: 44px;
+    padding-bottom: 64px;
+    margin-bottom: 0;
+  }
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-controls {
+  display: none; /* Removed from header */
+}
+
+.carousel-btn {
+  background-color: #ffffff;
+  border: 1.5px solid var(--border-color, #e5e7eb);
+  color: var(--teal-950, #061d21);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(6, 29, 33, 0.08);
+  flex-shrink: 0;
+  z-index: 5;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background-color: var(--teal-50, #f0fdfa);
+  border-color: var(--teal-500, #14b8a6);
+  color: var(--teal-700, #0f766e);
+  transform: scale(1.06);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .carousel-wrapper {
+    gap: 8px;
+  }
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.featured-carousel-container {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 0 18px;
+  /* Hide scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  container-type: inline-size;
+}
+
+.featured-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  align-items: stretch;
+}
+
+/* Compact Package Card (Pass 8 Refined) */
+.package-card.compact {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  box-shadow: 0 3px 12px rgba(6, 29, 33, 0.05);
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  /* Responsive widths via cqw and JS fallback */
+  flex: 0 0 var(--computed-card-width, calc(100cqw));
+  width: var(--computed-card-width, calc(100cqw));
+  max-width: var(--computed-card-width, calc(100cqw));
+}
+
+@media (min-width: 768px) {
+  .package-card.compact {
+    flex: 0 0 var(--computed-card-width, calc((100cqw - 16px) / 2));
+    width: var(--computed-card-width, calc((100cqw - 16px) / 2));
+    max-width: var(--computed-card-width, calc((100cqw - 16px) / 2));
+  }
+}
+
+@media (min-width: 1024px) {
+  .package-card.compact {
+    flex: 0 0 var(--computed-card-width, calc((100cqw - 32px) / 3));
+    width: var(--computed-card-width, calc((100cqw - 32px) / 3));
+    max-width: var(--computed-card-width, calc((100cqw - 32px) / 3));
+  }
+}
+
+@media (min-width: 1280px) {
+  .package-card.compact {
+    flex: 0 0 var(--computed-card-width, calc((100cqw - 48px) / 4));
+    width: var(--computed-card-width, calc((100cqw - 48px) / 4));
+    max-width: var(--computed-card-width, calc((100cqw - 48px) / 4));
+  }
+}
+
+.package-card.compact:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(6, 29, 33, 0.09);
+}
+
+.package-card.compact .package-media-wrap {
+  position: relative;
+  height: 160px;
+  border-radius: 13px 13px 0 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.package-card.compact .package-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.package-card.compact .package-badge-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  background: rgba(6, 29, 33, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--gold, #f2aa27);
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.package-card.compact .package-duration-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(4px);
+  color: var(--teal-950, #061d21);
+  border-radius: 6px;
+}
+
+.package-card.compact .package-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.package-card.compact .package-destination {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--teal-600, #0d9488);
+  margin-bottom: 4px;
+}
+
+.package-card.compact h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  color: var(--teal-950, #061d21);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.package-card.compact p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-muted, #64748b);
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 36px;
+}
+
+.package-card.compact .package-feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 14px;
+  min-height: 52px;
+  align-content: flex-start;
+}
+
+.package-card.compact .pill-feature {
+  font-size: 10px;
+  padding: 3px 7px;
+  background: var(--bg-warm, #f8fafc);
+  color: var(--teal-900, #0a2a30);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.package-card.compact .package-card-footer {
+  padding-top: 12px;
+  margin-top: auto;
+  border-top: 1px solid var(--border-color, #f1f5f9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.package-card.compact .package-price-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.package-card.compact .package-price-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted, #64748b);
+}
+
+.package-card.compact .package-price-value {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--teal-900, #0a2a30);
+}
+
+.package-card.compact .btn-sm {
+  padding: 7px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
 }
