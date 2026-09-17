@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ThaiPackages.com - Core Application Controller
  * High-performance, accessible, vanilla JavaScript application controller.
  * Fully decoupled from hardcoded business data; powered by /context/.
@@ -58,8 +58,8 @@
       tagline: "Beaches, Nightlife & Island Adventures",
       shortDescription: "Vibrant coastal playground featuring Coral Island watersports, sea-view condos with private kitchen, and world-class entertainment.",
       description: "A dynamic coastal resort city just 2 hours from Bangkok, famed for Coral Island watersports, sea-view condos, and cabaret shows.",
-      heroImage: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80",
+      heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
       quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "3 – 4 Days", travelStyle: ["Watersports", "Nightlife", "Condo Stays", "Family Fun"] },
       highlights: ["Coral Island (Koh Larn) speedboat tour with Indian lunch", "Alcazar Cabaret Show with VIP seating", "Pattaya Big Buddha and scenic coastal viewpoints", "Spacious beachfront condos with kitchen amenities"],
       packageSlugs: ["bangkok-pattaya-classic-vacation"]
@@ -192,8 +192,8 @@
       startingPriceINR: 14999,
       startingPriceUSD: 170,
       startingPriceTHB: 6200,
-      heroImage: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80",
+      heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
       shortDescription: "Experience thrilling watersports at Coral Island, world-class Alcazar cabaret show, Sanctuary of Truth & night markets.",
       description: "Experience the vibrant coastal energy of Pattaya with Coral Island speedboat excursions and cultural landmarks."
     },
@@ -669,9 +669,7 @@
               <h3>${pkg.title}</h3>
               <p>${pkg.shortDescription || pkg.description}</p>
               
-              <div class="package-feature-pills">
-                ${pills.map(p => `<span class="pill-feature">${p}</span>`).join('')}
-              </div>
+              
 
               <div class="package-card-footer">
                 <a href="${link}" class="btn btn-primary btn-sm">
@@ -694,7 +692,7 @@
       if (prevBtn && nextBtn && featuredCarousel) {
         const updateCarouselDimensions = () => {
           const w = featuredCarousel.clientWidth;
-          let cardsVisible = 1;
+          let cardsVisible = 1.15;
           if (window.innerWidth >= 1280) cardsVisible = 4;
           else if (window.innerWidth >= 1024) cardsVisible = 3;
           else if (window.innerWidth >= 768) cardsVisible = 2;
@@ -1301,4 +1299,5 @@
 
   });
 })();
+
 

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* ==========================================================================
    ThaiPackages.com - Modern Boutique Travel Design System
    Visual Direction: Deep Forest Teal + Warm Amber Gold + Clean White + Warm Sand
@@ -3746,9 +3746,9 @@ body.drawer-open .global-sticky-actions {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
   /* Responsive widths via cqw and JS fallback */
-  flex: 0 0 var(--computed-card-width, calc(100cqw));
-  width: var(--computed-card-width, calc(100cqw));
-  max-width: var(--computed-card-width, calc(100cqw));
+  flex: 0 0 var(--computed-card-width, 85vw);
+  width: var(--computed-card-width, 85vw);
+  max-width: var(--computed-card-width, 85vw);
 }
 
 @media (min-width: 768px) {
@@ -3857,10 +3857,10 @@ body.drawer-open .global-sticky-actions {
   color: var(--text-muted, #64748b);
   margin-bottom: 12px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 36px;
+  text-overflow: ellipsis;
 }
 
 .package-card.compact .package-feature-pills {
