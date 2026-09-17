@@ -217,9 +217,7 @@ ul, ol {
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+  display: none;
 }
 
 .nav-link {
@@ -391,7 +389,7 @@ ul, ol {
 
 /* Hamburger */
 .hamburger-btn {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -478,6 +476,76 @@ ul, ol {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.drawer-menu a.drawer-link {
+  width: 100%;
+}
+.drawer-menu a.drawer-link.active {
+  color: var(--gold);
+}
+
+.menu-item-has-children {
+  width: 100%;
+}
+
+.submenu-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.submenu-toggle .chevron-icon {
+  transition: transform 0.25s ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.submenu-toggle.open .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.drawer-submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  gap: 12px;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.drawer-submenu.open {
+  display: flex;
+  animation: slideDown 0.25s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.drawer-submenu a {
+  border-bottom: none;
+  padding: 4px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color var(--ease-fast);
+}
+
+.drawer-submenu a:hover,
+.drawer-submenu a.active {
+  color: var(--gold);
+}
+
 /* ==========================================================================
    Hero Section (Reference Style: Large Cinematic Editorial)
    ========================================================================== */
@@ -494,6 +562,12 @@ ul, ol {
   overflow: hidden;
 }
 
+@keyframes kenBurns {
+  0% { transform: scale(1.02); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1.02); }
+}
+
 .hero-bg-media {
   position: absolute;
   inset: 0;
@@ -501,9 +575,8 @@ ul, ol {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.55;
-  transform: scale(1.02);
-  transition: transform 1.2s ease;
+  opacity: 0.65;
+  animation: kenBurns 30s ease-in-out infinite;
 }
 
 .hero-overlay {
@@ -3511,6 +3584,38 @@ h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; }
 h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; }
 
 /* 4. Trust Signals Styling Enhancement */
+
+/* ==========================================================================
+   UI/UX Audit & Cross-Browser Consistency Polish (Applied Programmatically)
+   ========================================================================== */
+
+/* 1. Touch Targets & Mobile Optimization (Min 44px for accessibility) */
+a.btn, button.btn, .nav-link, .sticky-action-btn, .link-arrow, button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Image Fallbacks & Rendering Consistency (Prevent white flashes on slow networks) */
+.hero-bg-media, .package-image, .dest-image, img {
+  background-color: #e2e8f0; 
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* 3. Typography Standardization (Ensure consistent visual hierarchy) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--teal-900, #134e4a);
+  line-height: 1.25;
+}
+
+h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; }
+
+/* 4. Trust Signals Styling Enhancement */
 .highlights-list li, #pkgInclusions li, #pkgExclusions li {
   line-height: 1.6;
   margin-bottom: 8px;
@@ -3519,4 +3624,13 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; }
 /* 5. Smooth Scrolling for Anchor Links */
 html {
   scroll-behavior: smooth;
+}
+
+/* 6. Hide Global Actions When Drawer Open */
+.global-sticky-actions {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+body.drawer-open .global-sticky-actions {
+  opacity: 0;
+  pointer-events: none;
 }

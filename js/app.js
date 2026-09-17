@@ -277,6 +277,7 @@
         mobileDrawer.classList.add('open');
         mobileDrawer.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        document.body.classList.add('drawer-open');
         if (closeDrawerBtn) closeDrawerBtn.focus();
       };
 
@@ -284,6 +285,7 @@
         mobileDrawer.classList.remove('open');
         mobileDrawer.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        document.body.classList.remove('drawer-open');
         if (hamburgerBtn) hamburgerBtn.focus();
       };
 
@@ -300,7 +302,67 @@
         }
       });
 
-      drawerLinks.forEach(link => link.addEventListener('click', closeMenu));
+      // Handle submenu toggles
+      const submenuToggles = document.querySelectorAll('.submenu-toggle');
+      submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const submenu = toggle.nextElementSibling;
+          if (submenu && submenu.classList.contains('drawer-submenu')) {
+            const isExpanded = submenu.classList.contains('open');
+            
+            // Close other open submenus for accordion behavior
+            document.querySelectorAll('.drawer-submenu.open').forEach(openSub => {
+               if (openSub !== submenu) {
+                  openSub.classList.remove('open');
+                  const otherToggle = openSub.previousElementSibling;
+                  if (otherToggle && otherToggle.classList.contains('submenu-toggle')) {
+                      otherToggle.classList.remove('open');
+                      otherToggle.setAttribute('aria-expanded', 'false');
+                  }
+               }
+            });
+
+            if (isExpanded) {
+              submenu.classList.remove('open');
+              toggle.classList.remove('open');
+              toggle.setAttribute('aria-expanded', 'false');
+            } else {
+              submenu.classList.add('open');
+              toggle.classList.add('open');
+              toggle.setAttribute('aria-expanded', 'true');
+            }
+          }
+        });
+      });
+
+      // Set active state on load based on URL
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const allDrawerLinks = document.querySelectorAll('.drawer-menu a.drawer-link');
+      allDrawerLinks.forEach(link => {
+        const linkPath = link.getAttribute('href').split('?')[0];
+        if (linkPath === currentPath) {
+           link.classList.add('active');
+           // Automatically expand submenu if active link is inside one
+           const parentSubmenu = link.closest('.drawer-submenu');
+           if (parentSubmenu) {
+             parentSubmenu.classList.add('open');
+             const siblingToggle = parentSubmenu.previousElementSibling;
+             if (siblingToggle && siblingToggle.classList.contains('submenu-toggle')) {
+                 siblingToggle.classList.add('open');
+                 siblingToggle.setAttribute('aria-expanded', 'true');
+             }
+           }
+        }
+      });
+
+      // Close drawer on link click
+      allDrawerLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+           closeMenu();
+        });
+      });
     }
 
     // Helper: URL Query Parameter
