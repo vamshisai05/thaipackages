@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ThaiPackages.com - Core Application Controller
  * High-performance, accessible, vanilla JavaScript application controller.
  * Fully decoupled from hardcoded business data; powered by /context/.
@@ -961,7 +961,7 @@
     // ==========================================================================
     const destDetailHero = document.getElementById('destDetailHero');
     if (destDetailHero && DESTINATIONS && DESTINATIONS.length > 0) {
-      const slug = getQueryParam('id');
+      const slug = getQueryParam('id') || getQueryParam('dest');
       let destination = DESTINATIONS.find(d => d.slug === slug);
 
       if (!destination) {
@@ -1053,7 +1053,7 @@
 
     const pkgDetailMain = document.getElementById('pkgDetailMain');
     if (pkgDetailMain && PACKAGES && PACKAGES.length > 0) {
-      const slug = getQueryParam('id');
+      const slug = getQueryParam('id') || getQueryParam('dest');
       let pkg = PACKAGES.find(p => p.slug === slug);
 
       if (!pkg) {
@@ -1062,7 +1062,7 @@
       }
       activeDetailPackage = pkg;
 
-      const durationStr = `${pkg.durationDays || pkg.duration.days} Days / ${pkg.durationNights || pkg.duration.nights} Nights`;
+      const durationStr = `${pkg.durationDays || (pkg.duration && pkg.duration.days) || 5} Days / ${pkg.durationNights || (pkg.duration && pkg.duration.nights) || 4} Nights`;
 
       // Document Title
       document.title = `${pkg.title} (${durationStr}) | ${BRAND.name || 'ThaiPackages.com'}`;
