@@ -1,4 +1,4 @@
-$index = [System.IO.File]::ReadAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\index.html", [System.Text.Encoding]::UTF8)
+$index = [System.IO.File]::ReadAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\index.html", (New-Object System.Text.UTF8Encoding $false))
 
 $drawerStart = $index.IndexOf('<ul class="drawer-menu">')
 $drawerEnd = $index.IndexOf('</ul>', $drawerStart) + 5
@@ -11,7 +11,7 @@ $footer = $index.Substring($footerStart, $footerEnd - $footerStart)
 $files = Get-ChildItem -Filter *.html
 foreach ($file in $files) {
     if ($file.Name -eq "index.html") { continue }
-    $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
+    $content = [System.IO.File]::ReadAllText($file.FullName, (New-Object System.Text.UTF8Encoding $false))
     
     $dStart = $content.IndexOf('<ul class="drawer-menu">')
     if ($dStart -ge 0) {
@@ -25,6 +25,6 @@ foreach ($file in $files) {
         $content = $content.Substring(0, $fStart) + $footer + $content.Substring($fEnd)
     }
 
-    [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
 }
 Write-Output "Perfect Sync Complete"

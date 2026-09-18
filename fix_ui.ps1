@@ -9,7 +9,7 @@ if (Test-Path $stylePath) {
     # Fix mobile carousel width (100cqw to 85vw)
     $css = $css -replace 'calc\(100cqw\)', '85vw'
     
-    Set-Content -Path $stylePath -Value $css -Encoding UTF8
+    [System.IO.File]::WriteAllText($stylePath, $css, (New-Object System.Text.UTF8Encoding $false))
     Write-Output "Fixed style.css"
 }
 
@@ -27,7 +27,7 @@ if (Test-Path $appPath) {
     # Bug 4: Replace broken image
     $app = $app -replace '1598970434795-0c54fe7c0648', '1549880338-65dd4bc8a4d4'
     
-    Set-Content -Path $appPath -Value $app -Encoding UTF8
+    [System.IO.File]::WriteAllText($appPath, $app, (New-Object System.Text.UTF8Encoding $false))
     Write-Output "Fixed app.js"
 }
 
@@ -42,7 +42,7 @@ if (Test-Path $indexPath) {
     # Bug 4: Replace broken image
     $html = $html -replace '1598970434795-0c54fe7c0648', '1549880338-65dd4bc8a4d4'
     
-    Set-Content -Path $indexPath -Value $html -Encoding UTF8
+    [System.IO.File]::WriteAllText($indexPath, $html, (New-Object System.Text.UTF8Encoding $false))
     Write-Output "Fixed index.html"
 }
 

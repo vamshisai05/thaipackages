@@ -35,5 +35,5 @@ if ($match.Success) {
     $content = $content -replace $reviewsRegex, "`$1`n    $familySection"
 }
 
-[System.IO.File]::WriteAllText(".\index.html", $content, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText(".\index.html", $content, (New-Object System.Text.UTF8Encoding $false))
 Write-Host "Reordered index.html successfully"

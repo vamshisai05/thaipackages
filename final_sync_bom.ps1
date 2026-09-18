@@ -1,4 +1,4 @@
-﻿$drawerMenu = @"
+$drawerMenu = @"
       <ul class="drawer-menu">
         <li><a href="packages.html">Holiday Packages <span>→</span></a></li>
         <li><a href="destinations.html">Destinations <span>→</span></a></li>
@@ -69,7 +69,7 @@ $footer = @"
 
 $files = Get-ChildItem -Filter *.html
 foreach ($file in $files) {
-    $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
+    $content = [System.IO.File]::ReadAllText($file.FullName, (New-Object System.Text.UTF8Encoding $false))
     
     $dStart = $content.IndexOf('<ul class="drawer-menu">')
     if ($dStart -ge 0) {
@@ -83,6 +83,6 @@ foreach ($file in $files) {
         $content = $content.Substring(0, $fStart) + $footer + $content.Substring($fEnd)
     }
 
-    [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
 }
 Write-Output "Perfect Sync Complete"

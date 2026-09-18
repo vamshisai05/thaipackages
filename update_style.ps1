@@ -163,5 +163,5 @@ $newCss = @"
 
 $content = $content -replace $regex, $newCss
 
-[System.IO.File]::WriteAllText(".\css\style.css", $content, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText(".\css\style.css", $content, (New-Object System.Text.UTF8Encoding $false))
 Write-Host "Updated style.css successfully"

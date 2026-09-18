@@ -1,4 +1,4 @@
-$about = [System.IO.File]::ReadAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\about.html", [System.Text.Encoding]::UTF8)
+$about = [System.IO.File]::ReadAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\about.html", (New-Object System.Text.UTF8Encoding $false))
 
 $mainStart = $about.IndexOf('<main>')
 $mainEnd = $about.IndexOf('</main>') + 7
@@ -67,7 +67,7 @@ $phuketMain = @"
 $bangkokFull = $headerPart + $bangkokMain + $footerPart
 $phuketFull = $headerPart + $phuketMain + $footerPart
 
-[System.IO.File]::WriteAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\bangkok-pattaya-saver.html", $bangkokFull, [System.Text.Encoding]::UTF8)
-[System.IO.File]::WriteAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\phuket-krabi-escape.html", $phuketFull, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\bangkok-pattaya-saver.html", $bangkokFull, (New-Object System.Text.UTF8Encoding $false))
+[System.IO.File]::WriteAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\phuket-krabi-escape.html", $phuketFull, (New-Object System.Text.UTF8Encoding $false))
 
 Write-Output "Pages created successfully"

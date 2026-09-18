@@ -13,7 +13,7 @@ foreach ($file in $htmlFiles) {
     # Add cache buster to context/index.js
     $content = $content -replace 'src="context/index\.js(?![\?])"', 'src="context/index.js?v=2.0"'
 
-    [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
     Write-Host "Updated cache-busters in: $($file.Name)"
 }
 

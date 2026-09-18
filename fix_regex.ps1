@@ -5,7 +5,7 @@ $envelope = [string]([char]0x2709) + [string]([char]0xFE0F)
 $phone = [string]([char]0xD83D) + [string]([char]0xDCDE)
 
 foreach ($file in $files) {
-    $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
+    $content = [System.IO.File]::ReadAllText($file.FullName, (New-Object System.Text.UTF8Encoding $false))
 
     $content = [regex]::Replace($content, '(?s)Holiday Packages <span>.*?</span>', "Holiday Packages <span>$arrow</span>")
     $content = [regex]::Replace($content, '(?s)Destinations <span>.*?</span>', "Destinations <span>$arrow</span>")
@@ -17,6 +17,6 @@ foreach ($file in $files) {
 
     $content = [regex]::Replace($content, '(?s)\(from .*?19,900\)', "(from $rupee`19,900)")
 
-    [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
 }
 Write-Output "Fixed via Regex Unicode Strings"

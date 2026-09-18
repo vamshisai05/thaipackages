@@ -46,8 +46,8 @@ $drawerMenu = @'
 '@
 
 foreach ($file in $files) {
-    $content = [System.IO.File]::ReadAllText($file.FullName)
+    $content = [System.IO.File]::ReadAllText($file.FullName, (New-Object System.Text.UTF8Encoding $false))
     $content = [regex]::Replace($content, '(?s)<ul class="drawer-menu">.*?</ul>', $drawerMenu)
-    [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
 }
 Write-Output "Updated HTML files for Pass 4"

@@ -50,7 +50,7 @@ $hamburger = @'
 '@
 
 foreach ($file in $files) {
-    $content = [System.IO.File]::ReadAllText($file.FullName)
+    $content = [System.IO.File]::ReadAllText($file.FullName, (New-Object System.Text.UTF8Encoding $false))
     
     # Replace nav block
     $content = [regex]::Replace($content, '(?s)<nav aria-label="Main Navigation">.*?</nav>', $navMain)
@@ -61,6 +61,6 @@ foreach ($file in $files) {
     # Replace drawer menu
     $content = [regex]::Replace($content, '(?s)<ul class="drawer-menu">.*?</ul>', $drawerMenu)
 
-    [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
 }
 Write-Output "Updated all HTML files for Pass 2 Navigation"

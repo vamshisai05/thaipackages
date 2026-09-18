@@ -69,7 +69,7 @@ $footer = @'
 '@
 
 foreach ($file in $files) {
-    $content = [System.IO.File]::ReadAllText($file.FullName)
+    $content = [System.IO.File]::ReadAllText($file.FullName, (New-Object System.Text.UTF8Encoding $false))
     
     $p = if ($file.Name -eq "packages.html") { "nav-link active" } else { "nav-link" }
     $d = if ($file.Name -eq "destinations.html") { "nav-link active" } else { "nav-link" }
@@ -89,6 +89,6 @@ foreach ($file in $files) {
     $content = [regex]::Replace($content, '(?s)<ul class="drawer-menu">.*?</ul>', $drawerMenu)
     $content = [regex]::Replace($content, '(?s)<footer class="site-footer".*?>.*?</footer>', $footer)
 
-    [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
 }
 Write-Output "Updated HTML files via PowerShell"

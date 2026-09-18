@@ -225,7 +225,7 @@ $pages = @(
 
 foreach ($p in $pages) {
     $html = ($templateTop -f $p.title, $p.hero_image) + $p.content + $templateBottom
-    [System.IO.File]::WriteAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\$($p.filename)", $html, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText("c:\Users\theva\OneDrive\Desktop\thaipackages\$($p.filename)", $html, (New-Object System.Text.UTF8Encoding $false))
 }
 
 Write-Output "Pages created successfully"
