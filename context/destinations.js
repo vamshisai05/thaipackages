@@ -173,10 +173,11 @@ export const DESTINATIONS = [
     ],
 
     packageSlugs: []
-  }
+  }$huahin
 ];
 
 if (typeof window !== 'undefined') {
   window.TRAVEL_CONTEXT = window.TRAVEL_CONTEXT || {};
   window.TRAVEL_CONTEXT.DESTINATIONS = DESTINATIONS;
 }
+
