@@ -19,6 +19,14 @@
       heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
       quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "4 – 7 Days", travelStyle: ["Beach", "Island Hopping", "Luxury Resorts"] },
+      longDescriptionHTML: `
+<h2>Phuket – The Pearl of the Andaman Sea</h2>
+<p>Discover Phuket, Thailand's premier island destination, famous for its dramatic limestone cliffs, pristine beaches, vibrant night markets, and luxurious resorts.</p>
+<p>Enjoy spectacular speedboat tours to the Phi Phi Islands, witness breathtaking sunsets at Promthep Cape, explore the Sino-Portuguese heritage of Old Phuket Town, and experience thrilling marine adventures.</p>
+<p>Whether you're travelling with family, as a couple, on honeymoon, with friends or as a group, Phuket offers a perfect mix of relaxation, culture, and coastal excitement.</p>
+<p><strong>Beaches • Island Hopping • Night Markets • Heritage • Marine Adventures • Luxury</strong></p>
+<p>Phuket – Discover the ultimate island escape.</p>
+      `,
       highlights: ["Speedboat tours to Phi Phi & Maya Bay", "Promthep Cape and Big Buddha viewpoint", "Old Phuket Town heritage and street food", "Beachfront pool villa resorts"],
       packageSlugs: ["phuket-krabi-romantic-escape", "grand-thailand-phuket-krabi-bangkok", "phuket-phi-phi-island-adventure"]
     },
@@ -33,6 +41,14 @@
       heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
       quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Scenic Nature", "Island Hopping", "Relaxation"] },
+      longDescriptionHTML: `
+<h2>Krabi – Tropical Beauty & Island Adventures</h2>
+<p>Discover Krabi, a stunning tropical destination famous for its crystal-clear waters, limestone cliffs, beautiful beaches and breathtaking islands.</p>
+<p>Enjoy exciting island-hopping tours, snorkeling, beach activities, scenic viewpoints and sunset experiences. Explore the spectacular Railay Beach, Phi Phi Islands and Four Islands, or simply relax surrounded by nature.</p>
+<p>Whether you're travelling with family, as a couple, on honeymoon or with friends, Krabi offers the perfect blend of relaxation, adventure and natural beauty.</p>
+<p><strong>Beaches • Island Tours • Snorkeling • Adventure • Nature • Sunsets</strong></p>
+<p>Krabi – Where tropical dreams become unforgettable memories.</p>
+      `,
       highlights: ["Krabi 4 Islands scenic longtail boat cruise", "Phra Nang Cave Beach and Railay Peninsula", "Rainforest Emerald Pool and Hot Springs", "Tranquil sunsets at Ao Nang Beach"],
       packageSlugs: ["phuket-krabi-romantic-escape", "grand-thailand-phuket-krabi-bangkok"]
     },
@@ -47,6 +63,14 @@
       heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
       quickFacts: { bestTime: "Nov – Feb", currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Culture", "Shopping", "Rooftops", "River Cruises"] },
+      longDescriptionHTML: `
+<h2>Bangkok – Where Tradition Meets Modern Thailand</h2>
+<p>Discover Bangkok, Thailand's vibrant capital, where rich culture, modern city life and unforgettable experiences come together. Explore magnificent temples, enjoy a scenic Chao Phraya River cruise, shop at colorful markets and world-class malls, and experience Bangkok's famous food scene.</p>
+<p>From Grand Palace and Wat Pho to bustling markets, rooftop views and exciting nightlife, Bangkok offers something for every traveller.</p>
+<p>Whether you're travelling with family, as a couple, on your honeymoon, with friends or as a group, ThaiPackages.com can customize your Bangkok experience around your interests and budget.</p>
+<p><strong>Culture • Shopping • Food • Sightseeing • River Cruises • Nightlife</strong></p>
+<p>Bangkok – Experience the heart of Thailand.</p>
+      `,
       highlights: ["Grand Palace & Wat Traimit Golden Buddha", "Chao Phraya Princess luxury dinner cruise with live music", "Shopping at ICONSIAM, CentralWorld & Platinum Mall", "Safari World & Marine Park family day tour"],
       packageSlugs: ["bangkok-pattaya-classic-vacation", "grand-thailand-phuket-krabi-bangkok"]
     },
@@ -61,6 +85,14 @@
       heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
       quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "3 – 4 Days", travelStyle: ["Watersports", "Nightlife", "Condo Stays", "Family Fun"] },
+      longDescriptionHTML: `
+<h2>Pattaya – Beaches, Adventure & Exciting Nights</h2>
+<p>Discover Pattaya, one of Thailand's most popular seaside destinations, known for its beautiful coastline, island adventures, entertainment and vibrant nightlife.</p>
+<p>Enjoy Coral Island trips, water sports, beach activities, scenic viewpoints, shopping, restaurants and spectacular entertainment shows. As the sun sets, Pattaya comes alive with lively streets, music, restaurants, bars and nightlife—making it especially popular with friends and bachelor groups.</p>
+<p>Whether you're travelling with family, as a couple, on honeymoon, with friends or as a group, Pattaya offers experiences to match every travel style.</p>
+<p><strong>Beaches • Island Tours • Water Sports • Shopping • Entertainment • Nightlife</strong></p>
+<p>Pattaya – Fun, adventure and unforgettable memories.</p>
+      `,
       highlights: ["Coral Island (Koh Larn) speedboat tour with Indian lunch", "Alcazar Cabaret Show with VIP seating", "Pattaya Big Buddha and scenic coastal viewpoints", "Spacious beachfront condos with kitchen amenities"],
       packageSlugs: ["bangkok-pattaya-classic-vacation"]
     },
@@ -75,6 +107,14 @@
       heroImage: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80",
       quickFacts: { bestTime: "Dec – Sep", currency: "Thai Baht (THB)", idealDuration: "4 – 6 Days", travelStyle: ["Luxury Villas", "Couples", "Marine Parks", "Wellness"] },
+      longDescriptionHTML: `
+<h2>Koh Samui – Tropical Luxury & Coconut Groves</h2>
+<p>Discover Koh Samui, an upscale island sanctuary celebrated for its private beachfront villas, lush coconut-fringed shores, and tranquil turquoise waters.</p>
+<p>Experience yacht excursions to Ang Thong Marine Park, visit the iconic Big Buddha temple, stroll through Fisherman’s Village, and indulge in world-class holistic spa treatments overlooking the ocean.</p>
+<p>Whether you're travelling with family, as a couple, on honeymoon, with friends or as a group, Koh Samui offers an unforgettable blend of serenity, romance, and tropical luxury.</p>
+<p><strong>Luxury Villas • Wellness Spas • Island Cruising • Romance • Beaches • Serenity</strong></p>
+<p>Koh Samui – Unwind in an exclusive tropical paradise.</p>
+      `,
       highlights: ["Ang Thong National Marine Park yacht excursion with kayaking", "5-Star oceanfront pool villa resorts", "Big Buddha temple and Fisherman’s Village boutiques", "Herbal spa treatments and beachside dining"],
       packageSlugs: ["samui-luxury-villa-retreat"]
     },
@@ -89,6 +129,14 @@
       heroImage: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=800&q=80",
       quickFacts: { bestTime: "Oct – Feb", currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Culture & Heritage", "Mountains", "Elephants", "Crafts"] },
+      longDescriptionHTML: `
+<h2>Chiang Mai – Culture, Nature & Mountain Charm</h2>
+<p>Discover Chiang Mai, a beautiful destination in northern Thailand known for its ancient temples, lush mountains, peaceful surroundings and rich local culture.</p>
+<p>Explore magnificent temples, visit vibrant night markets, experience traditional Thai culture and enjoy the natural beauty of the surrounding mountains and countryside.</p>
+<p>Whether you're travelling with family, as a couple, on honeymoon or with friends, Chiang Mai offers a relaxing escape filled with culture, nature and memorable experiences.</p>
+<p><strong>Temples • Mountains • Culture • Night Markets • Nature • Local Experiences</strong></p>
+<p>Chiang Mai – Discover the peaceful and beautiful side of Thailand.</p>
+      `,
       highlights: ["Wat Phra That Doi Suthep mountaintop golden temple", "Ethical elephant rescue sanctuary interaction", "Old City walking street night markets", "Traditional Lanna cooking classes"],
       packageSlugs: ["chiang-mai-northern-heritage"]
     }
@@ -983,17 +1031,11 @@
       if (destDesc) destDesc.textContent = destination.description;
       if (destHeroBg) destHeroBg.src = destination.heroImage;
 
-      // Quick Facts
-      const factBestTime = document.getElementById('factBestTime');
-      const factCurrency = document.getElementById('factCurrency');
-      const factDuration = document.getElementById('factDuration');
-      const factStyle = document.getElementById('factStyle');
-
-      const qf = destination.quickFacts || {};
-      if (factBestTime) factBestTime.textContent = qf.bestTime || destination.bestTime || 'Nov – Apr';
-      if (factCurrency) factCurrency.textContent = qf.currency || destination.currency || 'Thai Baht (THB)';
-      if (factDuration) factDuration.textContent = qf.idealDuration || destination.idealDuration || '4 – 7 Days';
-      if (factStyle) factStyle.textContent = Array.isArray(qf.travelStyle) ? qf.travelStyle.join(', ') : (qf.travelStyle || destination.travelStyle || 'Scenic Travel');
+      // City Description Block
+      const destCityDescription = document.getElementById('destCityDescription');
+      if (destCityDescription && destination.longDescriptionHTML) {
+        destCityDescription.innerHTML = destination.longDescriptionHTML;
+      }
 
       // Highlights List
       const destHighlightsList = document.getElementById('destHighlightsList');

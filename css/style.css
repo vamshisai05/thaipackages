@@ -171,6 +171,30 @@ ul, ol {
 }
 
 /* ==========================================================================
+   Destination City Description Typography
+   ========================================================================== */
+.city-description-block {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-8);
+  max-width: 840px;
+}
+
+.city-description-block h2 {
+  margin-bottom: var(--space-3);
+  color: var(--teal-950);
+}
+
+.city-description-block p {
+  margin-bottom: 20px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.city-description-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
    Header & Navigation
    ========================================================================== */
 
