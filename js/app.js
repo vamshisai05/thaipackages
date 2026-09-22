@@ -16,8 +16,8 @@
       tagline: "The Pearl of the Andaman Sea",
       shortDescription: "Thailand's premier island combining lively beach clubs, world-famous Phi Phi speedboats, and 5-star ocean villas.",
       description: "Thailand's largest island, famed for dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
-      heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
+      heroImage: "images/phuket (2).jpg",
+      thumbnail: "images/phuket (2).jpg",
       quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "4 – 7 Days", travelStyle: ["Beach", "Island Hopping", "Luxury Resorts"] },
       longDescriptionHTML: `
 <h2>Phuket – The Pearl of the Andaman Sea</h2>
@@ -82,8 +82,8 @@
       tagline: "Beaches, Nightlife & Island Adventures",
       shortDescription: "Vibrant coastal playground featuring Coral Island watersports, sea-view condos with private kitchen, and world-class entertainment.",
       description: "A dynamic coastal resort city just 2 hours from Bangkok, famed for Coral Island watersports, sea-view condos, and cabaret shows.",
-      heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
+      heroImage: "images/pattaya city.jpg",
+      thumbnail: "images/pattaya city.jpg",
       quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "3 – 4 Days", travelStyle: ["Watersports", "Nightlife", "Condo Stays", "Family Fun"] },
       longDescriptionHTML: `
 <h2>Pattaya – Beaches, Adventure & Exciting Nights</h2>
@@ -148,8 +148,8 @@
       tagline: "Royal Seaside Heritage & Golf Retreats",
       shortDescription: "A sophisticated royal beach resort town known for tranquil beaches, night markets, and world-class golf courses.",
       description: "A sophisticated royal beach resort town known for tranquil beaches, vibrant night markets, and world-class golf courses just a short drive from Bangkok.",
-      heroImage: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80",
+      heroImage: "images/hua hin.jpg",
+      thumbnail: "images/hua hin.jpg",
       quickFacts: { bestTime: "Nov – Feb", currency: "Thai Baht (THB)", idealDuration: "2 – 4 Days", travelStyle: ["Relaxation", "Golf", "Family", "Heritage"] },
       longDescriptionHTML: `
 <h2>Hua Hin – Royal Seaside Heritage</h2>

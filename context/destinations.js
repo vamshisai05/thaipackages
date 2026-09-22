@@ -12,8 +12,8 @@ export const DESTINATIONS = [
     tagline: "The Pearl of the Andaman Sea",
     shortDescription: "Dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
     description: "Thailand’s largest island, famed for dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
-    heroImage: "images/phuket.jpg",
-    thumbnail: "images/phuket.jpg",
+    heroImage: "images/phuket (2).jpg",
+    thumbnail: "images/phuket (2).jpg",
     
     quickFacts: {
       bestTime: "Nov – Apr",
@@ -123,8 +123,8 @@ export const DESTINATIONS = [
     tagline: "Seaside Entertainment & Coastal Fun",
     shortDescription: "A dynamic coastal resort city offering golden beaches, Coral Island day trips, and botanical gardens.",
     description: "A dynamic coastal resort city offering golden beaches, Coral Island day trips, botanical gardens, and non-stop entertainment.",
-    heroImage: "images/pattaya.jpg",
-    thumbnail: "images/pattaya.jpg",
+    heroImage: "images/pattaya city.jpg",
+    thumbnail: "images/pattaya city.jpg",
 
     quickFacts: {
       bestTime: "Nov – Mar",
@@ -230,8 +230,8 @@ export const DESTINATIONS = [
     tagline: "Royal Seaside Heritage & Golf Retreats",
     shortDescription: "A sophisticated royal beach resort town known for tranquil beaches, night markets, and world-class golf courses.",
     description: "A sophisticated royal beach resort town known for tranquil beaches, vibrant night markets, and world-class golf courses just a short drive from Bangkok.",
-    heroImage: "images/hua-hin.jpg",
-    thumbnail: "images/hua-hin.jpg",
+    heroImage: "images/hua hin.jpg",
+    thumbnail: "images/hua hin.jpg",
     
     quickFacts: {
       bestTime: "Nov – Feb",
