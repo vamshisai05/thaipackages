@@ -230,7 +230,7 @@ export const DESTINATIONS = [
     tagline: "Royal Seaside Heritage & Golf Retreats",
     shortDescription: "A sophisticated royal beach resort town known for tranquil beaches, night markets, and world-class golf courses.",
     description: "A sophisticated royal beach resort town known for tranquil beaches, vibrant night markets, and world-class golf courses just a short drive from Bangkok.",
-    heroImage: "images/hua hin.jpg",
+    heroImage: "images/koh-samui.jpg",
     thumbnail: "images/hua hin.jpg",
     
     quickFacts: {
