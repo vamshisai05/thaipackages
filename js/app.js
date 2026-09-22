@@ -60,8 +60,8 @@
       tagline: "The Electric Capital of Smiles",
       shortDescription: "A dazzling metropolis of golden temples, world-class luxury shopping malls, Michelin street food, and Chao Phraya river cruises.",
       description: "Opulent golden palaces, historic riverfront temples, vibrant street markets, Michelin-rated dining, and luxury rooftop lounges.",
-      heroImage: "images/bangkok-hero.jpg",
-      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
+      heroImage: "https://images.unsplash.com/photo-1729658189582-3c4e13cb213b?fm=jpg&q=80&w=2000&auto=format&fit=crop",
+      thumbnail: "https://images.unsplash.com/photo-1729658189582-3c4e13cb213b?fm=jpg&q=80&w=2000&auto=format&fit=crop",
       quickFacts: { bestTime: "Nov – Feb", currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Culture", "Shopping", "Rooftops", "River Cruises"] },
       longDescriptionHTML: `
 <h2>Bangkok – Where Tradition Meets Modern Thailand</h2>

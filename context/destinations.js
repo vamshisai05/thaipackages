@@ -12,8 +12,8 @@ export const DESTINATIONS = [
     tagline: "The Pearl of the Andaman Sea",
     shortDescription: "Dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
     description: "Thailand’s largest island, famed for dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
-    heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
+    heroImage: "images/phuket.jpg",
+    thumbnail: "images/phuket.jpg",
     
     quickFacts: {
       bestTime: "Nov – Apr",
@@ -49,8 +49,8 @@ export const DESTINATIONS = [
     tagline: "Dramatic Karsts & Emerald Waters",
     shortDescription: "Towering limestone karst monoliths, tranquil emerald bays, hidden lagoons, and world-class island hopping.",
     description: "Towering limestone karst monoliths, tranquil emerald bays, hidden lagoons, and world-class island hopping around Railay Beach.",
-    heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+    heroImage: "images/krabi.jpg",
+    thumbnail: "images/krabi.jpg",
 
     quickFacts: {
       bestTime: "Nov – Apr",
@@ -86,8 +86,8 @@ export const DESTINATIONS = [
     tagline: "The Electric Capital of Smiles",
     shortDescription: "Opulent golden palaces, historic riverfront temples, vibrant street markets, and luxury rooftop lounges.",
     description: "Opulent golden palaces, historic riverfront temples, vibrant street markets, Michelin-rated dining, and luxury rooftop lounges.",
-    heroImage: "images/bangkok-hero.jpg",
-    thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
+    heroImage: "images/bangkok.jpg",
+    thumbnail: "images/bangkok.jpg",
 
     quickFacts: {
       bestTime: "Nov – Feb",
@@ -123,8 +123,8 @@ export const DESTINATIONS = [
     tagline: "Seaside Entertainment & Coastal Fun",
     shortDescription: "A dynamic coastal resort city offering golden beaches, Coral Island day trips, and botanical gardens.",
     description: "A dynamic coastal resort city offering golden beaches, Coral Island day trips, botanical gardens, and non-stop entertainment.",
-    heroImage: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80",
+    heroImage: "images/pattaya.jpg",
+    thumbnail: "images/pattaya.jpg",
 
     quickFacts: {
       bestTime: "Nov – Mar",
@@ -160,8 +160,8 @@ export const DESTINATIONS = [
     tagline: "Pristine Island Paradise & Luxury Villas",
     shortDescription: "Lush coconut groves, tranquil turquoise waters, serene wellness spas, and ultra-luxury private pool villas.",
     description: "Lush coconut groves, tranquil turquoise waters, serene wellness spas, and ultra-luxury private pool villa retreats.",
-    heroImage: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80",
+    heroImage: "images/koh-samui.jpg",
+    thumbnail: "images/koh-samui.jpg",
 
     quickFacts: {
       bestTime: "Dec – Sep",
@@ -195,8 +195,8 @@ export const DESTINATIONS = [
     tagline: "Misty Mountains & Ancient Lanna Heritage",
     shortDescription: "Tranquil mountain valleys, sacred ancient temples, ethical elephant sanctuaries, and artisan crafts.",
     description: "Tranquil mountain valleys, sacred ancient temples, ethical elephant rescue sanctuaries, and rich Northern Thai artisan traditions.",
-    heroImage: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=800&q=80",
+    heroImage: "images/chiang-mai.jpg",
+    thumbnail: "images/chiang-mai.jpg",
 
     quickFacts: {
       bestTime: "Oct – Feb",
@@ -230,8 +230,8 @@ export const DESTINATIONS = [
     tagline: "Royal Seaside Heritage & Golf Retreats",
     shortDescription: "A sophisticated royal beach resort town known for tranquil beaches, night markets, and world-class golf courses.",
     description: "A sophisticated royal beach resort town known for tranquil beaches, vibrant night markets, and world-class golf courses just a short drive from Bangkok.",
-    heroImage: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80",
+    heroImage: "images/hua-hin.jpg",
+    thumbnail: "images/hua-hin.jpg",
     
     quickFacts: {
       bestTime: "Nov – Feb",
