@@ -72,6 +72,8 @@ if (typeof window !== 'undefined') {
     inspiration: CONTENT.inspiration,
     faqs: CONTENT.faqs
   };
+
+  window.dispatchEvent(new Event('ContextReady'));
 }
 
 export default TRAVEL_CONTEXT;

@@ -15,11 +15,11 @@ export const PACKAGES = [
     destinationSlug: "bangkok",
     category: "Family & City Breaks",
     duration: {
-      days: 6,
-      nights: 5
+      days: 5,
+      nights: 4
     },
-    durationDays: 6,
-    durationNights: 5,
+    durationDays: 5,
+    durationNights: 4,
     startingPriceINR: 19900,
     startingPriceUSD: 290,
     startingPriceTHB: 10500,
@@ -96,36 +96,11 @@ export const PACKAGES = [
     ],
 
     itinerary: [
-      {
-        day: 1,
-        title: "Suvarnabhumi Airport Private Pickup -> Transfer to Pattaya Condo",
-        summary: "Meet your private chauffeur directly at Bangkok Suvarnabhumi Airport. Enjoy a comfortable private AC drive to Pattaya. Check into your Premium Sea-View Condo with kitchen amenities. Evening at leisure to stroll Pattaya Beach or relax."
-      },
-      {
-        day: 2,
-        title: "Coral Island Speedboat Tour with Indian Lunch & Alcazar VIP Show",
-        summary: "Morning speedboat excursion to Coral Island (Koh Larn) with crystal-clear waters and white sands, followed by a delicious Indian lunch. In the evening, enjoy VIP seating at the world-famous Alcazar Cabaret Show."
-      },
-      {
-        day: 3,
-        title: "Pattaya City Highlights (Big Buddha & Viewpoints) -> Night Markets",
-        summary: "Visit the towering Big Buddha (Wat Phra Yai) and panoramic coastal viewpoints overlooking Pattaya Bay. Spend the afternoon exploring local cafes or relaxing in your condo pool, followed by vibrant evening night markets."
-      },
-      {
-        day: 4,
-        title: "Private Transfer to Bangkok -> Luxury City-Center Condo Check-in",
-        summary: "Private door-to-door transfer from Pattaya to Bangkok. Check into your City-Center Luxury Condo. Afternoon at leisure for street shopping, visiting Platinum Fashion Mall, or exploring downtown Sukhumvit."
-      },
-      {
-        day: 5,
-        title: "Shopping at Pratunam/MBK -> Chao Phraya Princess Dinner Cruise",
-        summary: "Enjoy shopping at Pratunam, MBK Center, or ICONSIAM. In the evening, board the Chao Phraya Princess Luxury Dinner Cruise with live music, breathtaking illuminated views of Wat Arun and the Grand Palace, and a lavish buffet."
-      },
-      {
-        day: 6,
-        title: "Relaxed Morning -> Private Transfer to Bangkok Airport",
-        summary: "Enjoy a relaxed breakfast in your condo or partner cafe. Your private AC chauffeur will transfer you directly to Suvarnabhumi or Don Mueang Airport for your return flight home."
-      }
+      { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
+      { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at the hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy the beach and optional water activities; Return to Pattaya; Evening at leisure; Overnight stay in Pattaya." },
+      { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Transfer to Bangkok; Bangkok city sightseeing; Visit Wat Traimit (Golden Buddha); Hotel check-in; Evening free for shopping and leisure; Overnight stay in Bangkok." },
+      { day: 4, title: "Bangkok Sightseeing", summary: "Breakfast at the hotel; Visit Grand Palace and Wat Pho; Chao Phraya River experience; Shopping at popular malls/markets; Evening at leisure; Overnight stay in Bangkok." },
+      { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with wonderful memories of Thailand." }
     ]
   },
 
@@ -204,41 +179,13 @@ export const PACKAGES = [
     ],
 
     itinerary: [
-      {
-        day: 1,
-        title: "Arrival in Phuket & Welcome to the Andaman",
-        summary: "Arrive at Phuket International Airport (HKT). Meet your private chauffeur and transfer to your oceanfront resort. Enjoy free time relaxing by the resort pool or strolling along the beach."
-      },
-      {
-        day: 2,
-        title: "Phi Phi Islands & Maya Bay Speedboat Excursion",
-        summary: "Morning speedboat cruise across turquoise waters to Phi Phi Don and Phi Phi Leh. Swim at Maya Bay, snorkel in Pileh Lagoon, visit Monkey Beach, and enjoy an island buffet lunch."
-      },
-      {
-        day: 3,
-        title: "Phuket Sightseeing & Big Buddha Viewpoint",
-        summary: "Explore Sino-Portuguese architecture in Old Phuket Town, visit the revered Wat Chalong temple, and admire panoramic views of Chalong Bay from the 45-meter Big Buddha."
-      },
-      {
-        day: 4,
-        title: "Private Scenic Transfer: Phuket to Krabi",
-        summary: "After breakfast, take a comfortable private drive through southern Thailand’s limestone karst landscapes into Krabi. Check into your resort in Ao Nang. Evening at leisure."
-      },
-      {
-        day: 5,
-        title: "Krabi 4 Islands Scenic Boat Tour",
-        summary: "Cruise to Koh Gai (Chicken Island), Koh Tup, Koh Mor, and Phra Nang Cave Beach. Snorkel among coral reefs and relax on soft white sands with a picnic lunch."
-      },
-      {
-        day: 6,
-        title: "Rainforest Hot Springs & Relaxation Day",
-        summary: "Spend the morning visiting Krabi’s natural thermal Hot Springs and Emerald Pool in the rainforest, followed by an afternoon of leisure or resort spa treatments."
-      },
-      {
-        day: 7,
-        title: "Farewell Thailand & Airport Departure",
-        summary: "Enjoy breakfast and pack your bags. Private transfer to Krabi International Airport (KBV) for your onward flight."
-      }
+      { day: 1, title: "Phuket Arrival", summary: "Arrival at Phuket Airport; Private transfer to hotel; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Phuket." },
+      { day: 2, title: "Phi Phi Island Tour", summary: "Breakfast at hotel; Full-day Phi Phi Island tour by speedboat; Enjoy beautiful beaches, crystal-clear waters and snorkeling; Return to Phuket; Romantic evening at leisure; Overnight stay in Phuket." },
+      { day: 3, title: "Phuket Sightseeing", summary: "Breakfast at hotel; Visit Wat Chalong; Phuket Old Town; Karon Viewpoint; Visit Promthep Cape for a beautiful sunset; Overnight stay in Phuket." },
+      { day: 4, title: "Phuket → Krabi", summary: "Breakfast and hotel check-out; Private transfer to Krabi; Hotel check-in; Relax at the beach; Evening at leisure; Overnight stay in Krabi." },
+      { day: 5, title: "Four Islands Tour", summary: "Breakfast at hotel; Full-day Four Islands tour; Visit scenic islands and beaches; Enjoy swimming, snorkeling and beach time; Return to Krabi; Romantic sunset evening; Overnight stay in Krabi." },
+      { day: 6, title: "Krabi Leisure & Romance", summary: "Breakfast at hotel; Visit Railay Beach and Phra Nang Beach; Enjoy a relaxed afternoon; Optional couple spa/romantic dinner; Overnight stay in Krabi." },
+      { day: 7, title: "Krabi Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Krabi Airport; Departure with beautiful memories of Thailand." }
     ]
   }
 

@@ -171,16 +171,60 @@
       destination: "Bangkok & Pattaya",
       destinationSlug: "bangkok",
       category: "Family & City Breaks",
-      duration: { days: 6, nights: 5 },
-      durationDays: 6,
-      durationNights: 5,
+      duration: { days: 5, nights: 4 },
+      durationDays: 5,
+      durationNights: 4,
       startingPriceINR: 19900,
       startingPriceUSD: 290,
       startingPriceTHB: 10500,
       heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
       shortDescription: "Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private kitchen, 100% private AC transfers & Telugu-speaking guides.",
-      description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, Chao Phraya luxury dinner cruise, and 100% Telugu-speaking guide options."
+      description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, Chao Phraya luxury dinner cruise, and 100% Telugu-speaking guide options.",
+      highlights: [
+        "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+        "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+        "🚐 100% Private AC Vehicle Transfers",
+        "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+        "💰 Fully Customisable to your exact preferences",
+        "3 Nights in Pattaya in a Premium Sea-View Condo (with Private Kitchen)",
+        "2 Nights in Bangkok in a City-Center Luxury Condo",
+        "🗣️ 100% Telugu-Speaking Guides & Dedicated Local Coordinators Available",
+        "🎉 25% Discount on Group Packages (4+ Travelers)",
+        "Food Flexibility: Option A (Self-cook with groceries) or Option B (Daily fresh Indian meals)",
+        "Alcazar Cabaret Show (VIP Seating)",
+        "Coral Island (Koh Larn) Speedboat Tour with Indian Lunch",
+        "Pattaya City Highlights (Big Buddha & coastal viewpoints)",
+        "Chao Phraya Princess Luxury Dinner Cruise with live music",
+        "100% Private door-to-door AC Vehicle Transfers (Zero shared buses)"
+      ],
+      inclusions: [
+        "Dedicated Telugu & Hindi speaking local coordinator",
+        "End-to-End guidance from India to return home",
+        "Private AC transfers from airport to hotel and between attractions",
+        "3 Nights in Premium Sea-View Condo in Pattaya",
+        "2 Nights in City-Center Luxury Condo in Bangkok",
+        "Kitchen access in condo with pre-stocked fridge/groceries (Option A) or Indian partner meals (Option B)",
+        "Coral Island speedboat excursion with Indian lunch",
+        "Alcazar Cabaret Show VIP admission tickets",
+        "Pattaya Big Buddha and scenic coastal viewpoints tour",
+        "Chao Phraya Princess Luxury Dinner Cruise ticket with international & Indian buffet",
+        "100% Private AC vehicle transfers: Airport -> Pattaya -> Bangkok -> Airport",
+        "Dedicated 24/7 WhatsApp concierge support"
+      ],
+      exclusions: [
+        "International flights (assistance provided upon request)",
+        "Thailand Visa fees (free/on-arrival per government rules)",
+        "Optional motorized watersports (Parasailing, Jet Ski)",
+        "Personal tipping and personal expenses"
+      ],
+      itinerary: [
+        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at the hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy the beach and optional water activities; Return to Pattaya; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Transfer to Bangkok; Bangkok city sightseeing; Visit Wat Traimit (Golden Buddha); Hotel check-in; Evening free for shopping and leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Bangkok Sightseeing", summary: "Breakfast at the hotel; Visit Grand Palace and Wat Pho; Chao Phraya River experience; Shopping at popular malls/markets; Evening at leisure; Overnight stay in Bangkok." },
+        { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with wonderful memories of Thailand." }
+      ]
     },
     {
       slug: "phuket-krabi-romantic-escape",
@@ -197,7 +241,49 @@
       heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
       shortDescription: "An idyllic 7-day Andaman holiday pairing lively Phuket beaches with Krabi's dramatic limestone karsts, 100% private transfers and island cruises.",
-      description: "An idyllic 7-day Andaman holiday pairing the lively beaches of Phuket with the dramatic limestone karsts and tranquil luxury of Krabi."
+      description: "An idyllic 7-day Andaman holiday pairing the lively beaches of Phuket with the dramatic limestone karsts and tranquil luxury of Krabi.",
+      highlights: [
+        "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+        "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+        "🚐 100% Private AC Vehicle Transfers",
+        "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+        "💰 Fully Customisable to your exact preferences",
+        "3 Nights accommodation in Phuket (4★/5★ Beachfront Resort)",
+        "3 Nights accommodation in Krabi (4★/5★ Cliffside Resort)",
+        "Full-day Phi Phi Islands & Maya Bay Speedboat Tour with Buffet Lunch",
+        "Krabi 4 Islands Scenic Sunset Boat Tour with Snorkeling Gear",
+        "100% Private air-conditioned vehicle transfers between all airports and hotels",
+        "Daily buffet breakfast at resorts"
+      ],
+      inclusions: [
+        "Dedicated Telugu & Hindi speaking local coordinator",
+        "End-to-End guidance from India to return home",
+        "Private AC transfers from airport to hotel and between attractions",
+        "6 Nights accommodation in vetted 4-star / 5-star properties",
+        "Daily buffet breakfast at hotels",
+        "Full-day Phi Phi Islands & Maya Bay tour by Speedboat with Lunch",
+        "Krabi 4 Islands Tour by Longtail Boat with Snorkeling Gear & Life Jackets",
+        "Phuket Airport Pickup and Krabi Airport Drop in Private AC Vehicle",
+        "Private inter-city transfer between Phuket and Krabi",
+        "National Marine Park environmental entry permits",
+        "Dedicated on-trip WhatsApp support"
+      ],
+      exclusions: [
+        "International and domestic flights (available upon request)",
+        "Thailand Visa fees (Visa on arrival / e-Visa if applicable)",
+        "Meals not mentioned in the itinerary",
+        "Optional motorized watersports (Parasailing, Jet Ski)",
+        "Personal tipping and travel insurance"
+      ],
+      itinerary: [
+        { day: 1, title: "Phuket Arrival", summary: "Arrival at Phuket Airport; Private transfer to hotel; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Phuket." },
+        { day: 2, title: "Phi Phi Island Tour", summary: "Breakfast at hotel; Full-day Phi Phi Island tour by speedboat; Enjoy beautiful beaches, crystal-clear waters and snorkeling; Return to Phuket; Romantic evening at leisure; Overnight stay in Phuket." },
+        { day: 3, title: "Phuket Sightseeing", summary: "Breakfast at hotel; Visit Wat Chalong; Phuket Old Town; Karon Viewpoint; Visit Promthep Cape for a beautiful sunset; Overnight stay in Phuket." },
+        { day: 4, title: "Phuket → Krabi", summary: "Breakfast and hotel check-out; Private transfer to Krabi; Hotel check-in; Relax at the beach; Evening at leisure; Overnight stay in Krabi." },
+        { day: 5, title: "Four Islands Tour", summary: "Breakfast at hotel; Full-day Four Islands tour; Visit scenic islands and beaches; Enjoy swimming, snorkeling and beach time; Return to Krabi; Romantic sunset evening; Overnight stay in Krabi." },
+        { day: 6, title: "Krabi Leisure & Romance", summary: "Breakfast at hotel; Visit Railay Beach and Phra Nang Beach; Enjoy a relaxed afternoon; Optional couple spa/romantic dinner; Overnight stay in Krabi." },
+        { day: 7, title: "Krabi Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Krabi Airport; Departure with beautiful memories of Thailand." }
+      ]
     },
     {
       slug: "thailand-family-tour-packages",
@@ -394,7 +480,7 @@
     };
   };
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function initApp() {
     const ctx = getContext();
     const { BRAND, BUSINESS, CONTACT, DESTINATIONS, PACKAGES, CONTENT, LEGAL, isContactConfigured, getWhatsAppUrl } = ctx;
 
@@ -1174,7 +1260,9 @@
               <span class="itinerary-chevron" aria-hidden="true">▼</span>
             </summary>
             <div class="itinerary-details">
-              <p>${item.summary}</p>
+              <ul style="list-style-type: disc; padding-left: 24px; margin-top: 12px; color: var(--text-body); font-size: 14px; line-height: 1.7;">
+                ${item.summary.split(';').map(s => s.trim() ? `<li style="margin-bottom: 8px;">${s.trim()}</li>` : '').join('')}
+              </ul>
             </div>
           </details>
         `).join('');
@@ -1370,7 +1458,17 @@
 
     removeAsterisksFromTextNodes(document.body);
 
+  } // end initApp
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.TRAVEL_CONTEXT && window.TRAVEL_CONTEXT.PACKAGES) {
+      initApp();
+    } else {
+      window.addEventListener('ContextReady', initApp);
+      setTimeout(initApp, 1000); // fallback safety
+    }
   });
+
 })();
 
 
