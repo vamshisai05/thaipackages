@@ -611,6 +611,17 @@ ul, ol {
               linear-gradient(180deg, rgba(6, 29, 33, 0.3) 0%, rgba(6, 29, 33, 0.5) 100%);
 }
 
+/* Custom Bangkok Hero Override */
+.hero-bangkok .hero-bg-media {
+  opacity: 0.95 !important;
+  object-position: 40% 15%; /* Shift focal point left and up to frame the prominent tower and skyline */
+}
+
+.hero-bangkok .hero-overlay {
+  /* Subtle dark gradient concentrated behind text, fading out */
+  background: radial-gradient(ellipse at center, rgba(6, 29, 33, 0.6) 0%, rgba(6, 29, 33, 0.1) 65%) !important;
+}
+
 .hero-inner {
   position: relative;
   z-index: 10;

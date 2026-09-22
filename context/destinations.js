@@ -86,7 +86,7 @@ export const DESTINATIONS = [
     tagline: "The Electric Capital of Smiles",
     shortDescription: "Opulent golden palaces, historic riverfront temples, vibrant street markets, and luxury rooftop lounges.",
     description: "Opulent golden palaces, historic riverfront temples, vibrant street markets, Michelin-rated dining, and luxury rooftop lounges.",
-    heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
+    heroImage: "images/bangkok-hero.jpg",
     thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
 
     quickFacts: {
@@ -220,6 +220,39 @@ export const DESTINATIONS = [
       "Vibrant Sunday Walking Street night market with local handicrafts"
     ],
 
+    packageSlugs: []
+  },
+  {
+    slug: "hua-hin",
+    name: "Hua Hin",
+    country: "Thailand",
+    region: "Gulf of Thailand",
+    tagline: "Royal Seaside Heritage & Golf Retreats",
+    shortDescription: "A sophisticated royal beach resort town known for tranquil beaches, night markets, and world-class golf courses.",
+    description: "A sophisticated royal beach resort town known for tranquil beaches, vibrant night markets, and world-class golf courses just a short drive from Bangkok.",
+    heroImage: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=1600&q=85",
+    thumbnail: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80",
+    
+    quickFacts: {
+      bestTime: "Nov – Feb",
+      currency: "Thai Baht (THB)",
+      idealDuration: "2 – 4 Days",
+      travelStyle: ["Relaxation", "Golf", "Family", "Heritage"]
+    },
+    longDescriptionHTML: `
+<h2>Hua Hin – Royal Seaside Heritage</h2>
+<p>Discover Hua Hin, Thailand's original royal beach resort town, celebrated for its laid-back atmosphere, wide sandy beaches, and sophisticated charm. Just a few hours from Bangkok, it offers the perfect escape from the bustling city.</p>
+<p>Enjoy world-class golf courses, explore the vibrant Cicada night market, visit historic royal summer palaces, and relax at premier beachfront resorts and spas.</p>
+<p>Whether you're travelling with family, seeking a quiet couple's retreat, or looking for a premium golf holiday, Hua Hin delivers an elegant coastal experience.</p>
+<p><strong>Beaches • Night Markets • Golf • Heritage • Relaxation • Family</strong></p>
+<p>Hua Hin – A sophisticated coastal escape.</p>
+    `,
+    highlights: [
+      "Cicada Market and Tamarind Market for local arts and dining",
+      "Khao Takiab (Monkey Mountain) for panoramic coastal views",
+      "World-class championship golf courses",
+      "Historic Maruekhathaiyawan Royal Summer Palace"
+    ],
     packageSlugs: []
   }
 ];
