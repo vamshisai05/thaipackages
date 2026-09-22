@@ -352,14 +352,13 @@ ul, ol {
 }
 
 .btn-secondary {
-  background-color: rgba(255, 255, 255, 0.14);
+  background-color: var(--teal-900, #0a2a30);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(8px);
+  border: 1px solid var(--teal-800, #0d3b43);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--teal-950, #061d21);
   border-color: #ffffff;
   transform: scale(1.02);
 }
@@ -3723,10 +3722,19 @@ body.drawer-open .global-sticky-actions {
 @media (max-width: 640px) {
   .carousel-wrapper {
     gap: 8px;
+    padding-top: 48px;
   }
   .carousel-btn {
     width: 36px;
     height: 36px;
+    position: absolute;
+    top: 0;
+  }
+  .prev-btn {
+    right: 48px;
+  }
+  .next-btn {
+    right: 0;
   }
 }
 
