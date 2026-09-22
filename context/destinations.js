@@ -160,7 +160,7 @@ export const DESTINATIONS = [
     tagline: "Pristine Island Paradise & Luxury Villas",
     shortDescription: "Lush coconut groves, tranquil turquoise waters, serene wellness spas, and ultra-luxury private pool villas.",
     description: "Lush coconut groves, tranquil turquoise waters, serene wellness spas, and ultra-luxury private pool villa retreats.",
-    heroImage: "images/koh-samui.jpg",
+    heroImage: "https://images.unsplash.com/photo-1683263430050-a3cbf42c48a0?fm=jpg&q=80&w=2000&auto=format&fit=crop",
     thumbnail: "images/koh-samui.jpg",
 
     quickFacts: {
