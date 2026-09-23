@@ -204,7 +204,7 @@ export const PACKAGES = [
     heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
     thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
     shortDescription: "The ultimate kid-friendly Thailand family tour package featuring Safari World, Sea Life Ocean World, and spacious family condo stays.",
-    description: "Our top-rated Thailand Family Tour Package ensures a stress-free holiday for parents and endless fun for kids. Highlights include Safari World & Marine Park, Sea Life Bangkok Ocean World, and relaxed pacing with family-sized condo accommodations providing home-like comfort and kitchen access.",
+    description: "Our top-rated 5-day Thailand Family Tour Package ensures a stress-free holiday for parents and endless fun for kids. Experience the best of Bangkok and Pattaya with a family-friendly itinerary featuring a speedboat tour to Coral Island, underwater marvels at SEA LIFE Bangkok Ocean World, celebrity encounters at Madame Tussauds, and a full day of excitement at Safari World.",
     highlights: [
       "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
       "🗣️ 24/7 Telugu & Hindi On-Ground Support",
@@ -244,16 +244,16 @@ export const PACKAGES = [
     travelNotes: ["Perfect for families with toddlers or teens."],
     importantNotes: ["Perfect for families with toddlers or teens."],
     itinerary: [
-      { day: 1, title: "Arrival in Bangkok -> Pattaya Family Condo", summary: "Private pickup at Suvarnabhumi Airport and transfer to your spacious Pattaya family condo." },
-      { day: 2, title: "Pattaya Leisure & Beach Time", summary: "Relaxed morning. Optional visit to Nong Nooch Tropical Garden or Pattaya Beach." },
-      { day: 3, title: "Transfer to Bangkok & Sea Life Ocean World", summary: "Transfer to Bangkok. Check into your condo and visit Sea Life Bangkok Ocean World in the afternoon." },
-      { day: 4, title: "Safari World & Marine Park Excursion", summary: "A full day of family fun at Safari World and Marine Park with a buffet lunch included." },
-      { day: 5, title: "Shopping & Departure", summary: "Morning shopping at MBK or Platinum Mall before private transfer to the airport." }
+      { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
+      { day: 2, title: "Coral Island & Beach Fun", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy the beach, swimming and optional water activities; Return to Pattaya; Evening at leisure; Overnight stay in Pattaya." },
+      { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Transfer to Bangkok; Visit SEA LIFE Bangkok Ocean World; Visit Madame Tussauds Bangkok; Hotel check-in; Evening shopping and leisure; Overnight stay in Bangkok." },
+      { day: 4, title: "Safari World & Bangkok Family Fun", summary: "Breakfast at hotel; Full-day visit to Safari World Bangkok; Enjoy the Safari Park and exciting animal shows; Return to Bangkok; Evening at leisure; Overnight stay in Bangkok." },
+      { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Return home with wonderful family memories of Thailand." }
     ]
   },
   {
     slug: "thailand-honeymoon-packages",
-    title: "Thailand Honeymoon Packages",
+    title: "Phuket • Krabi • Bangkok – Honeymoon Special",
     destination: "Phuket & Krabi",
     destinationSlug: "phuket",
     category: "Honeymoon & Romantic",
@@ -266,7 +266,7 @@ export const PACKAGES = [
     heroImage: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1600&q=85",
     thumbnail: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80",
     shortDescription: "A luxurious and romantic Thailand Honeymoon Package with private pool villas, sunset dinner cruises, and couple's spa sessions.",
-    description: "Celebrate your love with our premium Thailand Honeymoon Package. Featuring private pool villa stays, romantic beachfront candlelight dinners, exclusive sunset cruises, and tranquil couple's spa experiences across the pristine shores of Phuket and Krabi.",
+    description: "Celebrate your love with our premium 6-day honeymoon package. Experience a romantic island retreat featuring a private beachfront stay, a full-day Phi Phi Island speedboat tour, a scenic Krabi Four Islands excursion, and an optional romantic dinner cruise in Bangkok to end your trip with beautiful memories.",
     highlights: [
       "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
       "🗣️ 24/7 Telugu & Hindi On-Ground Support",
@@ -306,12 +306,12 @@ export const PACKAGES = [
     travelNotes: ["Designed for maximum privacy and romance."],
     importantNotes: ["Designed for maximum privacy and romance."],
     itinerary: [
-      { day: 1, title: "Arrival in Phuket -> Pool Villa Check-in", summary: "Private transfer to your luxury resort. Enjoy a beautifully decorated honeymoon suite." },
-      { day: 2, title: "Phi Phi Islands Tour", summary: "Premium speedboat tour to Maya Bay and Phi Phi Islands with snorkeling and lunch." },
-      { day: 3, title: "Couple's Spa & Sunset Dinner Cruise", summary: "Relaxing couple's Thai massage followed by a romantic sunset dinner cruise." },
-      { day: 4, title: "Transfer to Krabi -> Beachfront Relaxation", summary: "Private transfer to Krabi. Spend the afternoon relaxing on the pristine beaches." },
-      { day: 5, title: "Krabi 4 Islands Tour", summary: "Explore the beautiful Krabi 4 Islands on a longtail boat." },
-      { day: 6, title: "Departure", summary: "Private transfer to the airport with beautiful memories." }
+      { day: 1, title: "Phuket Arrival", summary: "Arrival at Phuket Airport; Private transfer to hotel; Hotel check-in and relaxation; Romantic evening at leisure; Overnight stay in Phuket." },
+      { day: 2, title: "Phi Phi Island Tour", summary: "Breakfast at hotel; Full-day Phi Phi Island tour by speedboat; Enjoy beautiful beaches, crystal-clear waters and snorkeling; Return to Phuket; Romantic sunset evening; Overnight stay in Phuket." },
+      { day: 3, title: "Phuket → Krabi", summary: "Breakfast and hotel check-out; Transfer to Krabi; Hotel check-in; Relax and enjoy the resort; Evening at leisure; Overnight stay in Krabi." },
+      { day: 4, title: "Four Islands Tour", summary: "Breakfast at hotel; Full-day Four Islands tour; Visit beautiful beaches and islands; Enjoy swimming, snorkeling and beach time; Romantic evening at leisure; Overnight stay in Krabi." },
+      { day: 5, title: "Krabi → Bangkok", summary: "Breakfast and hotel check-out; Transfer to Krabi Airport; Flight to Bangkok; Hotel check-in; Evening shopping and leisure; Optional romantic dinner cruise; Overnight stay in Bangkok." },
+      { day: 6, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with beautiful memories of your honeymoon in Thailand." }
     ]
   },
   {
