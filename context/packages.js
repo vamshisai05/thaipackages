@@ -38,7 +38,7 @@ export const PACKAGES = [
       "3 Nights in Pattaya in a Premium Sea-View Condo (with Private Kitchen)",
       "2 Nights in Bangkok in a City-Center Luxury Condo",
       "🗣️ 100% Telugu-Speaking Guides & Dedicated Local Coordinators Available",
-      "🎉 25% Discount on Group Packages (4+ Travelers)",
+      "💰 25% Discount on Group Packages (4+ Travelers)",
       "Food Flexibility: Option A (Self-cook with groceries) or Option B (Daily fresh Indian meals)",
       "Alcazar Cabaret Show (VIP Seating)",
       "Coral Island (Koh Larn) Speedboat Tour with Indian Lunch",
@@ -103,7 +103,6 @@ export const PACKAGES = [
       { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with wonderful memories of Thailand." }
     ]
   },
-
   {
     slug: "phuket-krabi-romantic-escape",
     title: "Phuket & Krabi Romantic Island Escape",
@@ -187,9 +186,8 @@ export const PACKAGES = [
       { day: 6, title: "Krabi Leisure & Romance", summary: "Breakfast at hotel; Visit Railay Beach and Phra Nang Beach; Enjoy a relaxed afternoon; Optional couple spa/romantic dinner; Overnight stay in Krabi." },
       { day: 7, title: "Krabi Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Krabi Airport; Departure with beautiful memories of Thailand." }
     ]
-  }
-
-  ,{
+  },
+  {
     slug: "thailand-family-tour-packages",
     title: "Thailand Family Tour Packages",
     destination: "Bangkok & Pattaya",
@@ -226,7 +224,7 @@ export const PACKAGES = [
       "Safari World & Marine Park tickets with transfers",
       "Sea Life Bangkok tickets",
       "Daily breakfast or kitchen provisions",
-      "100% Private AC Vehicle Transfers"
+      "🚐 100% Private AC Vehicle Transfers"
     ],
     exclusions: [
       "International Flights & Visa Fees",
@@ -316,7 +314,7 @@ export const PACKAGES = [
   },
   {
     slug: "bangkok-tour-packages",
-    title: "Bangkok Tour Packages",
+      title: "🇹🇭 Bangkok Tour – 4 Days / 3 Nights",
     destination: "Bangkok",
     destinationSlug: "bangkok",
     category: "Family & City Breaks",
@@ -368,15 +366,15 @@ export const PACKAGES = [
     travelNotes: ["Ideal for a long weekend city break."],
     importantNotes: ["Ideal for a long weekend city break."],
     itinerary: [
-      { day: 1, title: "Arrival -> City-Center Condo", summary: "Private transfer from the airport to your luxury condo in the heart of Sukhumvit." },
-      { day: 2, title: "Grand Palace, Temples & Dinner Cruise", summary: "Morning guided tour of the Grand Palace and Wat Arun. Evening Chao Phraya River dinner cruise." },
-      { day: 3, title: "Ultimate Shopping Day", summary: "A full day dedicated to shopping at Pratunam, Platinum Fashion Mall, and MBK Center." },
-      { day: 4, title: "Departure", summary: "Morning coffee at a local cafe before your private transfer to the airport." }
-    ]
-  },
+        { day: 1, title: "Bangkok Arrival & City Evening", summary: "Arrival at Bangkok Airport; Private transfer to hotel; Hotel check-in and relaxation; Evening visit to a local night market; Overnight stay in Bangkok." },
+        { day: 2, title: "Bangkok City & Cultural Tour", summary: "Breakfast at hotel; Visit **Grand Palace & Wat Pho**; Visit **Wat Arun**; Chao Phraya River experience; Evening shopping at popular markets/malls; Overnight stay in Bangkok." },
+        { day: 3, title: "Safari World & Shopping", summary: "Breakfast at hotel; Full-day visit to **Safari World Bangkok**; Enjoy Safari Park and animal shows; Return to Bangkok; Evening shopping and leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Leisure & Departure", summary: "Breakfast and hotel check-out; Free time for shopping or leisure, depending on flight timing; Transfer to Bangkok Airport; **Departure with wonderful memories of Bangkok.**" }
+      ]
+    },
   {
     slug: "pattaya-tour-packages",
-    title: "Pattaya Tour Packages",
+      title: "🌴 Pattaya Tour – 4 Days / 3 Nights",
     destination: "Pattaya",
     destinationSlug: "pattaya",
     category: "Family & City Breaks",
@@ -429,383 +427,12 @@ export const PACKAGES = [
     travelNotes: ["Perfect for friends groups and entertainment seekers."],
     importantNotes: ["Perfect for friends groups and entertainment seekers."],
     itinerary: [
-      { day: 1, title: "Arrival -> Pattaya Sea-View Condo", summary: "Private transfer from Bangkok airport directly to your Pattaya condo. Evening at leisure." },
-      { day: 2, title: "Coral Island & Alcazar Show", summary: "Morning speedboat tour to Coral Island for water sports and lunch. Evening VIP seats at the Alcazar Show." },
-      { day: 3, title: "Sanctuary of Truth & Night Markets", summary: "Visit the stunning wooden Sanctuary of Truth. Spend the evening exploring Pattaya's vibrant night markets." },
-      { day: 4, title: "Departure", summary: "Private transfer back to the airport." }
-    ]
-  },
-  {
-    slug: "phuket-tour-packages",
-    title: "Phuket Tour Packages",
-    destination: "Phuket",
-    destinationSlug: "phuket",
-    category: "Beach & Islands",
-    duration: { days: 5, nights: 4 },
-    durationDays: 5,
-    durationNights: 4,
-    startingPriceINR: 19900,
-    startingPriceUSD: 240,
-    startingPriceTHB: 9200,
-    heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
-    shortDescription: "Explore Thailand's largest island with our Phuket Tour Packages, featuring Patong beach access, Phi Phi island tours, and Big Buddha views.",
-    description: "Our comprehensive Phuket Tour Packages offer the ultimate tropical getaway. Enjoy luxurious beachfront resorts near Patong, embark on full-day speedboat tours to the Phi Phi Islands and James Bond Island, and explore the rich heritage of Old Phuket Town.",
-    highlights: [
-      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
-      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
-      "🚐 100% Private AC Vehicle Transfers",
-      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
-      "💰 Fully Customisable to your exact preferences",
-
-      "4-Star/5-Star Beachfront Resort Accommodation",
-      "Phi Phi Islands & Maya Bay Speedboat Tour",
-      "James Bond Island & Phang Nga Bay Tour",
-      "Phuket City Tour (Big Buddha & Old Town)"
-    ],
-    inclusions: [
-      "Dedicated Telugu & Hindi speaking local coordinator",
-      "End-to-End guidance from India to return home",
-      "Private AC transfers from airport to hotel and between attractions",
-
-      "4 Nights Resort Accommodation",
-      "Phi Phi Island Tour with Lunch",
-      "James Bond Island Tour with Lunch",
-      "Private AC Airport Transfers"
-    ],
-    exclusions: [
-      "Flights & Visa Fees",
-      "National Park Fees (if applicable)"
-    ],
-    hotelOptions: [
-      { tier: "Beach Resort", phuket: "Diamond Cliff Resort / Patong Beach Hotel" }
-    ],
-    diningOptions: [
-      { plan: "Resort Breakfast", details: "Daily buffet breakfast at the resort." }
-    ],
-    transferOptions: [
-      { type: "Private Transfers", details: "Private airport pickups and drop-offs." }
-    ],
-    travelNotes: ["Great balance of island hopping and relaxation."],
-    importantNotes: ["Great balance of island hopping and relaxation."],
-    itinerary: [
-      { day: 1, title: "Arrival in Phuket", summary: "Private transfer to your beachfront resort in Patong or Karon. Evening at leisure to explore the beach." },
-      { day: 2, title: "Phi Phi Islands Tour", summary: "Full day speedboat excursion to the stunning Phi Phi Islands and Maya Bay." },
-      { day: 3, title: "James Bond Island Tour", summary: "Explore the dramatic limestone cliffs of Phang Nga Bay and the famous James Bond Island." },
-      { day: 4, title: "Phuket City Tour", summary: "Visit the Big Buddha, Wat Chalong, and wander through the charming streets of Old Phuket Town." },
-      { day: 5, title: "Departure", summary: "Enjoy a final morning by the pool before your private transfer to the airport." }
-    ]
-  },
-  {
-    slug: "krabi-tour-packages",
-    title: "Krabi Tour Packages",
-    destination: "Krabi",
-    destinationSlug: "krabi",
-    category: "Beach & Islands",
-    duration: { days: 4, nights: 3 },
-    durationDays: 4,
-    durationNights: 3,
-    startingPriceINR: 21500,
-    startingPriceUSD: 260,
-    startingPriceTHB: 9800,
-    heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
-    shortDescription: "Tranquil Krabi Tour Packages showcasing the iconic 4-Islands tour, Railay Beach, and lush Emerald Pool hot springs.",
-    description: "Escape to nature with our Krabi Tour Packages. Famous for its dramatic limestone cliffs and serene atmosphere, Krabi offers the perfect relaxation spot. Enjoy the iconic 4-Islands longtail boat tour, relax on the stunning Railay Beach, and soak in the natural Emerald Pool.",
-    highlights: [
-      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
-      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
-      "🚐 100% Private AC Vehicle Transfers",
-      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
-      "💰 Fully Customisable to your exact preferences",
-
-      "Cliffside or Beachfront Resort Accommodation",
-      "Classic Krabi 4-Islands Tour by Longtail Boat",
-      "Visit to the stunning Railay Beach",
-      "Emerald Pool & Hot Springs Rainforest Tour"
-    ],
-    inclusions: [
-      "Dedicated Telugu & Hindi speaking local coordinator",
-      "End-to-End guidance from India to return home",
-      "Private AC transfers from airport to hotel and between attractions",
-
-      "3 Nights Resort Accommodation",
-      "4-Islands Tour with Picnic Lunch",
-      "Emerald Pool Tour",
-      "Private AC Airport Transfers"
-    ],
-    exclusions: [
-      "Flights & Visa Fees",
-      "National Park Fees"
-    ],
-    hotelOptions: [
-      { tier: "Nature Resort", krabi: "Centara Ao Nang Beach Resort / Rayavadee" }
-    ],
-    diningOptions: [
-      { plan: "Resort Breakfast", details: "Daily buffet breakfast at the resort." }
-    ],
-    transferOptions: [
-      { type: "Private Transfers", details: "Private transfers to and from Krabi airport." }
-    ],
-    travelNotes: ["Ideal for nature lovers and couples seeking tranquility."],
-    importantNotes: ["Ideal for nature lovers and couples seeking tranquility."],
-    itinerary: [
-      { day: 1, title: "Arrival in Krabi", summary: "Private transfer to your resort in Ao Nang. Watch the sunset over the Andaman Sea." },
-      { day: 2, title: "Krabi 4-Islands Tour", summary: "A classic longtail boat tour to Koh Gai (Chicken Island), Koh Tup, Koh Mor, and Phra Nang Cave Beach." },
-      { day: 3, title: "Emerald Pool & Hot Springs", summary: "Venture into the rainforest to swim in the natural Emerald Pool and relax in the thermal hot springs." },
-      { day: 4, title: "Departure", summary: "Morning relaxation at the resort before your private transfer to the airport." }
-    ]
-  },
-  {
-    slug: "bangkok-pattaya-tour-packages",
-    title: "Bangkok & Pattaya Tour Packages",
-    destination: "Bangkok & Pattaya",
-    destinationSlug: "bangkok",
-    category: "Family & City Breaks",
-    duration: { days: 6, nights: 5 },
-    durationDays: 6,
-    durationNights: 5,
-    startingPriceINR: 19900,
-    startingPriceUSD: 240,
-    startingPriceTHB: 9200,
-    heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-    shortDescription: "The classic twin-city combo. Our Bangkok & Pattaya Tour Packages offer the perfect mix of city shopping and beachside entertainment.",
-    description: "Experience the best of both worlds with our Bangkok & Pattaya Tour Packages. This classic twin-city combo offers the vibrant shopping and cultural landmarks of Bangkok paired with the thrilling water sports and nightlife of Pattaya, all with private transfers and luxury condo stays.",
-    highlights: [
-      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
-      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
-      "🚐 100% Private AC Vehicle Transfers",
-      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
-      "💰 Fully Customisable to your exact preferences",
-
-      "Twin-city experience: 3N Pattaya + 2N Bangkok",
-      "Coral Island Speedboat Tour & Alcazar Show",
-      "Chao Phraya Princess Dinner Cruise",
-      "Private AC Inter-city Transfers"
-    ],
-    inclusions: [
-      "Dedicated Telugu & Hindi speaking local coordinator",
-      "End-to-End guidance from India to return home",
-      "Private AC transfers from airport to hotel and between attractions",
-
-      "5 Nights Luxury Condo Accommodation",
-      "All major attraction tickets (Alcazar, Coral Island, Dinner Cruise)",
-      "100% Private AC Vehicle Transfers",
-      "Pre-stocked kitchen options"
-    ],
-    exclusions: [
-      "Flights & Visa Fees",
-      "Personal shopping"
-    ],
-    hotelOptions: [
-      { tier: "Premium Condos", pattaya: "The Base Central", bangkok: "Ideo Mobi Sukhumvit" }
-    ],
-    diningOptions: [
-      { plan: "Flexible", details: "Pre-stocked kitchen groceries or partner Indian restaurant meals." }
-    ],
-    transferOptions: [
-      { type: "Private Transfers", details: "Seamless door-to-door private transfers." }
-    ],
-    travelNotes: ["The most popular choice for first-time visitors to Thailand."],
-    importantNotes: ["The most popular choice for first-time visitors to Thailand."],
-    itinerary: [
-      { day: 1, title: "Arrival -> Pattaya", summary: "Private pickup at Bangkok airport and direct transfer to your Pattaya condo." },
-      { day: 2, title: "Coral Island & Alcazar Show", summary: "Water sports at Coral Island during the day, VIP Alcazar show in the evening." },
-      { day: 3, title: "Pattaya Leisure", summary: "Visit the Big Buddha or relax by the condo pool." },
-      { day: 4, title: "Transfer to Bangkok & Dinner Cruise", summary: "Private transfer to Bangkok. Evening luxury dinner cruise on the Chao Phraya River." },
-      { day: 5, title: "Bangkok Shopping", summary: "A full day for shopping at MBK, Platinum Mall, and Chatuchak." },
-      { day: 6, title: "Departure", summary: "Private transfer to the airport." }
-    ]
-  },
-  {
-    slug: "bangkok-phuket-tour-packages",
-    title: "Bangkok & Phuket Tour Packages",
-    destination: "Bangkok & Phuket",
-    destinationSlug: "phuket",
-    category: "City & Beach Multi-Destinations",
-    duration: { days: 7, nights: 6 },
-    durationDays: 7,
-    durationNights: 6,
-    startingPriceINR: 27500,
-    startingPriceUSD: 330,
-    startingPriceTHB: 12500,
-    heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
-    shortDescription: "The ultimate City & Beach combo! Bangkok's urban excitement seamlessly paired with Phuket's tropical island paradise.",
-    description: "Combine the energetic pulse of Thailand's capital with the serene beaches of its largest island. Our Bangkok & Phuket Tour Packages provide a seamless, multi-destination experience including city luxury condos, beachfront resorts, and internal flight assistance.",
-    highlights: [
-      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
-      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
-      "🚐 100% Private AC Vehicle Transfers",
-      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
-      "💰 Fully Customisable to your exact preferences",
-
-      "3 Nights in a Phuket Beachfront Resort + 3 Nights in a Bangkok Luxury Condo",
-      "Phi Phi Islands Speedboat Tour",
-      "Grand Palace Tour & Chao Phraya Dinner Cruise",
-      "Seamless airport transfers for internal flights"
-    ],
-    inclusions: [
-      "Dedicated Telugu & Hindi speaking local coordinator",
-      "End-to-End guidance from India to return home",
-      "Private AC transfers from airport to hotel and between attractions",
-
-      "6 Nights Premium Accommodation",
-      "Phi Phi Island Tour",
-      "Dinner Cruise in Bangkok",
-      "All airport transfers in private AC vehicles"
-    ],
-    exclusions: [
-      "Internal Domestic Flight (BKK to HKT)",
-      "International Flights & Visa Fees"
-    ],
-    hotelOptions: [
-      { tier: "Premium Mix", phuket: "Diamond Cliff Resort", bangkok: "Ideo Mobi Sukhumvit" }
-    ],
-    diningOptions: [
-      { plan: "Mixed Dining", details: "Resort breakfast in Phuket, pre-stocked kitchen in Bangkok." }
-    ],
-    transferOptions: [
-      { type: "Private Transfers", details: "All airport-to-hotel transfers are private." }
-    ],
-    travelNotes: ["Internal flight booking assistance is provided free of charge."],
-    importantNotes: ["Internal flight booking assistance is provided free of charge."],
-    itinerary: [
-      { day: 1, title: "Arrival in Phuket", summary: "Arrive in Phuket, private transfer to your beachfront resort." },
-      { day: 2, title: "Phi Phi Islands", summary: "Full day speedboat tour to the stunning Phi Phi Islands." },
-      { day: 3, title: "Phuket Leisure", summary: "Relax on the beach or explore Patong." },
-      { day: 4, title: "Fly to Bangkok", summary: "Private transfer to Phuket airport, fly to Bangkok, private transfer to your city condo." },
-      { day: 5, title: "Bangkok Temples & Dinner Cruise", summary: "Explore the Grand Palace and enjoy an evening dinner cruise." },
-      { day: 6, title: "Bangkok Shopping", summary: "Shop at the famous Platinum Mall and MBK." },
-      { day: 7, title: "Departure", summary: "Private transfer to the airport." }
-    ]
-  },
-  {
-    slug: "thailand-tour-packages-from-hyderabad",
-    title: "Thailand Packages from Hyderabad",
-    destination: "Bangkok & Pattaya",
-    destinationSlug: "bangkok",
-    category: "Family & City Breaks",
-    duration: { days: 6, nights: 5 },
-    durationDays: 6,
-    durationNights: 5,
-    startingPriceINR: 21900,
-    startingPriceUSD: 260,
-    startingPriceTHB: 9800,
-    heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-    shortDescription: "Tailored Thailand Tour Packages from Hyderabad featuring Telugu-speaking guides, direct flight convenience (RGIA), and authentic South-Indian food.",
-    description: "Designed specifically for travelers flying from Rajiv Gandhi International Airport (RGIA). Our Thailand Packages from Hyderabad offer seamless travel coordination, the option for Telugu-speaking guides, and guaranteed authentic South-Indian meals throughout your stay in Bangkok and Pattaya.",
-    highlights: [
-      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
-      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
-      "🚐 100% Private AC Vehicle Transfers",
-      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
-      "💰 Fully Customisable to your exact preferences",
-
-      "Telugu-Speaking Guides & Dedicated Local Coordinators",
-      "Authentic South-Indian Food / Kitchen Access",
-      "Optimized for direct flights from Hyderabad (HYD to BKK)",
-      "Premium Condo accommodations in Pattaya & Bangkok"
-    ],
-    inclusions: [
-      "Dedicated Telugu & Hindi speaking local coordinator",
-      "End-to-End guidance from India to return home",
-      "Private AC transfers from airport to hotel and between attractions",
-
-      "5 Nights Premium Condo Accommodation",
-      "Telugu-Speaking Guide availability",
-      "South-Indian Meal Plan or Pre-stocked Kitchen",
-      "All major attraction tickets (Alcazar, Coral Island, Dinner Cruise)",
-      "100% Private AC Vehicle Transfers"
-    ],
-    exclusions: [
-      "Flights from Hyderabad",
-      "Personal expenses"
-    ],
-    hotelOptions: [
-      { tier: "Premium Condos", pattaya: "The Base Central", bangkok: "Ideo Mobi Sukhumvit" }
-    ],
-    diningOptions: [
-      { plan: "South-Indian Comfort", details: "Guaranteed South-Indian meals at verified partner restaurants or self-cook options." }
-    ],
-    transferOptions: [
-      { type: "Private Transfers", details: "Seamless private transfers aligning with Hyderabad flight timings." }
-    ],
-    travelNotes: ["Perfect for families and groups from Telangana and Andhra Pradesh."],
-    importantNotes: ["Perfect for families and groups from Telangana and Andhra Pradesh."],
-    itinerary: [
-      { day: 1, title: "Arrival from HYD -> Pattaya", summary: "Pickup at BKK Airport by your Telugu-speaking coordinator and transfer to Pattaya." },
-      { day: 2, title: "Coral Island & Alcazar Show", summary: "Enjoy Coral Island with a South-Indian lunch, followed by the Alcazar show." },
-      { day: 3, title: "Pattaya Sightseeing", summary: "Visit the Big Buddha and viewpoints." },
-      { day: 4, title: "Transfer to Bangkok & Dinner Cruise", summary: "Transfer to Bangkok. Evening luxury dinner cruise featuring an Indian buffet." },
-      { day: 5, title: "Bangkok Shopping", summary: "Guided shopping day at major malls." },
-      { day: 6, title: "Departure to HYD", summary: "Private transfer to BKK Airport for your direct flight back to Hyderabad." }
-    ]
-  },
-  {
-    slug: "thailand-tour-packages-with-indian-food",
-    title: "Thailand Packages for Indian Families & Indian Food",
-    destination: "Bangkok & Pattaya",
-    destinationSlug: "bangkok",
-    category: "Family & City Breaks",
-    duration: { days: 6, nights: 5 },
-    durationDays: 6,
-    durationNights: 5,
-    startingPriceINR: 22900,
-    startingPriceUSD: 275,
-    startingPriceTHB: 10200,
-    heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
-    thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
-    shortDescription: "Zero-hassle Thailand packages guaranteeing 100% pure veg, Jain, and authentic Indian food options with private kitchen access condos.",
-    description: "Travel to Thailand without worrying about your dietary preferences. Our specialized packages for Indian families guarantee 100% pure veg, Jain, and authentic Indian meals. Stay in luxury condos equipped with private kitchens pre-stocked with Indian groceries for the ultimate home-away-from-home comfort.",
-    highlights: [
-      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
-      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
-      "🚐 100% Private AC Vehicle Transfers",
-      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
-      "💰 Fully Customisable to your exact preferences",
-
-      "Guaranteed Pure Veg, Jain, or authentic Indian meals",
-      "Luxury Condos with fully equipped private kitchens",
-      "Pre-stocked Indian groceries (milk, bread, spices, rice)",
-      "Family-friendly pacing with private AC vehicles"
-    ],
-    inclusions: [
-      "Dedicated Telugu & Hindi speaking local coordinator",
-      "End-to-End guidance from India to return home",
-      "Private AC transfers from airport to hotel and between attractions",
-
-      "5 Nights Luxury Condo Accommodation",
-      "Comprehensive Indian Meal Plan (or Groceries Option)",
-      "All major attraction tickets (Alcazar, Coral Island, Dinner Cruise with Indian Buffet)",
-      "100% Private AC Vehicle Transfers"
-    ],
-    exclusions: [
-      "International Flights",
-      "Personal expenses"
-    ],
-    hotelOptions: [
-      { tier: "Premium Kitchen Condos", pattaya: "The Base Central", bangkok: "Ideo Mobi Sukhumvit" }
-    ],
-    diningOptions: [
-      { plan: "Pure Veg / Jain / Indian", details: "Strictly vetted partner restaurants and 100% customizable kitchen groceries." }
-    ],
-    transferOptions: [
-      { type: "Private Transfers", details: "Private AC vehicles to accommodate family travel comfortably." }
-    ],
-    travelNotes: ["The most stress-free option for Indian families with strict dietary requirements."],
-    importantNotes: ["The most stress-free option for Indian families with strict dietary requirements."],
-    itinerary: [
-      { day: 1, title: "Arrival -> Pattaya Condo", summary: "Private transfer to your Pattaya condo. Find your kitchen pre-stocked with Indian groceries." },
-      { day: 2, title: "Coral Island with Indian Lunch", summary: "Speedboat tour to Coral Island, featuring a guaranteed pure veg/Indian lunch." },
-      { day: 3, title: "Pattaya Leisure & Alcazar Show", summary: "Relax in your condo. Evening VIP seats for the Alcazar Cabaret Show." },
-      { day: 4, title: "Transfer to Bangkok & Indian Dinner Cruise", summary: "Transfer to Bangkok. Evening Chao Phraya dinner cruise featuring a dedicated Indian buffet section." },
-      { day: 5, title: "Family Shopping Day", summary: "Explore Bangkok's shopping districts with recommendations for nearby Indian restaurants." },
-      { day: 6, title: "Departure", summary: "Enjoy a home-cooked breakfast before your private transfer to the airport." }
-    ]
-  }
+        { day: 1, title: "Pattaya Arrival & Nightlife", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Experience Pattaya’s vibrant nightlife, including **Walking Street, live music, bars and entertainment venues**; Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Pattaya Nightlife", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy beaches, swimming and optional water activities; Return to Pattaya; Evening free for dinner and nightlife; Explore **Walking Street and Pattaya’s evening entertainment**; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya Sightseeing & Evening Entertainment", summary: "Breakfast at hotel; Visit **Sanctuary of Truth**; Visit Pattaya Viewpoint; Shopping and leisure time; Evening at leisure or enjoy a **cabaret/entertainment show**; Optional nightlife experience; Overnight stay in Pattaya." },
+        { day: 4, title: "Leisure & Departure", summary: "Breakfast and hotel check-out; Free time for shopping or relaxation; Transfer to Bangkok Airport; **Departure with unforgettable Pattaya memories.**" }
+      ]
+    }
 ];
 
 if (typeof window !== 'undefined') {

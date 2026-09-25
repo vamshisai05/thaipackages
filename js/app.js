@@ -7,6 +7,21 @@
 (function() {
   'use strict';
 
+  // Global fallback image handler for all missing/broken images
+  document.addEventListener('error', function(e) {
+    if (e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'img') {
+      if (e.target.dataset.fallbackApplied) return;
+      e.target.dataset.fallbackApplied = 'true';
+      const ctx = (e.target.alt + ' ' + e.target.src).toLowerCase();
+      if (ctx.includes('phuket')) e.target.src = 'images/phuket (2).jpg';
+      else if (ctx.includes('pattaya')) e.target.src = 'images/pattaya city.jpg';
+      else if (ctx.includes('krabi')) e.target.src = 'images/krabi.jpg';
+      else if (ctx.includes('samui')) e.target.src = 'images/koh-samui.jpg';
+      else if (ctx.includes('chiang')) e.target.src = 'images/chiang-mai.jpg';
+      else e.target.src = 'images/bangkok.jpg';
+    }
+  }, true);
+
   const FALLBACK_DESTINATIONS = [
     {
       slug: "phuket",
@@ -139,33 +154,11 @@
       `,
       highlights: ["Wat Phra That Doi Suthep mountaintop golden temple", "Ethical elephant rescue sanctuary interaction", "Old City walking street night markets", "Traditional Lanna cooking classes"],
       packageSlugs: ["chiang-mai-northern-heritage"]
-    },
-    {
-      slug: "hua-hin",
-      name: "Hua Hin",
-      country: "Thailand",
-      region: "Gulf of Thailand",
-      tagline: "Royal Seaside Heritage & Golf Retreats",
-      shortDescription: "A sophisticated royal beach resort town known for tranquil beaches, night markets, and world-class golf courses.",
-      description: "A sophisticated royal beach resort town known for tranquil beaches, vibrant night markets, and world-class golf courses just a short drive from Bangkok.",
-      heroImage: "images/koh-samui.jpg",
-      thumbnail: "images/hua hin.jpg",
-      quickFacts: { bestTime: "Nov – Feb", currency: "Thai Baht (THB)", idealDuration: "2 – 4 Days", travelStyle: ["Relaxation", "Golf", "Family", "Heritage"] },
-      longDescriptionHTML: `
-<h2>Hua Hin – Royal Seaside Heritage</h2>
-<p>Discover Hua Hin, Thailand's original royal beach resort town, celebrated for its laid-back atmosphere, wide sandy beaches, and sophisticated charm. Just a few hours from Bangkok, it offers the perfect escape from the bustling city.</p>
-<p>Enjoy world-class golf courses, explore the vibrant Cicada night market, visit historic royal summer palaces, and relax at premier beachfront resorts and spas.</p>
-<p>Whether you're travelling with family, seeking a quiet couple's retreat, or looking for a premium golf holiday, Hua Hin delivers an elegant coastal experience.</p>
-<p><strong>Beaches • Night Markets • Golf • Heritage • Relaxation • Family</strong></p>
-<p>Hua Hin – A sophisticated coastal escape.</p>
-      `,
-      highlights: ["Cicada Market and Tamarind Market for local arts and dining", "Khao Takiab (Monkey Mountain) for panoramic coastal views", "World-class championship golf courses", "Historic Maruekhathaiyawan Royal Summer Palace"],
-      packageSlugs: []
     }
   ];
 
   const FALLBACK_PACKAGES = [
-    {
+      {
       slug: "bangkok-pattaya-classic-vacation",
       title: "Bangkok & Pattaya Super Saver",
       destination: "Bangkok & Pattaya",
@@ -226,7 +219,7 @@
         { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with wonderful memories of Thailand." }
       ]
     },
-    {
+      {
       slug: "phuket-krabi-romantic-escape",
       title: "Phuket & Krabi Romantic Island Escape",
       destination: "Phuket & Krabi",
@@ -285,7 +278,7 @@
         { day: 7, title: "Krabi Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Krabi Airport; Departure with beautiful memories of Thailand." }
       ]
     },
-    {
+      {
       slug: "thailand-family-tour-packages",
       title: "Thailand Family Tour Packages",
       destination: "Bangkok & Pattaya",
@@ -335,7 +328,7 @@
         { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Return home with wonderful family memories of Thailand." }
       ]
     },
-    {
+      {
       slug: "thailand-honeymoon-packages",
       title: "Phuket • Krabi • Bangkok – Honeymoon Special",
       destination: "Phuket & Krabi",
@@ -382,7 +375,7 @@
         { day: 6, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with beautiful memories of your honeymoon in Thailand." }
       ]
     },
-    {
+      {
       slug: "bangkok-tour-packages",
       title: "Bangkok Tour Packages",
       destination: "Bangkok",
@@ -399,7 +392,7 @@
       shortDescription: "Immerse yourself in Bangkok's golden temples, lively shopping malls, Chao Phraya river dinner cruise & street markets.",
       description: "Dive into the bustling metropolis with our dedicated Bangkok Tour Packages featuring Grand Palace, temples, and luxury shopping."
     },
-    {
+      {
       slug: "pattaya-tour-packages",
       title: "Pattaya Tour Packages",
       destination: "Pattaya",
@@ -415,110 +408,8 @@
       thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
       shortDescription: "Experience thrilling watersports at Coral Island, world-class Alcazar cabaret show, Sanctuary of Truth & night markets.",
       description: "Experience the vibrant coastal energy of Pattaya with Coral Island speedboat excursions and cultural landmarks."
-    },
-    {
-      slug: "phuket-tour-packages",
-      title: "Phuket Tour Packages",
-      destination: "Phuket",
-      destinationSlug: "phuket",
-      category: "Island Special",
-      duration: { days: 5, nights: 4 },
-      durationDays: 5,
-      durationNights: 4,
-      startingPriceINR: 21999,
-      startingPriceUSD: 270,
-      startingPriceTHB: 9900,
-      heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Discover pristine Andaman beaches, Phi Phi Islands tour, Phang Nga Bay James Bond Island & Old Phuket Town heritage.",
-      description: "Explore the pearl of the Andaman Sea with luxury beachfront resort stays and island speedboat excursions."
-    },
-    {
-      slug: "krabi-tour-packages",
-      title: "Krabi Tour Packages",
-      destination: "Krabi",
-      destinationSlug: "krabi",
-      category: "Nature Special",
-      duration: { days: 4, nights: 3 },
-      durationDays: 4,
-      durationNights: 3,
-      startingPriceINR: 18999,
-      startingPriceUSD: 230,
-      startingPriceTHB: 8500,
-      heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Pristine limestone karsts, crystal clear waters of Railay, rainforest Emerald Pool hot springs & 4 Islands cruise.",
-      description: "Experience majestic limestone monoliths, tranquil emerald lagoons, and picturesque 4-island boat excursions."
-    },
-    {
-      slug: "bangkok-pattaya-tour-packages",
-      title: "Bangkok & Pattaya Tour Packages",
-      destination: "Bangkok & Pattaya",
-      destinationSlug: "bangkok",
-      category: "Combo Tour",
-      duration: { days: 5, nights: 4 },
-      durationDays: 5,
-      durationNights: 4,
-      startingPriceINR: 20999,
-      startingPriceUSD: 240,
-      startingPriceTHB: 9200,
-      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "The perfect holiday package covering top sights of both Bangkok and Pattaya with comfortable private transfers.",
-      description: "Our twin-city package combines Bangkok's cultural and shopping highlights with Pattaya's scenic coastal charms."
-    },
-    {
-      slug: "bangkok-phuket-tour-packages",
-      title: "Bangkok & Phuket Tour Packages",
-      destination: "Bangkok & Phuket",
-      destinationSlug: "phuket",
-      category: "Twin Destination",
-      duration: { days: 6, nights: 5 },
-      durationDays: 6,
-      durationNights: 5,
-      startingPriceINR: 27999,
-      startingPriceUSD: 330,
-      startingPriceTHB: 12500,
-      heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Combine metropolitan excitement & temple serenity in Bangkok with the tropical paradise & island hopping of Phuket.",
-      description: "The ultimate twin-destination vacation pairing capital city splendors with Andaman seaside luxury."
-    },
-    {
-      slug: "thailand-tour-packages-from-hyderabad",
-      title: "Thailand Tour from Hyderabad",
-      destination: "Bangkok & Pattaya",
-      destinationSlug: "bangkok",
-      category: "Telugu Special",
-      duration: { days: 5, nights: 4 },
-      durationDays: 5,
-      durationNights: 4,
-      startingPriceINR: 23499,
-      startingPriceUSD: 260,
-      startingPriceTHB: 9800,
-      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Handcrafted specifically for Telugu travelers with dedicated native Telugu coordination, South Indian food & care.",
-      description: "Travel with confidence featuring dedicated Telugu-speaking guides, South Indian dining arrangements, and private door-to-door transit."
-    },
-    {
-      slug: "thailand-tour-packages-with-indian-food",
-      title: "Thailand Packages with Indian Food",
-      destination: "Bangkok & Pattaya",
-      destinationSlug: "bangkok",
-      category: "Indian Food",
-      duration: { days: 5, nights: 4 },
-      durationDays: 5,
-      durationNights: 4,
-      startingPriceINR: 22499,
-      startingPriceUSD: 250,
-      startingPriceTHB: 9500,
-      heroImage: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Never worry about meals. Pure veg, Jain, & authentic Indian partner restaurants plus condo kitchen facilities.",
-      description: "Enjoy verified partner Indian dining and fully equipped condo kitchens tailored for pure vegetarian and Jain dietary needs."
     }
-  ];
+    ];
 
   // Obtain centralized context from window or fallback
   const getContext = () => {
