@@ -164,9 +164,9 @@
       destination: "Bangkok & Pattaya",
       destinationSlug: "bangkok",
       category: "Family & City Breaks",
-      duration: { days: 5, nights: 4 },
-      durationDays: 5,
-      durationNights: 4,
+      duration: { days: 6, nights: 5 },
+      durationDays: 6,
+      durationNights: 5,
       startingPriceINR: 19900,
       startingPriceUSD: 290,
       startingPriceTHB: 10500,
@@ -377,37 +377,79 @@
     },
       {
       slug: "bangkok-tour-packages",
-      title: "Bangkok Tour Packages",
+      cardTitle: "Bangkok Tour Packages",
+      title: "Bangkok Tour – 4 Days / 3 Nights",
       destination: "Bangkok",
       destinationSlug: "bangkok",
-      category: "City Break",
+      category: "Family & City Breaks",
       duration: { days: 4, nights: 3 },
       durationDays: 4,
       durationNights: 3,
-      startingPriceINR: 16999,
+      startingPriceINR: 14900,
       startingPriceUSD: 180,
       startingPriceTHB: 6800,
-      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Immerse yourself in Bangkok's golden temples, lively shopping malls, Chao Phraya river dinner cruise & street markets.",
-      description: "Dive into the bustling metropolis with our dedicated Bangkok Tour Packages featuring Grand Palace, temples, and luxury shopping."
+      heroImage: "https://images.unsplash.com/photo-1509339022327-1e1e25360a41?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1509339022327-1e1e25360a41?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Experience the vibrant heart of Thailand with our Bangkok Tour Packages, featuring majestic temples, endless shopping, and luxury dinner cruises.",
+      description: "Dive into the bustling metropolis with our dedicated Bangkok Tour Packages. Perfect for a quick city break, this itinerary covers the cultural majesty of the Grand Palace and Wat Arun, the shopping paradise of Pratunam and MBK, and the dazzling nightlife from premier skybars.",
+      itinerary: [
+        { day: 1, title: "Bangkok Arrival & City Evening", summary: "Arrival at Bangkok Airport; Private transfer to hotel; Hotel check-in and relaxation; Evening visit to a local night market; Overnight stay in Bangkok." },
+        { day: 2, title: "Bangkok City & Cultural Tour", summary: "Breakfast at hotel; Visit **Grand Palace & Wat Pho**; Visit **Wat Arun**; Chao Phraya River experience; Evening shopping at popular markets/malls; Overnight stay in Bangkok." },
+        { day: 3, title: "Safari World & Shopping", summary: "Breakfast at hotel; Full-day visit to **Safari World Bangkok**; Enjoy Safari Park and animal shows; Return to Bangkok; Evening shopping and leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Leisure & Departure", summary: "Breakfast and hotel check-out; Free time for shopping or leisure, depending on flight timing; Transfer to Bangkok Airport; **Departure with wonderful memories of Bangkok.**" }
+      ]
     },
       {
       slug: "pattaya-tour-packages",
-      title: "Pattaya Tour Packages",
+      cardTitle: "Pattaya Tour Packages",
+      title: "Pattaya Tour – 4 Days / 3 Nights",
       destination: "Pattaya",
       destinationSlug: "pattaya",
-      category: "Beach Special",
+      category: "Family & City Breaks",
       duration: { days: 4, nights: 3 },
       durationDays: 4,
       durationNights: 3,
-      startingPriceINR: 14999,
-      startingPriceUSD: 170,
-      startingPriceTHB: 6200,
+      startingPriceINR: 15900,
+      startingPriceUSD: 190,
+      startingPriceTHB: 7200,
       heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
       thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Experience thrilling watersports at Coral Island, world-class Alcazar cabaret show, Sanctuary of Truth & night markets.",
-      description: "Experience the vibrant coastal energy of Pattaya with Coral Island speedboat excursions and cultural landmarks."
+      shortDescription: "Thrilling Pattaya Tour Packages packed with Coral Island water sports, Alcazar VIP shows, and premium sea-view condo stays.",
+      description: "Discover the entertainment capital with our action-packed Pattaya Tour Packages. Enjoy a premium sea-view condo, thrilling water sports at Coral Island, the world-famous Alcazar Cabaret Show, and visits to the awe-inspiring Sanctuary of Truth.",
+      itinerary: [
+        { day: 1, title: "Pattaya Arrival & Nightlife", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Experience Pattaya’s vibrant nightlife, including **Walking Street, live music, bars and entertainment venues**; Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Pattaya Nightlife", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy beaches, swimming and optional water activities; Return to Pattaya; Evening free for dinner and nightlife; Explore **Walking Street and Pattaya’s evening entertainment**; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya Sightseeing & Evening Entertainment", summary: "Breakfast at hotel; Visit **Sanctuary of Truth**; Visit Pattaya Viewpoint; Shopping and leisure time; Evening at leisure or enjoy a **cabaret/entertainment show**; Optional nightlife experience; Overnight stay in Pattaya." },
+        { day: 4, title: "Leisure & Departure", summary: "Breakfast and hotel check-out; Free time for shopping or relaxation; Transfer to Bangkok Airport; **Departure with unforgettable Pattaya memories.**" }
+      ]
+    },
+      {
+      slug: "thailand-vietnam-tour-packages",
+      cardTitle: "Thailand & Vietnam Tour Packages",
+      title: "Thailand & Vietnam Tour Packages",
+      tag: "Twin Country Special",
+      destination: "Thailand & Vietnam",
+      destinationSlug: "bangkok",
+      category: "Twin Country Special",
+      duration: { days: 7, nights: 6 },
+      durationDays: 7,
+      durationNights: 6,
+      startingPriceINR: 34999,
+      startingPriceUSD: 420,
+      startingPriceTHB: 15500,
+      heroImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=85",
+      thumbnail: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+      shortDescription: "Experience the ultimate twin-country journey across Thailand and Vietnam, featuring Bangkok, Pattaya nightlife, and tropical Phu Quoc island.",
+      description: "Experience the best of two iconic Southeast Asian destinations in one seamless journey. Explore Bangkok's vibrant city culture and Pattaya's famous nightlife before flying to the pristine beaches, island tours, and breathtaking cable car experiences of Phu Quoc, Vietnam.",
+      itinerary: [
+        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Beach activities and optional water sports; Return to Pattaya; Evening at leisure / nightlife; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Pattaya sightseeing; Transfer to Bangkok; Hotel check-in; Evening shopping and leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Bangkok → Phu Quoc", summary: "Breakfast and hotel check-out; Transfer to Bangkok Airport; Flight to Phu Quoc, Vietnam; Hotel check-in; Relax and enjoy the beach; Evening at leisure; Overnight stay in Phu Quoc." },
+        { day: 5, title: "Phu Quoc Island Tour", summary: "Breakfast at hotel; Full-day island and beach experience; Enjoy snorkeling, swimming and scenic island views; Visit selected attractions; Return to hotel; Evening at leisure; Overnight stay in Phu Quoc." },
+        { day: 6, title: "Phu Quoc Cable Car & Leisure", summary: "Breakfast at hotel; Experience the famous **Hon Thom Cable Car**; Enjoy beach time and island views; Explore local markets / leisure; Sunset by the beach; Overnight stay in Phu Quoc." },
+        { day: 7, title: "Phu Quoc Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Phu Quoc Airport; **Departure with wonderful memories of Thailand & Vietnam.**" }
+      ]
     }
     ];
 
@@ -471,6 +513,35 @@
       return `From ${currConfig.symbol}${converted.toLocaleString(locale)}`;
     }
 
+    // Update all .dynamic-price[data-base-inr] elements with the current currency
+    function updateDynamicPrices() {
+      const currencies = (BUSINESS && BUSINESS.currencies) ? BUSINESS.currencies : {
+        INR: { code: 'INR', symbol: '\u20b9', rateFromUSD: 83.5 },
+        USD: { code: 'USD', symbol: '$', rateFromUSD: 1.0 },
+        THB: { code: 'THB', symbol: '\u0e3f', rateFromUSD: 36.5 }
+      };
+      const currConfig = currencies[currentCurrency] || currencies.INR;
+      document.querySelectorAll('.dynamic-price[data-base-inr]').forEach(function(el) {
+        const baseINR = parseFloat(el.getAttribute('data-base-inr'));
+        if (!baseINR) return;
+        let displayText;
+        if (currentCurrency === 'INR') {
+          displayText = currConfig.symbol + baseINR.toLocaleString('en-IN');
+        } else if (currentCurrency === 'USD') {
+          const usd = Math.round(baseINR / 83.5);
+          displayText = currConfig.symbol + usd.toLocaleString('en-US');
+        } else if (currentCurrency === 'THB') {
+          const thb = Math.round((baseINR / 83.5) * 36.5);
+          displayText = currConfig.symbol + thb.toLocaleString('en-US');
+        } else {
+          const baseUSD = baseINR / 83.5;
+          const converted = Math.round(baseUSD * (currConfig.rateFromUSD || 1));
+          displayText = currConfig.symbol + converted.toLocaleString('en-US');
+        }
+        el.textContent = displayText;
+      });
+    }
+
     function setupCurrencySelectors() {
       const selectors = document.querySelectorAll('.currency-select');
       selectors.forEach(sel => {
@@ -482,11 +553,13 @@
           if (typeof renderPackagesList === 'function') renderPackagesList();
           if (typeof updatePackageDetailPrices === 'function') updatePackageDetailPrices();
           if (typeof renderHomeFeaturedPackages === 'function') renderHomeFeaturedPackages();
+          updateDynamicPrices();
         });
       });
     }
 
     setupCurrencySelectors();
+    updateDynamicPrices();
 
     // ==========================================================================
     // 2. Navigation Header & Mobile Drawer Menu
@@ -755,19 +828,15 @@
           '100% Private AC'
         ];
         const isSignature = pkg.slug === 'bangkok-pattaya-classic-vacation';
-        const link = pkg.slug === 'bangkok-pattaya-classic-vacation' ? 'package-detail.html?id=bangkok-pattaya-classic-vacation' :
-                     pkg.slug === 'phuket-krabi-romantic-escape' ? 'package-detail.html?id=phuket-krabi-romantic-escape' :
-                     pkg.slug === 'thailand-family-tour-packages' ? 'package-detail.html?id=thailand-family-tour-packages' :
-                     pkg.slug === 'thailand-honeymoon-packages' ? 'package-detail.html?id=thailand-honeymoon-packages' :
-                     pkg.slug === 'thailand-tour-packages-from-hyderabad' ? 'group-tours.html' :
-                     pkg.slug === 'thailand-tour-packages-with-indian-food' ? 'customized-packages.html' :
-                     'packages.html';
+        const link = (pkg.slug === 'thailand-tour-packages-from-hyderabad') ? 'group-tours.html' :
+                     (pkg.slug === 'thailand-tour-packages-with-indian-food') ? 'customized-packages.html' :
+                     `package-detail.html?id=${pkg.slug}`;
 
         return `
           <article class="package-card compact" id="${isSignature ? 'cardBangkokPattaya' : ''}">
             <div class="package-media-wrap">
               <img src="${pkg.thumbnail || pkg.heroImage}" alt="${pkg.title}" loading="lazy" width="600" height="450">
-              <span class="package-badge-tag">${badges[idx] || pkg.category || 'FEATURED'}</span>
+              <span class="package-badge-tag">${pkg.tag || badges[idx] || pkg.category || 'FEATURED'}</span>
               <span class="package-duration-tag">${pkg.durationDays || (pkg.duration && pkg.duration.days) || 5} Days / ${pkg.durationNights || (pkg.duration && pkg.duration.nights) || 4} Nights</span>
             </div>
             <div class="package-card-body">
@@ -776,7 +845,7 @@
                 <span class="package-price-value">${formatPrice(pkg)}</span>
               </div>
               <span class="package-destination">${pkg.destination || 'Thailand'}</span>
-              <h3>${pkg.title}</h3>
+              <h3>${pkg.cardTitle || pkg.title}</h3>
               <p>${pkg.shortDescription || pkg.description}</p>
               
               
@@ -1215,7 +1284,7 @@
             </summary>
             <div class="itinerary-details">
               <ul style="list-style-type: disc; padding-left: 24px; margin-top: 12px; color: var(--text-body); font-size: 14px; line-height: 1.7;">
-                ${item.summary.split(';').map(s => s.trim() ? `<li style="margin-bottom: 8px;">${s.trim()}</li>` : '').join('')}
+                ${item.summary.split(';').map(s => s.trim() ? `<li style="margin-bottom: 8px;">${s.trim().replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</li>` : '').join('')}
               </ul>
             </div>
           </details>
@@ -1225,8 +1294,17 @@
       // Inclusions & Exclusions
       const pkgInclusions = document.getElementById('pkgInclusions');
       const pkgExclusions = document.getElementById('pkgExclusions');
-      if (pkgInclusions && pkg.inclusions) pkgInclusions.innerHTML = pkg.inclusions.map(i => `<li>${i}</li>`).join('');
-      if (pkgExclusions && pkg.exclusions) pkgExclusions.innerHTML = pkg.exclusions.map(e => `<li>${e}</li>`).join('');
+      const incBlock = pkgInclusions ? pkgInclusions.closest('.detail-block') : null;
+      if (pkgInclusions && pkg.inclusions && pkg.inclusions.length > 0) {
+        pkgInclusions.innerHTML = pkg.inclusions.map(i => `<li>${i}</li>`).join('');
+      }
+      if (pkgExclusions && pkg.exclusions && pkg.exclusions.length > 0) {
+        pkgExclusions.innerHTML = pkg.exclusions.map(e => `<li>${e}</li>`).join('');
+      }
+      if (incBlock) {
+        const hasIncOrExc = (pkg.inclusions && pkg.inclusions.length > 0) || (pkg.exclusions && pkg.exclusions.length > 0);
+        incBlock.style.display = hasIncOrExc ? '' : 'none';
+      }
 
       // Dynamic Hotel & Dining Options (if defined on package)
       const pkgAccomOptions = document.getElementById('pkgAccomOptions');

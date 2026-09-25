@@ -15,11 +15,11 @@ export const PACKAGES = [
     destinationSlug: "bangkok",
     category: "Family & City Breaks",
     duration: {
-      days: 5,
-      nights: 4
+      days: 6,
+      nights: 5
     },
-    durationDays: 5,
-    durationNights: 4,
+    durationDays: 6,
+    durationNights: 5,
     startingPriceINR: 19900,
     startingPriceUSD: 290,
     startingPriceTHB: 10500,
@@ -314,7 +314,8 @@ export const PACKAGES = [
   },
   {
     slug: "bangkok-tour-packages",
-      title: "🇹🇭 Bangkok Tour – 4 Days / 3 Nights",
+    cardTitle: "Bangkok Tour Packages",
+    title: "Bangkok Tour – 4 Days / 3 Nights",
     destination: "Bangkok",
     destinationSlug: "bangkok",
     category: "Family & City Breaks",
@@ -374,7 +375,8 @@ export const PACKAGES = [
     },
   {
     slug: "pattaya-tour-packages",
-      title: "🌴 Pattaya Tour – 4 Days / 3 Nights",
+    cardTitle: "Pattaya Tour Packages",
+    title: "Pattaya Tour – 4 Days / 3 Nights",
     destination: "Pattaya",
     destinationSlug: "pattaya",
     category: "Family & City Breaks",
@@ -432,7 +434,62 @@ export const PACKAGES = [
         { day: 3, title: "Pattaya Sightseeing & Evening Entertainment", summary: "Breakfast at hotel; Visit **Sanctuary of Truth**; Visit Pattaya Viewpoint; Shopping and leisure time; Evening at leisure or enjoy a **cabaret/entertainment show**; Optional nightlife experience; Overnight stay in Pattaya." },
         { day: 4, title: "Leisure & Departure", summary: "Breakfast and hotel check-out; Free time for shopping or relaxation; Transfer to Bangkok Airport; **Departure with unforgettable Pattaya memories.**" }
       ]
-    }
+    },
+  {
+    slug: "thailand-vietnam-tour-packages",
+    cardTitle: "Thailand & Vietnam Tour Packages",
+    title: "Thailand & Vietnam Tour Packages",
+    tag: "Twin Country Special",
+    destination: "Thailand & Vietnam",
+    destinationSlug: "bangkok",
+    category: "Twin Country Special",
+    duration: { days: 7, nights: 6 },
+    durationDays: 7,
+    durationNights: 6,
+    startingPriceINR: 34999,
+    startingPriceUSD: 420,
+    startingPriceTHB: 15500,
+    heroImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=85",
+    thumbnail: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+    shortDescription: "Experience the ultimate twin-country journey across Thailand and Vietnam, featuring Bangkok, Pattaya nightlife, and tropical Phu Quoc island.",
+    description: "Experience the best of two iconic Southeast Asian destinations in one seamless journey. Explore Bangkok's vibrant city culture and Pattaya's famous nightlife before flying to the pristine beaches, island tours, and breathtaking cable car experiences of Phu Quoc, Vietnam.",
+    highlights: [
+      "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
+      "🗣️ 24/7 Telugu & Hindi On-Ground Support",
+      "🚐 100% Private AC Vehicle Transfers",
+      "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
+      "💰 Fully Customisable to your exact preferences",
+      "3 Nights in Thailand (Pattaya & Bangkok)",
+      "3 Nights in Phu Quoc, Vietnam",
+      "Coral Island (Koh Larn) Speedboat Excursion",
+      "World-famous Hon Thom Cable Car Experience in Phu Quoc",
+      "Full-Day Phu Quoc Island & Snorkeling Tour"
+    ],
+    hotelOptions: [
+      { tier: "Selected 4★ Beach Resorts & City Hotels", pattaya: "Centara Pattaya", bangkok: "Amari Bangkok", phuquoc: "Novotel Phu Quoc Resort" }
+    ],
+    diningOptions: [
+      { plan: "Breakfast Included", details: "Daily buffet breakfast at hotels/resorts with Indian and vegetarian dining options accessible." }
+    ],
+    transferOptions: [
+      { type: "Private Transfers", details: "Private AC vehicle transfers for all airport pickups, inter-city, and scheduled tours." }
+    ],
+    travelNotes: [
+      "Twin country travel: Valid passport and Vietnam Visa required. Flight between Bangkok and Phu Quoc is typically under 2 hours."
+    ],
+    importantNotes: [
+      "Twin country travel: Valid passport and Vietnam Visa required. Flight between Bangkok and Phu Quoc is typically under 2 hours."
+    ],
+    itinerary: [
+      { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
+      { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Beach activities and optional water sports; Return to Pattaya; Evening at leisure / nightlife; Overnight stay in Pattaya." },
+      { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Pattaya sightseeing; Transfer to Bangkok; Hotel check-in; Evening shopping and leisure; Overnight stay in Bangkok." },
+      { day: 4, title: "Bangkok → Phu Quoc", summary: "Breakfast and hotel check-out; Transfer to Bangkok Airport; Flight to Phu Quoc, Vietnam; Hotel check-in; Relax and enjoy the beach; Evening at leisure; Overnight stay in Phu Quoc." },
+      { day: 5, title: "Phu Quoc Island Tour", summary: "Breakfast at hotel; Full-day island and beach experience; Enjoy snorkeling, swimming and scenic island views; Visit selected attractions; Return to hotel; Evening at leisure; Overnight stay in Phu Quoc." },
+      { day: 6, title: "Phu Quoc Cable Car & Leisure", summary: "Breakfast at hotel; Experience the famous **Hon Thom Cable Car**; Enjoy beach time and island views; Explore local markets / leisure; Sunset by the beach; Overnight stay in Phu Quoc." },
+      { day: 7, title: "Phu Quoc Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Phu Quoc Airport; **Departure with wonderful memories of Thailand & Vietnam.**" }
+    ]
+  }
 ];
 
 if (typeof window !== 'undefined') {
