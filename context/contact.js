@@ -52,7 +52,7 @@ export function isContactConfigured(value) {
 /**
  * Generates a clean WhatsApp web/mobile direct URL if configured, or '#' if placeholder.
  */
-export function getWhatsAppUrl(customMessage = '') {
+export function getWhatsAppUrl(customMessage = 'Hi, I want details about the Thailand Family Package') {
   if (!isContactConfigured(CONTACT.whatsappNumber)) {
     return '#';
   }

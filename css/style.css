@@ -13,7 +13,7 @@
   --teal-800: #104149;
   --teal-700: #185a65;
   --teal-600: #217381;
-  
+
   /* Primary Navy/Teal aliases for compatibility */
   --navy-900: #061d21;
   --navy-800: #0a2a30;
@@ -100,7 +100,9 @@
    Base & Reset
    ========================================================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -129,7 +131,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--teal-950);
   font-weight: 700;
@@ -137,10 +144,29 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.03em;
 }
 
-h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 800; letter-spacing: -0.035em; }
-h2 { font-size: clamp(26px, 3.5vw, 36px); font-weight: 700; letter-spacing: -0.03em; }
-h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.025em; }
-h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; }
+h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
 
 p {
   color: var(--text-muted);
@@ -159,7 +185,8 @@ a {
   transition: color var(--ease-fast);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -235,20 +262,33 @@ ul, ol {
   letter-spacing: -0.02em;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .brand-logo-img {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  object-fit: cover;
+  height: 46px;
+  width: auto;
+  border-radius: 4px;
+  object-fit: contain;
   flex-shrink: 0;
-  display: inline-block;
+  display: block;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 .brand-logo span {
   color: var(--gold);
+  display: inline-block;
+  margin: 0;
+  margin-left: -2.5px;
+  padding: 0;
+  letter-spacing: inherit;
 }
 
 .nav-links {
@@ -513,6 +553,7 @@ ul, ol {
 .drawer-menu a.drawer-link {
   width: 100%;
 }
+
 .drawer-menu a.drawer-link.active {
   color: var(--gold);
 }
@@ -562,8 +603,15 @@ ul, ol {
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .drawer-submenu a {
@@ -597,9 +645,17 @@ ul, ol {
 }
 
 @keyframes kenBurns {
-  0% { transform: scale(1.0); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1.0); }
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
 }
 
 .hero-bg-media {
@@ -619,6 +675,7 @@ ul, ol {
   /* Subtle dark gradient concentrated behind text, fading out */
   background: radial-gradient(ellipse at center, rgba(6, 29, 33, 0.6) 0%, rgba(6, 29, 33, 0.1) 65%);
 }
+
 .hero-inner {
   position: relative;
   z-index: 10;
@@ -835,7 +892,7 @@ ul, ol {
   min-height: max-content;
   padding-bottom: 45px;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .package-card:hover {
@@ -1303,7 +1360,7 @@ ul, ol {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
@@ -1746,7 +1803,8 @@ details[open] .itinerary-chevron {
   gap: 24px;
 }
 
-.inc-list li, .exc-list li {
+.inc-list li,
+.exc-list li {
   position: relative;
   padding-left: 24px;
   font-size: 14px;
@@ -2053,23 +2111,28 @@ details[open] .itinerary-chevron {
   .nav-links {
     display: none;
   }
+
   .hamburger-btn {
     display: flex;
   }
+
   .bento-dest-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 16px;
   }
+
   .bento-card.featured {
     grid-row: auto;
     grid-column: span 2;
     aspect-ratio: 16 / 9;
   }
+
   .feature-split-layout {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
+
   .final-lead-card {
     grid-template-columns: 1fr;
     padding: 36px 24px 45px;
@@ -2077,24 +2140,30 @@ details[open] .itinerary-chevron {
     min-height: max-content;
     padding-bottom: 45px;
   }
+
   .package-detail-layout {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .package-sidebar {
     display: none;
   }
+
   .mobile-conversion-bar {
     display: flex;
   }
+
   .global-sticky-actions {
     bottom: 20px;
     right: 16px;
   }
+
   body.has-mobile-bar .global-sticky-actions,
   .package-detail-page .global-sticky-actions {
     bottom: 84px;
   }
+
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
     gap: 28px;
@@ -2105,39 +2174,48 @@ details[open] .itinerary-chevron {
   .section {
     padding: 60px 0;
   }
+
   .section-header {
     margin-bottom: 28px;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
+
   .section-header.centered {
     align-items: center;
     text-align: center;
   }
+
   .hero-section {
     padding: 130px 0 60px;
     min-height: auto;
   }
+
   .hero-inner h1 {
     font-size: clamp(28px, 7vw, 42px);
   }
+
   .hero-inner p {
     font-size: 15px;
     margin-bottom: 24px;
   }
+
   .hero-cta-group {
     width: 100%;
     flex-direction: column;
     gap: 12px;
   }
+
   .hero-cta-group .btn {
     width: 100%;
   }
+
   .bento-dest-grid {
     grid-template-columns: 1fr;
     gap: 14px;
   }
+
   .bento-card,
   .bento-card.featured {
     grid-column: auto;
@@ -2145,57 +2223,71 @@ details[open] .itinerary-chevron {
     min-height: 200px;
     padding: 20px;
   }
+
   .feature-quad-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
   .inc-exc-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .footer-top-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .footer-bottom {
     flex-direction: column;
     gap: 8px;
     text-align: center;
   }
+
   .form-grid-2 {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
   .form-input,
   .form-select,
   .form-textarea {
-    font-size: 16px; /* Prevents auto-zoom on iOS */
+    font-size: 16px;
+    /* Prevents auto-zoom on iOS */
   }
+
   .final-lead-card {
     padding: 28px 18px 45px;
     border-radius: var(--radius-lg);
     min-height: max-content;
     padding-bottom: 45px;
   }
+
   .final-cta-inner {
     padding: 36px 20px 45px;
     min-height: max-content;
     padding-bottom: 45px;
   }
+
   .package-card {
     min-height: max-content;
     padding-bottom: 45px;
   }
+
   .final-lead-form {
     padding: 20px 16px;
   }
+
   .package-card-body {
     padding: 20px 16px;
   }
+
   .reviews-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .travel-styles-grid {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -2206,22 +2298,41 @@ details[open] .itinerary-chevron {
   .container {
     padding: 0 16px;
   }
+
   .site-header {
     height: 68px;
   }
+
   .brand-logo {
     font-size: 19px;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
   }
+
+  .brand-logo-img {
+    height: 38px;
+    width: auto;
+  }
+
+  .brand-logo span {
+    margin-left: -2px;
+  }
+
   .nav-actions {
     gap: 8px;
   }
+
   .currency-select {
     padding: 6px 10px;
     font-size: 12px;
   }
+
   .nav-actions .btn-sm {
-    display: none; /* Keep header clean on ultra-small screens; drawer CTA is available */
+    display: none;
+    /* Keep header clean on ultra-small screens; drawer CTA is available */
   }
+
   .package-badge-tag,
   .package-category-tag,
   .dest-region-badge {
@@ -2230,49 +2341,61 @@ details[open] .itinerary-chevron {
     font-size: 9.5px;
     padding: 4px 9px;
   }
+
   .package-duration-tag {
     bottom: 10px;
     right: 10px;
     font-size: 10px;
     padding: 4px 9px;
   }
+
   .package-price-value {
     font-size: 16px;
   }
+
   .package-card-footer {
     gap: 8px;
   }
+
   .pill-feature {
     font-size: 10.5px;
     padding: 3px 7px;
   }
+
   .itinerary-modal {
     padding: 12px;
   }
+
   .itinerary-modal-dialog {
     padding: 22px 14px;
     border-radius: var(--radius-md);
   }
+
   .modal-highlights-grid {
     grid-template-columns: 1fr;
     padding: 12px;
   }
+
   .modal-timeline-item {
     flex-direction: column;
     gap: 8px;
   }
+
   .modal-day-badge {
     align-self: flex-start;
   }
+
   .global-sticky-actions {
     bottom: 16px;
     right: 12px;
     gap: 8px;
   }
+
   .sticky-action-btn {
     padding: 8px 12px;
     font-size: 12px;
   }
+
   body.has-mobile-bar .global-sticky-actions,
   .package-detail-page .global-sticky-actions {
     bottom: 78px;
@@ -2511,14 +2634,17 @@ details[open] .itinerary-chevron {
   .itinerary-modal-dialog {
     padding: 24px 18px;
   }
+
   .modal-footer-cta {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
   }
+
   .modal-action-buttons {
     flex-direction: column;
   }
+
   .modal-action-buttons .btn {
     width: 100%;
   }
@@ -2660,9 +2786,11 @@ details[open] .itinerary-chevron {
     grid-template-columns: 1fr;
     gap: 32px;
   }
+
   .story-img-wrap img {
     height: 360px;
   }
+
   .step-grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2694,6 +2822,7 @@ details[open] .itinerary-chevron {
 }
 
 @media (min-width: 768px) {
+
   .catalog-search-panel,
   .flex.flex-col.md\:flex-row {
     flex-direction: row;
@@ -2768,88 +2897,274 @@ details[open] .itinerary-chevron {
    Tailwind Spacing & Design System Utilities
    ========================================================================== */
 
-.py-12 { padding-top: 48px; padding-bottom: 48px; }
-.py-16 { padding-top: 64px; padding-bottom: 64px; }
-.py-20 { padding-top: 80px; padding-bottom: 80px; }
-.py-24 { padding-top: 96px; padding-bottom: 96px; }
-.pt-16 { padding-top: 64px; }
-.pb-16 { padding-bottom: 64px; }
-.pt-20 { padding-top: 80px; }
-.pb-20 { padding-bottom: 80px; }
-.pt-24 { padding-top: 96px; }
-.pb-24 { padding-bottom: 96px; }
+.py-12 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
 
-.gap-2 { gap: 8px; }
-.gap-4 { gap: 16px; }
-.gap-6 { gap: 24px; }
-.gap-8 { gap: 32px; }
-.gap-10 { gap: 40px; }
+.py-16 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
 
-.w-full { width: 100%; }
-.max-w-5xl { max-width: 64rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.grid { display: grid; }
-.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-.justify-center { justify-content: center; }
-.place-items-center { place-items: center; }
+.py-20 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
-.flex { display: flex; }
-.flex-wrap { flex-wrap: wrap; }
+.py-24 {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
 
-.rounded-2xl { border-radius: 16px; }
-.rounded-t-2xl { border-top-left-radius: 16px; border-top-right-radius: 16px; }
-.rounded-lg { border-radius: 8px; }
-.rounded-full { border-radius: 9999px; }
+.pt-16 {
+  padding-top: 64px;
+}
+
+.pb-16 {
+  padding-bottom: 64px;
+}
+
+.pt-20 {
+  padding-top: 80px;
+}
+
+.pb-20 {
+  padding-bottom: 80px;
+}
+
+.pt-24 {
+  padding-top: 96px;
+}
+
+.pb-24 {
+  padding-bottom: 96px;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-6 {
+  gap: 24px;
+}
+
+.gap-8 {
+  gap: 32px;
+}
+
+.gap-10 {
+  gap: 40px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.rounded-2xl {
+  border-radius: 16px;
+}
+
+.rounded-t-2xl {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
 
 /* Luxury Typography */
-.tracking-tight { letter-spacing: -0.025em; }
-.tracking-wide { letter-spacing: 0.05em; }
-.tracking-widest { letter-spacing: 0.1em; }
-.leading-relaxed { line-height: 1.75; }
-.text-slate-600 { color: #475569; }
-.text-slate-700 { color: #334155; }
-.text-slate-800 { color: #1e293b; }
-.text-xs { font-size: 12px; }
-.font-semibold { font-weight: 600; }
-.font-bold { font-weight: 700; }
-.uppercase { text-transform: uppercase; }
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.leading-relaxed {
+  line-height: 1.75;
+}
+
+.text-slate-600 {
+  color: #475569;
+}
+
+.text-slate-700 {
+  color: #334155;
+}
+
+.text-slate-800 {
+  color: #1e293b;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
 
 /* Frosted glass & badges */
-.bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
-.backdrop-blur-sm { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.bg-white\/90 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
 
 /* Shadows & Micro-interactions */
-.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
-.shadow-\[0_8px_30px_rgb\(0\,0\,0\,0\.06\)\] { box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); }
-.shadow-\[0_20px_40px_rgb\(0\,0\,0\,0\.08\)\] { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); }
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
 
-.transition-all { transition-property: all; }
-.transition-transform { transition-property: transform; }
-.duration-300 { transition-duration: 300ms; }
-.ease-in-out { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
 
-.hover\:-translate-y-1:hover { transform: translateY(-4px); }
-.hover\:shadow-\[0_20px_40px_rgb\(0\,0\,0\,0\.08\)\]:hover { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); }
-.hover\:scale-\[1\.02\]:hover { transform: scale(1.02); }
-.active\:scale-95:active { transform: scale(0.95); }
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-\[0_8px_30px_rgb\(0\,0\,0\,0\.06\)\] {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-\[0_20px_40px_rgb\(0\,0\,0\,0\.08\)\] {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.transition-all {
+  transition-property: all;
+}
+
+.transition-transform {
+  transition-property: transform;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:-translate-y-1:hover {
+  transform: translateY(-4px);
+}
+
+.hover\:shadow-\[0_20px_40px_rgb\(0\,0\,0\,0\.08\)\]:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hover\:scale-\[1\.02\]:hover {
+  transform: scale(1.02);
+}
+
+.active\:scale-95:active {
+  transform: scale(0.95);
+}
 
 @media (min-width: 768px) {
-  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .md\:py-16 { padding-top: 64px; padding-bottom: 64px; }
-  .md\:py-20 { padding-top: 80px; padding-bottom: 80px; }
-  .md\:py-24 { padding-top: 96px; padding-bottom: 96px; }
-  .md\:pt-20 { padding-top: 80px; }
-  .md\:pb-20 { padding-bottom: 80px; }
-  .md\:pt-24 { padding-top: 96px; }
-  .md\:pb-24 { padding-bottom: 96px; }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:py-16 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .md\:py-20 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .md\:py-24 {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .md\:pt-20 {
+    padding-top: 80px;
+  }
+
+  .md\:pb-20 {
+    padding-bottom: 80px;
+  }
+
+  .md\:pt-24 {
+    padding-top: 96px;
+  }
+
+  .md\:pb-24 {
+    padding-bottom: 96px;
+  }
 }
 
 @media (max-width: 768px) {
   .section {
     padding: 48px 0;
   }
+
   .section-family-trust {
     padding: 48px 0;
   }
@@ -2945,6 +3260,7 @@ details[open] .itinerary-chevron {
     padding: 16px 18px;
     gap: 12px;
   }
+
   .group-discount-btn {
     width: 100%;
     text-align: center;
@@ -3060,6 +3376,7 @@ details[open] .itinerary-chevron {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .commitment-card-img {
     height: 170px;
   }
@@ -3515,9 +3832,11 @@ details[open] .itinerary-chevron {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
   .step-flow-grid.grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .info-faq-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -3525,6 +3844,7 @@ details[open] .itinerary-chevron {
 }
 
 @media (max-width: 768px) {
+
   .step-flow-grid,
   .step-flow-grid.grid-4,
   .step-flow-grid.grid-2,
@@ -3532,18 +3852,22 @@ details[open] .itinerary-chevron {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .info-cta-banner {
     flex-direction: column;
     text-align: center;
     padding: 30px 20px;
   }
+
   .info-cta-actions {
     width: 100%;
     justify-content: center;
   }
+
   .info-cta-actions .btn {
     width: 100%;
   }
+
   .info-alert-box {
     flex-direction: column;
     gap: 10px;
@@ -3591,7 +3915,12 @@ details[open] .itinerary-chevron {
    ========================================================================== */
 
 /* 1. Touch Targets & Mobile Optimization (Min 44px for accessibility) */
-a.btn, button.btn, .nav-link, .sticky-action-btn, .link-arrow, button {
+a.btn,
+button.btn,
+.nav-link,
+.sticky-action-btn,
+.link-arrow,
+button {
   min-height: 48px;
   display: inline-flex;
   align-items: center;
@@ -3599,22 +3928,41 @@ a.btn, button.btn, .nav-link, .sticky-action-btn, .link-arrow, button {
 }
 
 /* 2. Image Fallbacks & Rendering Consistency (Prevent white flashes on slow networks) */
-.hero-bg-media, .package-image, .dest-image, img {
-  background-color: #e2e8f0; 
+.hero-bg-media,
+.package-image,
+.dest-image,
+img {
+  background-color: #e2e8f0;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 
 /* 3. Typography Standardization (Ensure consistent visual hierarchy) */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--teal-900, #134e4a);
   line-height: 1.25;
 }
 
-h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; }
-h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; }
-h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; }
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 600;
+}
 
 /* 4. Trust Signals Styling Enhancement */
 
@@ -3623,7 +3971,12 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; }
    ========================================================================== */
 
 /* 1. Touch Targets & Mobile Optimization (Min 44px for accessibility) */
-a.btn, button.btn, .nav-link, .sticky-action-btn, .link-arrow, button {
+a.btn,
+button.btn,
+.nav-link,
+.sticky-action-btn,
+.link-arrow,
+button {
   min-height: 48px;
   display: inline-flex;
   align-items: center;
@@ -3631,25 +3984,46 @@ a.btn, button.btn, .nav-link, .sticky-action-btn, .link-arrow, button {
 }
 
 /* 2. Image Fallbacks & Rendering Consistency (Prevent white flashes on slow networks) */
-.hero-bg-media, .package-image, .dest-image, img {
-  background-color: #e2e8f0; 
+.hero-bg-media,
+.package-image,
+.dest-image,
+img {
+  background-color: #e2e8f0;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 
 /* 3. Typography Standardization (Ensure consistent visual hierarchy) */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--teal-900, #134e4a);
   line-height: 1.25;
 }
 
-h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; }
-h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; }
-h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 600; }
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 600;
+}
 
 /* 4. Trust Signals Styling Enhancement */
-.highlights-list li, #pkgInclusions li, #pkgExclusions li {
+.highlights-list li,
+#pkgInclusions li,
+#pkgExclusions li {
   line-height: 1.6;
   margin-bottom: 8px;
 }
@@ -3663,6 +4037,7 @@ html {
 .global-sticky-actions {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 body.drawer-open .global-sticky-actions {
   opacity: 0;
   pointer-events: none;
@@ -3695,7 +4070,8 @@ body.drawer-open .global-sticky-actions {
 }
 
 .carousel-controls {
-  display: none; /* Removed from header */
+  display: none;
+  /* Removed from header */
 }
 
 .carousel-btn {
@@ -3734,15 +4110,18 @@ body.drawer-open .global-sticky-actions {
     gap: 8px;
     padding-top: 48px;
   }
+
   .carousel-btn {
     width: 36px;
     height: 36px;
     position: absolute;
     top: 0;
   }
+
   .prev-btn {
     right: 48px;
   }
+
   .next-btn {
     right: 0;
   }
