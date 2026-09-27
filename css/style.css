@@ -257,12 +257,11 @@ ol {
 .brand-logo {
   font-family: var(--font-heading);
   font-size: 22px;
-  font-weight: 800;
-  color: var(--text-white);
+  color: var(--text-white, #ffffff);
   letter-spacing: -0.02em;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
@@ -271,24 +270,44 @@ ol {
 }
 
 .brand-logo-img {
-  height: 46px;
-  width: auto;
-  border-radius: 4px;
+  height: 45px;
+  width: 45px;
   object-fit: contain;
   flex-shrink: 0;
   display: block;
   background-color: transparent;
+  border: none;
+  border-radius: 0;
   margin: 0;
   padding: 0;
 }
 
+.brand-text {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.brand-name-bold,
+.brand-bold {
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.brand-name-light,
+.brand-light {
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
 .brand-logo span {
-  color: var(--gold);
+  color: #ffffff;
   display: inline-block;
   margin: 0;
-  margin-left: -2.5px;
   padding: 0;
-  letter-spacing: inherit;
 }
 
 .nav-links {
@@ -2155,13 +2174,15 @@ details[open] .itinerary-chevron {
   }
 
   .global-sticky-actions {
-    bottom: 20px;
+    bottom: 90px;
+    bottom: calc(90px + env(safe-area-inset-bottom, 0px));
     right: 16px;
   }
 
   body.has-mobile-bar .global-sticky-actions,
   .package-detail-page .global-sticky-actions {
-    bottom: 84px;
+    bottom: 90px;
+    bottom: calc(90px + env(safe-area-inset-bottom, 0px));
   }
 
   .footer-top-grid {
@@ -2305,18 +2326,18 @@ details[open] .itinerary-chevron {
 
   .brand-logo {
     font-size: 19px;
-    gap: 5px;
+    gap: 7px;
     margin: 0;
     padding: 0;
   }
 
   .brand-logo-img {
-    height: 38px;
-    width: auto;
+    height: 35px;
+    width: 35px;
   }
 
   .brand-logo span {
-    margin-left: -2px;
+    margin: 0;
   }
 
   .nav-actions {
@@ -2386,7 +2407,8 @@ details[open] .itinerary-chevron {
   }
 
   .global-sticky-actions {
-    bottom: 16px;
+    bottom: 90px;
+    bottom: calc(90px + env(safe-area-inset-bottom, 0px));
     right: 12px;
     gap: 8px;
   }
@@ -2398,7 +2420,8 @@ details[open] .itinerary-chevron {
 
   body.has-mobile-bar .global-sticky-actions,
   .package-detail-page .global-sticky-actions {
-    bottom: 78px;
+    bottom: 90px;
+    bottom: calc(90px + env(safe-area-inset-bottom, 0px));
   }
 }
 
