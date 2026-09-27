@@ -8,7 +8,8 @@ export const SEO = {
   defaultDescription: "Explore Thailand travel packages and plan your trip with ThaiPackages.com. Curated holidays across Phuket, Krabi, Bangkok, Pattaya, Koh Samui, and Chiang Mai.",
   siteUrl: "https://thaipackages.com",
   organization: "ThaiPackages.com",
-  ogImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=85",
+  logo: "https://thaipackages.com/images/favicon.jpeg",
+  ogImage: "https://thaipackages.com/images/favicon.jpeg",
   locale: "en_US",
   themeColor: "#0A192F",
 

@@ -235,6 +235,16 @@ ul, ol {
   letter-spacing: -0.02em;
   display: inline-flex;
   align-items: center;
+  gap: 10px;
+}
+
+.brand-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: inline-block;
 }
 
 .brand-logo span {

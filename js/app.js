@@ -1444,7 +1444,7 @@
     // Global Sticky Action Buttons: WhatsApp & Direct Phone Call
     const stickyWhatsAppBtn = document.getElementById('stickyWhatsAppBtn') || document.getElementById('floatingWhatsAppBtn');
     if (stickyWhatsAppBtn) {
-      stickyWhatsAppBtn.href = 'https://wa.me/918121214181';
+      stickyWhatsAppBtn.href = 'https://wa.me/918121214181?text=' + encodeURIComponent('Hi, I want details about the Thailand Family Package');
       stickyWhatsAppBtn.target = '_blank';
       stickyWhatsAppBtn.rel = 'noopener noreferrer';
     }

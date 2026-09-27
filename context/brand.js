@@ -7,6 +7,8 @@ export const BRAND = {
   name: "ThaiPackages.com",
   shortName: "ThaiPackages",
   domain: "https://thaipackages.com",
+  logo: "images/favicon.jpeg",
+  logoUrl: "https://thaipackages.com/images/favicon.jpeg",
   tagline: "Thailand",
   positioning: "Thailand-focused travel packages and personalized trip planning"
 };
