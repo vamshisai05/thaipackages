@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7MSQE6G0N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-V7MSQE6G0N');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cheap Flights to Thailand | ThaiPackages.com</title>
+  <meta name="description" content="Search and compare cheap flights to Bangkok, Phuket, Krabi, Chiang Mai and Koh Samui. Compare fares from hundreds of airlines and agencies in one place.">
+  <link rel="canonical" href="https://www.thaipackages.com/flights.html">
+  <!-- Favicon / Brand Logo for Google Search & Browsers -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2.3">
+
+  <!--
+    ============================================================
+    Travelpayouts White Label Web (Widget type) - main code
+    ============================================================
+    SETUP: Travelpayouts account -> White Label -> WL Web -> Create new -> Widget.
+    On the "Your widget code" tab, find the main code. It contains a URL like
+      https://tpwgts.com/wl_web/main.js?wl_id=XXXXX
+    Paste ONLY that number into TPWL_ID below. Until then, the page shows a
+    WhatsApp fallback box instead of the search form.
+    If Travelpayouts gives you main code that differs from this, replace this whole
+    <script> block with their code (keep the id="tpwl-search" / "tpwl-tickets" divs).
+  -->
+  <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
+    (function () {
+      var TPWL_ID = "24441"; // White Label ID from Travelpayouts
+
+      window.TPWL_ENABLED = /^\d+$/.test(TPWL_ID);
+      if (!window.TPWL_ENABLED) return;
+
+      var script = document.createElement("script");
+      script.async = 1;
+      script.type = "module";
+      script.src = "https://tpemd.com/wl_web/main.js?wl_id=" + TPWL_ID;
+      document.head.appendChild(script);
+    })();
+  </script>
+  <style>
+    .flights-search-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(15, 40, 50, 0.12);
+      padding: 28px;
+      margin-top: -90px;
+      position: relative;
+      z-index: 5;
+    }
+    .flights-results { margin-top: 32px; min-height: 40px; }
+    .flights-fallback { display: none; text-align: center; padding: 24px 8px; }
+    .flights-fallback p { margin: 0 0 18px; color: var(--text-dark); font-size: 17px; line-height: 1.6; }
+    .flights-fallback .btn { margin: 4px; }
+    .flights-routes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .flights-route {
+      border: 1px solid rgba(15, 40, 50, 0.1);
+      border-radius: 14px;
+      padding: 18px 20px;
+      background: #fff;
+    }
+    .flights-route strong { display: block; color: var(--teal-900); margin-bottom: 4px; }
+    .flights-route span { font-size: 15px; color: var(--text-dark); opacity: 0.8; }
+    .flights-note { font-size: 14px; opacity: 0.75; margin-top: 28px; text-align: center; }
+    @media (max-width: 640px) {
+      .flights-search-card { padding: 16px; margin-top: -60px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header solid-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ThaiPackages Homepage">
+        <img src="images/logo.jpeg" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
+      </a>
+      <nav aria-label="Main Navigation"></nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="brand-logo">
+          <img src="images/logo.jpeg" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
+        </span>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close Menu">&times;</button>
+      </div>
+      <ul class="drawer-menu">
+        <li><a href="index.html" class="drawer-link">Home</a></li>
+        <li class="menu-item-has-children">
+          <button class="submenu-toggle" aria-expanded="false">
+            Destinations
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="drawer-submenu">
+            <a href="destination-detail.html?id=bangkok" class="drawer-link">Bangkok</a>
+            <a href="destination-detail.html?id=pattaya" class="drawer-link">Pattaya</a>
+            <a href="destination-detail.html?id=krabi" class="drawer-link">Krabi</a>
+            <a href="destination-detail.html?id=phuket" class="drawer-link">Phuket</a>
+            <a href="destination-detail.html?id=samui" class="drawer-link">Koh Samui</a>
+            <a href="destination-detail.html?id=chiang-mai" class="drawer-link">Chiang Mai</a>
+            <a href="destination-detail.html?id=hua-hin" class="drawer-link">Hua Hin</a>
+          </div>
+        </li>
+        <li class="menu-item-has-children">
+          <button class="submenu-toggle" aria-expanded="false">
+            Tour Packages
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="drawer-submenu">
+            <a href="family-packages.html" class="drawer-link">Family Packages</a>
+            <a href="couple-packages.html" class="drawer-link">Couple Packages</a>
+            <a href="bachelor-packages.html" class="drawer-link">Bachelor Packages</a>
+            <a href="honeymoon-packages.html" class="drawer-link">Honeymoon Packages</a>
+            <a href="group-tours.html" class="drawer-link">Group Tours</a>
+            <a href="customized-packages.html" class="drawer-link">Customized Packages</a>
+          </div>
+        </li>
+        <li class="menu-item-has-children">
+          <button class="submenu-toggle" aria-expanded="false">
+            Services
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="drawer-submenu">
+            <a href="flights.html" class="drawer-link">Flight Tickets</a>
+            <a href="visa-services.html" class="drawer-link">Visa Services</a>
+            <a href="passport-services.html" class="drawer-link">Passport Services</a>
+          </div>
+        </li>
+        <li><a href="about.html" class="drawer-link">Why Us</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <main>
+    <section class="hero-section" style="min-height: 420px; padding: 140px 0 140px;">
+      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80" alt="Airplane flying above the clouds" class="hero-bg-media" fetchpriority="high">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <h1>Flights to Thailand</h1>
+          <p style="color: #fff; opacity: 0.9; font-size: 18px; margin-top: 12px;">Compare fares from hundreds of airlines and travel agencies, all in one search.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container" style="max-width: 1100px; margin: 0 auto;">
+        <div class="flights-search-card">
+          <!-- Travelpayouts White Label: search form -->
+          <div id="tpwl-search"></div>
+
+          <!-- Shown only when the White Label ID is not configured -->
+          <div class="flights-fallback" id="flightsFallback">
+            <p><strong>Live flight search is launching soon.</strong><br>Need fares now? Our team will find the best flight for your Thailand trip.</p>
+            <a href="https://wa.me/918121214181?text=Hi%2C%20I%20need%20flight%20tickets%20to%20Thailand" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Fares on WhatsApp</a>
+            <a href="contact.html" class="btn btn-secondary">Request a Quote</a>
+          </div>
+        </div>
+
+        <!-- Travelpayouts White Label: search results -->
+        <div class="flights-results" id="tpwl-tickets"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 1000px; margin: 0 auto; line-height: 1.8; font-size: 17px; color: var(--text-dark);">
+        <h2 style="margin-bottom: 16px; color: var(--teal-900);">Popular routes to Thailand</h2>
+        <p>Pick your departure city and destination above to see live prices. Popular choices with our travellers:</p>
+        <div class="flights-routes">
+          <div class="flights-route"><strong>Hyderabad → Bangkok</strong><span>Direct and one-stop options</span></div>
+          <div class="flights-route"><strong>Delhi → Bangkok</strong><span>Daily direct flights</span></div>
+          <div class="flights-route"><strong>Mumbai → Phuket</strong><span>Beach holidays, fast</span></div>
+          <div class="flights-route"><strong>Bengaluru → Bangkok</strong><span>Daily direct flights</span></div>
+          <div class="flights-route"><strong>Chennai → Krabi</strong><span>Via Bangkok or Kuala Lumpur</span></div>
+          <div class="flights-route"><strong>Kolkata → Bangkok</strong><span>Short 2.5-hour hop</span></div>
+        </div>
+
+        <h2 style="margin: 48px 0 16px; color: var(--teal-900);">Flight + holiday package?</h2>
+        <p>Already have your flights? Pair them with one of our <a href="packages.html">Thailand holiday packages</a>, or get <a href="visa-services.html">visa assistance</a> before you fly.</p>
+
+        <p class="flights-note">Flight tickets are booked and paid for on the airline's or travel agency's website. For changes or refunds, please contact the company you booked with.</p>
+      </div>
+    </section>
+  </main>
+  <!-- Global Sticky Quick Actions (WhatsApp & Direct Phone Call) -->
+  <div class="global-sticky-actions" id="globalStickyActions" aria-label="Quick contact actions">
+    <a href="tel:+918121214181" class="sticky-action-btn btn-call" id="stickyPhoneBtn" aria-label="Direct Phone Call"
+      title="Call Us Directly">
+      <svg class="call-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      <span class="sticky-action-label">Call Now</span>
+    </a>
+    <a href="https://wa.me/918121214181?text=Hi%2C%20I%20need%20flight%20tickets%20to%20Thailand" class="sticky-action-btn btn-whatsapp" id="stickyWhatsAppBtn"
+      aria-label="WhatsApp Chat" title="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.075-1.895-.445-1.571-.648-2.586-2.247-2.664-2.352-.078-.104-.633-.843-.633-1.608 0-.765.399-1.144.542-1.299.143-.156.312-.195.416-.195.104 0 .208.002.299.006.096.004.224-.036.35.267.13.312.442 1.079.481 1.157.039.078.065.169.013.273-.052.104-.078.169-.156.26-.078.091-.163.203-.234.273-.078.078-.159.163-.068.319.091.156.403.665.865 1.077.595.531 1.097.695 1.253.773.156.078.247.065.338-.039.091-.104.39-.455.494-.611.104-.156.208-.13.351-.078.143.052.909.429 1.065.507.156.078.26.117.299.182.039.065.039.377-.105.782z" />
+      </svg>
+      <span class="sticky-action-label">WhatsApp</span>
+    </a>
+  </div>
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="images/logo.jpeg" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
+          </a>
+          <p>Customized Thailand holiday packages, private island tours, and vetted luxury condo &amp; beachfront resort stays across Phuket, Krabi, Bangkok, and Pattaya.</p>
+          <div class="footer-address-block">
+            <span class="footer-address-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Offices &amp; Contact
+            </span>
+            <address class="footer-address-text">
+              <strong>Thailand Office:</strong> Level 18, Interchange 21 Tower, Sukhumvit Road, Bangkok 10110<br>
+              <strong>India Office:</strong> Surya Residency, Khammam, Telangana
+            </address>
+            <div class="footer-direct-contacts">
+              <a href="tel:+918121214181" class="footer-direct-link">📞 +91 81212 14181</a>
+              <a href="mailto:info@thaipackages.com" class="footer-direct-link">✉️ info@thaipackages.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="destination-detail.html?id=bangkok">Bangkok City Breaks</a></li>
+            <li><a href="destination-detail.html?id=pattaya">Pattaya Packages</a></li>
+            <li><a href="destination-detail.html?id=phuket">Phuket Holidays</a></li>
+            <li><a href="destination-detail.html?id=krabi">Krabi Island Tours</a></li>
+            <li><a href="destination-detail.html?id=samui">Koh Samui Retreats</a></li>
+            <li><a href="destination-detail.html?id=chiang-mai">Chiang Mai Culture</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Traveler Services</h4>
+          <ul class="footer-links">
+            <li><a href="flights.html">Flights to Thailand</a></li>
+            <li><a href="packages.html">Holiday Packages (from ₹19,900)</a></li>
+            <li><a href="about.html">About ThaiPackages.com</a></li>
+            <li><a href="contact.html">Request a Custom Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact &amp; Inquiries</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+918121214181">Direct Call: +91 81212 14181</a></li>
+            <li><a href="https://wa.me/918121214181?text=Hi%2C%20I%20want%20details%20about%20the%20Thailand%20Family%20Package" target="_blank" rel="noopener noreferrer">WhatsApp 24/7 Support</a></li>
+            <li><a href="mailto:info@thaipackages.com">info@thaipackages.com</a></li>
+            <li><a href="contact.html">Plan Tailored Itinerary</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ThaiPackages.com. All rights reserved. Thailand Holidays Made Easy.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    if (!window.TPWL_ENABLED) {
+      document.getElementById('flightsFallback').style.display = 'block';
+    }
+  </script>
+  <script type="module" src="context/index.js?v=2.0" defer></script>
+  <script src="js/app.js?v=2.0" defer></script>
+</body>
+</html>
