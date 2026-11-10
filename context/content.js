@@ -8,7 +8,7 @@ export const CONTENT = {
     heroBadge: "🌴 TAILOR-MADE PACKAGES FOR THAILAND HOLIDAYS • 25% OFF GROUP PACKAGES",
     heroTitle: "Your Thailand story starts here.",
     heroSubtitle: "Curated itineraries, luxury condo stays with private kitchen, 100% private transfers, and 100% Telugu-speaking guides — starting from ₹19,900 per person.",
-    heroImage: "https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1920&q=80",
     heroPrimaryCTA: "Plan My Thailand Trip",
     heroSecondaryCTA: "Explore Packages"
   },

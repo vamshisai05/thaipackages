@@ -45,7 +45,8 @@
 
   <!-- tp:perf-hints -->
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75" imagesrcset="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=640&amp;q=75 640w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=960&amp;q=75 960w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75 1280w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1920&amp;q=75 1920w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=2400&amp;q=75 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(max-aspect-ratio: 1/1)" imagesrcset="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=480&amp;h=1024&amp;q=80 480w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=640&amp;h=1365&amp;q=80 640w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=828&amp;h=1766&amp;q=80 828w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1080&amp;h=2304&amp;q=80 1080w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1290&amp;h=2752&amp;q=80 1290w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(min-aspect-ratio: 1001/1000)" imagesrcset="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=960&amp;q=80 960w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1280&amp;q=80 1280w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1920&amp;q=80 1920w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=2560&amp;q=80 2560w" imagesizes="100vw" fetchpriority="high">
   <link rel="modulepreload" href="context/index.js?v=6">
   <link rel="modulepreload" href="context/brand.js">
   <link rel="modulepreload" href="context/business.js">
@@ -59,7 +60,7 @@
   <link rel="modulepreload" href="context/legal.js">
   <!-- /tp:perf-hints -->
   <link rel="stylesheet" href="css/style.css?v=2.3">
-  <link rel="stylesheet" href="css/enhance.css?v=1.4">
+  <link rel="stylesheet" href="css/enhance.css?v=1.6">
 
   <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -338,8 +339,11 @@
   <main>
     <!-- 1. Hero Section -->
     <section class="hero-section hero-home">
-      <img decoding="async" srcset="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=640&amp;q=75 640w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=960&amp;q=75 960w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75 1280w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1920&amp;q=75 1920w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=2400&amp;q=75 2400w" sizes="100vw" src="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75"
-        alt="Tropical Thailand Beach" class="hero-bg-media" fetchpriority="high">
+      <picture>
+        <source media="(max-aspect-ratio: 1/1)" srcset="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=480&amp;h=1024&amp;q=80 480w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=640&amp;h=1365&amp;q=80 640w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=828&amp;h=1766&amp;q=80 828w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1080&amp;h=2304&amp;q=80 1080w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1290&amp;h=2752&amp;q=80 1290w" sizes="100vw">
+        <img decoding="async" srcset="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=960&amp;q=80 960w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1280&amp;q=80 1280w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1920&amp;q=80 1920w, https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=2560&amp;q=80 2560w" sizes="100vw" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
+          alt="View over a palm-fringed resort pool to the deep-blue ocean horizon" class="hero-bg-media" fetchpriority="high" width="1600" height="1067">
+      </picture>
       <div class="hero-overlay"></div>
 
       <div class="container">

@@ -911,6 +911,39 @@ img.img-placeholder {
   padding-bottom: 140px;
 }
 
+/* Homepage hero: ONE clean, full-bleed cinematic gradient, top to bottom. No spot shadows,
+   no vignette behind the text: the whole photo is toned evenly, a touch deeper at the very
+   top (menu) and bottom (stats strip), so white text reads effortlessly everywhere. */
+.hero-section.hero-home .hero-bg-media {
+  opacity: 1;
+}
+
+.hero-section.hero-home .hero-overlay {
+  background: linear-gradient(180deg,
+    rgba(4, 20, 24, 0.52) 0%,
+    rgba(4, 20, 24, 0.34) 22%,
+    rgba(4, 20, 24, 0.30) 55%,
+    rgba(4, 20, 24, 0.46) 80%,
+    rgba(4, 20, 24, 0.80) 100%);
+}
+
+/* Crisp, tight text shadows only (no glows) */
+.hero-section.hero-home .hero-inner h1 {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section.hero-home .hero-inner p,
+.hero-section.hero-home .hero-trust li,
+.hero-section.hero-home .hero-text-link {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section.hero-home .hero-eyebrow {
+  background: rgba(6, 29, 33, 0.38);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
 .hero-bg-media {
   animation: tpHeroZoomIn 0.8s var(--ease-out-expo) both, kenBurns 30s ease-in-out 0.8s infinite;
 }

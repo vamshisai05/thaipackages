@@ -8,7 +8,7 @@
 
 | Slot | Unsplash photo | Subject |
 |---|---|---|
-| home-hero | photo-1534008897995-27a23e859048 | Maya Bay, Phi Phi: turquoise water, long-tail boats |
+| home-hero | photo-1540541338287-41700207dee6 | View over a palm-fringed resort pool to the ocean horizon (native 6000x4002 landscape; used only here) |
 | pkg-bangkok-pattaya | photo-1508009603885-50cf7c579365 | Bangkok Chinatown (Yaowarat) neon at night |
 | pkg-phuket-krabi | photo-1552465011-b4e21bf6e79a | Railay, Krabi: long-tail boats under karst |
 | pkg-family-tour | photo-1475503572774-15a45e5d60b9 | Family walking on the beach |
