@@ -20,7 +20,7 @@ export const SEO = {
     },
     destinations: {
       title: "Thailand Travel Destinations | Phuket, Krabi, Bangkok & More | ThaiPackages.com",
-      description: "Explore the top Thailand holiday destinations. Discover travel guides, best seasons to visit, and signature tours for Phuket, Krabi, Bangkok, Koh Samui, and Chiang Mai."
+      description: "Explore the top Thailand holiday destinations. Discover travel guides and signature tours for Phuket, Krabi, Bangkok, Koh Samui, and Chiang Mai."
     },
     packages: {
       title: "Thailand Holiday Packages & Itineraries | ThaiPackages.com",

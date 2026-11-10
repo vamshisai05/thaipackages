@@ -31,7 +31,8 @@ export const CONTACT = {
   ],
 
   social: {
-    instagram: "",
+    instagram: "https://www.instagram.com/thaipackages/",
+    instagramHandle: "@thaipackages",
     facebook: "",
     youtube: ""
   }

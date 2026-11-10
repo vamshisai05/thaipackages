@@ -7,20 +7,47 @@
 (function() {
   'use strict';
 
-  // Global fallback image handler for all missing/broken images
-  document.addEventListener('error', function(e) {
-    if (e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'img') {
-      if (e.target.dataset.fallbackApplied) return;
-      e.target.dataset.fallbackApplied = 'true';
-      const ctx = (e.target.alt + ' ' + e.target.src).toLowerCase();
-      if (ctx.includes('phuket')) e.target.src = 'images/phuket (2).jpg';
-      else if (ctx.includes('pattaya')) e.target.src = 'images/pattaya city.jpg';
-      else if (ctx.includes('krabi')) e.target.src = 'images/krabi.jpg';
-      else if (ctx.includes('samui')) e.target.src = 'images/koh-samui.jpg';
-      else if (ctx.includes('chiang')) e.target.src = 'images/chiang-mai.jpg';
-      else e.target.src = 'images/bangkok.jpg';
+  // Broken images are handled by the inline "tp:image-slots" script in each page's <head>:
+  // if a photo URL ever fails, a branded tile is drawn instead of a broken-image icon.
+
+  // One routing rule for every "View Itinerary" button: open that package's detail page.
+  const packageUrl = (pkg) => {
+    if (!pkg || !pkg.slug) return 'packages.html';
+    if (pkg.slug === 'thailand-tour-packages-from-hyderabad') return 'group-tours.html';
+    if (pkg.slug === 'thailand-tour-packages-with-indian-food') return 'customized-packages.html';
+    return `package-detail.html?id=${encodeURIComponent(pkg.slug)}`;
+  };
+
+  // Responsive Unsplash images: phones download small files, large screens get sharp ones.
+  // Returns ` srcset="…" sizes="…"` for an images.unsplash.com URL (empty string for anything else).
+  const UNSPLASH_RX = /^https:\/\/images\.unsplash\.com\/(photo-[0-9a-f-]+)/;
+  const unsplashAt = (url, w) => {
+    const m = UNSPLASH_RX.exec(url || '');
+    return m ? `https://images.unsplash.com/${m[1]}?auto=format&fit=crop&w=${w}&q=75` : url;
+  };
+  const respAttrs = (url, kind) => {
+    if (!UNSPLASH_RX.test(url || '')) return '';
+    const widths = kind === 'hero' ? [640, 960, 1280, 1920, 2400] : [400, 600, 900, 1200];
+    const sizes = kind === 'hero' ? '100vw' : '(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw';
+    return ` srcset="${widths.map(w => `${unsplashAt(url, w)} ${w}w`).join(', ')}" sizes="${sizes}"`;
+  };
+  const setHeroImage = (img, url) => {
+    if (!img || !url) return;
+    if (UNSPLASH_RX.test(url)) {
+      img.sizes = '100vw';
+      img.srcset = [640, 960, 1280, 1920, 2400].map(w => `${unsplashAt(url, w)} ${w}w`).join(', ');
+      img.src = unsplashAt(url, 1280);
+    } else {
+      img.src = url;
     }
-  }, true);
+    img.fetchPriority = 'high';
+  };
+
+  // localStorage can throw (blocked storage in in-app browsers / private modes) — never let that break the page
+  const safeStorage = {
+    get(key) { try { return window.localStorage.getItem(key); } catch (e) { return null; } },
+    set(key, value) { try { window.localStorage.setItem(key, value); } catch (e) { /* ignore */ } }
+  };
 
   const FALLBACK_DESTINATIONS = [
     {
@@ -31,9 +58,9 @@
       tagline: "The Pearl of the Andaman Sea",
       shortDescription: "Thailand's premier island combining lively beach clubs, world-famous Phi Phi speedboats, and 5-star ocean villas.",
       description: "Thailand's largest island, famed for dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
-      heroImage: "images/phuket (2).jpg",
-      thumbnail: "images/phuket (2).jpg",
-      quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "4 – 7 Days", travelStyle: ["Beach", "Island Hopping", "Luxury Resorts"] },
+      heroImage: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=900&q=80",
+      quickFacts: { currency: "Thai Baht (THB)", idealDuration: "4 – 7 Days", travelStyle: ["Beach", "Island Hopping", "Luxury Resorts"] },
       longDescriptionHTML: `
 <h2>Phuket – The Pearl of the Andaman Sea</h2>
 <p>Discover Phuket, Thailand's premier island destination, famous for its dramatic limestone cliffs, pristine beaches, vibrant night markets, and luxurious resorts.</p>
@@ -53,9 +80,9 @@
       tagline: "Dramatic Karsts & Emerald Waters",
       shortDescription: "Towering limestone cliffs rising from emerald waters, secluded Railay beaches, and world-class snorkeling reefs.",
       description: "Towering limestone karst monoliths, tranquil emerald bays, hidden lagoons, and world-class island hopping around Railay Beach.",
-      heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
-      quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Scenic Nature", "Island Hopping", "Relaxation"] },
+      heroImage: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=900&q=80",
+      quickFacts: { currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Scenic Nature", "Island Hopping", "Relaxation"] },
       longDescriptionHTML: `
 <h2>Krabi – Tropical Beauty & Island Adventures</h2>
 <p>Discover Krabi, a stunning tropical destination famous for its crystal-clear waters, limestone cliffs, beautiful beaches and breathtaking islands.</p>
@@ -75,9 +102,9 @@
       tagline: "The Electric Capital of Smiles",
       shortDescription: "A dazzling metropolis of golden temples, world-class luxury shopping malls, Michelin street food, and Chao Phraya river cruises.",
       description: "Opulent golden palaces, historic riverfront temples, vibrant street markets, Michelin-rated dining, and luxury rooftop lounges.",
-      heroImage: "https://images.unsplash.com/photo-1729658189582-3c4e13cb213b?fm=jpg&q=80&w=2000&auto=format&fit=crop",
-      thumbnail: "https://images.unsplash.com/photo-1729658189582-3c4e13cb213b?fm=jpg&q=80&w=2000&auto=format&fit=crop",
-      quickFacts: { bestTime: "Nov – Feb", currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Culture", "Shopping", "Rooftops", "River Cruises"] },
+      heroImage: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=900&q=80",
+      quickFacts: { currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Culture", "Shopping", "Rooftops", "River Cruises"] },
       longDescriptionHTML: `
 <h2>Bangkok – Where Tradition Meets Modern Thailand</h2>
 <p>Discover Bangkok, Thailand's vibrant capital, where rich culture, modern city life and unforgettable experiences come together. Explore magnificent temples, enjoy a scenic Chao Phraya River cruise, shop at colorful markets and world-class malls, and experience Bangkok's famous food scene.</p>
@@ -97,9 +124,9 @@
       tagline: "Beaches, Nightlife & Island Adventures",
       shortDescription: "Vibrant coastal playground featuring Coral Island watersports, sea-view condos with private kitchen, and world-class entertainment.",
       description: "A dynamic coastal resort city just 2 hours from Bangkok, famed for Coral Island watersports, sea-view condos, and cabaret shows.",
-      heroImage: "images/pattaya city.jpg",
-      thumbnail: "images/pattaya city.jpg",
-      quickFacts: { bestTime: "Nov – Apr", currency: "Thai Baht (THB)", idealDuration: "3 – 4 Days", travelStyle: ["Watersports", "Nightlife", "Condo Stays", "Family Fun"] },
+      heroImage: "https://images.unsplash.com/photo-1578922746465-3a80a228f223?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1578922746465-3a80a228f223?auto=format&fit=crop&w=900&q=80",
+      quickFacts: { currency: "Thai Baht (THB)", idealDuration: "3 – 4 Days", travelStyle: ["Watersports", "Nightlife", "Condo Stays", "Family Fun"] },
       longDescriptionHTML: `
 <h2>Pattaya – Beaches, Adventure & Exciting Nights</h2>
 <p>Discover Pattaya, one of Thailand's most popular seaside destinations, known for its beautiful coastline, island adventures, entertainment and vibrant nightlife.</p>
@@ -119,9 +146,9 @@
       tagline: "Tropical Luxury & Coconut Groves",
       shortDescription: "Palm-fringed luxury island boasting 5-star private pool villas, yacht charters to Ang Thong Marine Park, and serene wellness retreats.",
       description: "Thailand’s upscale island sanctuary, celebrated for private beachfront villas, coconut-fringed shores, and Ang Thong Marine Park.",
-      heroImage: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80",
-      quickFacts: { bestTime: "Dec – Sep", currency: "Thai Baht (THB)", idealDuration: "4 – 6 Days", travelStyle: ["Luxury Villas", "Couples", "Marine Parks", "Wellness"] },
+      heroImage: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=900&q=80",
+      quickFacts: { currency: "Thai Baht (THB)", idealDuration: "4 – 6 Days", travelStyle: ["Luxury Villas", "Couples", "Marine Parks", "Wellness"] },
       longDescriptionHTML: `
 <h2>Koh Samui – Tropical Luxury & Coconut Groves</h2>
 <p>Discover Koh Samui, an upscale island sanctuary celebrated for its private beachfront villas, lush coconut-fringed shores, and tranquil turquoise waters.</p>
@@ -141,9 +168,9 @@
       tagline: "The Rose of Northern Thailand",
       shortDescription: "The cultural heart of the north: mist-shrouded mountain sanctuaries, ethical elephant care, and ancient golden Lanna temples.",
       description: "Surrounded by misty mountains, Chiang Mai showcases ancient golden temples, ethical elephant sanctuaries, and artisan night markets.",
-      heroImage: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=800&q=80",
-      quickFacts: { bestTime: "Oct – Feb", currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Culture & Heritage", "Mountains", "Elephants", "Crafts"] },
+      heroImage: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=900&q=80",
+      quickFacts: { currency: "Thai Baht (THB)", idealDuration: "3 – 5 Days", travelStyle: ["Culture & Heritage", "Mountains", "Elephants", "Crafts"] },
       longDescriptionHTML: `
 <h2>Chiang Mai – Culture, Nature & Mountain Charm</h2>
 <p>Discover Chiang Mai, a beautiful destination in northern Thailand known for its ancient temples, lush mountains, peaceful surroundings and rich local culture.</p>
@@ -164,30 +191,30 @@
       destination: "Bangkok & Pattaya",
       destinationSlug: "bangkok",
       category: "Family & City Breaks",
-      duration: { days: 6, nights: 5 },
-      durationDays: 6,
-      durationNights: 5,
+      duration: { days: 5, nights: 4 },
+      durationDays: 5,
+      durationNights: 4,
       startingPriceINR: 19900,
       startingPriceUSD: 290,
       startingPriceTHB: 10500,
-      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private kitchen, 100% private AC transfers & Telugu-speaking guides.",
-      description: "Our signature 5N/6D holiday featuring 3 Nights in Pattaya in a Premium Sea-View Condo and 2 Nights in Bangkok in a City-Center Luxury Condo. Includes private kitchen/food options, 100% private AC vehicle transfers, Alcazar VIP show, Coral Island speedboat tour, Chao Phraya luxury dinner cruise, and 100% Telugu-speaking guide options.",
+      heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=900&q=80",
+      shortDescription: "Our signature 5-day escape: 2 nights by the sea in Pattaya and 2 in the heart of Bangkok, with the Alcazar Show, Coral Island, a Chao Phraya dinner cruise and Telugu-speaking guides.",
+      description: "Our most-loved holiday, perfected over many family trips. Spend 2 nights in a premium sea-view condo in Pattaya and 2 nights in a city-centre luxury condo in Bangkok, each with your own kitchen. Enjoy the Alcazar Show and Pattaya's nightlife, a speedboat day on Coral Island, the Golden Buddha at Wat Traimit, the Grand Palace and Wat Pho, a Chao Phraya River dinner cruise under the city lights, and a final day of shopping. Every transfer is private and air-conditioned, and Telugu-speaking guides are available throughout.",
       highlights: [
         "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
         "🗣️ 24/7 Telugu & Hindi On-Ground Support",
         "🚐 100% Private AC Vehicle Transfers",
         "👨‍👩‍👧 Well-paced, family & couple friendly itinerary",
         "💰 Fully Customisable to your exact preferences",
-        "3 Nights in Pattaya in a Premium Sea-View Condo (with Private Kitchen)",
+        "2 Nights in Pattaya in a Premium Sea-View Condo (with Private Kitchen)",
         "2 Nights in Bangkok in a City-Center Luxury Condo",
         "🗣️ 100% Telugu-Speaking Guides & Dedicated Local Coordinators Available",
         "🎉 25% Discount on Group Packages (4+ Travelers)",
         "Food Flexibility: Option A (Self-cook with groceries) or Option B (Daily fresh Indian meals)",
         "Alcazar Cabaret Show (VIP Seating)",
         "Coral Island (Koh Larn) Speedboat Tour with Indian Lunch",
-        "Pattaya City Highlights (Big Buddha & coastal viewpoints)",
+        "Grand Palace, Wat Pho & Wat Traimit (Golden Buddha) in Bangkok",
         "Chao Phraya Princess Luxury Dinner Cruise with live music",
         "100% Private door-to-door AC Vehicle Transfers (Zero shared buses)"
       ],
@@ -195,12 +222,12 @@
         "Dedicated Telugu & Hindi speaking local coordinator",
         "End-to-End guidance from India to return home",
         "Private AC transfers from airport to hotel and between attractions",
-        "3 Nights in Premium Sea-View Condo in Pattaya",
+        "2 Nights in Premium Sea-View Condo in Pattaya",
         "2 Nights in City-Center Luxury Condo in Bangkok",
         "Kitchen access in condo with pre-stocked fridge/groceries (Option A) or Indian partner meals (Option B)",
         "Coral Island speedboat excursion with Indian lunch",
         "Alcazar Cabaret Show VIP admission tickets",
-        "Pattaya Big Buddha and scenic coastal viewpoints tour",
+        "Bangkok city sightseeing: Wat Traimit, Grand Palace & Wat Pho",
         "Chao Phraya Princess Luxury Dinner Cruise ticket with international & Indian buffet",
         "100% Private AC vehicle transfers: Airport -> Pattaya -> Bangkok -> Airport",
         "Dedicated 24/7 WhatsApp concierge support"
@@ -212,11 +239,11 @@
         "Personal tipping and personal expenses"
       ],
       itinerary: [
-        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
-        { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at the hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy the beach and optional water activities; Return to Pattaya; Evening at leisure; Overnight stay in Pattaya." },
-        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Transfer to Bangkok; Bangkok city sightseeing; Visit Wat Traimit (Golden Buddha); Hotel check-in; Evening free for shopping and leisure; Overnight stay in Bangkok." },
-        { day: 4, title: "Bangkok Sightseeing", summary: "Breakfast at the hotel; Visit Grand Palace and Wat Pho; Chao Phraya River experience; Shopping at popular malls/markets; Evening at leisure; Overnight stay in Bangkok." },
-        { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with wonderful memories of Thailand." }
+        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in & relaxation; Enjoy the **Alcazar Show**; **Experience Pattaya nightlife**; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy the beach & optional water activities; Return to Pattaya; **Enjoy Pattaya nightlife**; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast & hotel check-out; Transfer to Bangkok; Bangkok city sightseeing; Visit **Wat Traimit (Golden Buddha)**; Hotel check-in; Evening free for shopping & leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Bangkok Sightseeing", summary: "Breakfast at hotel; Visit **Grand Palace & Wat Pho**; Enjoy a memorable **Chao Phraya River Dinner Cruise**; Experience Bangkok's beautiful skyline with dinner onboard; Overnight stay in Bangkok." },
+        { day: 5, title: "Shopping & Departure", summary: "Breakfast & hotel check-out; Shopping at Bangkok's famous shopping malls and local markets; Enjoy some last-minute shopping and leisure time; Transfer to Bangkok Airport as per flight schedule; Departure with wonderful memories of Thailand." }
       ]
     },
       {
@@ -231,10 +258,10 @@
       startingPriceINR: 29999,
       startingPriceUSD: 450,
       startingPriceTHB: 16200,
-      heroImage: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "An idyllic 7-day Andaman holiday pairing lively Phuket beaches with Krabi's dramatic limestone karsts, 100% private transfers and island cruises.",
-      description: "An idyllic 7-day Andaman holiday pairing the lively beaches of Phuket with the dramatic limestone karsts and tranquil luxury of Krabi.",
+      heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=900&q=80",
+      shortDescription: "Seven unhurried days on the Andaman Sea: Phuket's beaches and sunsets, Krabi's limestone islands, private transfers and island cruises for two.",
+      description: "An idyllic 7-day Andaman holiday made for couples. Begin with Phuket's lively beaches, a speedboat day to the Phi Phi Islands and sunset at Promthep Cape. Then move to Krabi's dramatic limestone karsts for the Four Islands tour, Railay and Phra Nang beaches, and slow, romantic evenings. Every transfer is private, and every day is paced for the two of you.",
       highlights: [
         "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
         "🗣️ 24/7 Telugu & Hindi On-Ground Support",
@@ -269,13 +296,13 @@
         "Personal tipping and travel insurance"
       ],
       itinerary: [
-        { day: 1, title: "Phuket Arrival", summary: "Arrival at Phuket Airport; Private transfer to hotel; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Phuket." },
-        { day: 2, title: "Phi Phi Island Tour", summary: "Breakfast at hotel; Full-day Phi Phi Island tour by speedboat; Enjoy beautiful beaches, crystal-clear waters and snorkeling; Return to Phuket; Romantic evening at leisure; Overnight stay in Phuket." },
-        { day: 3, title: "Phuket Sightseeing", summary: "Breakfast at hotel; Visit Wat Chalong; Phuket Old Town; Karon Viewpoint; Visit Promthep Cape for a beautiful sunset; Overnight stay in Phuket." },
-        { day: 4, title: "Phuket → Krabi", summary: "Breakfast and hotel check-out; Private transfer to Krabi; Hotel check-in; Relax at the beach; Evening at leisure; Overnight stay in Krabi." },
-        { day: 5, title: "Four Islands Tour", summary: "Breakfast at hotel; Full-day Four Islands tour; Visit scenic islands and beaches; Enjoy swimming, snorkeling and beach time; Return to Krabi; Romantic sunset evening; Overnight stay in Krabi." },
-        { day: 6, title: "Krabi Leisure & Romance", summary: "Breakfast at hotel; Visit Railay Beach and Phra Nang Beach; Enjoy a relaxed afternoon; Optional couple spa/romantic dinner; Overnight stay in Krabi." },
-        { day: 7, title: "Krabi Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Krabi Airport; Departure with beautiful memories of Thailand." }
+        { day: 1, title: "Phuket Arrival", summary: "Arrival at Phuket Airport; Private transfer to hotel; Hotel check-in & relaxation; Evening at leisure; Overnight stay in Phuket." },
+        { day: 2, title: "Phi Phi Island Tour", summary: "Breakfast at hotel; Full-day **Phi Phi Island tour** by speedboat; Enjoy beautiful beaches, crystal-clear waters & snorkeling; Return to Phuket; Romantic evening at leisure; Overnight stay in Phuket." },
+        { day: 3, title: "Phuket Sightseeing", summary: "Breakfast at hotel; Visit **Wat Chalong**; Explore **Phuket Old Town**; Visit **Karon Viewpoint**; Sunset at **Promthep Cape**; Overnight stay in Phuket." },
+        { day: 4, title: "Phuket → Krabi", summary: "Breakfast & hotel check-out; Private transfer to Krabi; Hotel check-in; Relax at the beach & evening at leisure; Overnight stay in Krabi." },
+        { day: 5, title: "Four Islands Tour", summary: "Breakfast at hotel; Full-day **Four Islands tour**; Visit scenic islands, swimming, snorkeling & beach time; Return to Krabi; Romantic sunset evening; Overnight stay in Krabi." },
+        { day: 6, title: "Krabi Leisure & Romance", summary: "Breakfast at hotel; Visit **Railay Beach & Phra Nang Beach**; Enjoy a relaxed afternoon; Optional couple spa / romantic dinner; Overnight stay in Krabi." },
+        { day: 7, title: "Krabi Departure", summary: "Breakfast & hotel check-out; Free time depending on flight schedule; Private transfer to Krabi Airport; Departure with beautiful memories of Thailand." }
       ]
     },
       {
@@ -287,13 +314,13 @@
       duration: { days: 5, nights: 4 },
       durationDays: 5,
       durationNights: 4,
-      startingPriceINR: 24999,
+      startingPriceINR: 24500,
       startingPriceUSD: 310,
       startingPriceTHB: 11500,
-      heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Specially crafted family vacation featuring kid-friendly attractions, Safari World, and spacious condo stays with kitchen.",
-      description: "Our top-rated 5-day Thailand Family Tour Package ensures a stress-free holiday for parents and endless fun for kids. Experience the best of Bangkok and Pattaya with a family-friendly itinerary featuring a speedboat tour to Coral Island, underwater marvels at SEA LIFE Bangkok Ocean World, celebrity encounters at Madame Tussauds, and a full day of excitement at Safari World.",
+      heroImage: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&fit=crop&w=900&q=80",
+      shortDescription: "A carefree family holiday: Coral Island, SEA LIFE Ocean World, Madame Tussauds and a full day at Safari World, with a spacious family condo stay.",
+      description: "Five stress-free days for parents and endless fun for the children. Speedboat to Coral Island in Pattaya, meet the marine life at SEA LIFE Bangkok Ocean World, pose with the stars at Madame Tussauds and spend a full day at Safari World. Spacious family condos, homely Indian food and private AC transfers from arrival to departure keep everyone comfortable.",
       highlights: [
         "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
         "🗣️ 24/7 Telugu & Hindi On-Ground Support",
@@ -321,11 +348,11 @@
         "Personal expenses & tipping"
       ],
       itinerary: [
-        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
-        { day: 2, title: "Coral Island & Beach Fun", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy the beach, swimming and optional water activities; Return to Pattaya; Evening at leisure; Overnight stay in Pattaya." },
-        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Transfer to Bangkok; Visit SEA LIFE Bangkok Ocean World; Visit Madame Tussauds Bangkok; Hotel check-in; Evening shopping and leisure; Overnight stay in Bangkok." },
-        { day: 4, title: "Safari World & Bangkok Family Fun", summary: "Breakfast at hotel; Full-day visit to Safari World Bangkok; Enjoy the Safari Park and exciting animal shows; Return to Bangkok; Evening at leisure; Overnight stay in Bangkok." },
-        { day: 5, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Return home with wonderful family memories of Thailand." }
+        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Private transfer to Pattaya; Family Condo/Hotel check-in & relaxation; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Beach Fun", summary: "Breakfast at hotel; **Coral Island (Koh Larn)** tour by speedboat; Enjoy the beach, swimming & optional water activities; Return to Pattaya; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast & hotel check-out; Transfer to Bangkok; Visit **SEA LIFE Bangkok Ocean World**; Visit **Madame Tussauds Bangkok**; Hotel check-in; Evening shopping & leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Safari World & Family Fun", summary: "Breakfast at hotel; Full-day visit to **Safari World Bangkok**; Enjoy the Safari Park & exciting animal shows; Return to Bangkok; Evening at leisure; Overnight stay in Bangkok." },
+        { day: 5, title: "Bangkok Departure", summary: "Breakfast & hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Return home with wonderful family memories of Thailand." }
       ]
     },
       {
@@ -337,13 +364,13 @@
       duration: { days: 6, nights: 5 },
       durationDays: 6,
       durationNights: 5,
-      startingPriceINR: 32999,
+      startingPriceINR: 34900,
       startingPriceUSD: 420,
       startingPriceTHB: 15500,
-      heroImage: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Romantic island retreat featuring private pool villas, sunset dinner cruise, couple spa, and secluded island tours.",
-      description: "Celebrate your love with our premium 6-day honeymoon package. Experience a romantic island retreat featuring a private beachfront stay, a full-day Phi Phi Island speedboat tour, a scenic Krabi Four Islands excursion, and an optional romantic dinner cruise in Bangkok to end your trip with beautiful memories.",
+      heroImage: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80",
+      shortDescription: "A romantic island honeymoon: private pool-villa stays, the Phi Phi Islands, Krabi's Four Islands, couple's spa moments and an optional sunset dinner cruise.",
+      description: "Celebrate the beginning of your story. Six days of quiet luxury: a private beachfront stay in Phuket, a speedboat day to the Phi Phi Islands, Krabi's Four Islands by boat, and an optional romantic dinner cruise in Bangkok before you fly home with beautiful memories.",
       highlights: [
         "🇮🇳 Guaranteed Authentic Indian/Veg Food Options",
         "🗣️ 24/7 Telugu & Hindi On-Ground Support",
@@ -367,18 +394,18 @@
         "Personal expenses"
       ],
       itinerary: [
-        { day: 1, title: "Phuket Arrival", summary: "Arrival at Phuket Airport; Private transfer to hotel; Hotel check-in and relaxation; Romantic evening at leisure; Overnight stay in Phuket." },
-        { day: 2, title: "Phi Phi Island Tour", summary: "Breakfast at hotel; Full-day Phi Phi Island tour by speedboat; Enjoy beautiful beaches, crystal-clear waters and snorkeling; Return to Phuket; Romantic sunset evening; Overnight stay in Phuket." },
-        { day: 3, title: "Phuket → Krabi", summary: "Breakfast and hotel check-out; Transfer to Krabi; Hotel check-in; Relax and enjoy the resort; Evening at leisure; Overnight stay in Krabi." },
-        { day: 4, title: "Four Islands Tour", summary: "Breakfast at hotel; Full-day Four Islands tour; Visit beautiful beaches and islands; Enjoy swimming, snorkeling and beach time; Romantic evening at leisure; Overnight stay in Krabi." },
-        { day: 5, title: "Krabi → Bangkok", summary: "Breakfast and hotel check-out; Transfer to Krabi Airport; Flight to Bangkok; Hotel check-in; Evening shopping and leisure; Optional romantic dinner cruise; Overnight stay in Bangkok." },
-        { day: 6, title: "Bangkok Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with beautiful memories of your honeymoon in Thailand." }
+        { day: 1, title: "Phuket Arrival", summary: "Arrival at Phuket Airport; Private transfer to hotel; Hotel check-in & relaxation; Romantic evening at leisure; Overnight stay in Phuket." },
+        { day: 2, title: "Phi Phi Island Tour", summary: "Breakfast at hotel; Full-day **Phi Phi Island tour** by speedboat; Enjoy beautiful beaches, crystal-clear waters & snorkeling; Return to Phuket; Romantic sunset evening; Overnight stay in Phuket." },
+        { day: 3, title: "Phuket → Krabi", summary: "Breakfast & hotel check-out; Private transfer to Krabi; Hotel check-in & enjoy the resort; Evening at leisure; Overnight stay in Krabi." },
+        { day: 4, title: "Four Islands Tour", summary: "Breakfast at hotel; Full-day **Four Islands tour**; Visit beautiful beaches, swimming & snorkeling; Romantic evening at leisure; Overnight stay in Krabi." },
+        { day: 5, title: "Krabi → Bangkok", summary: "Breakfast & hotel check-out; Transfer to Krabi Airport & flight to Bangkok; Hotel check-in; Evening shopping & leisure; Optional **Romantic Dinner Cruise**; Overnight stay in Bangkok." },
+        { day: 6, title: "Bangkok Departure", summary: "Breakfast & hotel check-out; Free time depending on flight schedule; Transfer to Bangkok Airport; Departure with beautiful memories of your honeymoon in Thailand." }
       ]
     },
       {
       slug: "bangkok-tour-packages",
       cardTitle: "Bangkok Tour Packages",
-      title: "Bangkok Tour – 4 Days / 3 Nights",
+      title: "Bangkok City Tour",
       destination: "Bangkok",
       destinationSlug: "bangkok",
       category: "Family & City Breaks",
@@ -388,21 +415,21 @@
       startingPriceINR: 14900,
       startingPriceUSD: 180,
       startingPriceTHB: 6800,
-      heroImage: "https://images.unsplash.com/photo-1509339022327-1e1e25360a41?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1509339022327-1e1e25360a41?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Experience the vibrant heart of Thailand with our Bangkok Tour Packages, featuring majestic temples, endless shopping, and luxury dinner cruises.",
-      description: "Dive into the bustling metropolis with our dedicated Bangkok Tour Packages. Perfect for a quick city break, this itinerary covers the cultural majesty of the Grand Palace and Wat Arun, the shopping paradise of Pratunam and MBK, and the dazzling nightlife from premier skybars.",
+      heroImage: "https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&fit=crop&w=900&q=80",
+      shortDescription: "Four vibrant days in Bangkok: the Grand Palace, Wat Pho and Wat Arun, the Chao Phraya River, Safari World and the city's best shopping.",
+      description: "The perfect city break. Explore the golden Grand Palace, Wat Pho and Wat Arun, take in the Chao Phraya River, spend a full day at Safari World, shop Pratunam, MBK and the night markets, and see the city lights from a rooftop sky bar, all from a comfortable city-centre stay.",
       itinerary: [
-        { day: 1, title: "Bangkok Arrival & City Evening", summary: "Arrival at Bangkok Airport; Private transfer to hotel; Hotel check-in and relaxation; Evening visit to a local night market; Overnight stay in Bangkok." },
-        { day: 2, title: "Bangkok City & Cultural Tour", summary: "Breakfast at hotel; Visit **Grand Palace & Wat Pho**; Visit **Wat Arun**; Chao Phraya River experience; Evening shopping at popular markets/malls; Overnight stay in Bangkok." },
-        { day: 3, title: "Safari World & Shopping", summary: "Breakfast at hotel; Full-day visit to **Safari World Bangkok**; Enjoy Safari Park and animal shows; Return to Bangkok; Evening shopping and leisure; Overnight stay in Bangkok." },
-        { day: 4, title: "Leisure & Departure", summary: "Breakfast and hotel check-out; Free time for shopping or leisure, depending on flight timing; Transfer to Bangkok Airport; **Departure with wonderful memories of Bangkok.**" }
+        { day: 1, title: "Bangkok Arrival & City Evening", summary: "Arrival at Bangkok Airport; Private transfer to hotel; Hotel check-in & relaxation; Evening visit to a local night market; Overnight stay in Bangkok." },
+        { day: 2, title: "Bangkok City & Cultural Tour", summary: "Breakfast at hotel; Visit **Grand Palace & Wat Pho**; Visit **Wat Arun**; **Chao Phraya River experience**; Evening shopping at popular markets/malls; Overnight stay in Bangkok." },
+        { day: 3, title: "Safari World & Shopping", summary: "Breakfast at hotel; Full-day visit to **Safari World Bangkok**; Enjoy Safari Park & animal shows; Return to Bangkok; Evening shopping & leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Leisure & Departure", summary: "Breakfast & hotel check-out; Free time for shopping or leisure depending on flight timing; Transfer to Bangkok Airport; Departure with wonderful memories of Bangkok." }
       ]
     },
       {
       slug: "pattaya-tour-packages",
       cardTitle: "Pattaya Tour Packages",
-      title: "Pattaya Tour – 4 Days / 3 Nights",
+      title: "Pattaya Beach & Nightlife Tour",
       destination: "Pattaya",
       destinationSlug: "pattaya",
       category: "Family & City Breaks",
@@ -412,21 +439,21 @@
       startingPriceINR: 15900,
       startingPriceUSD: 190,
       startingPriceTHB: 7200,
-      heroImage: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Thrilling Pattaya Tour Packages packed with Coral Island water sports, Alcazar VIP shows, and premium sea-view condo stays.",
-      description: "Discover the entertainment capital with our action-packed Pattaya Tour Packages. Enjoy a premium sea-view condo, thrilling water sports at Coral Island, the world-famous Alcazar Cabaret Show, and visits to the awe-inspiring Sanctuary of Truth.",
+      heroImage: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=900&q=80",
+      shortDescription: "Four lively days in Pattaya: Coral Island by speedboat, the Alcazar VIP Show, the Sanctuary of Truth and Walking Street nightlife, from a sea-view condo.",
+      description: "Pattaya at its most exciting. Stay in a premium sea-view condo, speedboat to Coral Island for beaches and water sports, see the world-famous Alcazar Cabaret Show, explore the awe-inspiring Sanctuary of Truth, and enjoy the energy of Walking Street after dark.",
       itinerary: [
-        { day: 1, title: "Pattaya Arrival & Nightlife", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Experience Pattaya’s vibrant nightlife, including **Walking Street, live music, bars and entertainment venues**; Overnight stay in Pattaya." },
-        { day: 2, title: "Coral Island & Pattaya Nightlife", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Enjoy beaches, swimming and optional water activities; Return to Pattaya; Evening free for dinner and nightlife; Explore **Walking Street and Pattaya’s evening entertainment**; Overnight stay in Pattaya." },
-        { day: 3, title: "Pattaya Sightseeing & Evening Entertainment", summary: "Breakfast at hotel; Visit **Sanctuary of Truth**; Visit Pattaya Viewpoint; Shopping and leisure time; Evening at leisure or enjoy a **cabaret/entertainment show**; Optional nightlife experience; Overnight stay in Pattaya." },
-        { day: 4, title: "Leisure & Departure", summary: "Breakfast and hotel check-out; Free time for shopping or relaxation; Transfer to Bangkok Airport; **Departure with unforgettable Pattaya memories.**" }
+        { day: 1, title: "Pattaya Arrival & Nightlife", summary: "Arrival at Bangkok Airport; Private transfer to Pattaya; Sea-view Condo/Hotel check-in & relaxation; Experience Pattaya's vibrant nightlife (**Walking Street, live music & entertainment**); Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Nightlife", summary: "Breakfast at hotel; **Coral Island (Koh Larn)** tour by speedboat; Enjoy beaches, swimming & optional water sports; Return to Pattaya; Explore **Walking Street & evening entertainment**; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya Sightseeing & Shows", summary: "Breakfast at hotel; Visit **Sanctuary of Truth**; Visit **Pattaya Viewpoint**; Shopping & leisure time; Evening **Cabaret/Alcazar VIP Show** & nightlife; Overnight stay in Pattaya." },
+        { day: 4, title: "Leisure & Departure", summary: "Breakfast & hotel check-out; Free time for shopping or relaxation; Transfer to Bangkok Airport; Departure with unforgettable Pattaya memories." }
       ]
     },
       {
       slug: "thailand-vietnam-tour-packages",
       cardTitle: "Thailand & Vietnam Tour Packages",
-      title: "Thailand & Vietnam Tour Packages",
+      title: "Bangkok • Pattaya • Phu Quoc (Vietnam)",
       tag: "Twin Country Special",
       destination: "Thailand & Vietnam",
       destinationSlug: "bangkok",
@@ -437,18 +464,18 @@
       startingPriceINR: 34999,
       startingPriceUSD: 420,
       startingPriceTHB: 15500,
-      heroImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=85",
-      thumbnail: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
-      shortDescription: "Experience the ultimate twin-country journey across Thailand and Vietnam, featuring Bangkok, Pattaya nightlife, and tropical Phu Quoc island.",
-      description: "Experience the best of two iconic Southeast Asian destinations in one seamless journey. Explore Bangkok's vibrant city culture and Pattaya's famous nightlife before flying to the pristine beaches, island tours, and breathtaking cable car experiences of Phu Quoc, Vietnam.",
+      heroImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1920&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=80",
+      shortDescription: "Two countries, one seamless week: Pattaya and Bangkok, then a short flight to tropical Phu Quoc for island tours and the famous Hon Thom cable car.",
+      description: "The best of two Southeast Asian favourites in one effortless journey. Enjoy Bangkok's vibrant city culture and Pattaya's famous nightlife, then fly to Phu Quoc, Vietnam, for pristine beaches, a full-day island and snorkelling tour, and the breathtaking Hon Thom Cable Car.",
       itinerary: [
-        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in and relaxation; Evening at leisure; Overnight stay in Pattaya." },
-        { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at hotel; Coral Island (Koh Larn) tour by speedboat; Beach activities and optional water sports; Return to Pattaya; Evening at leisure / nightlife; Overnight stay in Pattaya." },
-        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast and hotel check-out; Pattaya sightseeing; Transfer to Bangkok; Hotel check-in; Evening shopping and leisure; Overnight stay in Bangkok." },
-        { day: 4, title: "Bangkok → Phu Quoc", summary: "Breakfast and hotel check-out; Transfer to Bangkok Airport; Flight to Phu Quoc, Vietnam; Hotel check-in; Relax and enjoy the beach; Evening at leisure; Overnight stay in Phu Quoc." },
-        { day: 5, title: "Phu Quoc Island Tour", summary: "Breakfast at hotel; Full-day island and beach experience; Enjoy snorkeling, swimming and scenic island views; Visit selected attractions; Return to hotel; Evening at leisure; Overnight stay in Phu Quoc." },
-        { day: 6, title: "Phu Quoc Cable Car & Leisure", summary: "Breakfast at hotel; Experience the famous **Hon Thom Cable Car**; Enjoy beach time and island views; Explore local markets / leisure; Sunset by the beach; Overnight stay in Phu Quoc." },
-        { day: 7, title: "Phu Quoc Departure", summary: "Breakfast and hotel check-out; Free time depending on flight schedule; Transfer to Phu Quoc Airport; **Departure with wonderful memories of Thailand & Vietnam.**" }
+        { day: 1, title: "Bangkok Arrival → Pattaya", summary: "Arrival at Bangkok Airport; Transfer to Pattaya; Hotel check-in & relaxation; Evening at leisure; Overnight stay in Pattaya." },
+        { day: 2, title: "Coral Island & Pattaya", summary: "Breakfast at hotel; **Coral Island (Koh Larn)** tour by speedboat; Beach activities & optional water sports; Return to Pattaya; Evening at leisure / Pattaya nightlife; Overnight stay in Pattaya." },
+        { day: 3, title: "Pattaya → Bangkok", summary: "Breakfast & hotel check-out; Pattaya sightseeing & transfer to Bangkok; Hotel check-in; Evening shopping & leisure; Overnight stay in Bangkok." },
+        { day: 4, title: "Bangkok → Phu Quoc (Vietnam)", summary: "Breakfast & hotel check-out; Transfer to Bangkok Airport & flight to **Phu Quoc, Vietnam**; Hotel check-in; Relax on the beach & evening at leisure; Overnight stay in Phu Quoc." },
+        { day: 5, title: "Phu Quoc Island Tour", summary: "Breakfast at hotel; Full-day **Phu Quoc island & beach experience**; Enjoy snorkeling, swimming & scenic island views; Return to hotel & evening at leisure; Overnight stay in Phu Quoc." },
+        { day: 6, title: "Phu Quoc Cable Car & Leisure", summary: "Breakfast at hotel; Experience the famous **Hon Thom Cable Car**; Enjoy beach time, island views & local markets; Sunset by the beach; Overnight stay in Phu Quoc." },
+        { day: 7, title: "Phu Quoc Departure", summary: "Breakfast & hotel check-out; Free time depending on flight schedule; Transfer to Phu Quoc Airport; Departure with wonderful memories of Thailand & Vietnam." }
       ]
     }
     ];
@@ -483,7 +510,7 @@
     // ==========================================================================
     // 1. Currency Management (State & LocalStorage Persistence)
     // ==========================================================================
-    const savedCurrency = localStorage.getItem('thaipackages_currency') || (BUSINESS.defaultCurrency || 'INR');
+    const savedCurrency = safeStorage.get('thaipackages_currency') || (BUSINESS.defaultCurrency || 'INR');
     let currentCurrency = savedCurrency;
 
     function formatPrice(pkg, targetCurr = currentCurrency) {
@@ -548,7 +575,7 @@
         sel.value = currentCurrency;
         sel.addEventListener('change', (e) => {
           currentCurrency = e.target.value;
-          localStorage.setItem('thaipackages_currency', currentCurrency);
+          safeStorage.set('thaipackages_currency', currentCurrency);
           selectors.forEach(s => s.value = currentCurrency);
           if (typeof renderPackagesList === 'function') renderPackagesList();
           if (typeof updatePackageDetailPrices === 'function') updatePackageDetailPrices();
@@ -582,7 +609,9 @@
       handleScroll();
     }
 
-    if (hamburgerBtn && mobileDrawer) {
+    // The drawer is normally wired by the inline "tp:menu-script" in each page (works before/without app.js).
+    // This block is only a fallback for pages that don't include it.
+    if (hamburgerBtn && mobileDrawer && !window.TP_MENU_BOUND) {
       const openMenu = () => {
         mobileDrawer.classList.add('open');
         mobileDrawer.setAttribute('aria-hidden', 'false');
@@ -736,7 +765,7 @@
       const featurePillsMap = {
         'bangkok-pattaya-classic-vacation': [
           'Telugu Guides',
-          '3N Pattaya Condo',
+          '2N Pattaya Condo',
           '2N Bangkok Condo',
           'Indian Food',
           '100% Private AC'
@@ -828,29 +857,24 @@
           '100% Private AC'
         ];
         const isSignature = pkg.slug === 'bangkok-pattaya-classic-vacation';
-        const link = (pkg.slug === 'thailand-tour-packages-from-hyderabad') ? 'group-tours.html' :
-                     (pkg.slug === 'thailand-tour-packages-with-indian-food') ? 'customized-packages.html' :
-                     `package-detail.html?id=${pkg.slug}`;
+        const link = packageUrl(pkg);
 
         return `
           <article class="package-card compact" id="${isSignature ? 'cardBangkokPattaya' : ''}">
             <div class="package-media-wrap">
-              <img src="${pkg.thumbnail || pkg.heroImage}" alt="${pkg.title}" loading="lazy" width="600" height="450">
+              <img src="${unsplashAt(pkg.thumbnail || pkg.heroImage, 900)}"${respAttrs(pkg.thumbnail || pkg.heroImage, 'card')} alt="${pkg.title}" loading="lazy" decoding="async" width="600" height="450">
               <span class="package-badge-tag">${pkg.tag || badges[idx] || pkg.category || 'FEATURED'}</span>
               <span class="package-duration-tag">${pkg.durationDays || (pkg.duration && pkg.duration.days) || 5} Days / ${pkg.durationNights || (pkg.duration && pkg.duration.nights) || 4} Nights</span>
             </div>
             <div class="package-card-body">
-              <div class="package-price-wrap">
-                <span class="package-price-label">Starting Price</span>
-                <span class="package-price-value">${formatPrice(pkg)}</span>
-              </div>
               <span class="package-destination">${pkg.destination || 'Thailand'}</span>
               <h3>${pkg.cardTitle || pkg.title}</h3>
               <p>${pkg.shortDescription || pkg.description}</p>
-              
-              
-
               <div class="package-card-footer">
+                <div class="package-price-wrap">
+                  <span class="package-price-label">Starting Price</span>
+                  <span class="package-price-value">${formatPrice(pkg)}</span>
+                </div>
                 <a href="${link}" class="btn btn-primary btn-sm">
                   View Itinerary
                 </a>
@@ -966,14 +990,13 @@
         destinationsGrid.innerHTML = filtered.map(d => `
           <article class="destination-card">
             <div class="dest-media-wrap">
-              <img src="${d.thumbnail}" alt="${d.name}, ${d.country || 'Thailand'}" loading="lazy" width="600" height="450">
+              <img src="${unsplashAt(d.thumbnail, 900)}"${respAttrs(d.thumbnail, 'card')} alt="${d.name}, ${d.country || 'Thailand'}" loading="lazy" decoding="async" width="600" height="450">
               <span class="dest-region-badge">${d.region}</span>
             </div>
             <div class="dest-card-body">
               <h3>${d.name}</h3>
               <p>${d.shortDescription || d.description}</p>
               <div class="dest-card-footer">
-                <span>Best: ${d.quickFacts ? d.quickFacts.bestTime : d.bestTime}</span>
                 <a href="destination-detail.html?id=${d.slug}" class="link-arrow">
                   Explore ${d.name} →
                 </a>
@@ -1072,7 +1095,7 @@
       packagesGrid.innerHTML = filtered.map(pkg => `
         <article class="package-card">
           <div class="package-media-wrap">
-            <img src="${pkg.thumbnail}" alt="${pkg.title}" loading="lazy" width="600" height="800">
+            <img src="${unsplashAt(pkg.thumbnail, 900)}"${respAttrs(pkg.thumbnail, 'card')} alt="${pkg.title}" loading="lazy" decoding="async" width="600" height="800">
             <span class="package-category-tag">${pkg.category}</span>
             <span class="package-duration-tag">${pkg.durationDays || pkg.duration.days} Days / ${pkg.durationNights || pkg.duration.nights} Nights</span>
           </div>
@@ -1085,7 +1108,7 @@
                 <span class="package-price-label">Starting Price</span>
                 <span class="package-price-value">${formatPrice(pkg)}</span>
               </div>
-              <a href="https://wa.me/918121214181?text=${encodeURIComponent('Hi ThaiPackages, I am interested in the ' + (pkg.title || 'Thailand Holiday') + ' package.')}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <a href="${packageUrl(pkg)}" class="btn btn-primary btn-sm">
                 View Itinerary
               </a>
             </div>
@@ -1161,7 +1184,7 @@
       if (destTagline) destTagline.textContent = destination.tagline;
       if (destDesc) destDesc.textContent = destination.description;
       if (destHeroBg) {
-        destHeroBg.src = destination.heroImage;
+        setHeroImage(destHeroBg, destination.heroImage);
         if (destDetailHero) {
           if (destination.slug === 'bangkok') {
             destDetailHero.classList.add('hero-bangkok');
@@ -1193,7 +1216,7 @@
           destRecommendedPackages.innerHTML = recPackages.map(pkg => `
             <article class="package-card">
               <div class="package-media-wrap">
-                <img src="${pkg.thumbnail}" alt="${pkg.title}" loading="lazy" width="600" height="800">
+                <img src="${unsplashAt(pkg.thumbnail, 900)}"${respAttrs(pkg.thumbnail, 'card')} alt="${pkg.title}" loading="lazy" decoding="async" width="600" height="800">
                 <span class="package-category-tag">${pkg.category}</span>
                 <span class="package-duration-tag">${pkg.durationDays || pkg.duration.days} Days / ${pkg.durationNights || pkg.duration.nights} Nights</span>
               </div>
@@ -1206,7 +1229,7 @@
                     <span class="package-price-label">Starting Price</span>
                     <span class="package-price-value">${formatPrice(pkg)}</span>
                   </div>
-                  <a href="https://wa.me/918121214181?text=${encodeURIComponent('Hi ThaiPackages, I am interested in the ' + (pkg.title || 'Thailand Holiday') + ' package.')}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <a href="${packageUrl(pkg)}" class="btn btn-primary btn-sm">
                     View Itinerary
                   </a>
                 </div>
@@ -1257,7 +1280,7 @@
       const pkgDuration = document.getElementById('pkgDuration');
       const pkgDesc = document.getElementById('pkgDesc');
 
-      if (pkgHeroBg) pkgHeroBg.src = pkg.heroImage;
+      if (pkgHeroBg) setHeroImage(pkgHeroBg, pkg.heroImage);
       if (pkgCategory) pkgCategory.textContent = pkg.category;
       if (pkgTitle) pkgTitle.textContent = pkg.title;
       if (pkgDest) pkgDest.textContent = pkg.destination;
@@ -1493,14 +1516,33 @@
 
   } // end initApp
 
-  document.addEventListener('DOMContentLoaded', () => {
-    if (window.TRAVEL_CONTEXT && window.TRAVEL_CONTEXT.PACKAGES) {
+  // Run initApp exactly once. (Previously the ContextReady listener AND the 1s timeout could both fire,
+  // binding every handler twice — e.g. submenu toggles opened and immediately closed again.)
+  let appStarted = false;
+  const startApp = () => {
+    if (appStarted) return;
+    appStarted = true;
+    try {
       initApp();
-    } else {
-      window.addEventListener('ContextReady', initApp);
-      setTimeout(initApp, 1000); // fallback safety
+    } catch (err) {
+      console.error('[ThaiPackages] app init failed:', err);
     }
-  });
+  };
+
+  const boot = () => {
+    if (window.TRAVEL_CONTEXT && window.TRAVEL_CONTEXT.PACKAGES) {
+      startApp();
+    } else {
+      window.addEventListener('ContextReady', startApp, { once: true });
+      setTimeout(startApp, 1000); // fallback: render with built-in data if the context modules never load
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
 
 })();
 

@@ -8,7 +8,7 @@ export const CONTENT = {
     heroBadge: "🌴 TAILOR-MADE PACKAGES FOR THAILAND HOLIDAYS • 25% OFF GROUP PACKAGES",
     heroTitle: "Your Thailand story starts here.",
     heroSubtitle: "Curated itineraries, luxury condo stays with private kitchen, 100% private transfers, and 100% Telugu-speaking guides — starting from ₹19,900 per person.",
-    heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2070&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&fit=crop&w=1920&q=80",
     heroPrimaryCTA: "Plan My Thailand Trip",
     heroSecondaryCTA: "Explore Packages"
   },
@@ -18,28 +18,28 @@ export const CONTENT = {
       id: "family",
       title: "Family Holidays",
       description: "Safaris, waterparks & relaxing beachfront resorts",
-      image: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=900&q=80",
       filterCategory: "Family"
     },
     {
       id: "honeymoon",
       title: "Honeymoon",
       description: "Private pool villas & sunset catamaran cruises",
-      image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80",
       filterCategory: "Honeymoon"
     },
     {
       id: "weekend",
       title: "Weekend / Short Trips",
       description: "Bangkok shopping & Pattaya nightlife breaks",
-      image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&fit=crop&w=900&q=80",
       filterCategory: "Family"
     },
     {
       id: "luxury",
       title: "Luxury & Marine",
       description: "5-star island retreats & private boat excursions",
-      image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=900&q=80",
       filterCategory: "Luxury"
     }
   ],
@@ -48,7 +48,7 @@ export const CONTENT = {
     badge: "WHAT YOU GET WITH US",
     title: "Thailand, planned around you.",
     subtitle: "Customized daily pacing, handpicked resorts, 100% Telugu-speaking guides, and certified private transfers so you don't waste time figuring things out on your own.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=85",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
     points: [
       {
         title: "100% Telugu-Speaking Guides",
@@ -73,7 +73,7 @@ export const CONTENT = {
     badge: "SIGNATURE TAILORED EXPERIENCE",
     title: "Accessible luxury for Indian families, couples & travelers.",
     description: "Travelling to Thailand shouldn't feel like a rigid, cookie-cutter tour with cramped hotel rooms and shared buses. At ThaiPackages, our signature standard delivers spacious premium condos with private kitchen access, 100% private door-to-door AC transfers, 100% Telugu-speaking guides, and complete Indian dining flexibility.",
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=85",
+    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=900&q=80",
     features: [
       {
         icon: "🏢",

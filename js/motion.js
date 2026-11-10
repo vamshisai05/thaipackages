@@ -32,6 +32,45 @@
   var ringBar = null;
   var RING_LEN = 125.66; // 2 * PI * 20
 
+  /* Highlight the current section in the desktop nav */
+  (function () {
+    // Normalise clean URLs (/packages) and file URLs (/packages.html) to the same key
+    var page = (location.pathname.split('/').pop() || 'index').toLowerCase().replace(/\.html$/, '') + '.html';
+    var groups = {
+      'destinations.html': 1, 'destination-detail.html': 1,
+      'packages.html': 2, 'package-detail.html': 2, 'family-packages.html': 2, 'couple-packages.html': 2,
+      'bachelor-packages.html': 2, 'honeymoon-packages.html': 2, 'group-tours.html': 2, 'customized-packages.html': 2,
+      'flights.html': 3, 'visa-services.html': 3, 'passport-services.html': 3, 'visa.html': 3, 'passport.html': 3, 'digital-arrival-card.html': 3,
+      'about.html': 4, 'contact.html': 5
+    };
+    var links = $$('.dnav > li > .dnav-link');
+    var idx = groups.hasOwnProperty(page) ? groups[page] : (page === 'index.html' ? 0 : -1);
+    if (links[idx]) links[idx].classList.add('active');
+  })();
+
+  /* Upgrade the floating call / WhatsApp buttons into two distinct widgets */
+  if (stickyActions) {
+    stickyActions.classList.add('tp-widgets');
+    document.body.classList.add('has-contact-widgets');
+    var callBtn = $('.btn-call', stickyActions);
+    var waBtn = $('.btn-whatsapp', stickyActions);
+    if (callBtn) {
+      var callLabel = $('.sticky-action-label', callBtn);
+      if (callLabel) {
+        callLabel.innerHTML = '<small>Call our experts</small><strong>+91 81212 14181</strong>';
+      }
+      callBtn.insertAdjacentHTML('beforeend', '<span class="widget-mobile-text">Call Now</span>');
+    }
+    if (waBtn) {
+      var waLabel = $('.sticky-action-label', waBtn);
+      if (waLabel) {
+        waLabel.innerHTML = '<small>Plan your trip on</small><strong>WhatsApp Chat</strong>';
+      }
+      waBtn.insertAdjacentHTML('afterbegin', '<span class="wa-online-dot" aria-hidden="true"></span>');
+      waBtn.insertAdjacentHTML('beforeend', '<span class="widget-mobile-text">WhatsApp</span>');
+    }
+  }
+
   if (stickyActions) {
     backTop = document.createElement('button');
     backTop.type = 'button';
@@ -114,14 +153,15 @@
     '.checklist-grid',
     '.info-faq-grid',
     '.footer-top-grid',
-    '.stats-strip'
+    '.stats-strip',
+    '.cat-highlights'
   ];
 
   function setGroupIndexes(group) {
     var kids = group.children;
     for (var i = 0; i < kids.length; i++) {
       // Cap stagger so long lists don't take forever to appear
-      kids[i].style.setProperty('--i', String(Math.min(i, 8)));
+      kids[i].style.setProperty('--i', String(Math.min(i, 5)));
     }
   }
 
@@ -133,7 +173,7 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.01, rootMargin: '0px 0px 80px 0px' });
 
     $$(SINGLE_SELECTORS.join(',')).forEach(function (el) {
       // Skip anything inside the hero (it has its own entrance animation)
@@ -164,6 +204,16 @@
     });
   }
 
+  /* Pause looping background animations while their section is off-screen (saves CPU/battery) */
+  if ('IntersectionObserver' in window) {
+    var pauseIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.target.classList.toggle('tp-offscreen', !e.isIntersecting); });
+    }, { rootMargin: '100px 0px' });
+    $$('.hero-section, .group-discount-banner, .section-aurora, .final-cta-section').forEach(function (el) {
+      pauseIo.observe(el);
+    });
+  }
+
   /* ------------------------------------------------------------------------
      3. Number counters  <span data-count-to="25" data-suffix="%">
      ------------------------------------------------------------------------ */
@@ -173,7 +223,7 @@
     var suffix = el.getAttribute('data-suffix') || '';
     if (isNaN(target)) return;
     if (reduceMotion) { el.textContent = prefix + target + suffix; return; }
-    var dur = 1600;
+    var dur = 900;
     var start = null;
     function step(ts) {
       if (!start) start = ts;
@@ -219,12 +269,12 @@
       var r = card.getBoundingClientRect();
       var px = (e.clientX - r.left) / r.width;
       var py = (e.clientY - r.top) / r.height;
-      var rx = (0.5 - py) * 7;
-      var ry = (px - 0.5) * 9;
+      var rx = (0.5 - py) * 4;
+      var ry = (px - 0.5) * 5;
       card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
       card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
       card.style.transform =
-        'perspective(1000px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) translateY(-8px)';
+        'perspective(1000px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) translateY(-6px)';
     }, { passive: true });
 
     document.addEventListener('pointerleave', function () {

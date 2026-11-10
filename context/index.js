@@ -5,11 +5,12 @@
 
 import { BRAND } from './brand.js';
 import { BUSINESS } from './business.js';
-import { CONTACT, isContactConfigured, getWhatsAppUrl } from './contact.js';
-import { DESTINATIONS } from './destinations.js';
-import { PACKAGES } from './packages.js';
+// Bump ?v= whenever these files change: /context/* is served as immutable for 1 year (see _headers)
+import { CONTACT, isContactConfigured, getWhatsAppUrl } from './contact.js?v=3';
+import { DESTINATIONS } from './destinations.js?v=6';
+import { PACKAGES } from './packages.js?v=6';
 import { NAVIGATION, PRIMARY_CTA, SECONDARY_CTA } from './navigation.js';
-import { SEO } from './seo.js';
+import { SEO } from './seo.js?v=2';
 import { DESIGN } from './design.js';
 import { CONTENT } from './content.js';
 import { LEGAL } from './legal.js';

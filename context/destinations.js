@@ -12,11 +12,10 @@ export const DESTINATIONS = [
     tagline: "The Pearl of the Andaman Sea",
     shortDescription: "Dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
     description: "Thailand’s largest island, famed for dramatic limestone cliffs, vibrant night markets, pristine beaches, and premier beachfront luxury resorts.",
-    heroImage: "images/phuket (2).jpg",
-    thumbnail: "images/phuket (2).jpg",
+    heroImage: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=1920&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=900&q=80",
     
     quickFacts: {
-      bestTime: "Nov – Apr",
       currency: "Thai Baht (THB)",
       idealDuration: "4 – 7 Days",
       travelStyle: ["Beach", "Island Hopping", "Luxury Resorts", "Marine Adventures"]
@@ -49,11 +48,10 @@ export const DESTINATIONS = [
     tagline: "Dramatic Karsts & Emerald Waters",
     shortDescription: "Towering limestone karst monoliths, tranquil emerald bays, hidden lagoons, and world-class island hopping.",
     description: "Towering limestone karst monoliths, tranquil emerald bays, hidden lagoons, and world-class island hopping around Railay Beach.",
-    heroImage: "images/krabi.jpg",
-    thumbnail: "images/krabi.jpg",
+    heroImage: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=1920&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=900&q=80",
 
     quickFacts: {
-      bestTime: "Nov – Apr",
       currency: "Thai Baht (THB)",
       idealDuration: "3 – 5 Days",
       travelStyle: ["Scenic Nature", "Island Hopping", "Relaxation", "Rock Climbing"]
@@ -86,11 +84,10 @@ export const DESTINATIONS = [
     tagline: "The Electric Capital of Smiles",
     shortDescription: "Opulent golden palaces, historic riverfront temples, vibrant street markets, and luxury rooftop lounges.",
     description: "Opulent golden palaces, historic riverfront temples, vibrant street markets, Michelin-rated dining, and luxury rooftop lounges.",
-    heroImage: "images/bangkok.jpg",
-    thumbnail: "images/bangkok.jpg",
+    heroImage: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=1920&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=900&q=80",
 
     quickFacts: {
-      bestTime: "Nov – Feb",
       currency: "Thai Baht (THB)",
       idealDuration: "3 – 5 Days",
       travelStyle: ["Culture", "Shopping", "Urban Gastronomy", "River Cruises"]
@@ -121,13 +118,12 @@ export const DESTINATIONS = [
     country: "Thailand",
     region: "Gulf of Thailand",
     tagline: "Seaside Entertainment & Coastal Fun",
-    shortDescription: "A dynamic coastal resort city offering golden beaches, Coral Island day trips, and botanical gardens.",
+    shortDescription: "A lively seaside city of golden beaches, Coral Island speedboat days, world-famous shows and beautiful botanical gardens.",
     description: "A dynamic coastal resort city offering golden beaches, Coral Island day trips, botanical gardens, and non-stop entertainment.",
-    heroImage: "images/pattaya city.jpg",
-    thumbnail: "images/pattaya city.jpg",
+    heroImage: "https://images.unsplash.com/photo-1578922746465-3a80a228f223?auto=format&fit=crop&w=1920&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1578922746465-3a80a228f223?auto=format&fit=crop&w=900&q=80",
 
     quickFacts: {
-      bestTime: "Nov – Mar",
       currency: "Thai Baht (THB)",
       idealDuration: "2 – 4 Days",
       travelStyle: ["Watersports", "Family Attractions", "Entertainment", "Beaches"]
@@ -160,11 +156,10 @@ export const DESTINATIONS = [
     tagline: "Pristine Island Paradise & Luxury Villas",
     shortDescription: "Lush coconut groves, tranquil turquoise waters, serene wellness spas, and ultra-luxury private pool villas.",
     description: "Lush coconut groves, tranquil turquoise waters, serene wellness spas, and ultra-luxury private pool villa retreats.",
-    heroImage: "https://images.unsplash.com/photo-1683263430050-a3cbf42c48a0?fm=jpg&q=80&w=2000&auto=format&fit=crop",
-    thumbnail: "images/koh-samui.jpg",
+    heroImage: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=1920&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=900&q=80",
 
     quickFacts: {
-      bestTime: "Dec – Sep",
       currency: "Thai Baht (THB)",
       idealDuration: "4 – 6 Days",
       travelStyle: ["Luxury Villas", "Wellness Spas", "Island Cruising", "Romance"]
@@ -195,11 +190,10 @@ export const DESTINATIONS = [
     tagline: "Misty Mountains & Ancient Lanna Heritage",
     shortDescription: "Tranquil mountain valleys, sacred ancient temples, ethical elephant sanctuaries, and artisan crafts.",
     description: "Tranquil mountain valleys, sacred ancient temples, ethical elephant rescue sanctuaries, and rich Northern Thai artisan traditions.",
-    heroImage: "images/chiang-mai.jpg",
-    thumbnail: "images/chiang-mai.jpg",
+    heroImage: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=1920&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1512553353614-82a7370096dc?auto=format&fit=crop&w=900&q=80",
 
     quickFacts: {
-      bestTime: "Oct – Feb",
       currency: "Thai Baht (THB)",
       idealDuration: "3 – 5 Days",
       travelStyle: ["Culture & Heritage", "Mountain Sanctuaries", "Eco-Travel", "Cooking"]
@@ -230,11 +224,10 @@ export const DESTINATIONS = [
     tagline: "Royal Seaside Heritage & Golf Retreats",
     shortDescription: "A sophisticated royal beach resort town known for tranquil beaches, night markets, and world-class golf courses.",
     description: "A sophisticated royal beach resort town known for tranquil beaches, vibrant night markets, and world-class golf courses just a short drive from Bangkok.",
-    heroImage: "images/koh-samui.jpg",
-    thumbnail: "images/hua hin.jpg",
+    heroImage: "https://images.unsplash.com/photo-1586500036706-41963de24d8b?auto=format&fit=crop&w=1920&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1586500036706-41963de24d8b?auto=format&fit=crop&w=900&q=80",
     
     quickFacts: {
-      bestTime: "Nov – Feb",
       currency: "Thai Baht (THB)",
       idealDuration: "2 – 4 Days",
       travelStyle: ["Relaxation", "Golf", "Family", "Heritage"]

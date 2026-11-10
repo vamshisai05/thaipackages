@@ -2,21 +2,23 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7MSQE6G0N"></script>
+  <!-- Google tag (gtag.js): events are queued immediately; the library itself loads after the page is ready -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-V7MSQE6G0N');
+    window.addEventListener('load', function () {
+      var go = function () { var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-V7MSQE6G0N'; document.head.appendChild(s); };
+      if ('requestIdleCallback' in window) { requestIdleCallback(go, { timeout: 2500 }); } else { setTimeout(go, 1200); }
+    });
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <title>ThaiPackages.com | Thailand Holidays Made Easy</title>
   <meta name="description"
-    content="Customized Thailand holiday packages for Indian families & couples. 100% Telugu & Hindi-speaking guides, luxury condo stays with private kitchens, and private AC transfers starting from ₹19,900/person.">
+    content="Tailor-made Thailand holidays for families & couples across Telangana and Andhra Pradesh. Telugu & Hindi-speaking guides, luxury condos with private kitchens, homely Indian food and private AC transfers, from ₹19,900 per person.">
   <meta name="theme-color" content="#0A2A30">
 
   <!-- Open Graph -->
@@ -31,19 +33,33 @@
     content="https://thaipackages.com/images/favicon.png">
 
   <!-- Favicon / Brand Logo for Google Search & Browsers -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png?v=2">
   <link rel="shortcut icon" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
   <!-- Typography Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"></noscript>
 
+  <!-- tp:perf-hints -->
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75" imagesrcset="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=640&amp;q=75 640w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=960&amp;q=75 960w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75 1280w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1920&amp;q=75 1920w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=2400&amp;q=75 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="modulepreload" href="context/index.js?v=6">
+  <link rel="modulepreload" href="context/brand.js">
+  <link rel="modulepreload" href="context/business.js">
+  <link rel="modulepreload" href="context/contact.js?v=3">
+  <link rel="modulepreload" href="context/destinations.js?v=6">
+  <link rel="modulepreload" href="context/packages.js?v=6">
+  <link rel="modulepreload" href="context/navigation.js">
+  <link rel="modulepreload" href="context/seo.js?v=2">
+  <link rel="modulepreload" href="context/design.js">
+  <link rel="modulepreload" href="context/content.js">
+  <link rel="modulepreload" href="context/legal.js">
+  <!-- /tp:perf-hints -->
   <link rel="stylesheet" href="css/style.css?v=2.3">
-  <link rel="stylesheet" href="css/enhance.css?v=1.0">
+  <link rel="stylesheet" href="css/enhance.css?v=1.4">
 
   <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -59,9 +75,53 @@
       "@type": "Country",
       "name": "Thailand"
     },
-    "currenciesAccepted": "INR, USD, THB"
+    "currenciesAccepted": "INR, USD, THB",
+    "telephone": "+91-81212-14181",
+    "sameAs": ["https://www.instagram.com/thaipackages/"]
   }
   </script>
+  <!-- tp:image-slots -->
+  <script>
+    /* Image safety net: if any photo fails to load (e.g. a stock URL is removed),
+       a branded teal-and-gold tile is drawn instead of a broken-image icon.
+       Photo choices and swap-in briefs: images/custom/IMAGE-BRIEF.md */
+    (function () {
+      var showFile = /[?&]briefs=1/.test(location.search);
+      function esc(s) { return String(s).replace(/[<>&"']/g, function (c) { return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+      function tile(label, file, plain) {
+        var sub = showFile && file ? file : 'THAIPACKAGES';
+        if (plain && !showFile) { label = ''; sub = ''; }
+        var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">' +
+          '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#185a65"/><stop offset=".55" stop-color="#0a2a30"/><stop offset="1" stop-color="#061d21"/></linearGradient>' +
+          '<radialGradient id="r" cx=".78" cy=".18" r=".65"><stop offset="0" stop-color="#f2aa27" stop-opacity=".32"/><stop offset="1" stop-color="#f2aa27" stop-opacity="0"/></radialGradient></defs>' +
+          '<rect width="1200" height="800" fill="url(#g)"/><rect width="1200" height="800" fill="url(#r)"/>' +
+          '<path d="M0 610 C200 570 400 650 600 610 S1000 570 1200 610 V800 H0Z" fill="#fff" fill-opacity=".05"/>' +
+          '<path d="M0 670 C220 630 420 710 620 670 S1010 630 1200 670 V800 H0Z" fill="#fff" fill-opacity=".05"/>' +
+          (label ? '<g fill="none" stroke="#f2aa27" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".9" transform="translate(560 250)">' +
+          '<path d="M40 110 C38 80 40 55 46 30"/><path d="M46 30 C30 12 12 10 0 16 C16 20 30 26 46 30"/><path d="M46 30 C60 10 78 6 92 12 C76 18 60 24 46 30"/>' +
+          '<path d="M46 30 C34 36 26 50 24 64 C34 52 40 42 46 30"/><path d="M46 30 C60 36 68 48 70 62 C60 52 52 42 46 30"/><path d="M8 110 C30 104 50 112 70 104 C78 100 80 90 74 88"/></g>' : '') +
+          '<text x="600" y="430" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="46" font-weight="600" fill="#ffffff" fill-opacity=".92">' + esc(label) + '</text>' +
+          '<text x="600" y="480" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="20" letter-spacing="8" fill="#f2aa27" fill-opacity=".85">' + esc(sub) + '</text></svg>';
+        return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+      }
+      window.tpPlaceholder = tile;
+      document.addEventListener('error', function (e) {
+        var img = e.target;
+        if (!img || img.tagName !== 'IMG') return;
+        var src = img.getAttribute('src') || '';
+        if (src.indexOf('data:') === 0) return; // the placeholder itself never retries
+        if (!src) return;                       // empty src: wait for scripts to set the real one
+        var file = src.split('/').pop().split('?')[0];
+        img.setAttribute('data-ph', file || '1');
+        img.classList.add('img-placeholder');
+        // Background photos (behind headlines) and tiny round icons get a plain tile without text
+        var plain = img.classList.contains('hero-bg-media') || img.id === 'destHeroBg' || img.id === 'pkgHeroBg' ||
+          !!img.closest('.family-trust-icon');
+        img.src = tile(img.getAttribute('alt') || 'ThaiPackages', file, plain);
+      }, true);
+    })();
+  </script>
+  <!-- /tp:image-slots -->
 </head>
 
 <body>
@@ -70,15 +130,54 @@
   <header class="site-header solid-nav">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" aria-label="ThaiPackages Homepage">
-        <img src="images/logo.jpeg" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
+        <img src="images/logo-mark-white.png" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
       </a>
 
-      <nav aria-label="Main Navigation">
-        <!-- Main nav links moved to hamburger menu -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <!-- tp:desktop-nav -->
+        <ul class="dnav">
+          <li><a href="index.html" class="dnav-link">Home</a></li>
+          <li class="dnav-has-menu">
+            <a href="destinations.html" class="dnav-link">Destinations <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dnav-menu">
+              <a href="destinations.html" class="dnav-menu-all">All Destinations</a>
+              <a href="destination-detail.html?id=bangkok">Bangkok</a>
+              <a href="destination-detail.html?id=pattaya">Pattaya</a>
+              <a href="destination-detail.html?id=krabi">Krabi</a>
+              <a href="destination-detail.html?id=phuket">Phuket</a>
+              <a href="destination-detail.html?id=samui">Koh Samui</a>
+              <a href="destination-detail.html?id=chiang-mai">Chiang Mai</a>
+              <a href="destination-detail.html?id=hua-hin">Hua Hin</a>
+            </div>
+          </li>
+          <li class="dnav-has-menu">
+            <a href="packages.html" class="dnav-link">Tour Packages <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dnav-menu">
+              <a href="packages.html" class="dnav-menu-all">All Tour Packages</a>
+              <a href="family-packages.html">Family Packages</a>
+              <a href="couple-packages.html">Couple Packages</a>
+              <a href="bachelor-packages.html">Bachelor Packages</a>
+              <a href="honeymoon-packages.html">Honeymoon Packages</a>
+              <a href="group-tours.html">Group Tours</a>
+              <a href="customized-packages.html">Customized Packages</a>
+            </div>
+          </li>
+          <li class="dnav-has-menu">
+            <a href="flights.html" class="dnav-link">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dnav-menu">
+              <a href="flights.html">Flight Tickets</a>
+              <a href="visa-services.html">Visa Services</a>
+              <a href="passport-services.html">Passport Services</a>
+            </div>
+          </li>
+          <li><a href="about.html" class="dnav-link">Why Us</a></li>
+          <li><a href="contact.html" class="dnav-link">Contact</a></li>
+        </ul>
+        <!-- /tp:desktop-nav -->
       </nav>
 
       <div class="nav-actions">
-        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get a Free Quote</a>
         <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-controls="mobileDrawer">
           <span></span>
           <span></span>
@@ -93,7 +192,7 @@
     <div class="drawer-content">
       <div class="drawer-header">
         <span class="brand-logo">
-          <img src="images/logo.jpeg" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
+          <img src="images/logo-mark-white.png" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
         </span>
         <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close Menu">&times;</button>
       </div>
@@ -108,6 +207,7 @@
             </svg>
           </button>
           <div class="drawer-submenu">
+            <a href="destinations.html" class="drawer-link drawer-link-all">All Destinations</a>
             <a href="destination-detail.html?id=bangkok" class="drawer-link">Bangkok</a>
             <a href="destination-detail.html?id=pattaya" class="drawer-link">Pattaya</a>
             <a href="destination-detail.html?id=krabi" class="drawer-link">Krabi</a>
@@ -126,6 +226,7 @@
             </svg>
           </button>
           <div class="drawer-submenu">
+            <a href="packages.html" class="drawer-link drawer-link-all">All Tour Packages</a>
             <a href="family-packages.html" class="drawer-link">Family Packages</a>
             <a href="couple-packages.html" class="drawer-link">Couple Packages</a>
             <a href="bachelor-packages.html" class="drawer-link">Bachelor Packages</a>
@@ -151,37 +252,118 @@
         <li><a href="about.html" class="drawer-link">Why Us</a></li>
         <li><a href="contact.html" class="drawer-link">Contact</a></li>
       </ul>
-      <div
-        style="margin-top: auto; padding-top: var(--space-4); border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 12px;">
-        <a href="contact.html" class="btn btn-primary btn-block">Plan Your Trip</a>
+      <!-- tp:drawer-actions -->
+      <div class="drawer-actions">
+        <a href="contact.html" class="btn btn-primary btn-block">Plan My Trip</a>
+        <div class="drawer-actions-row">
+          <a href="https://wa.me/918121214181?text=Hi%20ThaiPackages%2C%20I%27d%20like%20help%20planning%20a%20Thailand%20trip." target="_blank" rel="noopener noreferrer" class="btn btn-wa"><span class="btn-phone-text"><small lang="te">వాట్సాప్</small>WhatsApp</span></a>
+          <a href="tel:+918121214181" class="btn btn-phone"><span class="btn-phone-text"><small lang="te">కాల్ చేయండి</small>Call Us</span></a>
+        </div>
+        <a href="https://www.instagram.com/thaipackages/" target="_blank" rel="noopener noreferrer" class="drawer-ig">📸 Follow @thaipackages on Instagram</a>
       </div>
+      <!-- /tp:drawer-actions -->
     </div>
   </div>
+
+  <!-- tp:menu-script -->
+  <script>
+    /* Self-contained navigation drawer. Runs immediately (no dependency on app.js),
+       so the menu works on slow networks, in in-app browsers, and if any other script fails. */
+    (function () {
+      var drawer = document.getElementById('mobileDrawer');
+      var openBtn = document.getElementById('hamburgerBtn');
+      if (!drawer || !openBtn) return;
+      window.TP_MENU_BOUND = true;
+      var closeBtn = document.getElementById('closeDrawerBtn');
+      var each = function (list, fn) { Array.prototype.forEach.call(list, fn); };
+
+      function openMenu() {
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+        openBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        document.body.classList.add('drawer-open');
+        if (closeBtn) closeBtn.focus();
+      }
+      function closeMenu() {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        openBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        document.body.classList.remove('drawer-open');
+      }
+      function setSub(toggle, open) {
+        var sub = toggle.nextElementSibling;
+        if (!sub) return;
+        sub.classList.toggle('open', open);
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+
+      openBtn.setAttribute('aria-expanded', 'false');
+      openBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      drawer.addEventListener('click', function (e) { if (e.target === drawer) closeMenu(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) { closeMenu(); openBtn.focus(); }
+      });
+
+      var toggles = drawer.querySelectorAll('.submenu-toggle');
+      each(toggles, function (t) {
+        t.addEventListener('click', function (e) {
+          e.preventDefault();
+          var willOpen = !t.classList.contains('open');
+          each(toggles, function (o) { if (o !== t) setSub(o, false); });
+          setSub(t, willOpen);
+        });
+      });
+
+      // Works with both /packages.html and the clean /packages URLs Cloudflare Pages serves
+      var norm = function (p) { p = (p || '').split('?')[0].split('#')[0].split('/').pop().toLowerCase().replace(/\.html$/, ''); return p || 'index'; };
+      var page = norm(location.pathname);
+      each(drawer.querySelectorAll('a.drawer-link'), function (a) {
+        var href = a.getAttribute('href') || '';
+        var q = href.indexOf('?') > -1 ? href.slice(href.indexOf('?')) : '';
+        if (norm(href) === page && (!q || q === location.search)) {
+          a.classList.add('active');
+          var sub = a.closest('.drawer-submenu');
+          if (sub && sub.previousElementSibling) setSub(sub.previousElementSibling, true);
+        }
+        a.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
+  <!-- /tp:menu-script -->
 
   <main>
     <!-- 1. Hero Section -->
     <section class="hero-section hero-home">
-      <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?fm=jpg&q=80&w=2400&auto=format&fit=crop"
+      <img decoding="async" srcset="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=640&amp;q=75 640w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=960&amp;q=75 960w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75 1280w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1920&amp;q=75 1920w, https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=2400&amp;q=75 2400w" sizes="100vw" src="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&amp;fit=crop&amp;w=1280&amp;q=75"
         alt="Tropical Thailand Beach" class="hero-bg-media" fetchpriority="high">
       <div class="hero-overlay"></div>
 
       <div class="container">
         <div class="hero-inner">
-          <span class="hero-eyebrow"><span class="dot" aria-hidden="true">🌴</span>Thailand holidays for Indian families &amp; couples</span>
-          <h1>Your Thailand story <span class="text-gradient">starts here.</span></h1>
-          <p>Family-friendly itineraries, spacious condo stays with private kitchens, 100% private chauffeur transfers,
-            and complete peace of mind - starting from <span class="dynamic-price" data-base-inr="19900">₹19,900</span> per person.</p>
+          <span class="hero-eyebrow"><span class="dot" aria-hidden="true">🌴</span>Crafted for Telugu travellers &middot; Hosted in Thailand</span>
+          <h1>Your Thailand story, <span class="text-gradient">beautifully planned.</span></h1>
+          <p>Family-friendly itineraries, private chauffeur transfers, spacious condos with your own kitchen and
+            complete peace of mind &mdash; from <span class="dynamic-price" data-base-inr="19900">₹19,900</span> per person.</p>
 
           <div class="hero-cta-group">
             <a href="https://wa.me/918121214181?text=Hi%20ThaiPackages,%20I'm%20planning%20a%20Thailand%20trip%20and%20would%20like%20a%20tailored%20quote."
-              target="_blank" rel="noopener noreferrer" class="btn btn-primary">Chat on WhatsApp</a>
-            <a href="#packages" class="btn btn-secondary">View Packages</a>
+              target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span class="btn-phone-text"><small lang="te">వాట్సాప్‌లో మాట్లాడండి</small>Chat on WhatsApp</span></a>
+            <a href="tel:+918121214181" class="btn btn-phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="btn-phone-text"><small>Call us &middot; <span lang="te">కాల్ చేయండి</span></small>+91 81212 14181</span></a>
           </div>
+          <a href="#packages" class="hero-text-link">Explore our signature packages ↓</a>
 
           <ul class="hero-trust" aria-label="Why travellers choose us">
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Telugu &amp; Hindi guides</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Homely Indian food</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Zero hidden costs</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>No hidden costs, ever</li>
           </ul>
         </div>
       </div>
@@ -194,7 +376,7 @@
       <div class="stats-strip">
         <div class="stat-item">
           <span class="stat-value" data-count-to="7" data-suffix="+">7+</span>
-          <span class="stat-label">Thailand destinations</span>
+          <span class="stat-label">Handpicked destinations</span>
         </div>
         <div class="stat-item">
           <span class="stat-value" data-count-to="100" data-suffix="%">100%</span>
@@ -202,11 +384,11 @@
         </div>
         <div class="stat-item">
           <span class="stat-value" data-count-to="25" data-suffix="%">25%</span>
-          <span class="stat-label">Group discount (4+)</span>
+          <span class="stat-label">Group savings (4+ travellers)</span>
         </div>
         <div class="stat-item">
           <span class="stat-value">24/7</span>
-          <span class="stat-label">WhatsApp support</span>
+          <span class="stat-label">WhatsApp concierge</span>
         </div>
       </div>
     </div>
@@ -217,12 +399,12 @@
         <div class="group-discount-content">
           <span class="group-discount-badge">✨ Special Offer</span>
           <div class="group-discount-text">
-            <span>🎉 Special Group Offer: 25% Discount!</span> Planning with family or friends (4+ travelers)? Claim
-            your exclusive group package savings.
+            <span>🎉 Travel together, save 25%.</span> Booking for 4 or more family members or friends? Enjoy an
+            exclusive 25% group saving on your package.
           </div>
         </div>
         <a href="https://wa.me/918121214181?text=I'm%20interested%20in%20the%2025%25%20Group%20Offer" target="_blank"
-          rel="noopener noreferrer" class="group-discount-btn">Claim 25% Group Offer</a>
+          rel="noopener noreferrer" class="group-discount-btn">Claim My 25% Group Offer</a>
       </div>
     </div>
 
@@ -231,9 +413,10 @@
       <div class="container">
         <div class="section-header">
           <div class="section-header-left">
-            <span class="eyebrow-pill">MOST BOOKED THIS SEASON</span>
-            <h2>Featured Bestsellers</h2>
-            <p>Transparent pricing, zero hidden costs, and fully customizable itineraries for Indian travelers.</p>
+            <span class="eyebrow-pill">OUR MOST-LOVED HOLIDAYS</span>
+            <h2>Our Signature Holidays</h2>
+            <p>Featured bestsellers with clear, all-inclusive pricing, no hidden costs and itineraries we tailor
+              around your family.</p>
           </div>
         </div>
         <div class="carousel-wrapper">
@@ -248,17 +431,16 @@
               <!-- Card 1: Bangkok & Pattaya Super Saver -->
               <article class="package-card compact" id="cardBangkokPattaya">
                 <div class="package-media-wrap">
-                  <img
-                    src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80"
+                  <img decoding="async" srcset="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw"
+                    src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
                     alt="Bangkok & Pattaya Super Saver" loading="lazy" width="600" height="450">
                   <span class="package-badge-tag">BESTSELLER</span>
-                  <span class="package-duration-tag">6 Days / 5 Nights</span>
+                  <span class="package-duration-tag">5 Days / 4 Nights</span>
                 </div>
                 <div class="package-card-body">
                   <span class="package-destination">Bangkok & Pattaya</span>
                   <h3>Bangkok & Pattaya Super Saver</h3>
-                  <p>Our signature 5N/6D holiday with 3N Pattaya Sea-View Condo + 2N Bangkok Luxury Condo, private
-                    kitchen & Telugu guides.</p>
+                  <p>Our signature 5-day escape: 2 nights by the sea in Pattaya and 2 in the heart of Bangkok, with the Alcazar Show, Coral Island, a Chao Phraya dinner cruise and Telugu-speaking guides.</p>
                   
                   <div class="package-card-footer">
                     <div class="package-price-wrap">
@@ -274,8 +456,8 @@
               <!-- Card 2: Phuket & Krabi Romantic Island Escape -->
               <article class="package-card compact">
                 <div class="package-media-wrap">
-                  <img
-                    src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=800&q=80"
+                  <img decoding="async" srcset="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw"
+                    src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
                     alt="Phuket & Krabi Romantic Island Escape" loading="lazy" width="600" height="450">
                   <span class="package-badge-tag">COUPLE SPECIAL</span>
                   <span class="package-duration-tag">7 Days / 6 Nights</span>
@@ -283,8 +465,7 @@
                 <div class="package-card-body">
                   <span class="package-destination">Phuket & Krabi</span>
                   <h3>Phuket & Krabi Romantic Island Escape</h3>
-                  <p>An idyllic 7-day Andaman holiday pairing lively Phuket beaches with Krabi's dramatic limestone
-                    karsts & private cruises.</p>
+                  <p>Seven unhurried days on the Andaman Sea: Phuket's beaches and sunsets, Krabi's limestone islands, private transfers and island cruises for two.</p>
                   
                   <div class="package-card-footer">
                     <div class="package-price-wrap">
@@ -300,7 +481,7 @@
               <!-- Card 3: Thailand Family Tour Packages -->
               <article class="package-card compact">
                 <div class="package-media-wrap">
-                  <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80"
+                  <img decoding="async" srcset="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw" src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
                     alt="Thailand Family Tour Packages" loading="lazy" width="600" height="450">
                   <span class="package-badge-tag">FAMILY FAVORITE</span>
                   <span class="package-duration-tag">5 Days / 4 Nights</span>
@@ -308,13 +489,12 @@
                 <div class="package-card-body">
                   <span class="package-destination">Bangkok & Pattaya</span>
                   <h3>Thailand Family Tour Packages</h3>
-                  <p>Specially crafted family vacation featuring kid-friendly attractions, Safari World, and spacious
-                    condo stays with kitchen.</p>
+                  <p>A carefree family holiday: Coral Island, SEA LIFE Ocean World, Madame Tussauds and a full day at Safari World, with a spacious family condo stay.</p>
                   
                   <div class="package-card-footer">
                     <div class="package-price-wrap">
                       <span class="package-price-label">Starting Price</span>
-                      <span class="package-price-value">From ₹24,999</span>
+                      <span class="package-price-value">From ₹24,500</span>
                     </div>
                     <a href="package-detail.html?id=thailand-family-tour-packages" class="btn btn-primary btn-sm">View Itinerary</a>
                   </div>
@@ -324,8 +504,8 @@
               <!-- Card 4: Thailand Honeymoon Packages -->
               <article class="package-card compact">
                 <div class="package-media-wrap">
-                  <img
-                    src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80"
+                  <img decoding="async" srcset="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw"
+                    src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
                     alt="Thailand Honeymoon Packages" loading="lazy" width="600" height="450">
                   <span class="package-badge-tag">HONEYMOON SPECIAL</span>
                   <span class="package-duration-tag">6 Days / 5 Nights</span>
@@ -333,15 +513,14 @@
                 <div class="package-card-body">
                   <span class="package-destination">Phuket & Krabi</span>
                   <h3>Phuket • Krabi • Bangkok – Honeymoon Special</h3>
-                  <p>Romantic island retreat featuring private pool villas, sunset dinner cruise, couple spa, and
-                    secluded island tours.</p>
+                  <p>A romantic island honeymoon: private pool-villa stays, the Phi Phi Islands, Krabi's Four Islands, couple's spa moments and an optional sunset dinner cruise.</p>
                   
                   <div class="package-card-footer">
                     <div class="package-price-wrap">
                       <span class="package-price-label">Starting Price</span>
-                      <span class="package-price-value">From ₹32,999</span>
+                      <span class="package-price-value">From ₹34,900</span>
                     </div>
-                    <a href="honeymoon-packages.html" class="btn btn-primary btn-sm">View Itinerary</a>
+                    <a href="package-detail.html?id=thailand-honeymoon-packages" class="btn btn-primary btn-sm">View Itinerary</a>
                   </div>
                 </div>
               </article>
@@ -349,8 +528,8 @@
               <!-- Card 5: Bangkok Tour Packages -->
               <article class="package-card compact">
                 <div class="package-media-wrap">
-                  <img
-                    src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80"
+                  <img decoding="async" srcset="https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw"
+                    src="https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
                     alt="Bangkok Tour Packages" loading="lazy" width="600" height="450">
                   <span class="package-badge-tag">CITY BREAK</span>
                   <span class="package-duration-tag">4 Days / 3 Nights</span>
@@ -358,13 +537,12 @@
                 <div class="package-card-body">
                   <span class="package-destination">Bangkok</span>
                   <h3>Bangkok Tour Packages</h3>
-                  <p>Immerse yourself in Bangkok's golden temples, lively shopping malls, Chao Phraya river dinner
-                    cruise & street markets.</p>
+                  <p>Four vibrant days in Bangkok: the Grand Palace, Wat Pho and Wat Arun, the Chao Phraya River, Safari World and the city's best shopping.</p>
                   
                   <div class="package-card-footer">
                     <div class="package-price-wrap">
                       <span class="package-price-label">Starting Price</span>
-                      <span class="package-price-value">From ₹16,999</span>
+                      <span class="package-price-value">From ₹14,900</span>
                     </div>
                     <a href="package-detail.html?id=bangkok-tour-packages" class="btn btn-primary btn-sm">View Itinerary</a>
                   </div>
@@ -374,8 +552,8 @@
               <!-- Card 6: Pattaya Tour Packages -->
               <article class="package-card compact">
                 <div class="package-media-wrap">
-                  <img
-                    src="https://images.unsplash.com/photo-1549880338-65dd4bc8a4d4?auto=format&fit=crop&w=800&q=80"
+                  <img decoding="async" srcset="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw"
+                    src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
                     alt="Pattaya Tour Packages" loading="lazy" width="600" height="450">
                   <span class="package-badge-tag">BEACH SPECIAL</span>
                   <span class="package-duration-tag">4 Days / 3 Nights</span>
@@ -383,13 +561,12 @@
                 <div class="package-card-body">
                   <span class="package-destination">Pattaya</span>
                   <h3>Pattaya Tour Packages</h3>
-                  <p>Experience thrilling watersports at Coral Island, world-class Alcazar cabaret show, Sanctuary of
-                    Truth & night markets.</p>
+                  <p>Four lively days in Pattaya: Coral Island by speedboat, the Alcazar VIP Show, the Sanctuary of Truth and Walking Street nightlife, from a sea-view condo.</p>
                   
                   <div class="package-card-footer">
                     <div class="package-price-wrap">
                       <span class="package-price-label">Starting Price</span>
-                      <span class="package-price-value">From ₹14,999</span>
+                      <span class="package-price-value">From ₹15,900</span>
                     </div>
                     <a href="package-detail.html?id=pattaya-tour-packages" class="btn btn-primary btn-sm">View Itinerary</a>
                   </div>
@@ -399,8 +576,8 @@
               <!-- Card 7: Thailand & Vietnam Tour Packages -->
               <article class="package-card compact">
                 <div class="package-media-wrap">
-                  <img
-                    src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80"
+                  <img decoding="async" srcset="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 50vw, 33vw"
+                    src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
                     alt="Thailand & Vietnam Tour Packages" loading="lazy" width="600" height="450">
                   <span class="package-badge-tag">Twin Country Special</span>
                   <span class="package-duration-tag">7 Days / 6 Nights</span>
@@ -408,7 +585,7 @@
                 <div class="package-card-body">
                   <span class="package-destination">Thailand & Vietnam</span>
                   <h3>Thailand & Vietnam Tour Packages</h3>
-                  <p>Experience the ultimate twin-country journey across Thailand and Vietnam, featuring Bangkok, Pattaya nightlife, and tropical Phu Quoc island.</p>
+                  <p>Two countries, one seamless week: Pattaya and Bangkok, then a short flight to tropical Phu Quoc for island tours and the famous Hon Thom cable car.</p>
                   
                   <div class="package-card-footer">
                     <div class="package-price-wrap">
@@ -437,59 +614,58 @@
       <div class="container">
         <div class="section-header centered">
           <span class="eyebrow-pill">FAMILY-FIRST THAILAND TRAVEL</span>
-          <h2>Thailand With The Comfort Of Home</h2>
-          <p>A different Thailand experience built strictly for Indian families & couples. Overcoming top hesitations
-            with transparent pricing, familiar homely food, and guaranteed safety from your hometown to Thailand and
-            back.</p>
+          <h2>Thailand, With All the Comforts of Home</h2>
+          <p>A Thailand holiday designed only for Indian families and couples. Honest prices, familiar homely food
+            and complete safety, from your doorstep in India to Thailand and safely back again.</p>
         </div>
 
         <div class="family-trust-grid">
           <div class="family-trust-card">
             <div class="family-trust-icon">
-              <img
-                src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=100&h=100&q=80"
+              <img decoding="async"
+                src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=75"
                 alt="Indian Food" loading="lazy"
                 style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
             </div>
             <h3>Homely Indian Food</h3>
-            <p>Choice of menu for a comfortable, reliable dining experience with verified partner Indian restaurants
+            <p>Choose your menu and dine with comfort every day at our verified partner Indian restaurants,
               throughout your trip.</p>
           </div>
 
           <div class="family-trust-card">
             <div class="family-trust-icon">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80"
+              <img decoding="async"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=75"
                 alt="Native Support" loading="lazy"
                 style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
             </div>
-            <h3>Native Support</h3>
-            <p>100% Telugu & Hindi-speaking guides ensuring easy communication, zero language barriers, and full
-              on-ground coordination.</p>
+            <h3>Native-Language Support</h3>
+            <p>Telugu and Hindi-speaking guides on every trip. Talk easily in your own language, with full on-ground
+              coordination wherever you go.</p>
           </div>
 
           <div class="family-trust-card">
             <div class="family-trust-icon">
-              <img
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=100&h=100&q=80"
+              <img decoding="async"
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=75"
                 alt="Family Condos" loading="lazy"
                 style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
             </div>
-            <h3>Family Condos</h3>
-            <p>Spacious private luxury condos equipped with complete kitchens, sea-view balconies, and top-tier safety
-              and security.</p>
+            <h3>Spacious Family Condos</h3>
+            <p>Private luxury condos with full kitchens, sea-view balconies and top-tier security: room for
+              the whole family to feel at home.</p>
           </div>
 
           <div class="family-trust-card">
             <div class="family-trust-icon">
-              <img
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=100&h=100&q=80"
+              <img decoding="async"
+                src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=75"
                 alt="End-to-End Care" loading="lazy"
                 style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
             </div>
             <h3>End-to-End Care</h3>
-            <p>100% private AC chauffeur transfers and seamless transit planning from Hyderabad/Khammam to Thailand and
-              safely back.</p>
+            <p>Private AC chauffeur transfers and every connection planned for you, from anywhere in Telangana or Andhra Pradesh to
+              Thailand and safely home again.</p>
           </div>
         </div>
       </div>
@@ -500,41 +676,41 @@
       <div class="container">
         <div class="section-header centered">
           <span class="eyebrow-pill">SAFETY & COMFORT FIRST</span>
-          <h2>Why Trust ThaiPackages for Families?</h2>
+          <h2>Why Families Trust ThaiPackages</h2>
           <p>
-            We understand the hesitations Indian families face. We initially built this specifically for families from
-            Khammam and surrounding regions. We guarantee safety, homely Indian food, and 100% native Telugu-speaking
-            guides to ensure you feel at home, even in Thailand.
+            We know the questions every Indian family asks before travelling abroad. That is why we built every holiday around
+            Telugu families from across Telangana and Andhra Pradesh. We promise safety, homely Indian food and native Telugu-speaking
+            guides, so you feel at home even in Thailand.
           </p>
         </div>
 
         <div class="family-trust-grid" style="margin-top: 36px;">
           <div class="family-trust-card glass-card">
             <div class="family-trust-icon">🗣️</div>
-            <h3>100% Native Telugu Guides</h3>
-            <p>Zero language barrier. Our local Telugu coordinators stay with your
-              family from airport arrival to your return flight.</p>
+            <h3>Native Telugu Guides</h3>
+            <p>No language barrier. Our Telugu-speaking coordinators look after your family from the moment you land
+              until your flight home.</p>
           </div>
 
           <div class="family-trust-card glass-card">
             <div class="family-trust-icon">🍛</div>
             <h3>Homely Indian Dining</h3>
-            <p>Vegetarian, Jain, and non-veg Indian menus curated to suit South
-              Indian palates, with self-cook kitchen options.</p>
+            <p>Vegetarian, Jain and non-vegetarian Indian menus chosen for South Indian tastes, plus your own
+              kitchen if you prefer to cook.</p>
           </div>
 
           <div class="family-trust-card glass-card">
             <div class="family-trust-icon">🛡️</div>
-            <h3>Guaranteed Family Safety</h3>
-            <p>High-security private condos and 100% private chauffeured AC
-              vehicles exclusively for your group.</p>
+            <h3>Family Safety, Guaranteed</h3>
+            <p>Secure private condos and chauffeur-driven AC vehicles reserved only for your group. No shared buses,
+              no strangers.</p>
           </div>
 
           <div class="family-trust-card glass-card">
             <div class="family-trust-icon">💎</div>
-            <h3>Transparent Pricing</h3>
-            <p>Starting from <span class="dynamic-price" data-base-inr="19900">₹19,900</span> with 25% group discount. Absolute zero hidden
-              fees, zero surprise charges.</p>
+            <h3>Honest, Transparent Pricing</h3>
+            <p>From <span class="dynamic-price" data-base-inr="19900">₹19,900</span> per person, with 25% off for groups. Every
+              cost shown upfront, with no hidden fees and no surprises.</p>
           </div>
         </div>
       </div>
@@ -544,8 +720,9 @@
     <section class="section" id="reviews">
       <div class="container">
         <div class="section-header centered">
-          <h2>Happy travellers</h2>
-          <p>Real experiences from families and couples who trusted us.</p>
+          <span class="eyebrow-pill">IN OUR GUESTS' WORDS</span>
+          <h2>Happy Travellers</h2>
+          <p>Real experiences from the families and couples who trusted us with their holiday.</p>
         </div>
 
         <div class="reviews-grid">
@@ -592,6 +769,14 @@
     </section>
   </main>
 
+  <!-- tp:instagram-float -->
+  <a href="https://www.instagram.com/thaipackages/" class="ig-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Follow ThaiPackages on Instagram (@thaipackages)" title="Follow us on Instagram">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+    <span class="ig-float-label">@thaipackages</span>
+  </a>
+  <!-- /tp:instagram-float -->
+
   <!-- Global Sticky Quick Actions (WhatsApp & Direct Phone Call) -->
   <div class="global-sticky-actions" id="globalStickyActions" aria-label="Quick contact actions">
     <a href="tel:+918121214181" class="sticky-action-btn btn-call" id="stickyPhoneBtn" aria-label="Direct Phone Call"
@@ -619,9 +804,9 @@
       <div class="footer-top-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="images/logo.jpeg" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
+            <img src="images/logo-mark-white.png" alt="ThaiPackages Logo" class="brand-logo-img" width="45" height="45"><span class="brand-text"><span class="brand-name-bold">Thai</span><span class="brand-name-light">Packages</span></span>
           </a>
-          <p>Customized Thailand holiday packages, private island tours, and vetted luxury condo & beachfront resort stays across Phuket, Krabi, Bangkok, and Pattaya.</p>
+          <p>Tailor-made Thailand holidays for Indian families and couples: private island tours and handpicked luxury condo &amp; beachfront resort stays across Phuket, Krabi, Bangkok and Pattaya, planned with care for travellers across Telangana and Andhra Pradesh.</p>
           <div class="footer-address-block">
             <span class="footer-address-title">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -633,7 +818,9 @@
             </address>
             <div class="footer-direct-contacts">
               <a href="tel:+918121214181" class="footer-direct-link">📞 +91 81212 14181</a>
+              <a href="https://wa.me/918121214181?text=Hi%20ThaiPackages%2C%20I%27d%20like%20help%20planning%20a%20Thailand%20trip." class="footer-direct-link footer-wa" target="_blank" rel="noopener noreferrer">💬 WhatsApp us</a>
               <a href="mailto:info@thaipackages.com" class="footer-direct-link">✉️ info@thaipackages.com</a>
+              <a href="https://www.instagram.com/thaipackages/" class="footer-direct-link" target="_blank" rel="noopener noreferrer">📸 @thaipackages</a>
             </div>
           </div>
         </div>
@@ -665,6 +852,7 @@
           <ul class="footer-links">
             <li><a href="tel:+918121214181">Direct Call: +91 81212 14181</a></li>
             <li><a href="https://wa.me/918121214181?text=Hi%2C%20I%20want%20details%20about%20the%20Thailand%20Family%20Package" target="_blank" rel="noopener noreferrer">WhatsApp 24/7 Support</a></li>
+            <li><a href="https://www.instagram.com/thaipackages/" target="_blank" rel="noopener noreferrer">Instagram: @thaipackages</a></li>
             <li><a href="mailto:info@thaipackages.com">info@thaipackages.com</a></li>
             <li><a href="contact.html">Plan Tailored Itinerary</a></li>
           </ul>
@@ -672,15 +860,15 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 ThaiPackages.com. All rights reserved. Thailand Holidays Made Easy.</p>
+        <p>&copy; 2026 ThaiPackages.com &middot; Thailand holidays, made easy. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script type="module" src="context/index.js?v=2.2" defer></script>
-  <script src="js/app.js?v=2.2" defer></script>
-  <script src="js/motion.js?v=1.0" defer></script>
+  <script type="module" src="context/index.js?v=6" defer></script>
+  <script src="js/app.js?v=7" defer></script>
+  <script src="js/motion.js?v=1.4" defer></script>
 </body>
 
 </html>
